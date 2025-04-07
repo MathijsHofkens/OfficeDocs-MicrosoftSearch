@@ -1,22 +1,8 @@
 ---
-# Required metadata
-# For more information, see https://review.learn.microsoft.com/en-us/help/platform/learn-editor-add-metadata?branch=main
-# For valid values of ms.service, ms.prod, and ms.topic, see https://review.learn.microsoft.com/en-us/help/platform/metadata-taxonomies?branch=main
-
-title:       # Add a title for the browser tab
-description: # Add a meaningful description for search results
-author:      shivanioslo # GitHub alias
-ms.author:   shivansingh # Microsoft alias
-ms.service:  # Add the ms.service or ms.prod value
-# ms.prod:   # To use ms.prod, uncomment it and delete ms.service
-ms.topic:    # Add the ms.topic value
-ms.date:     04/07/2025
----
-
-title: "BambooHR Microsoft Graph Connector"
-ms.author: @shivansingh
-author: @shivaniolso
-manager: @helgesol
+title: "BambooHR Microsoft Graph connector"
+ms.author: shivansingh
+author: shivaniolso
+manager: helgesol
 audience: Admin
 ms.audience: Admin
 ms.topic: article
@@ -101,4 +87,4 @@ Custom setup is for admins who want to edit the default values for settings. Whe
 
 After you publish your connection, you can review the status under the **Data sources** tab in the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).
 
-If you have issues or want to provide feedback, see [Microsoft Graph support](https://developer.microsoft.com/en-us/graph/support).
+If you have issues or want to provide feedback, see [Microsoft Graph support](https://developer.microsoft.com/en-us/graph/support).c
