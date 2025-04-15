@@ -1,0 +1,119 @@
+--- 
+title: "Shortcut Microsoft Graph connector" 
+ms.author: raynezou
+author: raynezou
+manager: zezhangzhao
+audience: Admin
+ms.audience: Admin 
+ms.topic: article 
+ms.service: mssearch 
+ms.localizationpriority: Medium 
+search.appverid: 
+- BFB160 
+- MET150 
+- MOE150 
+description: "Set up the Shortcut Microsoft Graph connector for Microsoft Search and Microsoft 365 Copilot" 
+ms.date: 03/27/2025
+---
+
+# Shortcut Microsoft Graph connector (preview)
+
+The Shortcut Microsoft Graph connector empowers your organization to index and search Shortcut stories across your enterprise. Once configured, the connector automatically crawls Shortcut’s stories, making them easily discoverable through Microsoft 365 Copilot and any Microsoft Search client.
+
+This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors the Shortcut Microsoft Graph connector.
+
+>[!NOTE]
+>The Shortcut Microsoft Graph connector is in public preview. If you wish to get access to try it, enable the [Targeted release](/microsoft-365/admin/manage/release-options-in-office-365#set-up-the-release-option-in-the-admin-center) ring in your admin account.
+
+## Capabilities
+- Index stories from your Shortcut workspace
+- Customize your crawl frequency.  
+- Create workflows using this connection and plugins from Microsoft Copilot Studio.  
+- Use [Semantic search in Microsoft 365 Copilot](semantic-index-for-copilot.md) to enable users to find relevant content.
+
+## Limitations
+- The connector only crawls Shortcut stories from the most recent two-year period. 
+- The connector doesn't index comments.
+- The connector doesn't index customized fields.
+
+## Prerequisites
+Create or use an existing Shortcut account to access Shortcut’s developer portal. Once signed in at Shortcut, navigate to your account settings and locate the API Tokens section. Generate a new API token. For more information, see [Shortcut help center](https://help.shortcut.com/hc/en-us/articles/205701199-Shortcut-API-Tokens#:~:text=You%20can%20use%20a%20Shortcut%20API%20token%20to,name%20for%20the%20token%20and%20click%20Generate%20Token).
+
+## Get Started
+
+### 1. Configure the display name 
+A display name is used to identify each citation in Microsoft 365 Copilot, helping users easily recognize the associated file or item. Display name also signifies trusted content. Display name is also used as a [content source filter](/MicrosoftSearch/custom-filters#Content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize.
+
+### 2. Add the instance URL
+The Shortcut instance URL is always `https://api.app.shortcut.com`. 
+
+### 3. Authentication Type
+Choose "API Key" and enter the API key that you generated within Shortcut app.
+
+### 4. Roll out to limited audience
+Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. For more information, see [Staged rollout for Microsoft Graph connectors](staged-rollout-for-graph-connectors.md).
+
+To create the connection for Shortcut, click "Create" to publish your connection and index stories from your Shortcut account.
+
+For other settings, like **Access permissions**, **Schema**, and **Crawl frequency**, we have default values based on what works best with Shortcut data.
+
+| Users | Description |
+|:----|:---|
+| Access permissions | Only users with access to content in the data source. |
+| Map identities | Data source identities mapped using Microsoft Entra IDs. |
+
+| Content | Description |
+|:---|:---|
+| Manage properties | For information about the default properties and their schema, see [content](#content). |
+
+| Sync | Description |
+|:---|:---|
+| Incremental crawl | Runs every 15 minutes. |
+| Full crawl | Runs every day. |
+
+## Custom setup
+
+In custom setup you can edit any of the default values for users, content, and sync.
+
+### Users
+
+#### Access permissions
+The Shortcut Microsoft Graph connector allows your organization to index stories from Shortcut. After you configure the connector, end users can search for these stories from Shortcut in Microsoft 365 Copilot and from any Microsoft Search client.
+
+### Content
+
+#### Manage properties
+
+To view available properties from your Shortcut, assign a schema to the property (define whether a property is searchable, queryable, retrievable, or refinable), change the semantic label, and add an alias in the property. Some properties are selected by default.
+
+|Source property|Label|Description|Schema|
+|:---|:---|:---|:---|
+| Blocked          |                    |         | Retrieve, Search.     |
+| CreatedBy        | Created by                   |The user who created the item         | Retrieve, Search.     |
+| CreatedOn        | Created date time  |Date and time that the item was created         | Query, Retrieve.      |
+| Description      | Content            | Description of story | Search.               |
+| DueDate          |                    |         | Query, Retrieve.      |
+| EpicId           |                    |         | Query, Retrieve.      |
+| EpicName         |                    |         | Query, Retrieve.      |
+| Estimate         |                    |         | Query, Retrieve.      |
+| Id               |                    |         | Query, Retrieve.     |
+| IterationId      |                    |         | Query, Retrieve.      |
+| IterationName    |               |         | Search, Query, Retrieve. |
+| Labels           |                    |         | Retrieve, Search.     |
+| Name            |  Title                 | The title of the item that you want shown in Microsoft 365 Copilot and other search experiences        | Query, Retrieve.      |
+| Owners            |                    |         | Query, Retrieve.      |
+| StoryType      |    |         | Query, Retrieve      |
+| TeamName            |                    |         | Query, Refine.        |
+| Url              | url                |The target URL of the item in the data source        | Search.               |
+| UpdatedBy            |                    |         | Retrieve, Search.      |
+| UpdatedOn            |  Last modified date time                  |         | Query, Retrieve.      |
+| Workspace            |                    |         | Query, Refine, Retrieve.      |
+
+#### Preview data**
+Use the preview results button to verify the sample values of the selected properties and query filter.
+
+### Sync
+The refresh interval determines how often your data is synced between the data source and the Shortcut Microsoft Graph connector index. There are two types of refresh intervals - full crawl and incremental crawl. For more information, see [Refresh settings](configure-connector.md#guidelines-for-sync-settings).
+You can change the default refresh interval here if needed.
+
+If you have issues or want to provide feedback, contact [Microsoft Graph support](https://developer.microsoft.com/en-us/graph/support).

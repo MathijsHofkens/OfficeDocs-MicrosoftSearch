@@ -85,8 +85,6 @@ additionalContent:
             url: connectors-overview.md
           - text: Setup Graph Connectors
             url: configure-connector.md
-          - text: Federation connectors management
-            url: manage-dynamics365.md
 
         # Card
         - title: Customize the end-user UX

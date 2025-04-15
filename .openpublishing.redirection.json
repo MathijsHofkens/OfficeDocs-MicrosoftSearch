@@ -314,6 +314,16 @@
             "source_path": "MicrosoftSearch/troubleshoot-veeva-vault-promomats-connector.md",
             "redirect_url": "/MicrosoftSearch/troubleshoot-veeva-vault-connectors",
             "redirect_document_id": true
+        },
+        {
+            "source_path": "MicrosoftSearch/veeva-vault-qualitydocs-connector.md",
+            "redirect_url": "/MicrosoftSearch/veeva-vault-promomats-connector",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "MicrosoftSearch/manage-dynamics365.md",
+            "redirect_url": "/MicrosoftSearch/frequently-asked-questions",
+            "redirect_document_id": true
         }
     ]
 }
