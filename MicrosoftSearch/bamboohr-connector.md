@@ -18,42 +18,115 @@ ms.date: 04/07/2025
 
 # BambooHR Microsoft Graph connector
 
-{Summary description}
+With the Microsoft Graph connector, your organization in M365 can index profiles that are accessible to anyone in BambooHR, using Microsoft Copilot and Search. 
 
 This documentation is for Microsoft 365 administrators or anyone who configures, runs, and monitors the BambooHR Microsoft Graph connector. 
 
 ## Capabilities
 
-- {Capability 1}
-- {Capability 2}
-- {Capability 3}
-- ...
+- Access BambooHR profiles using the power of Semantic search
+- Customize your crawl frequency 
+- Create workflows using this connection and plugins from Microsoft Copilot Studio
+
 
 ## Limitations
 
 
-- {Limitation 1}
-- {Limitation 2}
-- {Limitation 3}
-- ...
+- Time off, documents, benefits, trainings, assets, notes, emergency, onboarding, offboarding, and custom properties are not indexable.  
 
 ## Prerequisites
 
-{List the prerequisits}
+Before you create a BambooHR connector, you must:
+
+**1. Setup Application on BambooHR Developer Portal**  
+
+Companies and developers need to work with BambooHR to get access to BambooHR developer portal.
+
+**2. Configure a BambooHR app**  
+
+Configure a BambooHR app with a unique App name 
+ ![Screenshot of Add application.](media/bamboohr-connector/bamboohr-addapp.png)
+
+
+**3. Add direct URLs**
+
+Add the following links into the "Redirect URLs" field in the App details section:   
+
+For M365 Enterprise, copy and paste: https://gcs.office.com/v1.0/admin/oauth/callback 
+
+For M365 Government, copy and paste: https://gcsgcc.office.com/v1.0/admin/oauth/callback 
+
+ ![Screenshot of App Details.](media/bamboohr-connector/bamboohr-appdetails.png)
+ ![Screenshot of Direct Urls form.](media/bamboohr-connector/bamboohr-redirecturis.png)
+
+**4. Add Application Scopes**  
+
+On the Application Scopes section, select the following scopes with read access only:  
+
+Claims: 
+
+            email, 
+
+            openid, 
+
+Employee: 
+
+            employee, 
+
+            employee:contact, 
+
+            employee:identification, 
+
+            employee:job, 
+
+            employee:management, 
+
+            employee:name, 
+
+            employee_directory, 
+
+            sensitive_employee:address, 
+
+Miscellaneous: 
+
+            app, 
+
+            field, 
+
+            offline_access, 
+
+            public.user, 
+
+            user, 
+
+            user:management, 
+
+Reports: 
+
+            report  
+
+ ![Screenshot of Select Scopes.](media/bamboohr-connector/bamboohr-selectscopes.png)
+ ![Screenshot of Scope Selection.](media/bamboohr-connector/bamboohr-scopeselection.png)
+
+**5. Get App Client Id and App Secret**
+
+Navigate to the app credentials section to get the App client id and App client secret.   
+ ![Screenshot of Client Id and Client Secret Section.](media/bamboohr-connector/bamboohr-clientidandsecret.png)
+
 
 ## Get started
 
 ### 1. Choose a display name
 
-{Explain that the display name can help users identify connector content in Copilot responses. For example: Choose a display name that helps users easily recognize associated files or items in Copilot responses.}
+Choose a display name that helps users easily recognize associated profiles in a Copilot response. 
 
 ### 2. Add the instance URL
 
-{Provide the format of the instance URL.}
+Enter your BambooHR instance URL e.g., https://contoso.bamboohr.com/ 
 
 ### 3. Choose authentication type
 
-{Provide details about the authentication options. If necessary, create H4 subsections for each authentication type.}
+Select OAuth 2.0 from list of authentication types, and enter the client id and client secret from BambooHR App portal.
 
 ### 4. Roll out to a limited audience
 
@@ -61,30 +134,16 @@ Deploy this connection to a limited user base to validate it in Copilot and othe
 
 ## Custom setup
 
-Custom setup is for admins who want to edit the default values for settings. When you choose Custom setup, you see three other tabs: Users, Content, and Sync.
-
-### Users
-
-{Describe how admins can customize users, for example with access permissions. Add H4 subsections if necessary.}
-
-#### Content
-
-{Describe properties that the admin can add, remove, or change, and list the properties that are indexed by default.}
-
-| Source property | Label | Description |
-|:----------------|:------|:------------|
-| {Property}      | {Label or Not applicable} | {Description} |
-
-#### Sync
-
-{Describe the full and incremental craws and default values that the admin can adjust.}
+Custom setup is not supported for this connector. 
 
 ## Troubleshooting
 
-{Provide common errors and troubleshooting steps or link to a more detailed Troubleshooting topic.}
+**1. Invalid Credentials. Verify the credential information from BambooHR App**
+
+Ensure that the scopes are correctly configured in the BambooHR App, and verify that the client ID and secret entered match those in the BambooHR App. 
 
 ## Next steps
 
 After you publish your connection, you can review the status under the **Data sources** tab in the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).
 
-If you have issues or want to provide feedback, see [Microsoft Graph support](https://developer.microsoft.com/en-us/graph/support).c
+If you have issues or want to provide feedback, see [Microsoft Graph support](https://developer.microsoft.com/en-us/graph/support).
