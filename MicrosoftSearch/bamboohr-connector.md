@@ -170,12 +170,12 @@ The refresh interval determines how often your data is synced between the data s
 
 ## Troubleshooting
 
-**1. Invalid Credentials. Verify the credential information from BambooHR App**
+1. Invalid Credentials. Verify the credential information from BambooHR App.
 
 Ensure that the scopes are correctly configured in the BambooHR App, and verify that the client ID and secret entered match those in the BambooHR App. 
 
 ## Next steps
 
-After you publish your connection, you can review the status under the **Data sources** tab in the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).
+After you publish your connection, you can review the status under **Data sources** in the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).
 
 If you have issues or want to provide feedback, see [Microsoft Graph support](https://developer.microsoft.com/en-us/graph/support).
