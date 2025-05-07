@@ -20,10 +20,10 @@ ms.date: 04/07/2025
 
 The BambooHR Microsoft 365 Copilot connector allows organizations to index profiles from BambooHR into Microsoft Graph, making them accessible across Microsoft 365 experiences, including Microsoft 365 Copilot. 
 
-This guide is for Microsoft 365 administrators or anyone responsible for configuring, managing, and monitoring the BambooHR Microsoft 365 Copilot connector. 
+This guide is for Microsoft 365 administrators or anyone responsible for configuring, managing, and monitoring the BambooHR Copilot connector. 
 
 ## Capabilities
-The BambooHR Microsoft 365 Copilot connector enables the following capabilities:
+The BambooHR Microsoft 365 Copilot  enables the following capabilities:
 
 - Index profile information from BambooHR.
 - Enable your end users to ask questions related to BambooHR profiles. 
@@ -35,9 +35,9 @@ The BambooHR Microsoft 365 Copilot connector enables the following capabilities:
 
 ## Prerequisites
 
-Before you create a BambooHR connector, you must:
+Before you create a BambooHR Copilot connector, you must:
 
-**1. Setup Application on BambooHR Developer Portal**  
+**1. Set up the application on BambooHR Developer Portal**  
 
 Companies and developers need to work with BambooHR to get access to BambooHR developer portal.
 
@@ -103,15 +103,15 @@ Reports:
  ![Screenshot of Select Scopes.](media/bamboohr-connector/bamboohr-selectscopes.png)
  ![Screenshot of Scope Selection.](media/bamboohr-connector/bamboohr-scopeselection.png)
 
-**5. Get App Client Id and App Secret**
+**5. Get App Client ID and App Secret**
 
-Navigate to the app credentials section to get the App client id and App client secret.   
+Navigate to the app credentials section to get the App client ID and App client secret.   
  ![Screenshot of Client Id and Client Secret Section.](media/bamboohr-connector/bamboohr-clientidandsecret.png)
 
 
 ## Get started
 
-[Add BambooHR people connector.](https://admin.microsoft.com/adminportal/home?#/MicrosoftSearch/Connectors/add)
+[Add BambooHR Copilot connector.](https://admin.microsoft.com/adminportal/home?#/MicrosoftSearch/Connectors/add)
 
 ### 1. Choose a display name
 
@@ -123,7 +123,7 @@ Enter your BambooHR instance URL e.g., https://contoso.bamboohr.com/
 
 ### 3. Choose authentication type
 
-Select OAuth 2.0 from list of authentication types, and enter the client id and client secret from BambooHR App portal.
+Select OAuth 2.0 from the list of authentication types, and enter the client ID and client secret from BambooHR App portal.
 
 <br>
 For other settings like Access permissions, Schema, and Crawl frequency, we have set defaults based on what works best with BambooHR people data. The default values are: 
@@ -167,17 +167,17 @@ For other settings like Access permissions, Schema, and Crawl frequency, we have
 
 ## Custom setup
 
-Custom setup is for admins who want to edit the default values for settings. When you choose Custom setup, you see other three tabs: Users, Content and Sync.
+Custom setup is for admins who want to edit the default values for settings. When you choose Custom setup, you see the other three tabs: Users, Content, and Sync.
 
 **Users**
 
-The BambooHR people connector only supports data visible to Everyone. This means indexed data appears in the search results for all users.
-The people connector only supports mapping your data source identities with Microsoft Entra ID by checking whether the email address of BambooHR profiles is the same as UserPrincipalName (UPN), or Mail of users in Microsoft Entra ID. 
+The BambooHR Copilot connector only supports data visible to Everyone. This means indexed data appears in the search results for all users.
+The BambooHR Copilot connector only supports mapping your data source identities with Microsoft Entra ID by checking whether the email address of BambooHR profiles is the same as UserPrincipalName (UPN), or Mail of users in Microsoft Entra ID. 
 
 
 **Content**
 
-The people connector does not support the addition of new properties or the removal of existing properties on this tab. Within this tab, there is a property named AnnotationSerialized that encompasses all the default properties previously mentioned.
+The BambooHR Copilot connector does not support the addition of new properties or the removal of existing properties on this tab. Within this tab, there is a property named AnnotationSerialized that encompasses all the default properties previously mentioned.
 
 
 **Sync**
