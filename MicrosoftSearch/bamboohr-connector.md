@@ -23,7 +23,6 @@ The BambooHR Microsoft 365 Copilot connector allows organizations to index profi
 This guide is for Microsoft 365 administrators or anyone responsible for configuring, managing, and monitoring the BambooHR Copilot connector. 
 
 ## Capabilities
-The BambooHR Microsoft 365 Copilot  enables the following capabilities:
 
 - Index profile information from BambooHR.
 - Enable your end users to ask questions related to BambooHR profiles. 
