@@ -42,9 +42,7 @@ This guide is for Microsoft 365 administrators or anyone responsible for configu
 
  ![Screenshot of App Details.](media/bamboohr-connector/bamboohr-appdetails.png)
  ![Screenshot of Direct Urls form.](media/bamboohr-connector/bamboohr-redirecturis.png)
-4. Add application ccopes  
-
-On the Application Scopes section, select the following scopes with read access only:  
+4. On the application scopes field, select the following scopes with read access only:  
 
 Claims: 
 
