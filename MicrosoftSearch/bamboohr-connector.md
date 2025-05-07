@@ -87,9 +87,8 @@ Reports:
  ![Screenshot of Select Scopes.](media/bamboohr-connector/bamboohr-selectscopes.png)
  ![Screenshot of Scope Selection.](media/bamboohr-connector/bamboohr-scopeselection.png)
 
-**5. Get App Client ID and App Secret**
 
-Navigate to the app credentials section to get the App client ID and App client secret.   
+5. Navigate to the **app credentials** to get the App client ID and App client secret.   
  ![Screenshot of Client Id and Client Secret Section.](media/bamboohr-connector/bamboohr-clientidandsecret.png)
 
 
@@ -151,20 +150,20 @@ For other settings like Access permissions, Schema, and Crawl frequency, we have
 
 ## Custom setup
 
-Custom setup is for admins who want to edit the default values for settings. When you choose Custom setup, you see the other three tabs: Users, Content, and Sync.
+In custom setup you can edit any of the default values for users, content, and sync.
 
-**Users**
+###Users
 
 The BambooHR Copilot connector only supports data visible to Everyone. This means indexed data appears in the search results for all users.
 The BambooHR Copilot connector only supports mapping your data source identities with Microsoft Entra ID by checking whether the email address of BambooHR profiles is the same as UserPrincipalName (UPN), or Mail of users in Microsoft Entra ID. 
 
 
-**Content**
+### Content
 
 The BambooHR Copilot connector does not support the addition of new properties or the removal of existing properties on this tab. Within this tab, there is a property named AnnotationSerialized that encompasses all the default properties previously mentioned.
 
 
-**Sync**
+### Sync
 
 The refresh interval determines how often your data is synced between the data source and the people connector index. There are two types of refresh intervals – full crawl and incremental crawl. For more information, see [refresh settings](https://learn.microsoft.com/en-us/microsoftsearch/configure-connector#guidelines-for-sync-settings).
 
