@@ -34,28 +34,15 @@ This guide is for Microsoft 365 administrators or anyone responsible for configu
 
 ## Prerequisites
 
-Before you create a BambooHR Copilot connector, you must:
-
-**1. Set up the application on BambooHR Developer Portal**  
-
-Companies and developers need to work with BambooHR to get access to BambooHR developer portal.
-
-**2. Configure a BambooHR app**  
-
-Configure a BambooHR app with a unique App name 
+1. Set up the application on BambooHR developer portal.
+2. Configure a BambooHR app with a unique App name 
  ![Screenshot of Add application.](media/bamboohr-connector/bamboohr-addapp.png)
-
-
-**3. Add direct URLs**
-
-Add the following links into the "Redirect URLs" field in the App details section:   
-
-For M365 Enterprise, copy and paste: https://gcs.office.com/v1.0/admin/oauth/callback 
+3. Add direct URLs** into the "Redirect URLs" field in the app details section.
+   For M365 Enterprise, copy and paste: https://gcs.office.com/v1.0/admin/oauth/callback 
 
  ![Screenshot of App Details.](media/bamboohr-connector/bamboohr-appdetails.png)
  ![Screenshot of Direct Urls form.](media/bamboohr-connector/bamboohr-redirecturis.png)
-
-**4. Add Application Scopes**  
+4. Add application ccopes  
 
 On the Application Scopes section, select the following scopes with read access only:  
 
