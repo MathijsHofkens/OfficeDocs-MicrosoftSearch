@@ -106,7 +106,7 @@ Use the **Client ID** from the newly created application in the Entra admin cent
    3. Fill out the name and description as your preference.
    4. In status, choose **active**.
    5. In authentication type, choose **Single Sign-on**
-   6. In Single Sign-on Profile, choose a profile created based on single sign-on.
+   6. In Single Sign-on Profile, choose a profile created based on single sign-on. For more information, see [Veeva Vault documentation](https://platform.veevavault.help/en/gr/13977/).
    7. In eSignature Profile, select **None**.
    8. In the OAuth 2.0 / OpenID Connect Profile, select the newly created OAuth 2.0 profile.
 
@@ -138,11 +138,22 @@ To configure the Veeva Vault PromoMats connector, select **Azure Active Director
 > [!Important]
 > Configure both Microsoft Entra ID and Veeva Vault admin settings to enable Microsoft Entra ID authentication.
 
-### 4. Roll out to limited audience
+### 4. Set up identity mapping
+
+For customers who need the security settings of their Veeva PromoMats instance to be honored, click **Custom setup** > **User**. In **Map identities**, select **Non-ME-ID** as the identity type for your content source.
+
+Enter the required information for identity mapping. For example, if you want to map identities based on email addresses, you can follow these steps.
+
+1. Select **Mail** as the **Microsoft Entra user property**.
+2. Select **Email** as the **non-Microsoft Entra user property**.
+3. Use a regular expression such as `([^@]+)` to capture a sequence of one or more characters that are not the `@` symbol.
+4. Create a formula to complete the mapping, such as `{0}@<your-domain>`.
+
+This process ensures that user identity mappings are correctly established and security permissions are properly enforced.
+
+### 5. Roll out to limited audience
 Deploy this connection to a limited group of users to validate indexing and access control functionality before a full rollout. 
 
-### 5. Customize sync schedules
-Set up periodic incremental crawls (default: 15 minutes) and full crawls (default: daily). 
 
 ## Default settings
 

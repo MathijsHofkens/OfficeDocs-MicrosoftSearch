@@ -35,7 +35,7 @@ The following common errors are observed while configuring the connector, or dur
 
     2. If there's an Advanced script configured in any of the '_Cannot Read_' user criteria in the article level, the article is stamped with deny access in the indexed data.
 
-4. Check if there's an empty criterion present at the knowledge base level - '_Cannot Read_', "_Cannot Contribute_'. Also, check if there's an empty criterion at the article level - '_Cannot Read_'. Empty criteria is a user criterion with empty fields. If there's an empty criterion present, the article is stamped with deny access in the indexed data.
+4. Check if there's an empty criterion present at the knowledge base level - '_Cannot Read_', '_Cannot Contribute_'. Also, check if there's an empty criterion at the article level - '_Cannot Read_'. Empty criteria are a user criterion with empty fields. If there's an empty criterion present, the article is stamped with deny access in the indexed data.
 
 5. If you're still not able to identify the root cause, reach out to [the Microsoft Graph connector support team](mailto:MicrosoftGraphConnectorsFeedback@service.microsoft.com) with the following details.
     1. Tenant ID
@@ -56,13 +56,18 @@ The following common errors are observed while configuring the connector, or dur
     
 If your organization uses single sign-on (SSO) to ServiceNow, you may have trouble logging in with the service account. You can bring up a username and password-based login by adding <em> `login.do`</em> to the ServiceNow instance URL. Example. `https://<your-organization-domain>.service-now.com./login.do`
 
-### 3. Unauthorized or forbidden response to API request
+### 3. Couldn't connect with the ServiceNow instance
+
 <details>
 <summary>(Click to expand) Follow the steps to troubleshoot this issue.</summary><br>
 
-1. **Check table access permissions:** If you see a forbidden or unauthorized response in connection status, check if the service account has the required access to the tables mentioned in [Step 2: Data Source Settings](/MicrosoftSearch/servicenow-knowledge-connector/#2-data-source-settings). Check whether the service account has 'read' access to all the tables in the column.
+If you see a forbidden or unauthorized response in connection status, it may be due to one of the following reasons:
 
-2. **Change in account password:** The ServiceNow Knowledge Microsoft Graph connector uses an access token fetched on behalf of the service account for the crawl. The access token refreshes every 12 hours. Ensure that the service account password isn't changed after publishing the connection. You may need to reauthenticate the connection if there's a change in the password.
+1. **Incorrect account password:** If you are using Basic authentication, it could be that the credentials you are using are incorrect. Please check the credentials again. 
+
+If you are using OAuth2.0, check if the account password is correct or hasn't been reset. The ServiceNow Knowledge Microsoft Graph connector uses an access token fetched on behalf of the service account for the crawl. The access token refreshes every 12 hours. You may need to reauthenticate the connection if there's a change in the password.
+
+2. **Check table access permissions:** Check if the service account has the required access to the tables mentioned in [Prerequisites](/MicrosoftSearch/servicenow-knowledge-connector/#prerequisites). Check whether the service account has ['read' access](/MicrosoftSearch/troubleshoot-servicenow-knowledge-connector#7-missing-access-to-certain-tables) to all the tables in the column.
 
 3. **Check if the ServiceNow instance is behind a firewall:** The ServiceNow Knowledge Microsoft Graph connector may not be able to reach your ServiceNow instance if it is behind a network firewall. You need to explicitly allow access to the connector service. You can find the public IP address range of the connector service in this table. Based on your tenant region, add it to your ServiceNow instance network allowlist.
 
@@ -72,11 +77,9 @@ If your organization uses single sign-on (SSO) to ServiceNow, you may have troub
    PROD | Europe | 20.54.41.208/30, 51.105.159.88/30
    PROD | Asia Pacific | 52.139.188.212/30, 20.43.146.44/30
 
-4. **Access permissions not working as expected:** If you observe discrepancies in access permissions applied to Microsoft Search or Microsoft 365 Copilot results, check if the user searching for the article has the required permissions to access the ServiceNow Knowledge articles. You can do that by using the [User criteria diagnostics](https://docs.servicenow.com/bundle/washingtondc-servicenow-platform/page/product/knowledge-management/concept/diagnose-knowledge-user-criteria.html) tool in ServiceNow.
-
 </details>
 
-### 4. To view the URL of the knowledge article, change it in the support portal
+### 4. Want to change the URL of the knowledge article
 
 <details><summary>(Click to expand) Follow the steps to change the URL of the knowledge article.</summary><br>
 
@@ -98,7 +101,7 @@ To change the destination URL, edit the `AccessUrl` part of the text property in
    |:--- |:---|
    |`"[{shortdescription}]({AccessUrl})"` | `"[{shortdescription}](https://contoso.service-now.com/sp?id=kb_article_view&sysparm_article={number})"`
 
-   Where `number` is the knowledge article number property. It should be marked as *retrieve* in the Manage Schema screen during connection creation.
+   Where `number` is the knowledge article number property. It should be marked as *retrieve* in the schema section of the Content tab during connection creation.
 
 4. Finish reviewing your result type updates and hit **Submit**. Give it a minute or two to pick up the changes. Your search results should now redirect to the desired URLs.
 </details>
@@ -109,9 +112,11 @@ If you see differences in the user criteria validation between ServiceNow and Mi
 
 ### 6. A 'Logout successfully' window appears when completing the OAuth process
 
+<details>
+<summary>(Click to expand) Follow the steps to troubleshoot this issue.</summary><br>
 While completing the OAuth process, a "Logout successfully" window may appear without prompting for ServiceNow credentials.
 
-By default, ServiceNow attempts to connect using Microsoft 365 Admin credentials through Single Sign-On (SSO) from a browser login, which can cause the connection to fail. As a result, the "Logout successfully" window appears.
+By default, ServiceNow attempts to connect using Microsoft 365 Admin credentials through single sign-On (SSO) from a browser login, which can cause the connection to fail. As a result, the "Logout successfully" window appears.
 
 ![Screenshot shows the 'logout successfully' window](media/servicenow-knowledge-connector/image1-issue6.png)
 
@@ -124,3 +129,52 @@ To resolve this issue, follow these steps:
 ![Screenshot shows the 'Oauth configuration' window](media/servicenow-knowledge-connector/image2-issue6.png)
 
 If you have issues or want to provide feedback, contact [Microsoft Graph | Support](https://developer.microsoft.com/en-us/graph/support).
+</details>
+
+### 7. Missing Access to Certain Tables
+
+<details>
+<summary>(Click to expand) Follow the steps to troubleshoot this issue.</summary><br>
+
+#### **Impact:**  
+- Without the right access, all content might not be indexed and permissions might not be granted accurately.
+---
+
+#### Resolution
+
+#### Role Required
+- ServiceNow Admin
+
+#### Steps to Validate Table Permissions using REST API Explorer:
+
+1. Impersonate the crawling account you have created in your ServiceNow instance.  
+   > Ensure the account has the following roles: `rest_api_explorer` and `web_service_admin`.
+2. Navigate to:  
+   **System Web Services > REST > REST API Explorer**
+3. Select one of the tables mentioned in the error message.
+
+   :::image type="content" source="media/tsg-servicenowkb-table-access-1.png" alt-text="Screenshot showing the 'REST API explorer' page." lightbox="media/tsg-servicenowkb-table-access-1.png":::
+
+4. Set `sysparm_limit` to `10` (to limit results for testing).
+
+   :::image type="content" source="media/tsg-servicenowkb-table-access-2.png" alt-text="Screenshot showing the 'sysparm_light' field." lightbox="media/tsg-servicenowkb-table-access-2.png":::
+
+5. Click on **Send**.
+6. Review the Response:
+   - **If you receive a `403 Status Code`** and an error message stating you're not authorized to access the table, follow the [steps here](/MicrosoftSearch/granting-table-access-servicenow) to provide table-level access.
+   - **If you receive a `200 Status Code`** but the response body contains empty results (e.g., no fields), this indicates row access exists but field-level access is missing. Follow the [steps here](/MicrosoftSearch/granting-table-access-servicenow#step-5-grant-field-level-access) to grant field-level access.
+   ![Screenshot showing the 'Response' section](media/tsg-servicenowkb-table-access-3.png)(media/tsg-servicenowkb-table-access-3.png#lightbox)
+
+   **If you do not see the table name in the dropdown, it may indicate lack of access to the table itself.**
+
+---
+
+### Alternate Method: Using Browser to Check Access
+
+1. Open an **incognito** browser window.
+2. Enter the following URL (replace placeholders appropriately):  
+   `https://<instance-url>/api/now/table/<table_name>?sysparm_limit=10`
+3. When prompted, log in using the **crawling account's credentials**.
+4. Review the response:
+   - If there's no response or an error appears, the account likely lacks necessary access.
+</details>

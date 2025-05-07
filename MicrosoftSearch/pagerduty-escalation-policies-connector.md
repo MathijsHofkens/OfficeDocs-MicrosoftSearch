@@ -22,9 +22,6 @@ The PagerDuty Escalation Policies Microsoft Graph connector enables your organiz
 
 This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors the PagerDuty Escalation Policies Microsoft Graph connector. 
 
-> [!NOTE]
-> The PagerDuty Escalation Policies Microsoft Graph connector is in preview. To request early access, submit the following [request form](https://forms.office.com/r/JniPmK5bzm).
-
 ## Capabilities
 - Access PagerDuty escalation policies in Copilot using the power of Semantic search.
 - Retain ACLs defined by your organization.
@@ -42,11 +39,9 @@ Before you create a PagerDuty Escalation Policies Microsoft Graph connector, com
 3. Select 'Scoped OAuth' in PagerDuty new app registration setting page.
 4. Use the following links for the field 'Redirect URL' in PagerDuty new app registration setting page.
 
-   - For M365 Enterprise, copy and paste this URL 
-   https://gcs.office.com/v1.0/admin/oauth/callback
+   - For M365 Enterprise, use `https://gcs.office.com/v1.0/admin/oauth/callback`
    
-   - For M365 Government, copy and paste this URL
-   https://gcsgcc.office.com/v1.0/admin/oauth/callback
+   - For M365 Government, use `https://gcsgcc.office.com/v1.0/admin/oauth/callback`
 
 7. Select the following scopes in PagerDuty new app registration setting page.
 

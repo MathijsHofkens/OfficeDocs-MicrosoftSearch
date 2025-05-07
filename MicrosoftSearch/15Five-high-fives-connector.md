@@ -23,9 +23,6 @@ The 15Five High Fives Microsoft Graph connector enables your organization to ind
 
 This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors the 15Five High Fives Microsoft Graph connector. 
 
-> [!NOTE]
-> The Microsoft Graph 15Five High Fives connector is in preview. To request early access, submit the following [request form](https://forms.office.com/r/JniPmK5bzm).
-
 ## Capabilities
 
 - Access 15Five high fives using the power of semantic search.

@@ -16,17 +16,14 @@ description: "Set up the Unily Microsoft Graph connector for Microsoft Search an
 ms.date: 03/19/2025
 ---
 
-# Unily Microsoft Graph connector
+# Unily Microsoft Graph connector (Preview)
 
 The Unily Graph connector allows your organization to index content from Unily intranet. After you configure the connector, end users can search for this content in Microsoft Copilot and from any Microsoft Search client. 
 
 This documentation is for Microsoft 365 administrators or anyone who configures, runs, and monitors a Unily Graph connector.
 
->[!NOTE]
->The Unily Graph connector is in preview. If you wish to get early access to try it, sign up using [this form](https://forms.office.com/r/JniPmK5bzm).
-
 ## Capabilities
-- Index Unily content (the following document types are supported: App,Doc Brand Asset, Image Brand Asset, FAQ, Form, Quiz, Idea, Location, Mandatory Read Article, Mandatory Read Doc, Media Content, Story, Knowledge Article).
+- Index Unily content (the following document types are supported: App, Doc Brand Asset, Image Brand Asset, FAQ, Form, Quiz, Idea, Location, Mandatory Read Article, Mandatory Read Doc, Media Content, Story, Knowledge Article).
 - Enable users within the company to ask questions in natural language using Copilot and receive answers based on content from Unily. Examples:
    - What are the company holidays for 2025?
    - What events are planned for national heritage month?
@@ -39,9 +36,10 @@ This documentation is for Microsoft 365 administrators or anyone who configures,
 - The connector doesn't support ACLs (access control lists). All the data indexed using the Unily Knowledge connector is visible to all Microsoft 365 users in your tenant, accessible through Microsoft Copilot or Search.
 
 ## Prerequisites
-- You must be the search admin for your organization's Microsoft 365 tenant.
+- To create a new connection, you must be the search admin for your organization's Microsoft 365 tenant.
 - To create a new connection, use your organization’s Unily instance URL. This URL is the specific web address used to access and interact with Unily API services for content retrieval, which usually looks like https://[your-organization-name].unily.com
-- To complete the authentication, you need a Client ID and Client Secret. To get your Unily Client ID and Secret, contact Unily directly. A Unily instance may have multiple applications, each with different permissions. Ensure that you obtain the correct credentials for the application to be used for the Graph connector.
+- To complete the authentication, you need a Client ID and Client Secret. To get your Unily Client ID and Secret, contact Unily directly. A Unily instance may have multiple applications, each with different permissions. Ensure that you obtain the correct credentials for the application to be used for the Graph connector.
+
 
 ## Get Started
 
@@ -70,7 +68,8 @@ Custom setup is for admins who want to edit the default values for settings. Onc
 **Access Permissions**
 
 All the data indexed using the Unily connector is visible to all Microsoft 365 users in your tenant, accessible through Microsoft Copilot or Search.
-The Unily connector is currently in preview. Once it becomes generally available, Access Control Lists (ACLs) will be valid. This capability ensures that all user permissions and group access available in Unily are supported through the connector in Microsoft apps like Copilot and Search.
+The Unily connector is currently in preview. Once it becomes generally available, Access Control Lists (ACLs) will be valid. This capability ensures that all user permissions and group access available in Unily are supported through the connector in Microsoft apps like Copilot and Search.
+
  
 ### Content
 
