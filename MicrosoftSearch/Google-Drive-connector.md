@@ -24,23 +24,24 @@ With the Microsoft Graph connector, your organization in Microsoft 365 can index
 This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors Microsoft Graph Google Drive connectors. 
 
 ## Capabilities
-- Access Google Drive files using the power of semantic search
-- Retain ACLs (Access Control Lists) defined by your organization
+- Access Google Drive files using the power of semantic search.
+- Retain ACLs (Access Control Lists) defined by your organization.
 - Customize your crawl frequency
-- Create workflows using this connection and plugins from Microsoft Copilot Studio
+- Create workflows using this connection and plugins from Microsoft Copilot Studio.
 
 ## Limitations
-- Folder replies & comments aren't indexable 
+- Folder replies & comments aren't indexable.
+- Currently, only files that are accessible to anyone in Google Drive are indexed and visible to all Microsoft 365 users in your tenant, from Microsoft Search or Microsoft 365 Copilot
 
 ## Prerequisites
 Before you create a Microsoft Graph Google Drive connector, you must:
 
 ### 1. Be a Google Workspace super admin role or be granted access
-Either be granted access by a super admin role or are a user with administrative privileges. You do not need a super admin role for yourself if you have the access granted by a super admin role.
+Either be granted access by a super admin role or be a user with administrative privileges. You do not need a super admin role for yourself if you have the access granted by a super admin role.
 
 :::image type="content" source="media/google-drive-connector/gdrive-check-user-role.png" lightbox="media/google-drive-connector/gdrive-check-user-role.png" alt-text="Screenshot that shows how to check gdrive user role.":::
 
-Check the user permission in admin console: Admin center/manage user/user detail.
+Check the user permission in the admin console: Admin center/manage user/user detail.
 
 ### 2. Create a Google Cloud Project
 
@@ -97,7 +98,7 @@ e.	Back on the Service Accounts page for your project, you should now be able to
 
 :::image type="content" source="media/google-drive-connector/gdrive-manage-kyes.png" lightbox="media/google-drive-connector/gdrive-manage-kyes.png" alt-text="Screenshot that shows how to manage keys of service account.":::
 
-f.	Click **Add Key** > **Create New Key**. In the panel that appears, select the key type JSON then click Create.
+f.	Click **Add Key** > **Create New Key**. In the panel that appears, select the key type JSON, then click Create.
 ![Screenshot that shows how to generate service account keys](media/google-drive-connector/gdrive-create-new-key.png)
 
 g.	A private JSON key is saved to your computer.
@@ -110,7 +111,7 @@ a.	Go to Google Workspace [Admin console](https://admin.google.com/ac/home?hl=en
 
 :::image type="content" source="media/google-drive-connector/gdrive-add-api-scope-1.png" lightbox="media/google-drive-connector/gdrive-add-api-scope-1.png" alt-text="Screenshot that shows how to add api scope-step1.":::
 
-b.	Click **MANAGE DOMAIN WIDE DELEGATION** in section Domain wide delegation:
+b.	Click **MANAGE DOMAIN WIDE DELEGATION** in the section Domain wide delegation:
 
 :::image type="content" source="media/google-drive-connector/gdrive-add-api-scope-2.png" lightbox="media/google-drive-connector/gdrive-add-api-scope-2.png" alt-text="Screenshot that shows how to add api scope-step2.":::
 
@@ -138,10 +139,10 @@ OAuth scopes (comma-delimited)
 ### 1. Display name   
 A display name is used to identify each reference in Copilot, helping users easily recognize the associated file or item. The display name also represents trusted content.
 
-### 2. Google Apps domain
+### 2. Add Google Apps domain
 To sign up for Google Workspace, you need an internet domain name, like your-company.com. This domain can host a website (`www.your-company.com`) and email (`info@your-company.com`). For more information, see [What is a domain?](https://support.google.com/a/answer/177483?hl=en&ref_topic=3540977&sjid=7603839478714180429-AP).
 
-### 3. Google Apps administrator account email
+### 3. Provide Google Apps administrator account email
 Enter the email of a Google Apps administrator account in the `user@company.com` format.
 
 ### 4. Roll out to a limited audience
@@ -149,23 +150,21 @@ Deploy this connection to a limited user base if you want to validate it in Copi
 
 For other settings, like Access permissions, Data inclusion rules, Schema, Crawl frequency, etc., we set defaults based on what works best with data in Google Drive. The default values settings are as follows.
 
-**Page** | **Settings** | **Default values**
---- | ---- | ---
-Users | Access Permissions | All files that are accessible to anyone in Google Drive are visible to all Microsoft 365 users in your tenant, from Microsoft Search or Microsoft 365 Copilot.
-Content | Index Content | All published posts and pages are selected by default.
-Content | Manage Properties | To check default properties and their schema, [click here](#content).
-Sync | Incremental Crawl | Frequency: Every 15 mins
-Sync | Full crawl | Frequency: Every day
-
-If you want to edit any of these values, you need to choose **Custom setup**.
+|Page|Settings|Default values|
+|:--- |:---- |:---|
+|Users | Access Permissions | All files that are accessible to anyone in Google Drive are visible to all Microsoft 365 users in your tenant, from Microsoft Search or Microsoft 365 Copilot.|
+|Content | Index Content | All published posts and pages are selected by default.|
+|Content | Manage Properties | To check default properties and their schema, [click here](#content).|
+|Sync | Incremental Crawl | Frequency: Every 15 mins|
+|Sync | Full crawl | Frequency: Every day|
 
 ## Custom setup 
 
-Custom setup is for those admins who want to edit the default values for settings. Once you click **Custom setup** , you should see three other tabs – Users, Content, and Sync. 
+In custom setup you can edit any of the default values for users, content, and sync. 
 
 ### Users 
 
-**Access permissions**
+#### Access permissions
 
 The Google Drive Graphs connector supports data visible to Only people with access to this data source (recommended) or Everyone. If you choose Everyone, indexed data appears in the search results for all users. 
 
@@ -173,22 +172,21 @@ If you choose Only people with access to this data source, you need to further c
 
 To identify which option is suitable for your organization: 
 
-1. Choose the **Microsoft Entra ID** option if the email ID of Google Drive users is same as the UserPrincipalName (UPN) of users in Microsoft Entra ID. 
+1. Choose the **Microsoft Entra ID** option if the email ID of Google Drive users is the same as the UserPrincipalName (UPN) of users in Microsoft Entra ID. 
 
 2. Choose the **non-AAD** option if the email ID of Google Drive users is **different** from the UserPrincipalName (UPN) of users in Microsoft Entra ID.
 
 >[!Important]
 >- If you choose Microsoft Entra ID as the type of identity source, the connector maps the email IDs of users obtained from Google Drive directly to UPN property from Microsoft Entra ID.
->- If you chose "non-AAD" for the identity type see Map your non-Azure AD Identities for instructions on mapping the identities. You can use this option to provide the mapping regular expression from email ID to UPN.
+>- If you chose "non-AAD" for the identity type, see Map your non-Azure AD Identities for instructions on mapping the identities. You can use this option to provide the mapping regular expression from email ID to UPN.
 >- Updates to users or groups governing access permissions are synced in full crawls only. Incremental crawls do not currently support the processing of updates to permissions. 
 
 ### Content 
 
-**Manage properties**
+#### Manage properties
+You can add or remove available properties from your PagerDuty Escalation Policy data source. Assign a schema, change the semantic label, and add an alias to the property. Some properties are indexed by default.
 
-Here, you can add or remove available properties from your Google Drive data source. Assign a schema to the property (define whether a property is **searchable, queryable, retrievable, or refinable**), change the semantic label, and add an alias to the property. Properties that are selected by default are:
-
-|Source property|Label|Description|Schema|
+|Default property|Label|Description|Schema|
 |--- | ---- | --- | ---|
 |createdTime | Created date time | The time at which the file was created.  | Search, Query, Retrieve.|
 |description |  | A short description of the file.| 
@@ -206,16 +204,15 @@ Here, you can add or remove available properties from your Google Drive data sou
 
 
 ### Sync 
-
 You can configure full and incremental crawls based on the scheduling options present here. By default, incremental crawl is set for every 15 minutes, and full crawl is set for every day. If needed, you can adjust these schedules to fit your data refresh needs.
 
 ## Troubleshooting
 
-### Invalid credentials detected. Check the credential info and check the permissions of the service account.
+1. Invalid credentials detected. Check the credential info and check the permissions of the service account.
 This error occurs when the service account lacks the necessary permissions for Google Drive access. Check the credentials info of the account and ensure that they're correctly filled in on the setup page.
 
-### The required permissions for users/files are missing.
-Authentication error, one or more required OAuth scopes to your service account are missing. Your service account must include both API scopes:
+2. The required permissions for users/files are missing.
+Authentication error, one or more required OAuth scopes for your service account are missing. Your service account must include both API scopes:
 
 `https://www.googleapis.com/auth/admin.directory.user.readonly` 
 
@@ -223,11 +220,11 @@ Authentication error, one or more required OAuth scopes to your service account 
 
 `https://www.googleapis.com/auth/admin.directory.group.readonly`
 
-### Failed to capture file information. Ensure the workspace isn't empty and has files accessible to the admin.
+3. Failed to capture file information. Ensure the workspace isn't empty and has files accessible to the admin.
  During the connector setup, at least one file must be present in your organization's workspace to test the connection successfully.
 
 ## Next steps
 
-After publishing your connection, you can review the status under the **Data sources** tab in the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).
+After publishing your connection, you can review the status under **Data sources** in the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).
 
 If you have any other issues or want to provide feedback, reach out to us at [Microsoft Graph | Support](https://developer.microsoft.com/en-us/graph/support).

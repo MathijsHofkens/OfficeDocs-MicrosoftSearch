@@ -69,9 +69,7 @@ Verify the .csv files you want to index have been uploaded to a SharePoint docum
 
 6. Select **SharePoint** and then **Delegated permissions**.
 
-7. Search for the following permissions and select **Add permissions**. <br>
-    a. AllSites.Read<br>
-    b. User.Read.All
+7. Search for the **AllSites.Read** permission and select **Add permissions**.
 
 8. Select **Grant admin consent for [TenantName]** and confirm by selecting **Yes**.
 
