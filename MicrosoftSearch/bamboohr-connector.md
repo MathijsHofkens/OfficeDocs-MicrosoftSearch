@@ -82,13 +82,15 @@ For other settings like Access permissions, Schema, and Crawl frequency, we set 
 
 | Users ||
 | :--- | :--- |
+| **Item** | **Description** |
 | Access permissions | Data is visible to everyone. |
 | Map identities | Data source identities mapped using Microsoft Entra IDs. |
 
 <br>
 
-| Source Property | Description | [Property in Microsoft 365 User Profile Schema](https://learn.microsoft.com/en-us/graph/api/resources/profile?view=graph-rest-beta) |
+| Schema | | |
 | :--- | :--- | :--- |
+| **Source Property** | **Description** | **[Property in Microsoft 365 User Profile Schema](https://learn.microsoft.com/en-us/graph/api/resources/profile?view=graph-rest-beta)** |
 | First Name | Employee's First Name | names->first |
 | Last Name | Employee's Last Name | names->last |
 | Name | Employee's Full Names | names->displayName |
@@ -112,6 +114,7 @@ For other settings like Access permissions, Schema, and Crawl frequency, we set 
 
 | Sync ||
 | :--- | :--- |
+| **Item** | **Description** |
 | Incremental Crawl | Frequency: Every 15 minutes. |
 | Full Crawl | Frequency: Every day. |
 
@@ -120,7 +123,7 @@ For other settings like Access permissions, Schema, and Crawl frequency, we set 
 
 In custom setup you can edit any of the default values for users, content, and sync.
 
-###Users
+### Users
 
 The BambooHR Copilot connector only supports data visible to Everyone. This means indexed data appears in the search results for all users.
 The BambooHR Copilot connector only supports mapping your data source identities with Microsoft Entra ID by checking whether the email address of BambooHR profiles is the same as UserPrincipalName (UPN), or Mail of users in Microsoft Entra ID. 
