@@ -16,11 +16,12 @@ description: "Set up the BambooHR Microsoft 365 Copilot connector."
 ms.date: 04/07/2025
 ---
 
-# BambooHR Microsoft 365 Copilot connector
+# BambooHR Microsoft 365 Copilot People Connector
 
-The BambooHR Microsoft 365 Copilot connector allows organizations to index profiles from BambooHR into Microsoft Graph, making them accessible across Microsoft 365 experiences, including Microsoft 365 Copilot. 
+The BambooHR Microsoft Copilot People connector allows organizations to index profiles from BambooHR into Microsoft Graph, making them accessible across Microsoft 365 experiences, including Microsoft 365 Copilot. 
 
-This guide is for Microsoft 365 administrators or anyone responsible for configuring, managing, and monitoring the BambooHR Copilot connector. 
+This guide is for Microsoft 365 administrators or anyone responsible for configuring, managing, and monitoring the BambooHR Microsoft Copilot People connector. 
+
 
 ## Capabilities
 
@@ -84,7 +85,8 @@ For other settings like Access permissions, Schema, and Crawl frequency, we set 
 | :--- | :--- |
 | **Item** | **Description** |
 | Access permissions | Data is visible to everyone. |
-| Map identities | Data source identities mapped using Microsoft Entra IDs. |
+| Map identities | Data source identities mapped using Microsoft Entra IDs. <br><br> *Note: All data retrieved through this connector is visible to everyone in your Microsoft tenant. However, we are not changing the system's behaviour, such as respecting access restrictions. If a user is blocked from seeing another user's profile data, that profile data (including people connector data) will not be shared or stored in the blocked user's view. <br><br> Access-restricted data will be included in future updates when user-level permission controls are implemented.*
+ |
 
 <br>
 
@@ -104,7 +106,7 @@ For other settings like Access permissions, Schema, and Crawl frequency, we set 
 | Original Hire Date Time | Employee's data of hire | anniversaries->date[type='originalHireDate'] |
 | Job Information Job Title | Employee's Job Title, for example, Senior HR Administrator | positions->detail->jobTitle |
 | Supervisor ID | Employee's Manager Identifier | positions->manager->userId<br><br>*Note: The supervisor ID is used to find the supervisor's email, which is then converted to the Microsoft Entra objectId of the manager for internal processing.* |
-| Mobile Phone | Employee's Mobile Phone | phones->number(type=mobile) |
+| Mobile Phone | Employee's Work Mobile Phone | phones->number(type=mobile) |
 | Work Phone | Employee's Work Phone | phones->number(type=work) |
 | Job Information Location | Employee's Office Location | positions->positionDetail->companyDetail->officeLocation |
 | Status | Employee's Status, for example, Active or Inactive | N/A<br><br>*Note: Internal use for filtering inactive employees, ensuring they're excluded from BambooHR data retrieval.* |
