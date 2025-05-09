@@ -33,7 +33,7 @@ The BambooHR People connector enables the following capabilities:
 
 ## Limitations
 
-- Time off, documents, benefits, trainings, assets, notes, emergency, onboarding, offboarding, and custom properties are not indexable.  
+- Time off, documents, benefits, trainings, assets, notes, emergency, onboarding, offboarding, and custom properties aren't indexable.  
 
 ## Prerequisites
 
@@ -53,7 +53,7 @@ Configure a BambooHR app with a unique App name
 
 Add the following links into the "Redirect URLs" field in the App details section:   
 
-For M365 Enterprise, copy and paste: https://gcs.office.com/v1.0/admin/oauth/callback 
+For Microsoft 365 Enterprise, copy and paste: https://gcs.office.com/v1.0/admin/oauth/callback 
 
  ![Screenshot of App Details.](media/bamboohr-connector/bamboohr-appdetails.png)
  ![Screenshot of Direct Urls form.](media/bamboohr-connector/bamboohr-redirecturis.png)
@@ -62,53 +62,21 @@ For M365 Enterprise, copy and paste: https://gcs.office.com/v1.0/admin/oauth/cal
 
 On the Application Scopes section, select the following scopes with read access only:  
 
-Claims: 
+| Category | Required Scopes |
+| :--- | :--- |
+| **Claims** | <table><tr><td>email</td></tr><tr><td>openid</td></tr></table> |
+| **Employee** | <table><tr><td>employee</td></tr><tr><td>employee:contact</td></tr><tr><td>employee:identification</td></tr><tr><td>employee:job</td></tr><tr><td>employee:management</td></tr><tr><td>employee:name</td></tr><tr><td>employee_directory</td></tr></table> |
+| **Miscellaneous** | <table><tr><td>app</td></tr><tr><td>field</td></tr><tr><td>offline_access</td></tr><tr><td>public.user</td></tr><tr><td>user</td></tr><tr><td>user:management</td></tr></table> |
+| **Reports** | <table><tr><td>report</td></tr></table> |
 
-            email, 
-
-            openid, 
-
-Employee: 
-
-            employee, 
-
-            employee:contact, 
-
-            employee:identification, 
-
-            employee:job, 
-
-            employee:management, 
-
-            employee:name, 
-
-            employee_directory, 
-
-Miscellaneous: 
-
-            app, 
-
-            field, 
-
-            offline_access, 
-
-            public.user, 
-
-            user, 
-
-            user:management, 
-
-Reports: 
-
-            report  
 
  ![Screenshot of Select Scopes.](media/bamboohr-connector/bamboohr-selectscopes.png)
  ![Screenshot of Scope Selection.](media/bamboohr-connector/bamboohr-scopeselection.png)
 
-**5. Get App Client Id and App Secret**
+**5. Get App Client ID and App Secret**
 
-Navigate to the app credentials section to get the App client id and App client secret.   
- ![Screenshot of Client Id and Client Secret Section.](media/bamboohr-connector/bamboohr-clientidandsecret.png)
+Navigate to the app credentials section to get the App client ID and App client secret.   
+ ![Screenshot of Client ID and Client Secret Section.](media/bamboohr-connector/bamboohr-clientidandsecret.png)
 
 
 ## Get started
@@ -117,18 +85,18 @@ Navigate to the app credentials section to get the App client id and App client 
 
 ### 1. Choose a display name
 
-Choose a display name e.g., BambooHR Profiles, that helps users easily recognize associated profiles in a Copilot response.
+Choose a display name, for example, BambooHR Profiles, that helps users easily recognize associated profiles in a Copilot response.
 
 ### 2. Add the instance URL
 
-Enter your BambooHR instance URL e.g., https://contoso.bamboohr.com/ 
+Enter your BambooHR instance URL, for example, https://contoso.bamboohr.com/ 
 
 ### 3. Choose authentication type
 
-Select OAuth 2.0 from list of authentication types, and enter the client id and client secret from BambooHR App portal.
+Select OAuth 2.0 from list of authentication types, and enter the client ID and client secret from BambooHR App portal.
 
 <br>
-For other settings like Access permissions, Schema, and Crawl frequency, we have set defaults based on what works best with BambooHR people data. The default values are: 
+For other settings like Access permissions, Schema, and Crawl frequency, we set defaults based on what works best with BambooHR people data. The default values are: 
 
 
 | Users ||
@@ -145,18 +113,18 @@ For other settings like Access permissions, Schema, and Crawl frequency, we have
 | Name | Employee's Full Names | names->displayName |
 | Email | Employee's Work Email Address | emails->address[type='work']<br><br>*Note: Email is converted to the Microsoft Entra objectId of the end user and is used for internal processing.* |
 | Birth Date | Employee's Date of Birth | anniversaries->date[type='birthday'] |
-| Job Information Department | Employee's Job Department e.g., Human Resources | positions->detail->company->department |
-| Job Information Division | Employee's Job Division e.g., North America | position->detail->company->division |
+| Job Information Department | Employee's Job Department, for example, Human Resources | positions->detail->company->department |
+| Job Information Division | Employee's Job Division, for example, North America | position->detail->company->division |
 | Employee Number | Employee's Number | position->detail->employeeId |
 | Employee Eeid | Employee's ID in BambooHR | webAccounts->userId<br><br>*Note: The employee's eeid is also utilized internally to periodically check for any updates for a given Employee in BambooHR.* |
-| Employment Status | Employee's Status e.g., Full-Time, Contractor Etc. | position->detail->employeeType |
+| Employment Status | Employee's Status, for example, Full-Time, Contractor Etc. | position->detail->employeeType |
 | Original Hire Date Time | Employee's data of hire | anniversaries->date[type='originalHireDate'] |
-| Job Information Job Title | Employee's Job Title e.g., Senior HR Administrator | positions->detail->jobTitle |
-| Supervisor Id | Employee's Manager Identifier | positions->manager->userId<br><br>*Note: The supervisor ID is used to find the supervisor's email, which is then converted to the Microsoft Entra objectId of the manager for internal processing.* |
+| Job Information Job Title | Employee's Job Title, for example, Senior HR Administrator | positions->detail->jobTitle |
+| Supervisor ID | Employee's Manager Identifier | positions->manager->userId<br><br>*Note: The supervisor ID is used to find the supervisor's email, which is then converted to the Microsoft Entra objectId of the manager for internal processing.* |
 | Mobile Phone | Employee's Mobile Phone | phones->number(type=mobile) |
 | Work Phone | Employee's Work Phone | phones->number(type=work) |
 | Job Information Location | Employee's Office Location | positions->positionDetail->companyDetail->officeLocation |
-| Status | Employee's Status e.g., Active or Inactive | N/A<br><br>*Note: Internal use for filtering inactive employees, ensuring they are excluded from BambooHR data retrieval.* |
+| Status | Employee's Status, for example, Active or Inactive | N/A<br><br>*Note: Internal use for filtering inactive employees, ensuring they're excluded from BambooHR data retrieval.* |
 
 <br> 
 
@@ -169,7 +137,7 @@ For other settings like Access permissions, Schema, and Crawl frequency, we have
 
 ## Custom setup
 
-Custom setup is for admins who want to edit the default values for settings. When you choose Custom setup, you see other three tabs: Users, Content and Sync.
+Custom setup is for admins who want to edit the default values for settings. When you choose Custom setup, you see other three tabs: Users, Content, and Sync.
 
 **Users**
 
@@ -179,7 +147,7 @@ The people connector only supports mapping your data source identities with Micr
 
 **Content**
 
-The people connector does not support the addition of new properties or the removal of existing properties on this tab. Within this tab, there is a property named AnnotationSerialized that encompasses all the default properties previously mentioned.
+The people connector doesn't support the addition of new properties or the removal of existing properties on this tab. Within this tab, there's a property named AnnotationSerialized that encompasses all the default properties previously mentioned.
 
 
 **Sync**
@@ -191,7 +159,7 @@ The refresh interval determines how often your data is synced between the data s
 
 **1. Invalid Credentials. Verify the credential information from BambooHR App**
 
-Ensure that the scopes are correctly configured in the BambooHR App, and verify that the client ID and secret entered match those in the BambooHR App. 
+Ensure that the scopes are correctly configured in the BambooHR App, and verify that the client ID and secret entered match in the BambooHR App. 
 
 ## Next steps
 
