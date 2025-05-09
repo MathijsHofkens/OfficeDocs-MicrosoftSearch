@@ -1,6 +1,6 @@
 --- 
 title: "Zoom meetings Graph connector for Microsoft Search and Copilot" 
-ms.author: efgilboa
+ms.author: rerabo
 author: vivg
 manager: ereza
 audience: Admin
@@ -22,9 +22,6 @@ With the Microsoft Graph connector for Zoom meetings, your organization can inde
 
 This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors a Zoom meetings Graph connector.
 
->[!NOTE]
->The Zoom meetings Graph connector is in preview. If you wish to get early access to try it, sign up using [this form](https://forms.office.com/r/JniPmK5bzm).
-
 ## Capabilities
 - Index meeting related data such as transcript and summary. 
 - Enable your end users to ask questions related to their Zoom meetings in Copilot. 
@@ -35,7 +32,7 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 
 ## Prerequisites
 - You must be the **search admin** for your organization's Microsoft 365 tenant.
-- **Zoom account**: To connect to your Zoom meetings data, you need an account which supports cloud recordings.
+- **Zoom account**: To connect to your Zoom meetings data, you must have a paid Zoom plan (such as Pro, Business, or Enterprise) with cloud recording enabled.
 - **Create a Zoom marketplace app for the Microsoft Graph connector**: By creating a Zoom marketplace app, you can allow and control the access by the Graph connector to your Zoom meetings data.
 
 ### Create Zoom marketplace app

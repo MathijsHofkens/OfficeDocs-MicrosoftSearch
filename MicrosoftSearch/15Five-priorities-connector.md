@@ -23,9 +23,6 @@ The 15Five Priorities Microsoft Graph connector allows your organization to inde
 
 This documentation is for Microsoft 365 administrators or anyone who configures, runs, and monitors 15Five Priorities Microsoft Graph connector. 
 
->[!NOTE]
->The 15Five Priorities Microsoft Graph connector is in preview. To request early access, submit the following [request form](https://forms.office.com/r/JniPmK5bzm).
-
 ## Capabilities
 - Access 15Five priorities by using the power of semantic search.
 - Customize your crawl frequency.

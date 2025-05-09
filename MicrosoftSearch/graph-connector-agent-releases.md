@@ -9,17 +9,22 @@ ms.topic: article
 ms.service: mssearch 
 ms.localizationpriority: medium 
 search.appverid: 
-description: "Release history of Microsoft Graph connector agent, which is used to index the on-premises data sources using Microsoft built connectors" 
+description: "Release history of Microsoft Graph connector agent, which is used to index the on-premises data sources using Microsoft-built connectors" 
 ms.date: 01/13/2025
 --- 
 
 # Release history for Microsoft Graph connector agent
 
-Indexing on-premises data sources require you to install *Microsoft Graph connector agent* software. It allows for secure data transfer between on-premises data and the connector APIs.
+Indexing on-premises data sources requires you to install *Microsoft Graph connector agent* software. It allows for secure data transfer between on-premises data and the connector APIs.
 
 For help on installation, refer to [this page](graph-connector-agent.md#installation).
 
 [Download latest Graph Connector Agent](https://aka.ms/gca)
+
+## Version 3.1.7.0 (*March 31, 2025*)
+
+* Bug fixes for SharePoint, Confluence, Jira, and Enterprise Websites on-prem connectors.
+* Added support for using the URL of SharePoint items as the searchable item ID.
 
 ## Version 3.1.4.0 (*January 13, 2025*)
 
@@ -48,11 +53,11 @@ For help on installation, refer to [this page](graph-connector-agent.md#installa
 
 ## Version 3.0.0.0 (*August 08, 2024*)
 
-* This update is with a critical security patch that enhances the secure communication between endpoints. We recommend you to upgrade to this version immediately as Microsoft will deprecate the previous versions by September 30, 2024. For more details, follow the communication from Microsoft in the Message Center.
+* This update includes a critical security patch that enhances the secure communication between endpoints. We recommend that you upgrade to this version immediately as Microsoft will deprecate the previous versions by September 30, 2024. For more details, follow the communication from Microsoft in the Message Center.
 
 ## Version 2.4.0.0 (*July 05, 2024*)
 
-* Support for .NET 8. The .NET 8 upgrade flow for the host machine will kick in after you hit Upgrade button in the connection pane. Make sure to upgrade the machine's version to .NET 8 to avoid unexpected behavior. If there is a failure in the upgrade in the process, do a manual upgrade to the .NET version before upgrading the agent.
+* Support for .NET 8. The .NET 8 upgrade flow for the host machine will kick in after you hit the Upgrade button in the connection pane. Make sure to upgrade the machine's version to .NET 8 to avoid unexpected behavior. If there is a failure in the upgrade process, do a manual upgrade to the .NET version before upgrading the agent.
 * Feature to show elaborate index statistics for a connection. This feature gives more information about the current state of items in the index. [Learn more.](connector-view-details.md#view-connection-statistics)
 * Bug fixes and reliability improvements.
 
@@ -80,8 +85,8 @@ For help on installation, refer to [this page](graph-connector-agent.md#installa
 
 ## Version 2.3.2.0 (*March 20, 2024*)
 
-* Enterprises Websites Graph Connector: Added error reporting for redirection related errors.
-* Fixed identity sync crawls errors.
+* Enterprise Websites Microsoft Graph connector: Added error reporting for redirection-related errors.
+* Fixed identity sync crawl errors.
 * Other bug fixes and reliability improvements.
 
 ## Version 2.3.1.0 (*January 29, 2024*)

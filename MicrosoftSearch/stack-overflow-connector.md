@@ -51,7 +51,7 @@ Use your organization's Stack Overflow Instance URL. For Stack Overflow for Team
 ### 3. Authentication Type
 To authenticate and sync content from Stack Overflow, choose one of the two supported methods:<br>
    - If you use Stack Overflow for Teams **Enterprise**, select OAuth. To learn more about authentication and authorization in Stack Overflow for Teams **Enterprise**, [click here](https://stackoverflowteams.help/articles/8043418-stack-overflow-for-teams-enterprise-api-v3#authentication-and-authorization).<br>
-   - If you use Stack Overflow for Teams **Business**, select Basic authentication. To learn more about Stack Overflow for Teams **Business**, [click here](https://stackoverflowteams.help/articles/7913768-stack-overflow-for-teams-api-v3#authentication-and-authorization).
+   - If you use Stack Overflow for Teams **Business**, select Basic authentication. To learn more about authentication and authorization in Stack Overflow for Teams **Business**, [click here](https://stackoverflowteams.help/articles/7913768-stack-overflow-for-teams-api-v3#authentication-and-authorization).
  
 ### 4. Roll out to limited audience
 Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. To know more about limited rollout, see [staged rollout](staged-rollout-for-graph-connectors.md).
@@ -76,9 +76,9 @@ Here, you can add or remove available properties from your Stack Overflow data s
 
 **Source Property** | **Semantic Label** |**Description**| **Schema**
 --- | ---- | --- | ---
+BestAnswerBody | | Best answer content (accepted by the question author as the most helpful or accurate) | Retrieve, Search
 BestAnswerAuthorId |  | ID of the best answer | Retrieve
 BestAnswerAuthorName | | Name of the author who provided the best answer | Retrieve, Search
-BestAnswerBody | | Best answer content | Retrieve, Search
 BestAnswerCreatedAt | | Date when the best answer was created | Query, Refine, Retrieve
 CreationDate | Created date time | Date when the post was created (question was asked) | Query, Refine, Retrieve
 LastActivityDate | Last modified date time | Date when the post was last modified | Query, Refine, Retrieve

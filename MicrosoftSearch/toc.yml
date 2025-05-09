@@ -79,10 +79,6 @@ items:
       - name: Prebuilt Microsoft Graph connectors
         href: pre-built-connectors-overview.md
         items:
-        - name: Aha! Cloud
-          items:
-          - name: Setup
-            href: aha-cloud-connector.md
         - name: 15Five High Fives
           items:
           - name: Setup
@@ -99,6 +95,10 @@ items:
           items:
           - name: Setup
             href: aem-assets-cloud-connector.md        
+        - name: Aha!
+          items:
+          - name: Setup
+            href: aha-cloud-connector.md
         - name: Asana
           items:
           - name: Setup
@@ -151,10 +151,18 @@ items:
               href: troubleshoot-confluence-onpremises-connector.md
             - name: License agreement for Microsoft Graph connector plugin for Confluence
               href: graph-connector-atlassian-plugin-eula.md
+        - name: DataStax
+          items:
+          - name: Setup
+            href: datastax-graph-connector.md
         - name: Dropbox
           items:
           - name: Setup
             href: Dropbox-connector.md
+        - name: Freshservice
+          items:
+          - name: Setup
+            href: freshservice-connector.md
         - name: Jira Cloud
           items:
             - name: Setup
@@ -175,6 +183,10 @@ items:
             href: csv-connector.md
           - name: Troubleshooting
             href: troubleshoot-csv-connector.md
+        - name: Egnyte
+          items:
+          - name: Setup
+            href: egnyte-connector.md
         - name: Enterprise websites Cloud
           items:
           - name: Setup
@@ -215,10 +227,6 @@ items:
           items:
           - name: Setup
             href: guru-connector.md       
-        - name: iManage Cloud
-          items:
-          - name: Setup
-            href: imanage-cloud-connector.md     
         - name: MediaWiki
           items:
           - name: Setup
@@ -243,10 +251,12 @@ items:
           items:
           - name: Setup
             href: postgresql-connector.md    
-        - name: PagerDuty Escalation Policies
+        - name: PagerDuty
           items:
-          - name: Setup
+          - name: Setup PagerDuty Escalation Policies
             href: PagerDuty-Escalation-Policies-connector.md
+          - name: Setup PagerDuty Schedules
+            href: pagerduty-schedules-connector.md
         - name: Salesforce CRM
           items:
           - name: Setup
@@ -315,10 +325,12 @@ items:
             href: veeva-vault-promoMats-connector.md
           - name: Troubleshooting
             href: troubleshoot-veeva-vault-connectors.md
-        - name: WordPress.org (on-prem)
+        - name: WordPress
           items:
-          - name: Setup
+          - name: Setup WordPress.org (on-prem)
             href: WordPress-onprem-connector.md
+          - name: WordPress.com
+            href: wordpress-cloud-connector.md
         - name: Zendesk Help Center
           items:
           - name: Setup
@@ -377,23 +389,9 @@ items:
       href: manage-classic-spo-pages.md
   - name: Microsoft Search in Bing
     items:
-    - name: Overview
-      href: overview-microsoft-search-bing.md
     - name: Retirement of Microsoft Search in Bing
       href: retirement-microsoft-search-bing.md
-    - name: Security and Privacy
-      href: security-for-search.md
-    - name: Use Windows Search to find work or school results
-      href: use-windows-search-find-work-school-results.md             
-    - name: Customize address bar shortcuts for Microsoft Edge
-      href: edge-shortcuts.md
-    - name: Add a search box to your intranet site
-      href: add-a-search-box-to-your-intranet-site.md
-    - name: Select a school or work search experience
-      href: select-work-school-search-experience.md
     - name: Make Microsoft Edge the default browser
       href: /deployedge/edge-default-browser
-    - name: Make Bing the default search engine
-      href: set-default-search-engine.md
     - name: Make Bing.com the default home page
       href: set-default-homepage.md

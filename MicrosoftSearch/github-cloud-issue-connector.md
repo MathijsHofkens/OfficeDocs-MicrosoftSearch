@@ -33,7 +33,9 @@ This article is intended for Microsoft 365 administrators or anyone who configur
 
 ## Prerequisites
 1. Make sure that your GitHub instance is accessible via API.
-2. Set up a GitHub App for authentication. You can specify which organizations and repositories a GitHub app is authorized to access, effectively determining what content the connector will crawl.
+2. Set up a GitHub App for authentication. You can specify which organizations and repositories a GitHub app is authorized to access, effectively determining what content the connector will crawl. Specify the following redirect URLs when configuring GitLab authentication:
+    - For Microsoft 365 Enterprise, use `https://gcs.office.com/v1.0/admin/oauth/callback`
+    - For Microsoft 365 Government, use `https://gcsgcc.office.com/v1.0/admin/oauth/callback`
 3. Generate a **Client ID** and **Client secret** from the GitHub App for authentication. 
 4. Verify that the user account used for authentication has access to the repositories and issues to be indexed.
 5. Verify that the GitHub App has the following permissions configured to read issues:

@@ -1,5 +1,5 @@
 ---
-title: "BambooHR Microsoft Graph connector"
+title: "BambooHR Microsoft 365 Copilot connector"
 ms.author: shivansingh
 author: shivaniolso
 manager: helgesol
@@ -12,24 +12,21 @@ search.appverid:
 - BFB160
 - MET150
 - MOE150
-description: "Set up the BambooHR Microsoft Graph connector for Microsoft Search and Microsoft 365 Copilot."
+description: "Set up the BambooHR Microsoft 365 Copilot connector."
 ms.date: 04/07/2025
 ---
 
-# BambooHR Microsoft Graph connector
+# BambooHR Microsoft 365 Copilot connector
 
-The BambooHR Microsoft Copilot People connector allows organizations to index profiles from BambooHR into Microsoft Graph, making them accessible across Microsoft 365 experiences, including Microsoft 365 Copilot. 
+The BambooHR Microsoft 365 Copilot connector allows organizations to index profiles from BambooHR into Microsoft Graph, making them accessible across Microsoft 365 experiences, including Microsoft 365 Copilot. 
 
-This guide is for Microsoft 365 administrators or anyone responsible for configuring, managing, and monitoring the BambooHR Microsoft Copilot People connector. 
-
+This guide is for Microsoft 365 administrators or anyone responsible for configuring, managing, and monitoring the BambooHR Copilot connector. 
 
 ## Capabilities
-The BambooHR People connector enables the following capabilities:
 
 - Index profile information from BambooHR.
 - Enable your end users to ask questions related to BambooHR profiles. 
 - Use [Semantic search](https://learn.microsoft.com/en-us/microsoftsearch/semantic-index-for-copilot) in Copilot to enable users to find relevant profiles based on keywords, personal preferences, and social connections. 
-
 
 ## Limitations
 
@@ -37,30 +34,15 @@ The BambooHR People connector enables the following capabilities:
 
 ## Prerequisites
 
-Before you create a BambooHR connector, you must:
-
-**1. Setup Application on BambooHR Developer Portal**  
-
-Companies and developers need to work with BambooHR to get access to BambooHR developer portal.
-
-**2. Configure a BambooHR app**  
-
-Configure a BambooHR app with a unique App name 
+1. Set up the application on BambooHR developer portal.
+2. Configure a BambooHR app with a unique App name 
  ![Screenshot of Add application.](media/bamboohr-connector/bamboohr-addapp.png)
-
-
-**3. Add direct URLs**
-
-Add the following links into the "Redirect URLs" field in the App details section:   
-
-For Microsoft 365 Enterprise, copy and paste: https://gcs.office.com/v1.0/admin/oauth/callback 
+3. Add direct URLs** into the "Redirect URLs" field in the app details section.
+   For M365 Enterprise, copy and paste: https://gcs.office.com/v1.0/admin/oauth/callback 
 
  ![Screenshot of App Details.](media/bamboohr-connector/bamboohr-appdetails.png)
  ![Screenshot of Direct Urls form.](media/bamboohr-connector/bamboohr-redirecturis.png)
-
-**4. Add Application Scopes**  
-
-On the Application Scopes section, select the following scopes with read access only:  
+4. On the application scopes field, select the following scopes with read access only:  
 
 | Category | Required Scopes |
 | :--- | :--- |
@@ -73,15 +55,14 @@ On the Application Scopes section, select the following scopes with read access 
  ![Screenshot of Select Scopes.](media/bamboohr-connector/bamboohr-selectscopes.png)
  ![Screenshot of Scope Selection.](media/bamboohr-connector/bamboohr-scopeselection.png)
 
-**5. Get App Client ID and App Secret**
 
-Navigate to the app credentials section to get the App client ID and App client secret.   
- ![Screenshot of Client ID and Client Secret Section.](media/bamboohr-connector/bamboohr-clientidandsecret.png)
+5. Navigate to the **app credentials** to get the App client ID and App client secret.   
+ ![Screenshot of Client Id and Client Secret Section.](media/bamboohr-connector/bamboohr-clientidandsecret.png)
 
 
 ## Get started
 
-[Add BambooHR people connector.](https://admin.microsoft.com/adminportal/home?#/MicrosoftSearch/Connectors/add)
+[Add BambooHR Copilot connector.](https://admin.microsoft.com/adminportal/home?#/MicrosoftSearch/Connectors/add)
 
 ### 1. Choose a display name
 
@@ -93,7 +74,7 @@ Enter your BambooHR instance URL, for example, https://contoso.bamboohr.com/
 
 ### 3. Choose authentication type
 
-Select OAuth 2.0 from list of authentication types, and enter the client ID and client secret from BambooHR App portal.
+Select OAuth 2.0 from the list of authentication types, and enter the client ID and client secret from BambooHR App portal.
 
 <br>
 For other settings like Access permissions, Schema, and Crawl frequency, we set defaults based on what works best with BambooHR people data. The default values are: 
@@ -137,32 +118,32 @@ For other settings like Access permissions, Schema, and Crawl frequency, we set 
 
 ## Custom setup
 
-Custom setup is for admins who want to edit the default values for settings. When you choose Custom setup, you see other three tabs: Users, Content, and Sync.
+In custom setup you can edit any of the default values for users, content, and sync.
 
-**Users**
+###Users
 
-The BambooHR people connector only supports data visible to Everyone. This means indexed data appears in the search results for all users.
-The people connector only supports mapping your data source identities with Microsoft Entra ID by checking whether the email address of BambooHR profiles is the same as UserPrincipalName (UPN), or Mail of users in Microsoft Entra ID. 
-
-
-**Content**
-
-The people connector doesn't support the addition of new properties or the removal of existing properties on this tab. Within this tab, there's a property named AnnotationSerialized that encompasses all the default properties previously mentioned.
+The BambooHR Copilot connector only supports data visible to Everyone. This means indexed data appears in the search results for all users.
+The BambooHR Copilot connector only supports mapping your data source identities with Microsoft Entra ID by checking whether the email address of BambooHR profiles is the same as UserPrincipalName (UPN), or Mail of users in Microsoft Entra ID. 
 
 
-**Sync**
+### Content
+
+The BambooHR Copilot connector does not support the addition of new properties or the removal of existing properties on this tab. Within this tab, there is a property named AnnotationSerialized that encompasses all the default properties previously mentioned.
+
+
+### Sync
 
 The refresh interval determines how often your data is synced between the data source and the people connector index. There are two types of refresh intervals – full crawl and incremental crawl. For more information, see [refresh settings](https://learn.microsoft.com/en-us/microsoftsearch/configure-connector#guidelines-for-sync-settings).
 
 
 ## Troubleshooting
 
-**1. Invalid Credentials. Verify the credential information from BambooHR App**
+1. Invalid Credentials. Verify the credential information from BambooHR App.
 
 Ensure that the scopes are correctly configured in the BambooHR App, and verify that the client ID and secret entered match in the BambooHR App. 
 
 ## Next steps
 
-After you publish your connection, you can review the status under the **Data sources** tab in the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).
+After you publish your connection, you can review the status under **Data sources** in the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).
 
 If you have issues or want to provide feedback, see [Microsoft Graph support](https://developer.microsoft.com/en-us/graph/support).
