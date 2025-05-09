@@ -40,8 +40,8 @@ This guide is for Microsoft 365 administrators or anyone responsible for configu
 3. Add direct URLs** into the "Redirect URLs" field in the app details section.
    For M365 Enterprise, copy and paste: https://gcs.office.com/v1.0/admin/oauth/callback 
 
- ![Screenshot of App Details.](media/bamboohr-connector/bamboohr-appdetails.png)
- ![Screenshot of Direct Urls form.](media/bamboohr-connector/bamboohr-redirecturis.png)
+   ![Screenshot of App Details.](media/bamboohr-connector/bamboohr-appdetails.png)
+   ![Screenshot of Direct Urls form.](media/bamboohr-connector/bamboohr-redirecturis.png)
 4. On the application scopes field, select the following scopes with read access only:  
 
 | Category | Required Scopes |
