@@ -1,7 +1,7 @@
 ---
 title: "BambooHR Microsoft 365 Copilot connector"
-ms.author: shivansingh
-author: shivaniolso
+ms.author: zmwangi
+author: zarrko
 manager: helgesol
 audience: Admin
 ms.audience: Admin
@@ -27,7 +27,7 @@ This guide is for Microsoft 365 administrators or anyone responsible for configu
 
 - Index profile information from BambooHR.
 - Enable your end users to ask questions related to BambooHR profiles. 
-- Use [Semantic search](https://learn.microsoft.com/en-us/microsoftsearch/semantic-index-for-copilot) in Copilot to enable users to find relevant profiles based on keywords, personal preferences, and social connections. 
+- Use [Semantic search](https://learn.microsoft.com/microsoftsearch/semantic-index-for-copilot) in Copilot to enable users to find relevant profiles based on keywords, personal preferences, and social connections. 
 
 ## Limitations
 
@@ -92,7 +92,7 @@ For other settings like Access permissions, Schema, and Crawl frequency, we set 
 
 | Schema | | |
 | :--- | :--- | :--- |
-| **Source Property** | **Description** | **[Property in Microsoft 365 User Profile Schema](https://learn.microsoft.com/en-us/graph/api/resources/profile?view=graph-rest-beta)** |
+| **Source Property** | **Description** | **[Property in Microsoft 365 User Profile Schema](https://learn.microsoft.com/graph/api/resources/profile)** |
 | First Name | Employee's First Name | names->first |
 | Last Name | Employee's Last Name | names->last |
 | Name | Employee's Full Names | names->displayName |
@@ -138,7 +138,7 @@ The BambooHR Copilot connector does not support the addition of new properties o
 
 ### Sync
 
-The refresh interval determines how often your data is synced between the data source and the people connector index. There are two types of refresh intervals – full crawl and incremental crawl. For more information, see [refresh settings](https://learn.microsoft.com/en-us/microsoftsearch/configure-connector#guidelines-for-sync-settings).
+The refresh interval determines how often your data is synced between the data source and the people connector index. There are two types of refresh intervals – full crawl and incremental crawl. For more information, see [refresh settings](https://learn.microsoft.com/microsoftsearch/configure-connector#guidelines-for-sync-settings).
 
 
 ## Troubleshooting
@@ -151,4 +151,4 @@ Ensure that the scopes are correctly configured in the BambooHR App, and verify 
 
 After you publish your connection, you can review the status under **Data sources** in the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).
 
-If you have issues or want to provide feedback, see [Microsoft Graph support](https://developer.microsoft.com/en-us/graph/support).
+If you have issues or want to provide feedback, see [Microsoft Graph support](https://developer.microsoft.com/graph/support).
