@@ -21,10 +21,17 @@ For help on installation, refer to [this page](graph-connector-agent.md#installa
 
 [Download latest Graph Connector Agent](https://aka.ms/gca)
 
+## Version 3.1.8.0 (*April 28, 2025*)
+
+* Bug fixes and reliability improvements.
+
 ## Version 3.1.7.0 (*March 31, 2025*)
 
-* Bug fixes for SharePoint, Confluence, Jira, and Enterprise Websites on-prem connectors.
-* Added support for using the URL of SharePoint items as the searchable item ID.
+* Bug fixes and reliability improvements.
+
+## Version 3.1.5.0 (*February 10, 2025*)
+
+* Bug fixes and reliability improvements.
 
 ## Version 3.1.4.0 (*January 13, 2025*)
 
