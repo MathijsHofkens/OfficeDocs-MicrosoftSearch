@@ -22,7 +22,6 @@ The BambooHR Microsoft 365 Copilot connector allows organizations to index profi
 
 This guide is for Microsoft 365 administrators or anyone responsible for configuring, managing, and monitoring the BambooHR Microsoft 365 Copilot connector. 
 
-
 ## Capabilities
 
 - Index profile information from BambooHR.
@@ -35,7 +34,7 @@ This guide is for Microsoft 365 administrators or anyone responsible for configu
 
 ## Prerequisites
 
-1. Set up the application on BambooHR developer portal.
+1. Set up the application on the BambooHR developer portal.
 2. Configure a BambooHR app with a unique App name 
  ![Screenshot of Add application.](media/bamboohr-connector/bamboohr-addapp.png)
 3. Add direct URLs** into the "Redirect URLs" field in the app details section.
@@ -47,19 +46,16 @@ This guide is for Microsoft 365 administrators or anyone responsible for configu
 
 | Category | Required scopes |
 | :--- | :--- |
-| **Claims** | <table><tr><td>email</td></tr><tr><td>openid</td></tr></table> |
-| **Employee** | <table><tr><td>employee</td></tr><tr><td>employee:contact</td></tr><tr><td>employee:identification</td></tr><tr><td>employee:job</td></tr><tr><td>employee:management</td></tr><tr><td>employee:name</td></tr><tr><td>employee_directory</td></tr></table> |
-| **Miscellaneous** | <table><tr><td>app</td></tr><tr><td>field</td></tr><tr><td>offline_access</td></tr><tr><td>public.user</td></tr><tr><td>user</td></tr><tr><td>user:management</td></tr></table> |
-| **Reports** | <table><tr><td>report</td></tr></table> |
-
+| Claims | <table><tr><td>email</td></tr><tr><td>openid</td></tr></table> |
+| Employee | <table><tr><td>employee</td></tr><tr><td>employee:contact</td></tr><tr><td>employee:identification</td></tr><tr><td>employee:job</td></tr><tr><td>employee:management</td></tr><tr><td>employee:name</td></tr><tr><td>employee_directory</td></tr></table> |
+| Miscellaneous | <table><tr><td>app</td></tr><tr><td>field</td></tr><tr><td>offline_access</td></tr><tr><td>public.user</td></tr><tr><td>user</td></tr><tr><td>user:management</td></tr></table> |
+| Reports | <table><tr><td>report</td></tr></table> |
 
  ![Screenshot of Select Scopes.](media/bamboohr-connector/bamboohr-selectscopes.png)
  ![Screenshot of Scope Selection.](media/bamboohr-connector/bamboohr-scopeselection.png)
 
-
 5. Navigate to the **app credentials** to get the App client ID and App client secret.   
  ![Screenshot of Client Id and Client Secret Section.](media/bamboohr-connector/bamboohr-clientidandsecret.png)
-
 
 ## Get started
 
@@ -78,49 +74,34 @@ Enter your BambooHR instance URL, for example, https://contoso.bamboohr.com/
 
 Select OAuth 2.0 from the list of authentication types, and enter the client ID and client secret from BambooHR App portal.
 
-<br>
-For other settings like Access permissions, Schema, and Crawl frequency, we set defaults based on what works best with BambooHR people data. The default values are: 
+For other settings, like Access Permissions, Data inclusion rules, Schema, Crawl frequency, etc., we set defaults based on what works best with data in Egnyte. The default values settings are as follows.
 
-
-| Users ||
-| :--- | :--- |
-| Item | Description |
-| Access permissions | Data is visible to everyone. |
-| Map identities | Data source identities mapped using Microsoft Entra IDs. <br><br> *Note: All data retrieved through this connector is visible to everyone in your Microsoft tenant. However, we aren't changing the system's behavior, such as respecting access restrictions. If a user is blocked from seeing another user's profile data, that profile data (including people connector data) won't be shared or stored in the blocked user's view. <br><br> Access-restricted data will be included in future updates when user-level permission controls are implemented.*
- |
-
-<br>
-
-| Schema | | |
+|Page|Settings|Default values|
 | :--- | :--- | :--- |
-| Source property |Description | [Property in Microsoft 365 User Profile Schema](https://learn.microsoft.com/graph/api/resources/profile) |
-| First Name | Employee's First Name | names->first |
-| Last Name | Employee's Last Name | names->last |
+|Users | Access Permissions | All files that are accessible to anyone.|
+|Map identities| Data source identities mapped using Microsoft Entra IDs. *Note:** All data retrieved through this connector is visible to everyone in your Microsoft tenant. However, we aren't changing the system's behavior, such as respecting access restrictions. If a user is blocked from seeing another user's profile data, that profile data (including people connector data) won't be shared or stored in the blocked user's view. Access-restricted data will be included in future updates when user-level permission controls are implemented.|
+|Sync | Incremental crawl | Frequency: every 15 minutes.|
+|Sync | Full crawl | Frequency: every day.|
+
+| Schema property |Description | [Property in Microsoft 365 User Profile Schema](https://learn.microsoft.com/graph/api/resources/profile) |
+| :--- | :--- | :--- |
+| First name | Employee's First Name | names->first |
+| Last name | Employee's Last Name | names->last |
 | Name | Employee's Full Names | names->displayName |
 | Email | Employee's Work Email Address | emails->address[type='work']<br><br>*Note: Email is converted to the Microsoft Entra objectId of the end user and is used for internal processing.* |
-| Birth Date | Employee's Date of Birth | anniversaries->date[type='birthday'] |
-| Job Information Department | Employee's Job Department, for example, Human Resources | positions->detail->company->department |
-| Job Information Division | Employee's Job Division, for example, North America | position->detail->company->division |
-| Employee Number | Employee's Number | position->detail->employeeId |
+| Birth date | Employee's Date of Birth | anniversaries->date[type='birthday'] |
+| Job information department | Employee's Job Department, for example, Human Resources | positions->detail->company->department |
+| Job information division | Employee's Job Division, for example, North America | position->detail->company->division |
+| Employee number | Employee's Number | position->detail->employeeId |
 | Employee Eeid | Employee's ID in BambooHR | webAccounts->userId<br><br>*Note: The employee's eeid is also utilized internally to periodically check for any updates for a given Employee in BambooHR.* |
-| Employment Status | Employee's Status, for example, Full-Time, Contractor Etc. | position->detail->employeeType |
-| Original Hire Date Time | Employee's data of hire | anniversaries->date[type='originalHireDate'] |
-| Job Information Job Title | Employee's Job Title, for example, Senior HR Administrator | positions->detail->jobTitle |
+| Employment status | Employee's Status, for example, Full-Time, Contractor Etc. | position->detail->employeeType |
+| Original hire date time | Employee's data of hire | anniversaries->date[type='originalHireDate'] |
+| Job information job title | Employee's Job Title, for example, Senior HR Administrator | positions->detail->jobTitle |
 | Supervisor ID | Employee's Manager Identifier | positions->manager->userId<br><br>*Note: The supervisor ID is used to find the supervisor's email, which is then converted to the Microsoft Entra objectId of the manager for internal processing.* |
-| Mobile Phone | Employee's Work Mobile Phone | phones->number(type=mobile) |
-| Work Phone | Employee's Work Phone | phones->number(type=work) |
-| Job Information Location | Employee's Office Location | positions->positionDetail->companyDetail->officeLocation |
+| Mobile phone | Employee's Work Mobile Phone | phones->number(type=mobile) |
+| Work phone | Employee's Work Phone | phones->number(type=work) |
+| Job information location | Employee's Office Location | positions->positionDetail->companyDetail->officeLocation |
 | Status | Employee's Status, for example, Active or Inactive | N/A<br><br>*Note: Internal use for filtering inactive employees, ensuring they're excluded from BambooHR data retrieval.* |
-
-<br> 
-
-
-| Sync ||
-| :--- | :--- |
-| Item | Description |
-| Incremental crawl | Frequency: every 15 minutes. |
-| Full crawl | Frequency: every day. |
-
 
 ## Custom setup
 
@@ -131,16 +112,13 @@ In custom setup you can edit any of the default values for users, content, and s
 The BambooHR Copilot connector only supports data visible to Everyone. This means indexed data appears in the search results for all users.
 The BambooHR Copilot connector only supports mapping your data source identities with Microsoft Entra ID by checking whether the email address of BambooHR profiles is the same as UserPrincipalName (UPN), or Mail of users in Microsoft Entra ID. 
 
-
 ### Content
 
 The BambooHR Copilot connector doesn't support the addition of new properties or the removal of existing properties on this tab. Within this tab, there's a property named AnnotationSerialized that encompasses all the default properties previously mentioned.
 
-
 ### Sync
 
 The refresh interval determines how often your data is synced between the data source and the people connector index. There are two types of refresh intervals – full crawl and incremental crawl. For more information, see [refresh settings](https://learn.microsoft.com/microsoftsearch/configure-connector#guidelines-for-sync-settings).
-
 
 ## Troubleshooting
 
