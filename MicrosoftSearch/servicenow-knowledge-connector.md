@@ -29,9 +29,9 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
    - How to create a new VPN connection?
    - How do I apply for leaves?
 - Use [Semantic search in Copilot](semantic-index-for-copilot.md) to enable users to find relevant content based on keywords, personal preferences, and social connections.
+- Support for [Advanced user criteria permissions](https://docs.servicenow.com/bundle/xanadu-servicenow-platform/page/product/knowledge-management/task/create-user-criteria-record-in-knowledge-management.html).
 
 ## Limitations
-- Doesn't support [Advanced scripts](https://docs.servicenow.com/bundle/xanadu-servicenow-platform/page/product/knowledge-management/task/create-user-criteria-record-in-knowledge-management.html).
 - If both Knowledge base and Knowledge article level permissions are defined, then only article-level permissions are honored.
 - Does not index attachments.
 
@@ -62,7 +62,7 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
    You can **create and assign a role** for the service account you use to connect with Microsoft Search. [Learn how to assign role for ServiceNow accounts](https://docs.servicenow.com/bundle/xanadu-platform-administration/page/administer/users-and-groups/task/t_AssignARoleToAUser.html). Read access to the tables can be assigned on the created role. To learn about setting read access to table records, see [Securing Table Records](https://developer.servicenow.com/dev.do#!/learn/learning-plans/xanadu/new_to_servicenow/app_store_learnv2_securingapps_xanadu_creating_and_editing_access_controls). 
 
    If you want to index properties from [extended tables](https://docs.servicenow.com/bundle/xanadu-platform-administration/page/administer/table-administration/concept/table-extension-and-classes.html) of *kb_knowledge*, provide read access to sys_dictionary and sys_db_object. Access to these tables is optional. You can index *kb_knowledge* table properties without access to the two additional tables.
-
+- **Scripted REST API**: If your ServiceNow instance uses **Advanced Scripts** in your Knowledge Base or Article-level user criteria, you'll need to use the **Advanced** flow. You will also need to create a Scripted REST API Endpoint. For more details, see [Use Advanced Flow for Microsoft Graph Connector for ServiceNow Knowledge](/MicrosoftSearch/servicenow-knowledge-advanced-flow).
 ## Get started
 
 This video provides a step-by-step guide on adding the ServiceNow Knowledge Microsoft Graph connector.
@@ -73,11 +73,16 @@ This video provides a step-by-step guide on adding the ServiceNow Knowledge Micr
 
 A display name is used to identify each reference in Copilot, helping users easily recognize the associated file or item. Display name also signifies trusted content. Display name is also used as a [content source filter](/MicrosoftSearch/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize.
 
-### 2. ServiceNow URL
+### 2. Select Simple or Advanced based on your user criteria setup
+
+The Microsoft Graph connector for ServiceNow Knowledge supports two flows for user criteria permissions: **Simple** and **Advanced**. The default is **Simple**. If your ServiceNow instance uses **Advanced Scripts** in your Knowledge Base or Article-level user criteria, you'll need to use the **Advanced** flow. This ensures accurate permissions handling when ingesting content into Microsoft Graph.
+
+
+### 3. ServiceNow URL
 
 To connect to your ServiceNow data, you need your organization's ServiceNow instance URL. Your organization's ServiceNow instance URL typically looks like `https://your-organization-name.service-now.com`.
 
-### 3. Authentication type
+### 4. Authentication type
 
 To authenticate and sync content from ServiceNow, choose **one of three** supported methods:
 
@@ -212,7 +217,11 @@ To authenticate and sync content from ServiceNow, choose **one of three** suppor
 
    </details>
 
-### 4. Rollout to a limited audience
+### 5. API Namespace (if you are using Advanced flow)
+If you are using the **Advanced** flow, enter the API namespace that you created in your ServiceNow instance. For more details, see [Advanced Flow for Microsoft Graph Connector for ServiceNow Knowledge](/MicrosoftSearch/servicenow-knowledge-advanced-flow).
+
+
+### 6. Rollout to a limited audience
 
 Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. To know more about limited rollout, click [here](/MicrosoftSearch/staged-rollout-for-graph-connectors).
 
