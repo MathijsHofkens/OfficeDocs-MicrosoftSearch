@@ -63,7 +63,8 @@ This guide is for Microsoft 365 administrators or anyone responsible for configu
 
 ## Get started
 
-[Add BambooHR Copilot connector.](https://admin.microsoft.com/adminportal/home?#/MicrosoftSearch/Connectors/add)
+[Add BambooHR People Copilot connector.](https://admin.microsoft.com/adminportal/home?#/MicrosoftSearch/Connectors/add)
+![Screenshot of Adding Connector from the Catalogue.](media/bamboohr-connector/bamboohr-addconnector.png)
 
 ### 1. Choose a display name
 
