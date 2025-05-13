@@ -84,7 +84,7 @@ For other settings like Access permissions, Schema, and Crawl frequency, we set 
 
 | Users ||
 | :--- | :--- |
-| **Item** | **Description** |
+| Item | Description |
 | Access permissions | Data is visible to everyone. |
 | Map identities | Data source identities mapped using Microsoft Entra IDs. <br><br> *Note: All data retrieved through this connector is visible to everyone in your Microsoft tenant. However, we aren't changing the system's behavior, such as respecting access restrictions. If a user is blocked from seeing another user's profile data, that profile data (including people connector data) won't be shared or stored in the blocked user's view. <br><br> Access-restricted data will be included in future updates when user-level permission controls are implemented.*
  |
@@ -117,9 +117,9 @@ For other settings like Access permissions, Schema, and Crawl frequency, we set 
 
 | Sync ||
 | :--- | :--- |
-| **Item** | **Description** |
-| Incremental Crawl | Frequency: Every 15 minutes. |
-| Full Crawl | Frequency: Every day. |
+| Item | Description |
+| Incremental crawl | Frequency: every 15 minutes. |
+| Full crawl | Frequency: every day. |
 
 
 ## Custom setup
