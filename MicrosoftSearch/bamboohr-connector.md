@@ -18,9 +18,9 @@ ms.date: 04/07/2025
 
 # BambooHR Microsoft 365 Copilot People Connector
 
-The BambooHR Microsoft Copilot People connector allows organizations to index profiles from BambooHR into Microsoft Graph, making them accessible across Microsoft 365 experiences, including Microsoft 365 Copilot. 
+The BambooHR Microsoft 365 Copilot connector allows organizations to index profiles from BambooHR into Microsoft Graph, making them accessible across Microsoft 365 experiences, including Microsoft 365 Copilot. 
 
-This guide is for Microsoft 365 administrators or anyone responsible for configuring, managing, and monitoring the BambooHR Microsoft Copilot People connector. 
+This guide is for Microsoft 365 administrators or anyone responsible for configuring, managing, and monitoring the BambooHR Microsoft 365 Copilot connector. 
 
 
 ## Capabilities
@@ -45,7 +45,7 @@ This guide is for Microsoft 365 administrators or anyone responsible for configu
    ![Screenshot of Direct Urls form.](media/bamboohr-connector/bamboohr-redirecturis.png)
 4. On the application scopes field, select the following scopes with read access only:  
 
-| Category | Required Scopes |
+| Category | Required scopes |
 | :--- | :--- |
 | **Claims** | <table><tr><td>email</td></tr><tr><td>openid</td></tr></table> |
 | **Employee** | <table><tr><td>employee</td></tr><tr><td>employee:contact</td></tr><tr><td>employee:identification</td></tr><tr><td>employee:job</td></tr><tr><td>employee:management</td></tr><tr><td>employee:name</td></tr><tr><td>employee_directory</td></tr></table> |
@@ -93,7 +93,7 @@ For other settings like Access permissions, Schema, and Crawl frequency, we set 
 
 | Schema | | |
 | :--- | :--- | :--- |
-| **Source Property** | **Description** | **[Property in Microsoft 365 User Profile Schema](https://learn.microsoft.com/graph/api/resources/profile)** |
+| Source property |Description | [Property in Microsoft 365 User Profile Schema](https://learn.microsoft.com/graph/api/resources/profile) |
 | First Name | Employee's First Name | names->first |
 | Last Name | Employee's Last Name | names->last |
 | Name | Employee's Full Names | names->displayName |
