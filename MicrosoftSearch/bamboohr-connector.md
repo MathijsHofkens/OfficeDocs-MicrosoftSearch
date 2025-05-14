@@ -1,5 +1,5 @@
 ---
-title: "BambooHR Microsoft 365 Copilot connector"
+title: "BambooHR Microsoft 365 Copilot People connector"
 ms.author: zmwangi
 author: zarrko
 manager: helgesol
@@ -12,15 +12,15 @@ search.appverid:
 - BFB160
 - MET150
 - MOE150
-description: "Set up the BambooHR Microsoft 365 Copilot connector."
+description: "Set up the BambooHR Microsoft 365 Copilot People connector."
 ms.date: 04/07/2025
 ---
 
-# BambooHR Microsoft 365 Copilot connector
+# BambooHR Microsoft 365 Copilot People connector
 
-The BambooHR Microsoft 365 Copilot connector allows organizations to index profiles from BambooHR into Microsoft Graph, making them accessible across Microsoft 365 experiences, including Microsoft 365 Copilot. 
+The BambooHR Microsoft 365 Copilot People connector allows organizations to index profiles from BambooHR into Microsoft Graph, making them accessible across Microsoft 365 experiences, including Microsoft 365 Copilot. 
 
-This guide is for Microsoft 365 administrators or anyone responsible for configuring, managing, and monitoring the BambooHR Microsoft 365 Copilot connector. 
+This guide is for Microsoft 365 administrators or anyone responsible for configuring, managing, and monitoring the BambooHR Microsoft 365 Copilot People connector. 
 
 ## Capabilities
 
@@ -59,8 +59,8 @@ This guide is for Microsoft 365 administrators or anyone responsible for configu
 
 ## Get started
 
-[Add BambooHR People Copilot connector.](https://admin.microsoft.com/adminportal/home?#/MicrosoftSearch/Connectors/add)
-![Screenshot of Adding Connector from the Catalogue.](media/bamboohr-connector/bamboohr-addconnector.png)
+[Add BambooHR people connector.](https://admin.microsoft.com/adminportal/home?#/MicrosoftSearch/Connectors/add)
+![Screenshot of Adding People Connector from the Catalogue.](media/bamboohr-connector/bamboohr-addconnector.png)
 
 ### 1. Choose a display name
 
@@ -79,7 +79,7 @@ For other settings, like Access Permissions, Data inclusion rules, Schema, Crawl
 |Page|Settings|Default values|
 | :--- | :--- | :--- |
 |Users | Access Permissions | All files that are accessible to anyone.|
-|Map identities| Data source identities mapped using Microsoft Entra IDs. *Note:** All data retrieved through this connector is visible to everyone in your Microsoft tenant. However, we aren't changing the system's behavior, such as respecting access restrictions. If a user is blocked from seeing another user's profile data, that profile data (including people connector data) won't be shared or stored in the blocked user's view. Access-restricted data will be included in future updates when user-level permission controls are implemented.|
+|Map identities| Data source identities mapped using Microsoft Entra IDs. *Note:** All data retrieved through this people connector is visible to everyone in your Microsoft tenant. However, we aren't changing the system's behavior, such as respecting access restrictions. If a user is blocked from seeing another user's profile data, that profile data (including people connector data) won't be shared or stored in the blocked user's view. Access-restricted data will be included in future updates when user-level permission controls are implemented.|
 |Sync | Incremental crawl | Frequency: every 15 minutes.|
 |Sync | Full crawl | Frequency: every day.|
 
@@ -109,12 +109,12 @@ In custom setup you can edit any of the default values for users, content, and s
 
 ### Users
 
-The BambooHR Copilot connector only supports data visible to Everyone. This means indexed data appears in the search results for all users.
-The BambooHR Copilot connector only supports mapping your data source identities with Microsoft Entra ID by checking whether the email address of BambooHR profiles is the same as UserPrincipalName (UPN), or Mail of users in Microsoft Entra ID. 
+The BambooHR people connector only supports data visible to Everyone. This means indexed data appears in the search results for all users.
+The BambooHR people connector only supports mapping your data source identities with Microsoft Entra ID by checking whether the email address of BambooHR profiles is the same as UserPrincipalName (UPN), or Mail of users in Microsoft Entra ID. 
 
 ### Content
 
-The BambooHR Copilot connector doesn't support the addition of new properties or the removal of existing properties on this tab. Within this tab, there's a property named AnnotationSerialized that encompasses all the default properties previously mentioned.
+The BambooHR people connector doesn't support the addition of new properties or the removal of existing properties on this tab. Within this tab, there's a property named AnnotationSerialized that encompasses all the default properties previously mentioned.
 
 ### Sync
 
