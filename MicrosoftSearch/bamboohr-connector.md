@@ -26,7 +26,7 @@ This guide is for Microsoft 365 administrators or anyone responsible for configu
 
 - Index profile information from BambooHR.
 - Enable your end users to ask questions related to BambooHR profiles. 
-- Use [Semantic search](https://learn.microsoft.com/microsoftsearch/semantic-index-for-copilot) in Copilot to enable users to find relevant profiles based on keywords, personal preferences, and social connections. 
+- Use [Semantic search](semantic-index-for-copilot.md) in Copilot to enable users to find relevant profiles based on keywords, personal preferences, and social connections. 
 
 ## Limitations
 
@@ -38,7 +38,7 @@ This guide is for Microsoft 365 administrators or anyone responsible for configu
 2. Configure a BambooHR app with a unique App name 
  ![Screenshot of Add application.](media/bamboohr-connector/bamboohr-addapp.png)
 3. Add direct URLs** into the "Redirect URLs" field in the app details section.
-   For M365 Enterprise, copy and paste: https://gcs.office.com/v1.0/admin/oauth/callback 
+   For M365 Enterprise, copy and paste: `https://gcs.office.com/v1.0/admin/oauth/callback` 
 
    ![Screenshot of App Details.](media/bamboohr-connector/bamboohr-appdetails.png)
    ![Screenshot of Direct Urls form.](media/bamboohr-connector/bamboohr-redirecturis.png)
@@ -118,7 +118,7 @@ The BambooHR people connector doesn't support the addition of new properties or 
 
 ### Sync
 
-The refresh interval determines how often your data is synced between the data source and the people connector index. There are two types of refresh intervals – full crawl and incremental crawl. For more information, see [refresh settings](https://learn.microsoft.com/microsoftsearch/configure-connector#guidelines-for-sync-settings).
+The refresh interval determines how often your data is synced between the data source and the people connector index. There are two types of refresh intervals – full crawl and incremental crawl. For more information, see [refresh settings](configure-connector.md#guidelines-for-sync-settings).
 
 ## Troubleshooting
 
