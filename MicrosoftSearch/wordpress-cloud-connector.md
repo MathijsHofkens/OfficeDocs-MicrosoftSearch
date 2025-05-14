@@ -18,7 +18,7 @@ ms.date: 04/23/2025
 
 # WordPress.com Microsoft 365 Copilot connector (preview)
 
-With the WordPress.com Microsoft 365 Copilot connector, your organization can index published posts and pages of your WordPress.com-built websites. After configuring the connector and index content from WordPress.com-built websites, end users can search for those published posts and pages in Microsoft Copilot and any Microsoft Search client. 
+With the WordPress.com Microsoft 365 Copilot connector, your organization can index published posts and pages of your WordPress.com-built websites. After admins configure the connector and index content from WordPress.com-built websites, end users can search for those published posts and pages in Microsoft Copilot and any Microsoft Search client. 
 
 This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors a WordPress.com Copilot connector. 
 
@@ -46,10 +46,24 @@ A display name is used to identify each citation in Copilot, helping users easil
 ### 2. Add WordPress.com-built website URL
 A WordPress.com-built website URL is the unique web address assigned to each WordPress.com-built website, allowing you to access your specific WordPress.com-built website.   
 
-### 3. Provide authentication Type
-We support the OAuth 2.0 authentication method.OAuth2 is a protocol that allows applications to interact with blogs on WordPress.com-built sites running Jetpack. To enable and configure OAuth 2.0 authentication for WordPress.com-built websites. For more information, see [Wordpress.com docs for developers](https://developer.wordpress.com/docs/oauth2/). 
+### 3. Authentication Type
+**WordPress.com OAuth 2.0**
+Use the following steps to use WordPress.com OAuth 2.0 for authentication. 
+A WordPress.com-built website admin needs to create an OAuth Application in the [WordPress.com Developer Center](https://developer.wordpress.com/apps/new/). OAuth2 is a protocol that allows applications to interact with blogs on WordPress.com-built sites running Jetpack. For more information, see [Wordpress.com docs for developers](https://developer.wordpress.com/docs/oauth2/). 
 
-### 5. Staged rollout to limited audience
+Use the information in the following table to fill out the OAuth application creation form.
+
+Field | Description | Recommended Value
+--- | --- | ---
+Name | (Required) Unique value that identifies the application that you require OAuth access for. | Microsoft Search and Copilot
+Description | (Required) A short description of the OAuth client. | Use an appropriate description
+Website URL | (Required) The URL to an informational home page about your application. | Your WordPress.com-built website URL
+Redirect URL | (Required) A required callback URL that the authorization server redirects to. | For **Microsoft 365 Enterprise**: https://<span>gcs.office.</span>com/v1.0/admin/oauth/callback</br></br>For **Microsoft 365 Government**: https://<span>gcsgcc.office.<span>com/v1.0/admin/oauth/callback
+Type|(Required) Application app type|Web|
+
+Enter the client ID (unique identifier) and secret to connect to your instance. After you connect, use a WordPress.com-built website admin account credential to authenticate permission to crawl.
+
+### 4. Staged rollout to limited audience
 Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience.
 
 To create the connection for a WordPress.com-built website, click **Create* to publish your connection and index published posts and pages from your WordPress.com-built website.  
@@ -88,17 +102,17 @@ To add or remove available properties from your WordPress.com data source, assig
 
 |Default property|Label|Description|Schema| 
 | --- | ---- | --- | ---
-| Author | Authors | Name of all the people who participated/collaborated on the item in the data source.  | Search, Query, Retrieve.| 
-| Categories  |  |Categories of Posts, not available for Pages  | Query, Retrieve, Refine.| 
-| Content |  | The content of Posts or Pages| Search, Retrieve. | 
-| Created | Created date time | Data and time that the item was created in the data source. | Query, Retrieve. | 
-| CreatedBy | Created by| Name of the person who created the item in the data source.| Search, Query, Retrieve. | 
-| Excerpt | |Summaries of Posts or Pages content  |Search, Retrieve. | 
-| Title |Title| The title of Posts or Pages |Search, Retrieve.|  
-| Type | |The type of the file, the potential value is Post or Page | Query, Retrieve, Refine.| 
-| Updated | Last modified date time | Date and time the item was last modified in the data source. |Query, Retrieve. | 
-| UpdatedBy | Last modified by | Name of the person who most recently edited the item in the data source |Search, Query, Retrieve. | 
-| Url | url | The target URL of the item in the data source.  |Retrieve. | 
+| Author | `Authors` | Name of all the people who participated/collaborated on the item in the data source.  | Search, Query, Retrieve.| 
+| Categories  |None  |Categories of Posts, not available for Pages  | Query, Retrieve, Refine.| 
+| Content | None | The content of Posts or Pages| Search, Retrieve. | 
+| Created | `Created date time` | Data and time that the item was created in the data source. | Query, Retrieve. | 
+| CreatedBy | `Created by`| Name of the person who created the item in the data source.| Search, Query, Retrieve. | 
+| Excerpt |None |Summaries of Posts or Pages content  |Search, Retrieve. | 
+| Title |`Title`| The title of Posts or Pages |Search, Retrieve.|  
+| Type |None |The type of the file, the potential value is Post or Page | Query, Retrieve, Refine.| 
+| Updated | `Last modified date time` | Date and time the item was last modified in the data source. |Query, Retrieve. | 
+| UpdatedBy | `Last modified by` | Name of the person who most recently edited the item in the data source |Search, Query, Retrieve. | 
+| Url | `url` | The target URL of the item in the data source.  |Retrieve. | 
 
 ### Sync 
 
