@@ -52,7 +52,8 @@ Using the recommended configuration of the machine, the connector agent instance
 * [.NET Framework 4.7.2](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net472)
 * [.NET Core Desktop Runtime 8.0 (x64)](https://dotnet.microsoft.com/download/dotnet/8.0)
 * 8 cores, 3 GHz
-* 16 GB RAM, 2 GB Disk Space
+* 16 GB RAM
+* 40 GB Disk space for 5M items and 7GB/Million items after 5M items
 * Network access to the data source and internet through 443
 
 If your organization's proxy servers or firewalls block communication to unknown domains, add the following rules to the 'allow' list:
