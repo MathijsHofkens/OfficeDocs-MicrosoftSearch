@@ -152,7 +152,7 @@ Deploy this connection to a limited user base if you want to validate it in Copi
 
 At this point, you're ready to create the connection for Salesforce CRM. You can click **Create** to publish your connection and index content from your Salesforce instance.
 
-For other settings, like **Access Permissions**, **Data Inclusion Rules**, **Schema**, and **Crawl frequency**, we have defaults based on what works best with Jira data. You can see the default values below:
+For other settings, like **Access Permissions**, **Data Inclusion Rules**, **Schema**, **Crawl frequency**, we have defaults based on what works best with Salesforce data. You can see the default values below:
 
 | Users | Description |
 |----|---|

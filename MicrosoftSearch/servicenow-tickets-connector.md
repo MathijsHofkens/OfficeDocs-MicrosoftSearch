@@ -48,17 +48,16 @@ The service account you use to configure a connection **must have** read access 
 --- | --- | ---
 Index base [Task table fields](https://docs.servicenow.com/bundle/sandiego-platform-administration/page/administer/task-table/reference/r_ImportantTaskTableFields.html#r_ImportantTaskTableFields) | `task` | For crawling default fields from out of the box task tables
 Sync user tables | `sys_user` | To index user access details for tickets
-
+Select a custom table from your organization| `sys_db_object` | Find the list of extended task tables including custom tables
 
 If you want to index custom properties from [extended tables](https://docs.servicenow.com/bundle/washingtondc-application-development/page/administer/table-administration/concept/table-extension-and-classes.html) of *task* table, provide read access to sys_dictionary and sys_db_object. 
 It is an **optional** feature. You'll be able to index *task* table properties without access to the two extra tables.
 
 **Feature** | **Read access required tables** | **Description**
 --- | --- | ---
-Select a custom table from your organization| `sys_db_object` | Find the list of extended task tables including custom tables
 Index custom fields from a specific <table_name> | `sys_dictionary` | Crawling custom fields from a specific table like incident, problem or change_management
 
-You can **create and assign a role** for the service account you use to connect with Microsoft Search and Microsoft 365 Copilot. [Learn how to assign role for ServiceNow accounts](https://docs.servicenow.com/bundle/washingtondc-platform-administration/page/administer/users-and-groups/task/t_AssignARoleToAUser.html). Read access to the tables can be provided to the created role. To learn about setting read access to table records, see [Securing Table Records](https://developer.servicenow.com/dev.do#!/learn/learning-plans/sandiego/new_to_servicenow/app_store_learnv2_securingapps_sandiego_securing_table_records). 
+You can **create and assign a role** for the service account you use to connect with Microsoft Search and Microsoft 365 Copilot. [Learn how to assign role for ServiceNow accounts](https://docs.servicenow.com/bundle/washingtondc-platform-administration/page/administer/users-and-groups/task/t_AssignARoleToAUser.html). Read access to the tables can be provided to the created role. To learn about setting read access to table records, see [Securing Table Records](https://developer.servicenow.com/dev.do#!/learn/learning-plans/sandiego/new_to_servicenow/app_store_learnv2_securingapps_sandiego_securing_table_records). When providing read access to sys_db_object, you should create two Access Control Lists: one for row access and one for field access.
 
 
 To authenticate and sync content from ServiceNow, choose **one of three** supported methods:

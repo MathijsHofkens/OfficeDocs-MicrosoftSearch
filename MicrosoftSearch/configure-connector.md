@@ -25,9 +25,6 @@ This article outlines the steps to set up a Microsoft Graph connector in the Mic
 > [!NOTE]
 > The setup process is similar for all the Microsoft Graph connectors but isn't exactly the same. In addition to reading this article, be sure to read the connector-specific information for your data source.
 
-> [!NOTE]
-> You can add a maximum of thirty (30) Microsoft Graph connections to each tenant.
-
 > [!TIP]
 > **Product survey**
 > 

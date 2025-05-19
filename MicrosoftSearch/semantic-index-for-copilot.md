@@ -32,7 +32,7 @@ Interactions with data in Microsoft Graph are based on keyword matching, persona
 
 ## How semantic indexing helps manage your data
 
-Semantic indexing of your data enhances the Microsoft 365 Copilot experience in both Business Chat and in Microsoft 365 apps. It supports an enhanced content grounding and conceptual understanding of your online data that is automatically enabled by Microsoft. It does this by creating vectorized indices. A vector is a numerical representation of a word, image pixel, or other data point. The vector is arranged or mapped with close numbers placed in proximity to one another to represent similarity. Vectors are stored in multi-dimensional spaces where semantically similar data points are clustered together in the vector space, enabling Microsoft 365 to handle a broader set of search queries beyond “exact match."
+Semantic index enhances the Microsoft 365 Copilot experience in both Microsoft 365 Chat and in the Microsoft 365 apps. It supports an enhanced content grounding and conceptual understanding of your online data that is automatically enabled by Microsoft. It does this by creating vectorized indices. A vector is a numerical representation of a word, image pixel, or other data point. The vector is arranged or mapped with close numbers placed in proximity to one another to represent similarity. Vectors are stored in multi-dimensional spaces where semantically similar data points are clustered together in the vector space, enabling Microsoft 365 to handle a broader set of search queries beyond “exact match."
 
 In practical terms, this means that Microsoft 365 services such as Microsoft 365 Copilot can:
 
