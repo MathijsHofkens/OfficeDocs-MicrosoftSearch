@@ -46,7 +46,8 @@ Before setting up the connector, ensure the following:
 3. The authentication user account must have access to repositories, issues, merge requests, knowledge files, and wiki pages.   
 4. The **Client ID** and **Client Secret** must include the following scopes:
    - `read_api`  
-   - `read_repository`  
+   - `read_repository`
+   - `read_user`
 5. Users who access the indexed GitLab data must have corresponding **Microsoft Entra ID** identities for permission mapping.
 6. Set the appropriate **redirect URLs** during GitLab authentication setup:
    - **Microsoft 365 Enterprise**:  
