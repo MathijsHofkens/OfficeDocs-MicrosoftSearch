@@ -133,6 +133,10 @@ items:
             href: MSSQL-connector.md
           - name: Troubleshooting
             href: troubleshoot-mssql-connector.md
+        - name: BambooHR
+          items:
+          - name: Setup
+            href: bamboohr-connector.md    
         - name: Bitbucket
           items:
           - name: Setup
