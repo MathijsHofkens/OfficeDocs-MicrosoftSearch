@@ -12,7 +12,7 @@ search.appverid:
 - BFB160
 - MET150
 - MOE150
-description: "Set up the BambooHR People Microsoft 365 Copilot connector."
+description: "Set up the BambooHR Microsoft 365 Copilot connector."
 ms.date: 04/07/2025
 ---
 
