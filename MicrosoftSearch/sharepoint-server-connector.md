@@ -18,10 +18,10 @@ description: "Set up the SharePoint Server Microsoft 365 Copilot connector."
 
 # SharePoint Server Microsoft 365 Copilot connector
 
-SharePoint server graph connector allows users in your organization to search for content stored in an on-premises SharePoint server or use the content in Copilot for specific use cases and scenarios. It crawls over Documents and site pages from the on-premises instance.
+SharePoint server graph connector allows users in your organization to search for content stored in an on-premises SharePoint server(supports SP server 2016, 2019 and Subscription edition) or use the content in Copilot for specific use cases and scenarios. It crawls over Documents and site pages from the on-premises instance.
 
 > [!NOTE]
-> Active directory synchronization is a prerequisite for enabling security trimming in SharePoint Server content search.
+> Active directory synchronization is a prerequisite for enabling security trimming in SharePoint Server content search. Read [this](how-to-connect-sync-whatis.md) to learn more.
 
 ## Capabilities
 
@@ -79,10 +79,14 @@ Select from the list of available Graph Connector Agents registered to your tena
 
 ### 4. Authentication
 
-Choose the authentication type from the drop-down menu of options. Currently supported options are Basic, Windows and Microsoft Entra ID.
+Choose the authentication type from the drop-down menu of options. Currently supported options are:
+- Basic, 
+- Windows(Keberos is not supported) and 
+- O-auth2 with Microsoft Entra ID(only OIDC is supported).
 
 > [!NOTE]
-> Use Domain\username format in username to authenticate to the SharePoint server instance using the Windows option.
+- Use Domain\username format in username to authenticate to the SharePoint server instance using the Windows option.
+- ADFS is currently not supported - including SAML or OIDC.
 
 To authenticate with the provided credentials, you need to click on Sign-in to load the list of available site collections.
 
