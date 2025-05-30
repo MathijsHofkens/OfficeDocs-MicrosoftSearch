@@ -287,6 +287,14 @@ These are the connectors under learning.
 |getAbstract|getAbstract|The getAbstract Microsoft Graph connector enhances your Microsoft Copilot with verified business knowledge from leading experts. The connector delivers fully indexed and licensed knowledge from domains like leadership & strategy, sales, marketing, corporate Finance, digital transformation, and many more, helping your employees solve business issues right in the flow of work. For more information, see [getAbstract connector](https://www.getabstract.com/en/connector).|
 |Go1|Go1|Go1 integration with Microsoft Search allows your employees to find and access learning from Microsoft Search, in places like Office.com, SharePoint, and Bing. Your employees can learn directly from Microsoft Search in their normal day-to-day routine. For more information, see [Go1 connector](https://www.go1.com/integrations/microsoft).|
 
+## People, Human Resources Information Systems (HRIS) 
+
+The following connectors are under people and Human Resource Information Systems (HRIS). Overview of People Connectors [insert link to overview page] 
+
+|Connector name|Publisher|Description|
+| -------- | -------- | -------- |
+|BambooHR |Microsoft |Allows your organization to populate People Experiences like profiles in Teams or Copilot with people data from the BambooHR system. For more information, see [BambooHR Microsoft Graph connector](https://learn.microsoft.com/en-us/microsoftsearch/bamboohr-connector). |
+
 ## Social Networks
 
 The following connectors are under social networks.
