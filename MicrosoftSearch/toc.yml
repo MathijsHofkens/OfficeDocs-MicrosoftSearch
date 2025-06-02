@@ -54,6 +54,8 @@ items:
       href: frequently-asked-questions.md
     - name: Index quota
       href: licensing.md
+    - name: The Microsoft 365 Copilot extension
+      href: crossover-browser.md
     - name: Terms of use
       href: terms-of-use.md
     - name: Set up Microsoft-built connectors
