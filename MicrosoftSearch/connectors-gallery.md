@@ -293,7 +293,7 @@ The following connectors are under people and Human Resource Information Systems
 
 |Connector name|Publisher|Description|
 | -------- | -------- | -------- |
-|BambooHR |Microsoft |Allows your organization to populate People Experiences like profiles in Teams or Copilot with people data from the BambooHR system. For more information, see [BambooHR Microsoft Graph connector](https://learn.microsoft.com/en-us/microsoftsearch/bamboohr-connector). |
+|BambooHR |Microsoft |Allows your organization to populate People Experiences like profiles in Teams or Copilot with people data from the BambooHR system. For more information, see [BambooHR connector](https://learn.microsoft.com/en-us/microsoftsearch/bamboohr-connector). |
 
 ## Social Networks
 
