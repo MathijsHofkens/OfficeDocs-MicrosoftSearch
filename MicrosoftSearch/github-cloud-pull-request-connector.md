@@ -39,11 +39,43 @@ Before you set up the connector:
 
 1. Make sure that your GitHub instance is accessible via API.
 2. Set up the GitHub App for authentication.
-3. Generate a **Client ID** and **Client secret** from the GitHub App for authentication. You can specify which organizations and repositories a GitHub app is authorized to access, effectively determining what content the connector will crawl. Specify the following redirect URLs when configuring GitLab authentication:
-    - For Microsoft 365 Enterprise, use `https://gcs.office.com/v1.0/admin/oauth/callback`
-    - For Microsoft 365 Government, use `https://gcsgcc.office.com/v1.0/admin/oauth/callback`
-4. Verify that the user account used for authentication has access to the repositories and pull requests to be indexed.
-5. Verify that the GitHub App has the following permissions configured to read issues:
+3. Verify that the user account used for authentication has access to the repositories and pull requests to be indexed.
+4. Make sure that users who access indexed GitHub data have corresponding **Microsoft Entra ID** identities for permission mapping.
+5. For enterprise-managed users who authenticate via Single Sign-On (SSO), the account must be signed in before performing any actions, as the GitHub authentication flow does not currently support SSO login.
+
+### Set Up a GitHub App for Authentication 
+Follow the steps below to create a GitHub App for use with your Graph Connector:
+
+1. In GitHub, click your profile photo (top right), select **Your organizations**, and choose the organization where the Graph Connector should pull data from.
+
+   :::image type="content" alt-text="Screenshot that shows how to access 'Your organizations'." source="media/github-connector/organizations-nav.png" lightbox="media/github-connector/organizations-nav.png":::
+
+2. On the organization overview page, click **Settings**.
+
+   :::image type="content" alt-text="Screenshot that shows how to access 'Settings' within the organization page." source="media/github-connector/organization-overview.png" lightbox="media/github-connector/organization-overview.png":::
+
+3. In the left sidebar, scroll down to **Developer settings** and click **GitHub Apps**.
+
+   :::image type="content" alt-text="Screenshot that shows how to access GitHub Apps." source="media/github-connector/github-apps.png" lightbox="media/github-connector/github-apps.png":::
+
+4. Click **New GitHub App**.
+
+   :::image type="content" alt-text="Screenshot that shows entry point to creation of new app." source="media/github-connector/new-github-app.png" lightbox="media/github-connector/new-github-app.png":::
+
+5. Configure the app:
+   - **GitHub App name**: Enter a name of your choice.
+   - **Homepage URL**: Copy the URL from your browser’s address bar (refer to the image if needed).
+   - **Callback URL**:  
+     - For Microsoft 365 Enterprise: `https://gcs.office.com/v1.0/admin/oauth/callback`  
+     - For Microsoft 365 Government: `https://gcsgcc.office.com/v1.0/admin/oauth/callback`
+
+       :::image type="content" alt-text="Screenshot that shows the initial part of the app configuration including name and URLs." source="media/github-connector/github-app1.png" lightbox="media/github-connector/github-app1.png":::
+
+6. Check **Request user authorization (OAuth) during installation** and disable the **Webhook** option.
+
+   :::image type="content" alt-text="Screenshot that of some check boxes required for the app configuration." source="media/github-connector/github-app2.png" lightbox="media/github-connector/github-app2.png":::
+
+7. Set the following permissions:
     - **Repository permissions**
         - Administration - **Read-only**
         - Metadata - **Read-only**
@@ -53,8 +85,18 @@ Before you set up the connector:
         - Members - **Read-only**
     - **Account permissions**
         - Email addresses - **Read-only**
-6. Make sure that users who access indexed GitHub data have corresponding **Microsoft Entra ID** identities for permission mapping.
-7. For enterprise-managed users who authenticate via Single Sign-On (SSO), the account must be signed in before performing any actions, as the GitHub authentication flow does not currently support SSO login.
+
+8. Under **Where can this GitHub App be installed**, select **Any account**, then click **Create GitHub App**.
+
+   :::image type="content" alt-text="Screenshot that shows the final steps of the GitHub app set up." source="media/github-connector/github-app3.png" lightbox="media/github-connector/github-app3.png":::
+
+9. On the GitHub App’s **General** page, generate and copy the **client secret** by clicking **Generate a new client secret**. Then click **Install App**.
+
+   :::image type="content" alt-text="Screenshot that shows the credentials of the app including Client Id and Client secret." source="media/github-connector/github-app-credentials.png" lightbox="media/github-connector/github-app-credentials.png":::
+
+10. Select the organization where you want the app to be installed. **After installation**, you're ready to configure the connector.
+
+    :::image type="content" alt-text="Screenshot that shows the app installation dialog." source="media/github-connector/github-install.png" lightbox="media/github-connector/github-install.png":::
 
 ## Get started
 
