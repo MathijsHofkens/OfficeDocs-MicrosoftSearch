@@ -37,6 +37,7 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 
 ## Limitations
 
+- Visibility permissions applied via managed permission sets or permission set groups are not honoured, this can lead to fields not being indexed or included in search results.
 - The Salesforce Microsoft Graph connector doesn't currently support Apex-based, territory-based sharing and sharing using personal groups from Salesforce.
 - There's a known bug in the Salesforce API the connector uses, where the private org-wide defaults for leads aren't honored currently.  
 - If a field has field level security (FLS) set for a profile, the connector won't ingest that field for any profiles in that Salesforce org. As a result, users won't be able to search for values for those fields or  show up in the results.  

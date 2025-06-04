@@ -1,5 +1,4 @@
 --- 
-
 title: "Tableau Cloud Microsoft 365 Copilot connector(preview)" 
 ms.author: rantang
 author: ranran1998
@@ -51,44 +50,53 @@ A Tableau Cloud site URL typically looks like `https://<your-domain>.online.tabl
 To enable and configure the Connected Apps with Direct Trust for Tableau Cloud, use the following steps to use Tableau Connected Apps with Direct Trust for authentication.
 
 **Step 1: Create a Tableau Connected Apps with Direct Trust**
+
 Create a connected app from Tableau Cloud’s Settings page.
+
 1. As a site admin, sign in to Tableau Cloud.
 2. From the left pane, select **Settings > Connected Apps**.
-![Screenshot that shows the navigation path to the apps configuration in Tableau.](media/tableau-navigation-to-settings-apps.png)
-3. Select the New Connected App button drop-down arrow and select **Direct Trust**.
+
+   :::image type="content" alt-text="Screenshot that shows the navigation path to the apps configuration in Tableau." source="media/tableau-navigation-to-settings-apps.png" lightbox="media/tableau-navigation-to-settings-apps.png":::
+
+3. Select the **New Connected App** button drop-down arrow and select **Direct Trust**.
 4. Use the information in the following table to fill out the **Create Connected App dialog box**.
 
-Field | Description | Recommended Value
---- | --- | ---
-Connected app name| Unique value that identifies the application that you require Direct Trust for. | Microsoft Search and Copilot
-Access Level | To control which views or metrics can be embedded, select "All projects" or "Only one project". All projects: This option enables the content in all projects to be embedded. Only one project: This option enables only the content in the specified project to be embedded. If the specified project contains nested projects, embedding content in those nested projects is not enabled. |"All project" or "Only one project"
-Domain allowlist|the domains where views or metrics can be embedded|All domains
+   | Field | Description | Recommended Value |
+   | --- | --- | --- |
+   | Connected app name| Unique value that identifies the application that you require Direct Trust for. | Microsoft Search and Copilot |
+   | Access Level | To control which views or metrics can be embedded, select "All projects" or "Only one project". All projects: This option enables the content in all projects to be embedded. Only one project: This option enables only the content in the specified project to be embedded. If the specified project contains nested projects, embedding content in those nested projects is not enabled. |"All project" or "Only one project" |
+   | Domain allowlist|the domains where views or metrics can be embedded|All domains |
 
-When finished, select the Create button.
-![Screenshot that shows the Tableau direct trust configuration.](media/tableau-direct-trust-configuration.png)  
+   When finished, select the **Create** button.
+
+   :::image type="content" alt-text="Screenshot that shows the Tableau direct trust configuration." source="media/tableau-direct-trust-configuration.png":::
 
 5. Next to the connected app's name, select the actions menu and select **Enable**.
-![Screenshot that shows how to enable the Tableau App.](media/tableau-enable-app.png)  
+
+   :::image type="content" alt-text="Screenshot that shows how to enable the Tableau App." source="media/tableau-enable-app.png":::
 
 **Step 2: Generate a secret**
+
 1. On the detail page of the connected app you created in Step 1, select the **Generate New Secret** button.
-![Screenshot that shows how to generate a secret for the Tableau App.](media/tableau-generate-a-secret.png)  
-2. Make note of the **Secret ID** ，**Secret Value** and **Client ID** to use in Step 3 below.
+
+   :::image type="content" alt-text="Screenshot that shows how to generate a secret for the Tableau App." source="media/tableau-generate-a-secret.png":::
+
+2. Make note of the **Secret ID**，**Secret Value** and **Client ID** to use in Step 3 below.
 
 **Step 3: Enter the required fields of Tableau Copilot connector authentication**.
 
 Enter the User, Connected App Client ID, Connected App Secret ID and Connected App Secret Key to connect to your Tableau Cloud Site. 
 
-![Screenshot that shows the authentication process for Tableau Copilot connector.](media/tableau-gc-auth.png) 
+:::image type="content" alt-text="Screenshot that shows the authentication process for Tableau Copilot connector." source="media/tableau-gc-auth.png":::
 
 Refer to the following table to learn the descriptions of the required fields of Tableau Copilot connector authentication
 
-Field | Description 
---- | --- 
-User| The admin user email. Recommend to fill the email of an admin user who configured the Tableau Connected Apps with Direct Trust.
-Connected App Client ID| **Client ID** of the Tableau Connected Apps with Direct Trust, refer to the value noted in the Step 2 above.
-Connected App Secret ID| **Secret ID** of the Tableau Connected Apps with Direct Trust, refer to the value noted in the Step 2 above.
-Connected App Secret Key| **Secret Value** of the Tableau Connected Apps with Direct Trust, refer to the value noted in the Step 2 above.
+| Field | Description |
+| --- | --- |
+| User| The admin user email. Recommend to fill the email of an admin user who configured the Tableau Connected Apps with Direct Trust. |
+| Connected App Client ID| **Client ID** of the Tableau Connected Apps with Direct Trust, refer to the value noted in the Step 2 above. |
+| Connected App Secret ID| **Secret ID** of the Tableau Connected Apps with Direct Trust, refer to the value noted in the Step 2 above. |
+| Connected App Secret Key| **Secret Value** of the Tableau Connected Apps with Direct Trust, refer to the value noted in the Step 2 above. |
 
 ### 4. Staged rollout to a limited audience
 Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience.
@@ -97,20 +105,20 @@ At this point, you're ready to create the connection for Tableau Cloud. You can 
 
 For other settings, like Access Permissions, Data inclusion rules, Schema, Crawl frequency, etc., we set defaults based on what works best with Tableau Cloud data. The default values are as follows: 
 
-**Page** | **Settings** | **Default values**
---- | ---- | ---
-Users | Access permissions | Only people with access to this data source.
-Users | Map Identities |Data source identities mapped using Microsoft Entra IDs.
-Content | Index content | All sheets, except the sheets in personal space. 
-Content | Manage properties | To check default properties and their schema, [click here](#content).
-Sync | Incremental crawl | Frequency: Every 15 mins
-Sync | Full crawl | Frequency: Every day
+| Page | Settings | Default values |
+| --- | ---- | --- |
+| Users | Access permissions | Only people with access to this data source. |
+| Users | Map Identities |Data source identities mapped using Microsoft Entra IDs. |
+| Content | Index content | All sheets, except the sheets in personal space. |
+| Content | Manage properties | To check default properties and their schema, [click here](#content). |
+| Sync | Incremental crawl | Frequency: Every 15 mins |
+| Sync | Full crawl | Frequency: Every day |
 
-If you want to edit any of these values, you need to choose the **Custom setup** option. 
+If you want to edit any of these values, you need to choose **Custom setup**.
 
 ## Custom setup 
 
-Custom setup is for those admins who want to edit the default values for settings. Once you click the **Custom setup** option, you should see three other tabs – **Users**, **Content**, and **Sync**. 
+Custom setup is for those admins who want to edit the default values for settings. Once you select **Custom setup**, you should see three other tabs – **Users**, **Content**, and **Sync**. 
 
 ### Users 
 
@@ -119,8 +127,10 @@ Custom setup is for those admins who want to edit the default values for setting
 The Tableau Cloud Copilot connector supports data visible to **Only people with access to this data source (recommended)** or Everyone. If you choose Everyone, indexed data appears in the search results for all users. 
 
 >[!NOTE]
->Tableau's ACL system uses a layered evaluation mechanism to calculate users' effective permissions. When you select "**Only people with access to this data source**" while configuring the Tableau Cloud Copilot connector, the connector applies a logic similar to Tableau’s native ACL system. This mechanism ensures that the content indexed by the Copilot connector is **not overshared** with users who don't have appropriate permissions within Tableau Cloud Sites. This image shows the specific rules are applied to determine which permissions govern the content and which users are authorized to access it.![Diagram that shows the workflow of Tableau Copilot connector ACL.](media/tableau-connector-acl-workflow.png)  
-
+> Tableau's ACL system uses a layered evaluation mechanism to calculate users' effective permissions. When you select "**Only people with access to this data source**" while configuring the Tableau Cloud Copilot connector, the connector applies a logic similar to Tableau’s native ACL system. This mechanism ensures that the content indexed by the Copilot connector is **not overshared** with users who don't have appropriate permissions within Tableau Cloud Sites. This image shows the specific rules are applied to determine which permissions govern the content and which users are authorized to access it.
+> 
+> :::image type="content" alt-text="Diagram that shows the workflow of Tableau Copilot connector ACL." source="media/tableau-connector-acl-workflow.png" lightbox="media/tableau-connector-acl-workflow.png":::
+>
 > - For admin users, they're always ALLOWED.
 > - If the user is a “denied user”, part of a “denied group” or in a “denied group set”, the user is DENIED.
 > - If the user is a project leader or a content owner, the user is ALLOWED.
@@ -130,14 +140,14 @@ The Tableau Cloud Copilot connector supports data visible to **Only people with 
 If you choose Only people with access to this data source, you need to further choose whether your Tableau Cloud Site has Microsoft Entra ID provisioned users or non-AAD users. 
 To identify which option is suitable for your organization: 
 
-1. Choose the **Microsoft Entra ID** option if the email ID of Tableau Cloud users is same as the UserPrincipalName (UPN) of users in Microsoft Entra ID. 
+1. Choose **Microsoft Entra ID** if the email ID of Tableau Cloud users is same as the UserPrincipalName (UPN) of users in Microsoft Entra ID. 
 
-2. Choose the **non-AAD** option if the email ID of Tableau Cloud users is **different** from the UserPrincipalName (UPN) of users in Microsoft Entra ID.
+2. Choose **non-AAD** if the email ID of Tableau Cloud users is **different** from the UserPrincipalName (UPN) of users in Microsoft Entra ID.
 
->[!Important]
->- If you choose Microsoft Entra ID as the type of identity source, the connector maps the email IDs of users obtained from Tableau Cloud directly to UPN property from Microsoft Entra ID.
->- If you chose "non-AAD" for the identity type see Map your non-Azure AD Identities for instructions on mapping the identities. You can use this option to provide the mapping regular expression from email ID to UPN.
->- Updates to users or groups governing access permissions are synced in full crawls only. Incremental crawls do not currently support the processing of updates to permissions.
+   >[!Important]
+   >- If you choose Microsoft Entra ID as the type of identity source, the connector maps the email IDs of users obtained from Tableau Cloud directly to UPN property from Microsoft Entra ID.
+   >- If you chose "non-AAD" for the identity type see Map your non-Azure AD Identities for instructions on mapping the identities. You can use this option to provide the mapping regular expression from email ID to UPN.
+   >- Updates to users or groups governing access permissions are synced in full crawls only. Incremental crawls do not currently support the processing of updates to permissions.
 
 ### Content 
 
@@ -173,4 +183,4 @@ You can configure full and incremental crawls based on the scheduling options pr
 ## Troubleshooting
 After publishing your connection, you can review the status under **Data sources** in the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).
 
-If you have issues or want to provide feedback, contact [Microsoft Graph | Support](https://developer.microsoft.com/graph/support).
+If you have issues or want to provide feedback, contact [Microsoft Graph](https://developer.microsoft.com/graph/support).
