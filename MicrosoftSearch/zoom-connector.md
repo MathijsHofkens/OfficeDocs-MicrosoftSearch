@@ -13,7 +13,7 @@ search.appverid:
 - MET150 
 - MOE150 
 description: "Set up the Zoom Meetings Microsoft 365 Copilot connector." 
-ms.date: 03/31/2025
+ms.date: 06/04/2025
 ---
 
 # Zoom Meetings Microsoft 365 Copilot connector (preview)
@@ -32,7 +32,7 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 
 ## Prerequisites
 - You must be the **search admin** for your organization's Microsoft 365 tenant.
-- **Zoom account**: To connect to your Zoom meetings data, you must have a paid Zoom plan (such as Pro, Business, or Enterprise) with cloud recording enabled.
+- **Zoom account**: To connect to your Zoom meetings data, you must have a paid Zoom plan (**Business** or **Enterprise**) with cloud recording enabled. 
 - **Create a Zoom marketplace app for the Zoom Meetings Copilot connector**: By creating a Zoom marketplace app, you can allow and control the access by the Zoom Meetings Copilot connector to your Zoom meetings data.
 
 ### Create Zoom marketplace app

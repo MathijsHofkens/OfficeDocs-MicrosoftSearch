@@ -101,6 +101,10 @@ items:
           items:
           - name: Setup
             href: aha-cloud-connector.md
+        - name: Amazon S3
+          items:
+          - name: Setup
+            href: amazon-s3-graph-connector.md
         - name: Asana
           items:
           - name: Setup
