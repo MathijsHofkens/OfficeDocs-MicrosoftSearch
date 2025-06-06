@@ -21,22 +21,17 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 >[!IMPORTANT]
 >The Azure DevOps Work Items Copilot connector supports only the Azure DevOps cloud service. Azure DevOps Server 2019, TFS 2018, TFS 2017, TFS 2015, and TFS 2013 are not supported by this connector.
 
-
 ## Capabilities
 - Index Work Items from Azure DevOps
 - Enable your end users to ask questions related to work items.
 - Use [Semantic search in Copilot](semantic-index-for-copilot.md) to enable users to find relevant content based on keywords, personal preferences, and social connections.
 
 ## Limitations
-- The connector only indexes one ADO organization per connection.
+- Only indexes one ADO organization per connection.
 
 ## Prerequisites
 - You must be the **search admin** for your organization's Microsoft 365 tenant.
-- To allow the connector to connect to your Azure DevOps organization, you must enable **Third-party application access via OAuth**. For more information, see [manage security policies](/azure/devops/organizations/accounts/change-application-access-policies?view=azure-devops#manage-a-policy&preserve-view=true) to learn more.
-
-    ![Screenshot that shows third-party application access via OAuth.](media/ado-workitems-connector-security-policies.png)
-
-- To connect to Azure DevOps and allow the Azure DevOps Work Items Copilot connector to update work items regularly, you need a service account with the following permissions granted to it.
+- The connector utilizes the logged-in M365 Admin's account as the crawl service account. To connect to Azure DevOps and allow the Copilot connector to update work items regularly, you need to grant the M365 Admin account the following permissions.
 
     | Permission name | Permission type | Required for |
     | ------------ | ------------ | ------------ |
@@ -45,7 +40,7 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
     | View work items in this node| [Area path](/azure/devops/organizations/security/permissions?view=azure-devops&tabs=preview-page#area-path-object-level&preserve-view=true) | Crawling Work Items in an area path. This permission is **optional**. Only those area paths are crawled for which the user account has permission. |
 
 >[!IMPORTANT]
->The crawl account must have **Basic** access level. To learn more about access levels in Azure DevOps, read [supported access levels](/azure/devops/organizations/security/access-levels).
+>The crawl account must have **Basic** access level. To learn more about access levels in Azure DevOps, see [supported access levels](/azure/devops/organizations/security/access-levels).
 
 ## Get started
 
@@ -57,19 +52,24 @@ A display name is used to identify each citation in Copilot, helping users easil
 ### Add the ADO Organization
 The Azure DevOps Work Items Copilot connector allows indexing of one organization per connection. To connect to your Azure DevOps service, provide the name of the organization to be indexed.
 
+>[!IMPORTANT]
+> - Make sure you enter the name of the organization only and not the complete URL of the organization.
+> - The following example shows an **incorrect** input - `https://dev.azure.com/<Organization_name>/`
+> - The following example shows a **correct** input - `<Organization_name>`
+
 ### Provide authentication type
 
-To authenticate and sync work items from Azure DevOps, follow the below steps:<br>
+You need to follow some steps to authenticate and sync work items from Azure DevOps. 
 
 > [!IMPORTANT]
 > - [Microsoft Entra ID OAuth](/azure/devops/integrate/get-started/authentication/oauth?preserve-view=true&view=azure-devops) is the recommended OAuth mechanism.
-> - [Azure DevOps OAuth](/azure/devops/integrate/get-started/authentication/oauth?preserve-view=true&view=azure-devops) is the legacy authentication mechanism, not being actively invested in.
+> - [Azure DevOps OAuth](/azure/devops/integrate/get-started/authentication/oauth?preserve-view=true&view=azure-devops) is the legacy authentication mechanism, not being actively invested in.  This method will be deprecated soon.
 
 #### Microsoft Entra ID OAuth
 
 **Ensure your ADO Organization is connected to Microsoft Entra**
 
-The Azure DevOps Work Items Copilot connector only indexes content from an ADO organization connected with Microsoft Entra of your tenant. To ensure that your ADO organization is connected with Microsoft Entra account, use the following steps. 
+The Azure DevOps Work Items Copilot connector only indexes content from an ADO organization connected with Microsoft Entra of your tenant. To ensure that your ADO organization is connected with a Microsoft Entra account, use the following steps. 
 
 1. Navigate to [Azure DevOps](https://dev.azure.com/) and select the required organization.
 2. Select `Organization settings`.
@@ -101,43 +101,9 @@ The Azure DevOps Work Items Copilot connector only indexes content from an ADO o
 14. Select **New Client secret** and select an expiry period for the secret. Copy the generated secret (Value) and save it because it isn't shown again.
 15. Use this Client secret and the application ID to configure the connector.
 
-**Grant the Microsoft Entra app access to projects in the ADO organization**
+**Authenticate the Microsoft Entra app with a crawl account**
 
-You need to provide the Microsoft Entra app with the necessary access to the projects that need to be indexed using the following steps:
-
-1. Navigate to [Azure DevOps](https://dev.azure.com/) and select the required organization.
-2. Select `Organization settings`.
-3. On the left navigation pane, select `Users` under the 'General' header.
-4. Select `Add users`.
-5. Copy the Application (client) ID obtained from the app to "Users or Service Principals".
-6. Grant the `Basic` access level and select the projects to allow access to the index. Also, add to the `Project Reader` Azure DevOps group (or equivalent) to ensure access. De-select the option to send an email invitation to users. Click add.
-
-#### b. Azure DevOps OAuth
-
-To connect to your Azure DevOps instance, you need your Azure DevOps [organization](/azure/devops/organizations/accounts/create-organization) name, its App ID, and client secret for OAuth authentication.
-
-**Register an app**
-
-Register an app in Azure DevOps so that the Microsoft Search app and Microsoft 365 Copilot can access the instance. To learn more, see Azure DevOps documentation on how to [register an app](/azure/devops/integrate/get-started/authentication/oauth?preserve-view=true&view=azure-devops#register-your-app).
-
-The following table provides guidance on how to fill out the app registration form:
-
-Mandatory Fields | Description | Recommended value
---- | --- | ---
-| Company name         | The name of your company. | Use an appropriate value   |
-| Application name     | A unique value that identifies the application that you're authorizing.    | Microsoft Search     |
-| Application website  | The URL of the application that requests access to your Azure DevOps instance during connector setup. (Required).  | For **M365 Enterprise**: https://<span>gcs.office.</span>com/,</br> For **M365 Government**: https://<span>gcsgcc.<span>office.com/
-| Authorization callback URL        | A required callback URL that the authorization server redirects to. | For **M365 Enterprise**: https://<span>gcs.office.</span>com/v1.0/admin/oauth/callback,</br> For **M365 Government**: https://<span>gcsgcc.office.<span>com/v1.0/admin/oauth/callback |
-| Authorized scopes | The scope of access for the application | Select the following scopes: Identity (read), Work Items (read), Variable Groups (read), Project and Team (read), Graph (read), Analytics (read)|
-
->[!IMPORTANT]
->The authorized scopes that you select for the app should match the scopes exactly as listed above. If you omit one of the authorized scopes in the list or add another scope, the authorization fails.
-
-On registering the app, you get the **App ID** and **Client Secret** that are used to configure the connector.
-
->[!NOTE]
->To revoke access to any app registered in Azure DevOps, go to User settings at the top right of your Azure DevOps instance. Select **Profile** and then select **Authorizations** in the Security section of the side pane. Hover over an authorized OAuth app to see the **Revoke** button in the corner of the app details.
-
+Your Entra app should automatically get authenticated with the logged-in Admin account due to single sign-on. Microsoft Entra issues an access token to the application. This access token contains information about the user and the delegated permissions that have been granted. The application uses the access token to make requests to Azure DevOps. The application can only access data and perform actions that the signed-in user is also authorized to do.
 
 ### 4. Roll out to limited audience
 Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. To know more about limited rollout, see [staged rollout](staged-rollout-for-graph-connectors.md).
@@ -148,7 +114,7 @@ For other settings, like **Access Permissions**, **Data Inclusion Rules**, **Sch
 
 | Users | Description |
 |----|---|
-| Access permissions | _Only people with access to content in Data source._ |
+| Access permissions | _Only people with access to the content in the data source._ |
 | Map Identities | _Data source identities mapped using Microsoft Entra IDs._ |
 
 | Content | Description |
