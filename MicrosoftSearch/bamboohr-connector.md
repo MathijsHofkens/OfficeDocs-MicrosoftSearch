@@ -44,15 +44,15 @@ This guide is for Microsoft 365 administrators or anyone responsible for configu
    ![Screenshot of Direct Urls form.](media/bamboohr-connector/bamboohr-redirecturis.png)
 4. On the application scopes field, select the following scopes with read access only:  
 
-| Category | Required scopes |
-| :--- | :--- |
-| Claims | <table><tr><td>email</td></tr><tr><td>openid</td></tr></table> |
-| Employee | <table><tr><td>employee</td></tr><tr><td>employee:contact</td></tr><tr><td>employee:identification</td></tr><tr><td>employee:job</td></tr><tr><td>employee:management</td></tr><tr><td>employee:name</td></tr><tr><td>employee_directory</td></tr></table> |
-| Miscellaneous | <table><tr><td>app</td></tr><tr><td>field</td></tr><tr><td>offline_access</td></tr><tr><td>public.user</td></tr><tr><td>user</td></tr><tr><td>user:management</td></tr></table> |
-| Reports | <table><tr><td>report</td></tr></table> |
+   | Category | Required scopes |
+   | :--- | :--- |
+   | Claims | <table><tr><td>email</td></tr><tr><td>openid</td></tr></table> |
+   | Employee | <table><tr><td>employee</td></tr><tr><td>employee:contact</td></tr><tr><td>employee:identification</td></tr><tr><td>employee:job</td></tr><tr><td>employee:management</td></tr><tr><td>employee:name</td></tr><tr><td>employee_directory</td></tr><tr><td>sensitive_employee:protected_info</td></tr></table> |
+   | Miscellaneous | <table><tr><td>field</td></tr><tr><td>offline_access</td></tr><tr><td>public.user</td></tr></table> |
+   | Reports | <table><tr><td>report</td></tr></table> |
 
- ![Screenshot of Select Scopes.](media/bamboohr-connector/bamboohr-selectscopes.png)
- ![Screenshot of Scope Selection.](media/bamboohr-connector/bamboohr-scopeselection.png)
+   ![Screenshot of Select Scopes.](media/bamboohr-connector/bamboohr-selectscopes.png)
+   ![Screenshot of Scope Selection.](media/bamboohr-connector/bamboohr-scopeselection.png)
 
 5. Navigate to the **app credentials** to get the App client ID and App client secret.   
  ![Screenshot of Client Id and Client Secret Section.](media/bamboohr-connector/bamboohr-clientidandsecret.png)
