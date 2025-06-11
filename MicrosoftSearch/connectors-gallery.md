@@ -289,11 +289,11 @@ These are the connectors under learning.
 
 ## People, Human Resources Information Systems (HRIS) 
 
-The following connectors are under people and Human Resource Information Systems (HRIS). Overview of People Connectors [insert link to overview page] 
+The following connectors are under people and Human Resource Information Systems (HRIS). More information can be found in the [overview page](https://learn.microsoft.com/graph/peopleconnectors).
 
 |Connector name|Publisher|Description|
 | -------- | -------- | -------- |
-|BambooHR |Microsoft |Allows your organization to populate People Experiences like profiles in Teams or Copilot with people data from the BambooHR system. For more information, see [BambooHR connector](https://learn.microsoft.com/en-us/microsoftsearch/bamboohr-connector). |
+|BambooHR |Microsoft |Allows your organization to populate People Experiences like profiles in Teams or Copilot with people data from the BambooHR system. For more information, see [BambooHR connector](https://learn.microsoft.com/microsoftsearch/bamboohr-connector). |
 
 ## Social Networks
 
