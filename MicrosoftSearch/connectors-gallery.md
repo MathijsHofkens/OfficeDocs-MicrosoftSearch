@@ -289,7 +289,7 @@ These are the connectors under learning.
 
 ## People, Human Resources Information Systems (HRIS) 
 
-The following connectors are under people and Human Resource Information Systems (HRIS). More information can be found in the [overview page](https://learn.microsoft.com/graph/peopleconnectors).
+The following connectors are under people and Human Resource Information Systems (HRIS). More information can be found in the [overview page](graph/peopleconnectors).
 
 |Connector name|Publisher|Description|
 | -------- | -------- | -------- |
