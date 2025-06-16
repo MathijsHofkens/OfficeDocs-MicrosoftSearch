@@ -28,7 +28,7 @@ This guide is for Microsoft 365 administrators or anyone responsible for configu
 - Enable your end users to ask questions related to BambooHR profiles. 
 - Use [Semantic search](semantic-index-for-copilot.md) in Copilot to enable users to find relevant profiles based on keywords, personal preferences, and social connections. 
 
-For more information, see [Microsoft 365 Copilot connector for people data](https://learn.microsoft.com/en-us/graph/peopleconnectors).
+For more information, see [Microsoft 365 Copilot connector for people data](https://learn.microsoft.com/graph/peopleconnectors).
 
 ## Limitations
 
