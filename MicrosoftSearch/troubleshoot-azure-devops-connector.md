@@ -29,5 +29,6 @@ The following common errors are observed while configuring the connector, or dur
 | Crawl time (post connector configuration) | `You don't have permission to access this data source. You can contact the owner of this data source to request permission.` | *Third-party application access via OAuth* is disabled. Follow steps to [manage security policies](/azure/devops/organizations/accounts/change-application-access-policies?view=azure-devops#manage-a-policy&preserve-view=true) to enable OAuth. |
 | Crawl time (post connector configuration) | `Credentials associated with this data source have expired. Renew the credentials and then update the connection` | The registered app may have been deleted or expired. |
 | Crawl time (post connector configuration) | `Item listed but no longer accessible or no longer exists` | The crawling account may be missing 'basic' access level. Crawls fail with 'stakeholder' access. |
+| Crawl time (post connector configuration) | `2011: Bad data source API` | The crawling account may be missing 'basic' access level. Crawls fail with 'stakeholder' access. |
 
-If you have issues or want to provide feedback, contact [Microsoft Graph | Support (https://developer.microsoft.com/en-us/graph/support).
+If you have issues or want to provide feedback, contact [Microsoft Graph | Support](https://developer.microsoft.com/en-us/graph/support).

@@ -49,6 +49,31 @@ These are the supported file types.
 | .md | Markdown | Markdown File |
 | .rtf | Rich Text Format | Rich Text Format |
 | .tsv | Tab Separated Values | Tab-Separated Values |
+| .gif | GIF | Graphics Interchange Format |
+| .jpeg | JPEG | JPEG Image |
+| .jpg | JPG | JPEG Image |
+| .png | PNG | Portable Network Graphics |
+| .mp3 | MP3 | MPEG Audio Layer III |
+| .wav | WAV | Waveform Audio File Format |
+| .aiff | AIFF | Audio Interchange File Format |
+| .flac | FLAC | Free Lossless Audio Codec |
+| .aac | AAC | Advanced Audio Coding |
+| .alac | ALAC | Apple Lossless Audio Codec |
+| .wma | WMA (Lossy) | Windows Media Audio (Lossy) |
+| .wma | WMA (Lossless) | Windows Media Audio (Lossless) |
+| .ogg | OGG | Ogg Vorbis Audio Format |
+| .pcm | PCM | Pulse-Code Modulation Audio |
+| .mp4 | MP4 | MPEG-4 Video File |
+| .mkv | MKV | Matroska Video File |
+| .avi | AVI | Audio Video Interleave |
+| .wmv | WMV | Windows Media Video |
+| .mov | MOV | Apple QuickTime Movie |
+| .flv | FLV | Flash Video Format |
+| .avchd | AVCHD | Advanced Video Coding High Definition |
+| .webm | WebM | Web Media File |
+| .mpeg | MPEG-2 | Moving Picture Experts Group Format |
+| .hevc | HEVC/H.265 | High Efficiency Video Coding |
+
 
 These are the supported  MIME types.
 
@@ -65,7 +90,7 @@ These are the supported  MIME types.
 - You must be the **search admin** for your organization's Microsoft 365 tenant.
 - **Install the Microsoft Graph connector agent**: To access your on-premises websites, you must install and configure the [Microsoft Graph connector agent](https://www.microsoft.com/download/details.aspx?id=104045). [Download the agent installer](https://www.microsoft.com/download/details.aspx?id=104045) and follow the installation instructions to set it up. Once installed, ensure that the agent is configured correctly to connect your on-premises websites with the connector.
 - **Website URLs**: To connect to your website content, you need the URL to the website. You can index multiple websites (up to 50) in a single connection. 
-- **Service Account (optional)**: A service account is only needed when your websites require authentication. Public websites don't require authentication and can be crawled directly. For websites requiring authentication, it is advised to have a dedicated account to authenticate and crawl the content.
+- **Service Account (optional)**: A service account is only needed when your websites require authentication. Public websites don't require authentication and can be crawled directly. For websites requiring authentication, it's advisable to have a dedicated account to authenticate and crawl the content.
 
 ## Get started
 
@@ -75,10 +100,7 @@ These are the supported  MIME types.
 A display name is used to identify each citation in Copilot, helping users easily recognize the associated file or item. Display name also signifies trusted content. Display name is also used as a [content source filter](/MicrosoftSearch/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize.
 
 ### Add website URLs to the index
-Specify the root of the website that you'd like to crawl. The Enterprise Websites on-premises Copilot connector uses this URL as the starting point and follows all the links from this URL for its crawl. You can index up to 50 different site URLs in a single connection. In the URLs field, enter the site URLs separated by commas (,). For example, `https://www.contoso.com,https://www.contosoelectronics.com`.
-
-> [!NOTE]
-> The connector always starts crawling from the root of the URL. For example - if your provided URL is `https://www.contoso.com/electronics`, then the connector will start crawling from `https://www.contoso.com`.
+Specify the root of the website that you'd like to crawl. The Enterprise Websites on-premises Copilot connector uses this URL as the starting point and follows all the links from this URL for its crawl. You can index up to 50 different site URLs in a single connection.
 
 The connector only crawls webpages in the domain of root URLs and doesn't support crawling of out-of-domain URLs. Redirection is only supported within the same domain. If there are redirections in the webpages to be crawled, you may add the redirected URL directly in list of URLs to be crawled.
 
@@ -94,7 +116,14 @@ b. Upon locating the robots.txt file, the crawler finds the sitemap links in the
 
 c. The crawler then crawls all webpages as listed in the sitemap files.
 
-d. If there is failure in any of the above steps, the crawler performs a deep crawl of the website, without throwing any error.
+d. If there's failure in any of the above steps, the crawler performs a deep crawl of the website, without throwing any error.
+
+**Index only pages under the specified subdirectory**
+
+The Website connector offers an option to index only webpages that are under the specified subdirectory specified. 
+
+- When this option is **not checked**, the connector always starts crawling from the root of the URL. For example - if your provided URL is `https://www.contoso.com/electronics`, then the connector starts crawl from `https://www.contoso.com`.
+- When this option is **checked**, the connector starts crawling from the exact input URL. For example - if your provided URL is `https://www.contoso.com/electronics`, then the connector starts crawl from `https://www.contoso.com/electronics`.
 
 ### Graph connector agent
 
@@ -148,7 +177,7 @@ The resource ID, client ID, and client secret values depend on how you did the s
       > [ ![Image showing the settings section on the authentication page.](media/enterprise-web-connector/connectors-enterpriseweb-authentication.png) ](media/enterprise-web-connector/connectors-enterpriseweb-authentication.png#lightbox)
     
       > [!NOTE]
-      > It is not required to have the above-specified route for Redirect URI on your website. Only if you use the user token sent by Azure in your website for authentication you will need to have the route.
+      > It isn't required to have the above-specified route for Redirect URI on your website. Only if you use the user token sent by Azure in your website for authentication you'll need to have the route.
     
     * View of the client ID on the **Essentials** section:
     
@@ -252,6 +281,13 @@ There are two ways to prevent pages from being crawled: disallow them in your ro
 2. Add URLs to exclude
 
     You can optionally create an **Exclusion list** to exclude some URLs from getting crawled if that content is sensitive or not worth crawling. To create an exclusion list, browse through the root URL. You can add the excluded URLs to the list during the configuration process.
+
+**Site configuration**
+
+The connector supports two options to customize crawler behavior.
+
+1. Index pages containing a "noindex" directive in their "meta" tag or X-Robots-Tag HTTP response header: Selecting this option forces the crawler to index these pages and override the default crawler behavior.
+2. Ignore 'Allow' and 'Disallow' directives specified in the "robots.txt" file: Selecting this option forces the crawler to ignore the crawl directives in robots.txt file.
 
 **Dynamic site configuration**
 
