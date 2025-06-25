@@ -91,11 +91,11 @@ To configure Microsoft Entra ID OAuth 2.0/OpenID Connect for the Veeva Vault Cop
    4. In **Authorization Server Provider**, select **Azure AD**.
    5. Click **Upload AS metadata** and select **Provide Authorization Server Metadata URL**.
    6. Copy the **OpenID Connect metadata document** from **endpoints** in the overview page of the newly created application in Microsoft Entra admin center, and paste it into the field.
-   7. Select **Identity is in another claim** and enter the **UPN** of the claim.
+   7. Select **Identity is in another claim** and enter the **upn** of the claim.
    8. In **User ID Type**, select **Federated ID**, and uncheck **Perform Strict Audience Restriction validation**.
 
    > [!NOTE]
-   > Make sure your UPN is the same as your federated ID.
+   > Make sure your upn is the same as your federated ID.
 
 2. In the newly created profile page, click **Client Applications** > **Add**. 
 Use the **Client ID** from the newly created application in the Entra admin center.
