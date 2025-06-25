@@ -11,12 +11,14 @@ description: "Learn how to use the crossover browser extension for Microsoft 365
 ---
 # The Microsoft 365 Copilot extension for Copilot connectors
 
+
+> [!IMPORTANT]
+> - This documentation is for preview customers only and is subject to change. Features described here may not be available in all regions and are not intended for production use.
+> - The extension exclusively operates with Microsoft 365 Copilot connectors that your organization’s administrator has approved and enabled, and it only recognizes and uses data from apps once those connections are in place.
+
 The Microsoft 365 Copilot extension is a browser add-on designed to enhance your Microsoft 365 Copilot search experience. It works by delivering personalized, highly relevant Copilot results from your work-related applications, directly within Microsoft 365 Copilot. 
 
 This extension enables Copilot Search to enhance the relevance of third-party content, applications, and connectors, bridging the gap between Microsoft 365 and the non-Microsoft applications you use at work.
-
-> [!Important]
-> The extension exclusively operates with Microsoft 365 Copilot connectors that your organization’s administrator has approved and enabled, and it only recognizes and uses data from apps once those connections are in place.
 
 ## Smart results from across your work tools 
 The Microsoft 365 Copilot extension brings together tickets, files, documents, and tasks from multiple applications, empowering you to resolve issues, collaborate with teammates, and move projects forward, from Microsoft 365 Copilot. With every search, you’re equipped to make faster decisions, complete tasks efficiently, and drive productivity throughout your day. 

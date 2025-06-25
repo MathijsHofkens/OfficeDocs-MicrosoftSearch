@@ -5,7 +5,7 @@ author: dannyyaou
 manager: jecui
 audience: Admin
 ms.audience: Admin
-ms.topic: article
+ms.topic: get-started
 ms.service: mssearch
 ms.localizationpriority: Medium
 search.appverid:
