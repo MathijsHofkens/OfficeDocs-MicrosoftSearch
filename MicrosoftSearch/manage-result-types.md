@@ -40,7 +40,7 @@ Each result type has a priority that determines the order of match evaluation. I
 The result type management experience is wizard driven, you're guided through steps to define the name, content source, rules, and layout. Result types can be customized at both the organization-level and SharePoint site level. A result type created at SharePoint site honors the search scope defined for site. If the search scope in a SharePoint site is set to hub or Organization scope, the result type created at the respective hub or Organization scope is applied to search results.
 
 > [!NOTE]
-> Result types for "SharePoint and OneDrive" content source is available in Microsoft Search in SharePoint home, sites and Office.com. The feature will be available in Microsoft Search in Bing soon. 
+> Result types for "SharePoint and OneDrive" content source is available in Microsoft Search in SharePoint home, sites and Office.com.
 
 ### Manage organization-level result types
 
@@ -60,8 +60,7 @@ The result type management experience is wizard driven, you're guided through st
 
 ## Limitations
 
-1. Custom SharePoint managed properties can't be used in the ‘Rules’ section of result type  
-2. Result types created for "SharePoint and OneDrive" content source doesn't apply to search results on Microsoft Search in Bing canvases. 
+1. Custom SharePoint managed properties can't be used in the ‘Rules’ section of result type
 
 ## Troubleshooting
 
