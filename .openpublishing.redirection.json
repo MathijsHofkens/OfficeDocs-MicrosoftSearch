@@ -8,7 +8,7 @@
         {
             "source_path": "MicrosoftSearch/add-a-location.md",
             "redirect_url": "/MicrosoftSearch/retirement-microsoft-search-bing",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "MicrosoftSearch/bulk-create-locations.md",
@@ -33,7 +33,7 @@
                 {
             "source_path": "MicrosoftSearch/bulk-create-qas.md",
             "redirect_url": "/MicrosoftSearch/retirement-microsoft-search-bing",
-            "redirect_document_id": true
+            "redirect_document_id": false
         },
         {
             "source_path": "MicrosoftSearch/create-and-manage-qas.md",
