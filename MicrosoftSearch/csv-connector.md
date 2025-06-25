@@ -1,27 +1,26 @@
 --- 
-
-title: "CSV Microsoft Graph connector for Microsoft Search and Microsoft 365 Copilot" 
+title: "CSV Microsoft 365 Copilot connector" 
 ms.author: rchanda 
 author: rchanda 
 manager: harshkum 
 audience: Admin
 ms.audience: Admin 
-ms.topic: article 
+ms.topic: install-set-up-deploy
 ms.service: mssearch 
 ms.localizationpriority: medium 
 search.appverid: 
 - BFB160 
 - MET150 
 - MOE150 
-description: "Set up the CSV Microsoft Graph connector for SharePoint or Azure Data Lake Storage sources." 
+description: "Set up the CSV Microsoft 365 Copilot connector for SharePoint or Azure Data Lake Storage sources." 
 ms.date: 03/08/2022
 ---
 
-# CSV Microsoft Graph connector
+# CSV Microsoft 365 Copilot connector
 
-The CSV Microsoft Graph connector allows your organization to ingest content from CSV files stored in SharePoint libraries and Azure Data Lake Storage (ADLS). After you configure the connector and index content from these sources, end users can find CSV files in Microsoft Search and Microsoft 365 Copilot.
+The CSV Microsoft 365 Copilot connector allows your organization to ingest content from CSV files stored in SharePoint libraries and Azure Data Lake Storage (ADLS). After you configure the connector and index content from these sources, end users can find CSV files in Microsoft Search and Microsoft 365 Copilot.
 
-This article is for anyone who configures, runs, and monitors a CSV Microsoft Graph connector. It supplements the general setup process and shows instructions that apply only to this connector.
+This article is for anyone who configures, runs, and monitors a CSV Microsoft 365 Copilot connector. It supplements the general setup process and shows instructions that apply only to this connector.
 
 ## Capabilities
 
@@ -34,7 +33,6 @@ This article is for anyone who configures, runs, and monitors a CSV Microsoft Gr
 - Profile enrichment scenarios aren't supported at this time
 - Spaces in CSV column headers are not supported
 
-<!---## Before you get started-->
 ## Prerequisites
 
 - Make sure there's no whitespace in the CSV headers
@@ -69,9 +67,7 @@ Verify the .csv files you want to index have been uploaded to a SharePoint docum
 
 6. Select **SharePoint** and then **Delegated permissions**.
 
-7. Search for the following permissions and select **Add permissions**. <br>
-    a. AllSites.Read<br>
-    b. User.Read.All
+7. Search for the **AllSites.Read** permission and select **Add permissions**.
 
 8. Select **Grant admin consent for [TenantName]** and confirm by selecting **Yes**.
 
@@ -99,11 +95,11 @@ Verify the .csv files you want to index have been uploaded to a SharePoint docum
 4. In the App Domain field, enter `www.gcs.com`.
 5. In the Redirect URL field, enter `https://www.gcs.com`.
 6. Select **Create**.
-7. Copy the app configuration information, including the Client ID and Client Secret. You'll need it when you set up the CSV connector.
+7. Copy the app configuration information, including the Client ID and Client Secret. You'll need it when you set up the CSV Microsoft 365 Copilot connector.
 
 ##### Enable app permissions to allow customAppAuthentication
 
-In PowerShell ([SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)), run these commands in administrative mode. Use the email address of the admin configuring the connector and your organization name. When the password pop-up appears, the admin should enter their password.
+In PowerShell ([SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online)), run these commands in administrative mode. Use the email address of the admin configuring the connector and your organization's name. When the password pop-up appears, the admin should enter their password.
 
 ```powershell
 Install-Module -Name Microsoft.Online.SharePoint.PowerShell
@@ -140,13 +136,13 @@ Set-spotenant –DisableCustomAppAuthentication $false
 
 For step-by-step guidance, see [Create a storage account](/azure/storage/common/storage-account-create#create-a-storage-account-1). To allow file storage capabilities, on the Advanced tab, select **Enable hierarchical namespace** and **Create a container for this site**.
 
-When you set up the CSV Microsoft Graph connector, you'll need to provide a primary storage connection string. To find it, open the storage account you created and select **Access keys**. Select **Show keys** and copy the connection string for Key1.
+When you set up the CSV Microsoft 365 Copilot connector, you'll need to provide a primary storage connection string. To find it, open the storage account you created and select **Access keys**. Select **Show keys** and copy the connection string for Key1.
 
 ## Get Started
 
-## Step 1: Add a Microsoft Graph connector in the Microsoft 365 admin center
+## Step 1: Add a CSV Microsoft 365 Copilot connector in the Microsoft 365 admin center
 
-[Add CSV Microsoft Graph connector](https://admin.microsoft.com/adminportal/home#/MicrosoftSearch/Connectors/add?ms_search_referrer=MicrosoftSearchDocs_CSV&type=CSV)
+[Add CSV Microsoft 365 Copilot connector](https://admin.microsoft.com/adminportal/home#/MicrosoftSearch/Connectors/add?ms_search_referrer=MicrosoftSearchDocs_CSV&type=CSV)
 
 Follow the general [setup instructions](./configure-connector.md).
 <!---If the above phrase does not apply, delete it and insert specific details for your data source that are different from general setup 
@@ -215,14 +211,14 @@ To control access on an item level, select columns mapped to allowed users and a
 :::image type="content" source="media/csv-connector/csv-connector-acl-item-level.png" alt-text="Item level access control settings." lightbox="media/csv-connector/csv-connector-acl-item-level.png":::
 
 > [!NOTE]
-> The CSV Microsoft Graph connector supports file- or item-level access control. If both are enabled, only the file-level access control is applied.
+> The CSV Microsoft 365 Copilot connector supports file- or item-level access control. If both are enabled, only the file-level access control is applied.
 
 ## Step 6: Assign property labels
 
 Follow the general [setup instructions](./configure-connector.md).
 
 > [!NOTE]
-> IconURL label is populated by default and the mapping cannot be changed.
+> IconURL label is populated by default, and the mapping cannot be changed.
 
 ## Step 7: Manage schema
 
@@ -244,8 +240,8 @@ Follow the general [setup instructions](./configure-connector.md).
 Follow the general [setup instructions](./configure-connector.md).
 
 ## Troubleshooting
-After publishing your connection, you can review the status under the **Data sources** tab in the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).
+After publishing your connection, you can review the status under **Data sources** in the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).
 
-You can find troubleshooting steps for commonly seen issues [here](troubleshoot-csv-connector.md).
+For more information, see [troubleshooting](troubleshoot-csv-connector.md).
 
 If you have issues or want to provide feedback, contact [Microsoft Graph | Support](https://developer.microsoft.com/en-us/graph/support).

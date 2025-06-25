@@ -32,7 +32,7 @@ Interactions with data in Microsoft Graph are based on keyword matching, persona
 
 ## How semantic indexing helps manage your data
 
-Semantic indexing of your data enhances the Microsoft 365 Copilot experience in both Business Chat and in Microsoft 365 apps. It supports an enhanced content grounding and conceptual understanding of your online data that is automatically enabled by Microsoft. It does this by creating vectorized indices. A vector is a numerical representation of a word, image pixel, or other data point. The vector is arranged or mapped with close numbers placed in proximity to one another to represent similarity. Vectors are stored in multi-dimensional spaces where semantically similar data points are clustered together in the vector space, enabling Microsoft 365 to handle a broader set of search queries beyond “exact match."
+Semantic index enhances the Microsoft 365 Copilot experience in both Microsoft 365 Chat and in the Microsoft 365 apps. It supports an enhanced content grounding and conceptual understanding of your online data that is automatically enabled by Microsoft. It does this by creating vectorized indices. A vector is a numerical representation of a word, image pixel, or other data point. The vector is arranged or mapped with close numbers placed in proximity to one another to represent similarity. Vectors are stored in multi-dimensional spaces where semantically similar data points are clustered together in the vector space, enabling Microsoft 365 to handle a broader set of search queries beyond “exact match."
 
 In practical terms, this means that Microsoft 365 services such as Microsoft 365 Copilot can:
 
@@ -92,7 +92,7 @@ Microsoft Graph grounded responses can utilize semantic understanding of user ma
 | PDF files                 | Supported      | Supported        |
 | Web pages (aspx)          | Supported      | Supported        |
 | OneNote files (one)       | Supported      | Supported        |
-| Graph Connector data      | Not applicable | Supported        |
+| Copilot connector data      | Not applicable | Supported        |
 
 >[!NOTE]
 >Files up to 512 MB are now supported for PDF, PPTX, and DOCX extensions. This enhancement allows Copilot users to effectively analyze, summarize, and generate insights from these large files.
@@ -132,7 +132,7 @@ Both Item insights and People insights don't cover personalization features base
 
 ## Incorporating third party information
 
-Using Copilot Connectors, organizations can bring organizational data or content from external sources into Microsoft Graph. Once in Microsoft Graph, that content is indexed so that Copilot may access it - while maintaining access controls for content. This expands the types of content sources that are searchable in your Microsoft 365 productivity apps and the broader Microsoft ecosystem. Note that this process works best when connector content is text rich. The third-party data can be hosted on-premises or in a public or private cloud. Learn more about graph connector licensing requirements for Microsoft 365 Enterprise and Microsoft 365 Copilot at [License requirements and pricing](licensing.md).
+Using Copilot connectors, organizations can bring organizational data or content from external sources into Microsoft Graph. Once in Microsoft Graph, that content is indexed so that Copilot may access it - while maintaining access controls for content. This expands the types of content sources that are searchable in your Microsoft 365 productivity apps and the broader Microsoft ecosystem. Note that this process works best when the connector content is text rich. The third-party data can be hosted on-premises or in a public or private cloud. Learn more about Copilot connector licensing requirements for Microsoft 365 Enterprise and Microsoft 365 Copilot at [License requirements and pricing](licensing.md).
 
 ## Privacy, compliance, and security
 

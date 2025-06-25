@@ -1,27 +1,27 @@
 --- 
 
-title: "Guru Microsoft Graph connector" 
+title: "Guru Microsoft 365 Copilot connector" 
 ms.author: rantang
 author: ranran1998
 manager: jecui
 audience: Admin
 ms.audience: Admin 
-ms.topic: article 
+ms.topic: install-set-up-deploy
 ms.service: mssearch 
 ms.localizationpriority: Medium 
 search.appverid: 
 - BFB160 
 - MET150 
 - MOE150 
-description: "Set up the Guru Microsoft Graph connector for Microsoft Search and Microsoft 365 Copilot" 
+description: "Set up the Guru Microsoft 365 Copilot." 
 ms.date: 3/14/2025
 ---
 
-# Guru Microsoft Graph connector (preview)
+# Guru Microsoft 365 Copilot connector (preview)
 
-With the Guru Microsoft Graph connector, your organization can index Guru cards of your Guru. After you configure the connector and index content from Guru, end users can search for those cards in Microsoft Copilot and from any Microsoft Search client. 
+With the Guru Microsoft 365 Copilot connector, your organization can index Guru cards of your Guru. After you configure the connector and index content from Guru, end users can search for those cards in Microsoft Copilot and from any Microsoft Search client. 
 
-This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors an Guru Microsoft Graph connector. 
+This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors an Guru Copilot connector. 
 
 ## Capabilities
 - Index cards of your Guru and supports ingestion filters by Guru Query Language 
@@ -35,18 +35,18 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 
 ## Prerequisites
 - You must be the **search admin** for your organization's Microsoft 365 tenant.
-- **Guru Instance Admin Account**: To connect to your Guru instance and allow Microsoft Graph Connector to update Guru cards regularly, you need an admin user account of your Guru instance with the permission to create an user token. Find more details [here](https://help.getguru.com/docs/gurus-api#obtaining-a-user-token).
+- **Guru Instance Admin Account**: To connect to your Guru instance and allow Guru Microsoft 365 Copilot connector to update Guru cards regularly, you need an admin user account of your Guru instance with the permission to create an user token. Find more details [here](https://help.getguru.com/docs/gurus-api#obtaining-a-user-token).
 
 ## Get started
 
-### 1. Display name 
+### Choose display name 
 A display name is used to identify each citation in Copilot, helping users easily recognize the associated file or item. Display name also signifies trusted content. The display name is also used as a [content source filter](/MicrosoftSearch/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize.
 
 
-### 2. Authentication Type
+### Provide authentication type
 We support the Basic Authentication for Guru, please use User token. You can find more details [here](https://help.getguru.com/docs/gurus-api#obtaining-a-user-token).
 
-### 3. Staged rollout to a limited audience
+### Staged rollout to a limited audience
 Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience.
 
 At this point, you are ready to create the connection for Guru. You can click the **Create** button to publish your connection and index cards from your Guru instance. 
@@ -66,13 +66,13 @@ If you want to edit any of these values, you need to choose the **Custom setup**
 
 ## Custom setup 
 
-Custom setup is for those admins who want to edit the default values for settings. Once you click the **Custom setup** option, you should see three other tabs – **Users**, **Content**, and **Sync**. 
+In custom setup you can edit any of the default values for users, content, and sync.
 
 ### Users 
 
-**Access permissions**
+#### Access permissions
 
-The Guru Microsoft Graph connector supports data visible to Only people with access to this data source (recommended) or Everyone. If you choose Everyone, indexed data appears in the search results for all users. 
+The Guru Microsoft 365 Copilot connector supports data visible to Only people with access to this data source (recommended) or Everyone. If you choose Everyone, indexed data appears in the search results for all users. 
 
 If you choose Only people with access to this data source, you need to further choose whether your Guru instance has Microsoft Entra ID provisioned users or non-AAD users. 
 

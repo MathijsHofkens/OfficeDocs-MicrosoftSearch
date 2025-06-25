@@ -1,51 +1,45 @@
 ---
 ms.date: 01/09/2024
-title: "Grant Table Access to a Service Account in ServiceNow"
+title: "Grant table access to a service account in ServiceNow"
 ms.author: souravpoddar
 author: souravpoddar001
 manager: harshkum
 audience: Admin 
 ms.audience: Admin
-ms.topic: article
+ms.topic: how-to
 ms.service: mssearch
 ms.localizationpriority: medium
 search.appverid:
 - BFB160
 - MET150
 - MOE150
-description: "Grant table access to a service account in ServiceNow which can then be used to set up Microsoft Graph Connectors for ServiceNow."
+description: Grant table access to a service account in ServiceNow which can then be used to set up ServiceNow Microsoft 365 Copilot connectors."
 ---
 
-# Granting Table Access to a User in ServiceNow
+# Granting table access to a user in ServiceNow
 
 This article explains how to grant table access to a service account in ServiceNow. The process involves creating a role, assigning it to a user, and configuring row-level and field-level access controls.
 
 ## Prerequisites
 
-- **Administrator Role**: Ensure you have admin access in ServiceNow.
-- **Security Admin Role**: Elevate to the `security_admin` role to make changes to Access Control Lists (ACLs).
+- Ensure you have admin access in ServiceNow.
+- Elevate to the `security_admin` role to make changes to Access Control Lists (ACLs).
+  
+## Get started
 
----
-
-## Step 1: Create a User
-
+### Create a user
 1. Navigate to **User Administration > Users**.
 2. Click **New** to create a new user.
 3. Fill in the user details, such as `microsoft.copilot` for the User ID and `Microsoft` and `Copilot` for the First Name and Last Name respectively.
 4. Click **Submit** to save the user.
 
----
-
-## Step 2: Create a Role
-
+###  Create a role
 1. Navigate to **User Administration > Roles**.
 2. Click **New**.
-3. Enter a unique name for the role (e.g., `Microsoft Graph Connector Account`).
+3. Enter a unique name for the role (e.g., `Copilot connector account`).
 4. Click **Submit** to save the role.
 
----
-
-## Step 3: Assign the Role to a User
+### Assign the role to a user
 
 1. Navigate to **User Administration > Users**.
 2. Open the user record for the intended user (e.g., `Microsoft Copilot`).
@@ -54,9 +48,7 @@ This article explains how to grant table access to a service account in ServiceN
 5. Click **Save** to finalize the assignment.
 6. Click on **Update** to update the user record.
 
----
-
-## Step 4: Grant Row-Level Access
+### Grant row-level access
 
 To grant access to rows within a specific table, follow these steps:
 
@@ -75,9 +67,7 @@ To grant access to rows within a specific table, follow these steps:
 1. Impersonate the user (e.g., `Microsoft Copilot`).
 2. Access the target table (e.g., `sys_dictionary`) and confirm that rows are visible. You will notice that though the user can view the rows, the field values are not visible. To grant field-level access, proceed to the next step.
 
----
-
-## Step 5: Grant Field-Level Access
+### Grant field-level access
 
 If the user can view rows but not field values, field-level access must be configured.
 
@@ -90,11 +80,9 @@ If the user can view rows but not field values, field-level access must be confi
 4. In the **Roles** section, add the previously created role (`Microsoft Graph Connector Account`).
 5. Click **Submit** to save the ACL.
 
-### Final Verification
+### Final verification
 
 1. Impersonate the user (e.g., `Microsoft Copilot`).
 2. Confirm that both rows and field values within the target table are now visible.
-
----
 
 By following these steps, you have successfully granted table access to a service account in ServiceNow.

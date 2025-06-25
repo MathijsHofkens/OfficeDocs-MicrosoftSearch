@@ -1,12 +1,12 @@
 ---
 ms.date: 10/08/2019
-title: "Troubleshooting the Oracle SQL Microsoft Graph connector"
+title: "Troubleshooting the Oracle SQL Microsoft 365 Copilot connector"
 ms.author: mecampos
 author: mecampos
 manager: umas
 audience: Admin
 ms.audience: Admin
-ms.topic: article
+ms.topic: troubleshooting-general
 ms.service: mssearch
 ms.localizationpriority: medium
 search.appverid:
@@ -14,12 +14,12 @@ search.appverid:
 - MET150
 - MOE150
 ROBOTS: NoIndex
-description: "Troubleshoot issues with the Oracle SQL Microsoft Graph connector for Microsoft Search and Microsoft 365 Copilot."
+description: "Troubleshoot issues with the Oracle SQL Microsoft 365 Copilot connector."
 ---
 
-# Troubleshooting the Oracle SQL Microsoft Graph connector
+# Troubleshooting the Oracle SQL Microsoft 365 Copilot connector.
 
-The following common errors are observed while configuring the connector, or during crawling and their possible reasons.
+The following common errors are observed while configuring the connector or during crawling, and their possible reasons.
 
 | Configuration step | Error message | Possible reasons |
 |:------------ |:------------ |:------------ |

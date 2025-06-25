@@ -329,6 +329,41 @@
             "source_path": "MicrosoftSearch/imanage-cloud-connector.md", 
             "redirect_url": "index",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "MicrosoftSearch/overview-microsoft-search-bing.md", 
+            "redirect_url": "/microsoftsearch/retirement-microsoft-search-bing",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "MicrosoftSearch/security-for-search.md", 
+            "redirect_url": "/microsoftsearch/retirement-microsoft-search-bing",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "MicrosoftSearch/use-windows-search-find-work-school-results.md", 
+            "redirect_url": "/microsoftsearch/retirement-microsoft-search-bing",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "MicrosoftSearch/edge-shortcuts.md", 
+            "redirect_url": "/microsoftsearch/retirement-microsoft-search-bing",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "MicrosoftSearch/add-a-search-box-to-your-intranet-site.md", 
+            "redirect_url": "/microsoftsearch/retirement-microsoft-search-bing",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "MicrosoftSearch/select-work-school-search-experience.md", 
+            "redirect_url": "/microsoftsearch/retirement-microsoft-search-bing",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "MicrosoftSearch/set-default-search-engine.md", 
+            "redirect_url": "/microsoftsearch/retirement-microsoft-search-bing",
+            "redirect_document_id": false
         }
     ]
 }

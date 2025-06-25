@@ -5,7 +5,7 @@ author: vivg
 manager: ereza
 audience: Admin
 ms.audience: Admin 
-ms.topic: article 
+ms.topic: install-set-up-deploy
 ms.service: mssearch 
 ms.localizationpriority: medium 
 search.appverid: 
@@ -32,11 +32,23 @@ This documentation is for Microsoft 365 administrators or anyone who configures,
 
 ## Limitations
 - The Salesforce Knowledge connector currently supports permissions based only on knowledge entity access. It does not support data category-based permissions, field-level security (FLS), or sharing rules.
+- Supports only articles and items written in English.
+- Only published items are indexed.
 
 ## Prerequisites
 
 >[!NOTE]
 >Make sure that the Salesforce account used to log in for the Salesforce Knowledge Microsoft Graph connector is the same as the account already logged into Salesforce.
+
+**Required Salesforce Permissions**
+
+To configure the Salesforce Knowledge connector, the following permissions are required:
+- API Enabled
+- View Setup and Configuration
+- Allow View Knowledge
+- Read access for the Knowledge entity
+
+**Obtain Salesforce Knowledge Connector Credentials**
 
 To connect to your Salesforce instance, you need your Salesforce instance URL, the client ID, and the client secret for OAuth 2.0 authentication. The following steps explain how you or your Salesforce administrator can get this information from your Salesforce account:
 
@@ -92,6 +104,24 @@ The first time you've attempted to sign in with these settings, you'll get a pop
 Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. To know more about limited rollout, see [staged rollout](staged-rollout-for-graph-connectors.md).
 
 At this point, you're ready to create the connection for Salesforce Knowledge. You can click on the "Create" button to publish your connection and index posts from your Salesforce Knowledge account.
+
+For other settings, like **Access Permissions**, **Data Inclusion Rules**, **Schema**, **Crawl frequency**, default values are preconfigured and optimized for Salesforce Knowledge data. You can find the default values listed below:
+
+| Users | Description |
+|----|---|
+| Access permissions | _Only people with access to content in Data source._ |
+| Map Identities | _Data source identities mapped using Microsoft Entra IDs._ |
+
+| Content | Description |
+|---|---|
+| Manage Properties | _To check default properties and their schema, see [content](#content)._ |
+
+| Sync | Description |
+|---|---|
+| Incremental Crawl | _Frequency: Every 15 mins_ |
+| Full Crawl | _Frequency: Every Day_ |
+
+To modify any of these values, select the **Custom setup** option.
 
 ## Custom Setup
 

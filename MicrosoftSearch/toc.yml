@@ -44,7 +44,7 @@ items:
     href: manage-search-apps.md
 - name: Data sources
   items:
-  - name: Microsoft Graph connectors
+  - name: Microsoft 365 Copilot connectors
     items:
     - name: Overview
       href: connectors-overview.md
@@ -54,6 +54,8 @@ items:
       href: frequently-asked-questions.md
     - name: Index quota
       href: licensing.md
+    - name: The Microsoft 365 Copilot extension
+      href: crossover-browser.md
     - name: Terms of use
       href: terms-of-use.md
     - name: Set up Microsoft-built connectors
@@ -62,9 +64,9 @@ items:
         href: configure-connector.md
       - name: Add Staged rollout to connectors
         href: staged-rollout-for-graph-connectors.md
-      - name: Microsoft Graph connectors in Microsoft 365 Copilot
+      - name: Microsoft 365 Copilot connectors
         items:
-        - name: Enhancing Microsoft 365 Copilot discovery with Microsoft Graph connector content
+        - name: Enhancing Microsoft 365 Copilot discovery with Microsoft 365 Copilot connector content
           href: enhancing-microsoft-copilot-discovery-with-graph-connector-content.md
       - name: On-prem connectors
         items:
@@ -76,7 +78,7 @@ items:
         href: map-non-aad.md
       - name: Map Microsoft Entra identities
         href: map-aad.md
-      - name: Prebuilt Microsoft Graph connectors
+      - name: Prebuilt Microsoft 365 Copilot connectors
         href: pre-built-connectors-overview.md
         items:
         - name: 15Five High Fives
@@ -99,6 +101,10 @@ items:
           items:
           - name: Setup
             href: aha-cloud-connector.md
+        - name: Amazon S3
+          items:
+          - name: Setup
+            href: amazon-s3-graph-connector.md
         - name: Asana
           items:
           - name: Setup
@@ -219,6 +225,10 @@ items:
             href: gitlab-connector.md 
           - name: Troubleshooting
             href: troubleshoot-gitlab-connector.md
+        - name: Gong (preview)
+          items:
+          - name: Setup
+            href: gong-connector.md
         - name: Google Drive
           items:
           - name: Setup
@@ -251,10 +261,12 @@ items:
           items:
           - name: Setup
             href: postgresql-connector.md    
-        - name: PagerDuty Escalation Policies
+        - name: PagerDuty
           items:
-          - name: Setup
+          - name: Setup PagerDuty Escalation Policies
             href: PagerDuty-Escalation-Policies-connector.md
+          - name: Setup PagerDuty Schedules
+            href: pagerduty-schedules-connector.md
         - name: Salesforce CRM
           items:
           - name: Setup
@@ -281,6 +293,10 @@ items:
             href: servicenow-knowledge-connector.md
           - name: Grant Table Access to a Service Account in ServiceNow
             href: granting-table-access-servicenow.md
+          - name: Advanced flow
+            href: servicenow-knowledge-advanced-flow.md
+          - name: Authenticating using OAuth 2.0
+            href: setup-oauth-servicenow.md
           - name: Troubleshooting
             href: troubleshoot-servicenow-knowledge-connector.md
         - name: ServiceNow Tickets
@@ -323,10 +339,12 @@ items:
             href: veeva-vault-promoMats-connector.md
           - name: Troubleshooting
             href: troubleshoot-veeva-vault-connectors.md
-        - name: WordPress.org (on-prem)
+        - name: WordPress
           items:
-          - name: Setup
+          - name: Setup WordPress.org (on-prem)
             href: WordPress-onprem-connector.md
+          - name: WordPress.com
+            href: wordpress-cloud-connector.md
         - name: Zendesk Help Center
           items:
           - name: Setup
@@ -351,7 +369,7 @@ items:
         href: connector-error-responses.md
       - name: Item delete notification
         href: connectors-viva-topics-item-delete-notification.md
-    - name: Deploy Microsoft Graph connectors in Teams admin center
+    - name: Deploy Microsoft 365 Copilot connectors in Teams admin center
       href: connectors-deploy-teams.md
   - name: Semantic index
     items:
@@ -385,23 +403,9 @@ items:
       href: manage-classic-spo-pages.md
   - name: Microsoft Search in Bing
     items:
-    - name: Overview
-      href: overview-microsoft-search-bing.md
     - name: Retirement of Microsoft Search in Bing
       href: retirement-microsoft-search-bing.md
-    - name: Security and Privacy
-      href: security-for-search.md
-    - name: Use Windows Search to find work or school results
-      href: use-windows-search-find-work-school-results.md             
-    - name: Customize address bar shortcuts for Microsoft Edge
-      href: edge-shortcuts.md
-    - name: Add a search box to your intranet site
-      href: add-a-search-box-to-your-intranet-site.md
-    - name: Select a school or work search experience
-      href: select-work-school-search-experience.md
     - name: Make Microsoft Edge the default browser
       href: /deployedge/edge-default-browser
-    - name: Make Bing the default search engine
-      href: set-default-search-engine.md
     - name: Make Bing.com the default home page
       href: set-default-homepage.md

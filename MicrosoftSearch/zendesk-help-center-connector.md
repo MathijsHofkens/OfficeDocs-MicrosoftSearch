@@ -1,29 +1,29 @@
 --- 
-title: "Zendesk Help Center Graph connector for Microsoft Search and Copilot" 
+title: "Zendesk Help Center Microsoft 365 Copilot connector" 
 ms.author: vivg 
 author: vivg 
 manager: harshkum 
 audience: Admin
 ms.audience: Admin 
-ms.topic: article 
+ms.topic: install-set-up-deploy
 ms.service: mssearch 
 ms.localizationpriority: Medium 
 search.appverid: 
 - BFB160 
 - MET150 
 - MOE150 
-description: "Set up the Zendesk Help Center Microsoft Graph connector for Microsoft Search and Copilot" 
+description: "Set up the Zendesk Help Center Microsoft 365 Copilot connector." 
 ms.date: 08/30/2024
 ---
 
-# Zendesk Help Center Microsoft Graph connector (Preview)
+# Zendesk Help Center Microsoft 365 Copilot connector (preview)
 
-The Zendesk Help Center Graph connector allows your organization to index articles from Zendesk Help Center (also known as Zendesk Guide). After you configure the connector, end users can search for these articles from Zendesk in Microsoft Copilot and from any Microsoft Search client.
+The Zendesk Help Center Microsoft 365 Copilot connector allows your organization to index articles from Zendesk Help Center (also known as Zendesk Guide). After you configure the connector, end users can search for these articles from Zendesk in Microsoft Copilot and from any Microsoft Search client.
 
-This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors a Zendesk Help Center Graph connector.
+This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors a Zendesk Help Center Copilot connector.
 
 >[!NOTE]
->The Zendesk Help Center connector is in public preview. If you wish to get access to try it, you need to enable [Targeted Release](/microsoft-365/admin/manage/release-options-in-office-365#set-up-the-release-option-in-the-admin-center) ring for your Admin account.
+>The Zendesk Help Copilot connector is in public preview. If you wish to get access to try it, you need to enable [Targeted Release](/microsoft-365/admin/manage/release-options-in-office-365#set-up-the-release-option-in-the-admin-center) ring for your Admin account.
 
 ## Capabilities
 - Index Help Center articles
@@ -40,7 +40,7 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 ## Prerequisites
 - You must be the **search admin** for your organization's Microsoft 365 tenant.
 - **Zendesk Instance URL**: To connect to your Zendesk Help Center data, you need your organization's Zendesk Help Center instance URL. Your organization's Zendesk Help Center instance URL typically looks like `https://<your-organization-domain>.zendesk.com`. If you don't have an instance already, refer the [article](https://support.zendesk.com/hc/articles/4408823799962-How-do-I-create-a-Support-trial-account) to learn about creating a test instance.
-- **Service Account**: To connect to Zendesk Help Center and allow Microsoft Graph Connector to update knowledge articles regularly, you need a service account with read permissions granted to the service account. The service account must have either 'Admin', 'Agent' or 'Light agent' role. The 'Contributor' role does not allow to read permissions in Zendesk. 
+- **Service Account**: To connect to Zendesk Help Center and allow Copilot onnector to update knowledge articles regularly, you need a service account with read permissions granted to the service account. The service account must have either 'Admin', 'Agent' or 'Light agent' role. The 'Contributor' role does not allow to read permissions in Zendesk. 
 
 ## Get Started
 
@@ -108,7 +108,7 @@ Custom setup is for those admins who want to edit the default values for setting
 
 **Access permissions**
 
-The Zendesk Help center Microsoft Graph connector supports search permissions visible to **Everyone** or **Only people with access to this data source**. If you choose **Everyone**, indexed data appears in the search results for all users. If you choose **Only people with access to this data source**, indexed data appears in the search results for users who have access to them.
+The Zendesk Help center Copilot connector supports search permissions visible to **Everyone** or **Only people with access to this data source**. If you choose **Everyone**, indexed data appears in the search results for all users. If you choose **Only people with access to this data source**, indexed data appears in the search results for users who have access to them.
 
 **Mapping identities**
 
@@ -165,7 +165,7 @@ Use the preview results button to verify the sample values of the selected prope
 
 [![Screenshot that shows Sync tab where you can configure crawl frequency.](media/Zendesk-help-center-sync-tab.png)](media/Zendesk-help-center-sync-tab.png#lightbox)
 
-The refresh interval determines how often your data is synced between the data source and the Zendesk Help center Microsoft Graph connector index. There are two types of refresh intervals - full crawl and incremental crawl. For more details, see [refresh settings](configure-connector.md#guidelines-for-sync-settings).
+The refresh interval determines how often your data is synced between the data source and the Zendesk Help center Copilot connector index. There are two types of refresh intervals - full crawl and incremental crawl. For more details, see [refresh settings](configure-connector.md#guidelines-for-sync-settings).
 
 You can change the default values of the refresh interval from here if you want to.
 

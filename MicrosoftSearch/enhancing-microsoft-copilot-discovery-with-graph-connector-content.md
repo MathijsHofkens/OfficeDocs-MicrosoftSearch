@@ -1,24 +1,24 @@
 ---
 ms.date: 06/17/2024
-title: "Enhancing Microsoft Copilot Discovery with Microsoft Graph connectors content"
+title: "Enhancing Microsoft Copilot Discovery with Microsoft 365 Copilot connectors content"
 ms.author: souravpoddar
 author: souravpoddar001
 manager: harshkum
 audience: Admin
 ms.audience: Admin
-ms.topic: article
+ms.topic: how-to
 ms.service: mssearch
 ms.localizationpriority: medium
 search.appverid:
 - BFB160
 - MET150
 - MOE150
-description: "Enhance the discoverability of Microsoft Graph connectors content within Microsoft Copilot."
+description: "Enhance the discoverability of Microsoft 365 Copilot connectors' content within Microsoft Copilot."
 ---
 
-# Enhancing Microsoft Copilot Discovery with Microsoft Graph connectors content
+# Enhancing Microsoft Copilot Discovery with Microsoft 365 Copilot connectors' content
 
-This document provides guidance on utilizing connection names and descriptions to enhance the likelihood for discoverability of Microsoft Graph connectors content within Microsoft Copilot. Choosing a meaningful connection name and descriptions can inform Microsoft Copilot that there is pertinent content and information in a connection that addresses the user's request.
+This document provides guidance on utilizing connection names and descriptions to enhance the likelihood of discoverability of Microsoft 365 Copilot connectors' content within Microsoft Copilot. Choosing a meaningful connection name and descriptions can inform Microsoft Copilot that there is pertinent content and information in a connection that addresses the user's request.
 
 ## Connection name
 
@@ -41,11 +41,11 @@ For Microsoft-built connectors, you have the flexibility to **modify the conne
       [![Screenshot that shows Update the connection description](/MicrosoftSearch/media/update-the-connection-description.png)](/MicrosoftSearch/media/update-the-connection-description.png#lightbox)
 
    >[!Note]
-   >1. Microsoft Graph connectors for Jira, ServiceNow Tickets, ADO Work Items, and Salesforce have a default description tailored to the generic use of the connectors.
+   >1. Microsoft 365 Copilot connectors for Jira, ServiceNow Tickets, ADO Work Items, and Salesforce have a default description tailored to the generic use of the connectors.
    >2. We still advise reviewing and modifying the descriptions to tailor them to the specific terms/language used by your organization.
-   >3. For on-prem connectors, the connector description must be updated using the connector API. See more information here: [Microsoft Graph connector agent | Microsoft Learn](/MicrosoftSearch/graph-connector-agent)
+   >3. For on-prem connectors, the connector description must be updated using the connector API. See more information here: [Microsoft 365 Copilot connector agent | Microsoft Learn](/MicrosoftSearch/graph-connector-agent)
 
-   ### Good practices to write a connector description
+   ### Good practices for writing a connector description
 
    The connection description serves as a crucial element in aiding users to locate the desired content. Make sure that the following elements are present:
    * A brief overview of the content type. 

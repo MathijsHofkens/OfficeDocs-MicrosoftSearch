@@ -4,7 +4,7 @@ ms.author: misvenso
 author: maheshsinghania
 manager: bstucker
 ms.audience: Admin
-ms.topic: article
+ms.topic: how-to
 ms.service: mssearch
 ms.localizationpriority: medium
 ms.date: 04/07/2022

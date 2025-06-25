@@ -1,27 +1,27 @@
 ---
 ms.date: 09/20/2024
-title: "SharePoint Server Microsoft Graph connector"
+title: "SharePoint Server Microsoft 365 Copilot connector"
 ms.author: antpandey
 author: antarikshp
 manager: harshkum
 audience: Admin 
 ms.audience: Admin
-ms.topic: article
+ms.topic: install-set-up-deploy
 ms.service: mssearch
 ms.localizationpriority: medium
 search.appverid:
 - BFB160
 - MET150
 - MOE150
-description: "Set up the SharePoint Server Microsoft Graph connector for Microsoft Search and Copilot."
+description: "Set up the SharePoint Server Microsoft 365 Copilot connector."
 ---
 
-# SharePoint Server Microsoft Graph connector
+# SharePoint Server Microsoft 365 Copilot connector
 
-SharePoint server graph connector allows users in your organization to search for content stored in on-premises SharePoint server or use the content in Copilot for specific use cases and scenarios. It crawls over Documents and site pages from the on-premises instance.
+SharePoint server graph connector allows users in your organization to search for content stored in an on-premises SharePoint server(supports SP server 2013, 2016, 2019 and Subscription edition) or use the content in Copilot for specific use cases and scenarios. It crawls over Documents and site pages from the on-premises instance.
 
 > [!NOTE]
-> Active directory synchronization is a pre-requisite for enabling security trimming in SharePoint Server content search.
+> Active directory synchronization is a prerequisite for enabling security trimming in SharePoint Server content search. For more information, see [How to connect sync what is](/entra/identity/hybrid/connect/how-to-connect-sync-whatis).
 
 ## Capabilities
 
@@ -43,7 +43,7 @@ SharePoint server graph connector allows users in your organization to search fo
 
 ### Install the Graph connector agent
 
-To index your SharePoint on-premises content, you must install and register Graph Connector Agent. See [Install Graph Connector Agent](graph-connector-agent.md) to learn more. Graph Connector Agent can be installed on the same machine as the SharePoint server or on a machine which has access to the SharePoint on-premises server.
+To index your SharePoint on-premises content, you must install and register Graph Connector Agent. See [Install Graph Connector Agent](graph-connector-agent.md) to learn more. The Graph Connector Agent can be installed on the same machine as the SharePoint server or on a machine which has access to the SharePoint on-premises server.
 
 Each source (SharePoint web application) can be configured in one connection. One Graph Connector Agent can be used to source content from multiple connections of SharePoint on-premises sources. It's advised to limit the number of connections to an agent to three sources, to ensure an optimal ingestion rate.
 
@@ -51,7 +51,7 @@ User should have full control access to the SharePoint server or should be a far
 
 ## Mandatory and optional settings
 
-To get you quickly started with Microsoft Graph connectors, the steps in the setup process are split into two groups:
+To get you quickly started with Copilot connectors, the steps in the setup process are split into two groups:
 
 **Mandatory settings** - Default setup screen that you see when you enter the setup flow. You must provide inputs for these fields to create the connection. The inputs (connection name, data source settings, etc.) vary based on your organization's context and use case.
 
@@ -59,7 +59,7 @@ To get you quickly started with Microsoft Graph connectors, the steps in the set
 
 ## Get started
 
-[Add the SharePoint Server Microsoft Graph connector](https://admin.microsoft.com/adminportal/home#/MicrosoftSearch/Connectors/add).
+[Add the SharePoint Server Copilot connector](https://admin.microsoft.com/adminportal/home#/MicrosoftSearch/Connectors/add).
 
 For more information, see general [setup instructions](./configure-connector.md).
 
@@ -79,10 +79,14 @@ Select from the list of available Graph Connector Agents registered to your tena
 
 ### 4. Authentication
 
-Choose the authentication type from the drop-down menu of options. Currently supported options are Basic, Windows and Microsoft Entra ID.
+Choose the authentication type from the drop-down menu of options. The supported options are:
+- Basic, 
+- Windows(Kerberos is not supported)
+- O-auth2 with Microsoft Entra ID (only OIDC is supported).
 
 > [!NOTE]
-> Use Domain\username format in username to authenticate to the SharePoint server instance using the Windows option.
+>- Use Domain\username format in username to authenticate to the SharePoint server instance using the Windows option.
+>- ADFS is currently not supported - including SAML or OIDC.
 
 To authenticate with the provided credentials, you need to click on Sign-in to load the list of available site collections.
 
@@ -151,13 +155,13 @@ The below options are available.
 | Everyone | _The connection is open to everyone and anyone in your organization can see the content._ |
 
 > [!NOTE]
-> Graph Connectors support Users, Security Groups and Distribution Lists. However, the data source (SharePoint Server) does not support Distribution Lists as Access Control Lists. If there are nested distribution lists, members of those distribution lists may also get access to content through Graph connectors.
+> Copilot connectors support Users, Security Groups and Distribution Lists. However, the data source (SharePoint Server) does not support Distribution Lists as Access Control Lists. If there are nested distribution lists, members of those distribution lists may also get access to content through Graph connectors.
 
-The default and preferred option is the one where connector honors the data source permissions and only allowed users can see the results. You're free to change it to "Everyone" if you want to make it available for everyone in the organization.
+The default and preferred option is the one where the connector honors the data source permissions and only allowed users can see the results. You're free to change it to "Everyone" if you want to make it available for everyone in the organization.
 
 [![Screenshot that shows users tab](media/sharepoint-server/userstabsp.png)](media/sharepoint-server/userstabsp.png#lightbox)
 
-The SharePoint on-premises connector supports existing Access Controlled List on given items. Indexed data appears in the search results and is visible to users who have permission to view it. Microsoft 365 experiences understand and honor Entra Id permissions. To support Access Controlled Lists on items, we require that Active Directory identities and Entra Identities are synced.
+The SharePoint on-premises connector supports the existing Access Controlled List on given items. Indexed data appears in the search results and is visible to users who have permission to view it. Microsoft 365 experiences understand and honor Entra Id permissions. To support Access Controlled Lists on items, we require that Active Directory identities and Entra Identities are synced.
 
 ### Content
 
@@ -196,7 +200,7 @@ You can add custom properties defined in your sites to better manage the search 
 
 ### Sync
 
-The refresh interval determines how often your data is synced between the data source and the Graph connector index. There are two types of refresh intervals - full crawl and incremental crawl. For more information, see [refresh settings](configure-connector.md#guidelines-for-sync-settings).
+The refresh interval determines how often your data is synced between the data source and the Copilot connector index. There are two types of refresh intervals - full crawl and incremental crawl. For more information, see [refresh settings](configure-connector.md#guidelines-for-sync-settings).
 
 Default values of refresh interval:
 

@@ -1,30 +1,30 @@
 --- 
 
-title: "Trello Microsoft Graph connector (preview)" 
+title: "Trello Microsoft 365 Copilot connector (preview)" 
 ms.author: anggao
 author: ms-anggao
 manager: jecui
 audience: Admin
 ms.audience: Admin 
-ms.topic: article 
+ms.topic: install-set-up-deploy
 ms.service: mssearch 
 ms.localizationpriority: Medium 
 search.appverid: 
 - BFB160 
 - MET150 
 - MOE150 
-description: "Set up the Trello Microsoft Graph connector for Microsoft Search and Microsoft 365 Copilot." 
+description: "Set up the Trello Microsoft 365 Copilot connector." 
 ms.date: 02/27/2025
 ---
 
-# Trello Microsoft Graph connector (preview)
+# Trello Microsoft 365 Copilot connector (preview)
 
-The Trello Microsoft Graph connector allows your organization to index cards from Trello. After you configure the connector, users can search for these tickets from Trello in Microsoft 365 Copilot and from any Microsoft Search client.
+The Trello Microsoft 365 Copilot connector allows your organization to index cards from Trello. After you configure the connector, users can search for these tickets from Trello in Microsoft 365 Copilot and from any Microsoft Search client.
 
-This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors a Trello Graph connector.
+This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors a Trello Copilot connector.
 
 >[!NOTE]
->The Trello connector is in public preview. To get access to the connector, enable the [Targeted Release](/microsoft-365/admin/manage/release-options-in-office-365#set-up-the-release-option-in-the-admin-center) ring for your Admin account.
+>The Trello Copilot connector is in public preview. To get access to the connector, enable the [Targeted Release](/microsoft-365/admin/manage/release-options-in-office-365#set-up-the-release-option-in-the-admin-center) ring for your Admin account.
 
 ## Capabilities
 
@@ -36,7 +36,7 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 ## Limitations
 
 - Doesn't index comments.
-- Doesn't crawl user identities and access permissions. All public cards indexed via the Trello connector are visible to all Microsoft 365 users in your tenant from Microsoft Search or Copilot.
+- Doesn't crawl user identities and access permissions. All public cards indexed via the Trello Copilot connector are visible to all Microsoft 365 users in your tenant from Microsoft Search or Copilot.
 
 ## Prerequisites
 
@@ -90,7 +90,7 @@ Custom setup is for admins who want to edit the default values for settings list
 
 #### Access permissions
 
-The Trello Microsoft Graph connector allows your organization to index cards from Trello. After you configure the connector, users can search for these tickets from Trello in Microsoft 365 Copilot and from any Microsoft Search client.
+The Trello Copilot connector allows your organization to index cards from Trello. After you configure the connector, users can search for these tickets from Trello in Microsoft 365 Copilot and from any Microsoft Search client.
 
 ### Content
 
@@ -119,7 +119,7 @@ Use the preview results button to verify the sample values of the selected prope
 
 ### Sync
 
-The refresh interval determines how often your data is synced between the data source and the Trello Microsoft Graph connector index. There are two types of refresh intervals: full crawl and incremental crawl. For more information, see [refresh settings](configure-connector.md#guidelines-for-sync-settings).
+The refresh interval determines how often your data is synced between the data source and the Trello Copilot connector index. There are two types of refresh intervals: full crawl and incremental crawl. For more information, see [refresh settings](configure-connector.md#guidelines-for-sync-settings).
 
 You can change the default values of the refresh interval.
 

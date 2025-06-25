@@ -1,25 +1,25 @@
 --- 
 
-title: "Result Layout for Jira Graph connector" 
+title: "Result Layout for Jira Microsoft 365 Copilot connector" 
 ms.author: vivg 
 author: vivg 
 manager: harshkum 
 audience: Admin
 ms.audience: Admin 
-ms.topic: article 
+ms.topic: how-to
 ms.service: mssearch 
 ms.localizationpriority: medium 
 search.appverid: 
 - BFB160 
 - MET150 
 - MOE150 
-description: "Result layout JSON for Jira connector for Microsoft Search" 
+description: "Result layout JSON for the Jira Microsoft 365 Copilot." 
 ms.date: 05/28/2022
 ---
 
-# Result layout for Jira Graph connector
+# Result layout for Jira Microsoft 365 Copilot connector
 
-The [Atlassian Jira Graph connector](jira-connector.md) allows your organization to index Jira issues. After you configure the connector and index content from the Jira site, you need to set up a search result page.
+The [Atlassian Jira Microsoft 365 Copilot connector](jira-connector.md) allows your organization to index Jira issues. After you configure the connector and index content from the Jira site, you need to set up a search result page.
 
 To set up the search result page, you need to:
 1. Set up [search vertical](manage-verticals.md).
@@ -29,7 +29,7 @@ In this document, we have provided a sample result layout JSON required for sett
 
 ## Before you get started
 
-You must have configured the Jira graph connector. To consume the sample result layout JSON as is, you must select the below properties for indexing with mentioned [search schema](configure-connector.md).
+You must have configured the Jira Copilot connector. To consume the sample result layout JSON as is, you must select the below properties for indexing with mentioned [search schema](configure-connector.md).
 
 > [!NOTE]
 > * Some of the below listed properties will be selected by default
@@ -53,7 +53,7 @@ You must have configured the Jira graph connector. To consume the sample result 
 
 With this sample, your search results will look like:
 
-![Example of a layout for Jira connector.](media/jira-connector-example-layout.png)
+![Example of a layout for the Jira Copilot connector.](media/jira-connector-example-layout.png)
 
 And here's the layout's associated JSON file:
 
