@@ -4,7 +4,7 @@ ms.author: misvenso
 author: revathi-b
 manager: wobba
 ms.audience: Admin
-ms.topic: article
+ms.topic: concept-article
 ms.service: mssearch
 ms.localizationpriority: medium
 ms.date: 11/22/2021

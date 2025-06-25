@@ -6,7 +6,7 @@ author: Mansipakhale10
 manager: harshkum
 audience: Admin
 ms.audience: Admin
-ms.topic: article
+ms.topic: install-set-up-deploy
 ms.service: mssearch
 ms.localizationpriority: high
 search.appverid:
@@ -35,7 +35,10 @@ This article is intended for Microsoft 365 administrators who are responsible fo
 ## Prerequisites
 1. **Install the GCA [Graph Connector Agent]**: Ensure that the GCA is installed on a Windows machine within the same network as the data source, accessible via the Confluence URL. You can find more information [Graph Connector Agent](./graph-connector-agent.md)
 2. **Install plugin**: Download and install the Confluence on-prem plugin from the Atlassian marketplace on your Confluence setup. Get the plugin from [Confluence On-prem Plugin for Copilot connectors | Atlassian Marketplace](https://marketplace.atlassian.com/apps/1234846?tab=reviews&hosting=datacenter).
-3. **Authentication**: Ensure that you have authentication credentials with the right access. 
+3. **Validate plugin**: Navigate to **Administration** > **Manage apps** and set app type filter to **System**, verify that **Confluence Mobile Web Plugin** is installed and enabled. This plugin is installed and enabled by default.
+  * If the plugin is not installed, get the plugin from [Mobile Plugin for Confluence Data Center](https://marketplace.atlassian.com/apps/1218250/mobile-plugin-for-confluence-data-center?hosting=server&tab=overview) and install it.
+  * If the plugin is installed but disabled, enable it.
+4. **Authentication**: Ensure that you have authentication credentials with the right access. 
 
 >[!IMPORTANT]
 > **Recommended: The Confluence Global Administrator should create the connection** </br>

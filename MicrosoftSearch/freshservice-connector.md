@@ -6,7 +6,7 @@ author: wangchen
 manager: zezhangzhao
 audience: Admin
 ms.audience: Admin 
-ms.topic: article 
+ms.topic: install-set-up-deploy
 ms.service: mssearch 
 ms.localizationpriority: Medium 
 search.appverid: 
@@ -33,7 +33,7 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 
 ## Prerequisites
 1. Create a Freshservice account with administrator permission in the Freshservice application.
-2. Navigate to the user profile setting page with the administrator account in the Freshservice application. Create an API key and copy it.
+2. Navigate to the user profile setting page with the administrator account in the Freshservice application. For more information, see [Where do I find my API key](https://support.freshservice.com/support/solutions/folders/50000000029) for details.
 
 ## Get started
 

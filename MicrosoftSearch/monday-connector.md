@@ -5,7 +5,7 @@ author: ranran1998
 manager: jecui
 audience: Admin
 ms.audience: Admin 
-ms.topic: article 
+ms.topic: install-set-up-deploy
 ms.service: mssearch 
 ms.localizationpriority: Medium 
 search.appverid: 
@@ -69,7 +69,7 @@ The Monday.com connector enables:
    - **For Microsoft 365 Enterprise**, copy and paste: `https://gcs.office.com/v1.0/admin/oauth/callback`.  
    - **For Microsoft 365 Government**, copy and paste:  `https://gcsgcc.office.com/v1.0/admin/oauth/callback`.
 
-   ![Screenshot that shows how to configure Redirect URL for the Monday.com OAuth App.](media/monday-redirect-URL.png)
+   ![Screenshot that shows how to configure Redirect URL for the Monday.com OAuth App.](media/monday-redirect-urls.png)
 
 6. Click **Promote to Live** to activate the app.
 
@@ -144,7 +144,7 @@ You can choose what data you want to index. Use the regex expression of WorkSpac
 | Fuzzy match for a single workspace         | `team-marketing-q1`                      | `.*marketing.*`                    | Matches any workspace that contains "marketing" in the name          |
 | Exact match for multiple workspaces        | `workspace1`, `workspace2`               | <code>^(workspace1&#124;workspace2)$</code>      | Matches exactly `workspace1` or `workspace2`                         |
 | Fuzzy match for multiple workspaces        | `workspace-marketing`, `workspace-sales` | <code>^workspace-[a-z]+$</code>                  | Matches any workspace starting with `workspace-` and letters         |
-| Fuzzy match for multiple keywords in name  | `workspace-engineering`, `workspace-sales-q4` | `.*(eng\|sales).*`       | Matches workspaces containing `eng` or `sales` in the name           |
+| Fuzzy match for multiple keywords in name  | `workspace-engineering`, `workspace-sales-q4` | `.*(eng|sales).*`       | Matches workspaces containing `eng` or `sales` in the name           |
 
 Use the preview results button to verify the sample values of the selected properties and filters. 
 
@@ -174,7 +174,7 @@ Here, you can check available properties from your Monday.com instance. Assign a
 **Description of `Content` property:**  
 The Content field contains a JSON object that represents all the columns and their corresponding values for a given item. Each key in the JSON object corresponds to a column name (such as Assignee or Status), and each value holds the specific data for that item. Below is an example illustrating how the item and its Content field are structured.
 
-![Screenshot that shows a example of item content](media/mondy-content-example.png)
+![Screenshot that shows a example of item content](media/monday-content-example.png)
 
 ```json
 {
