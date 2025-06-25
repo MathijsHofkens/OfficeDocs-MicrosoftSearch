@@ -44,7 +44,7 @@ items:
     href: manage-search-apps.md
 - name: Data sources
   items:
-  - name: Microsoft Graph connectors
+  - name: Microsoft 365 Copilot connectors
     items:
     - name: Overview
       href: connectors-overview.md
@@ -54,6 +54,8 @@ items:
       href: frequently-asked-questions.md
     - name: Index quota
       href: licensing.md
+    - name: The Microsoft 365 Copilot extension
+      href: crossover-browser.md
     - name: Terms of use
       href: terms-of-use.md
     - name: Set up Microsoft-built connectors
@@ -62,9 +64,9 @@ items:
         href: configure-connector.md
       - name: Add Staged rollout to connectors
         href: staged-rollout-for-graph-connectors.md
-      - name: Microsoft Graph connectors in Microsoft 365 Copilot
+      - name: Microsoft 365 Copilot connectors
         items:
-        - name: Enhancing Microsoft 365 Copilot discovery with Microsoft Graph connector content
+        - name: Enhancing Microsoft 365 Copilot discovery with Microsoft 365 Copilot connector content
           href: enhancing-microsoft-copilot-discovery-with-graph-connector-content.md
       - name: On-prem connectors
         items:
@@ -76,7 +78,7 @@ items:
         href: map-non-aad.md
       - name: Map Microsoft Entra identities
         href: map-aad.md
-      - name: Prebuilt Microsoft Graph connectors
+      - name: Prebuilt Microsoft 365 Copilot connectors
         href: pre-built-connectors-overview.md
         items:
         - name: 15Five High Fives
@@ -99,6 +101,10 @@ items:
           items:
           - name: Setup
             href: aha-cloud-connector.md
+        - name: Amazon S3
+          items:
+          - name: Setup
+            href: amazon-s3-graph-connector.md
         - name: Asana
           items:
           - name: Setup
@@ -219,6 +225,10 @@ items:
             href: gitlab-connector.md 
           - name: Troubleshooting
             href: troubleshoot-gitlab-connector.md
+        - name: Gong (preview)
+          items:
+          - name: Setup
+            href: gong-connector.md
         - name: Google Drive
           items:
           - name: Setup
@@ -283,6 +293,10 @@ items:
             href: servicenow-knowledge-connector.md
           - name: Grant Table Access to a Service Account in ServiceNow
             href: granting-table-access-servicenow.md
+          - name: Advanced flow
+            href: servicenow-knowledge-advanced-flow.md
+          - name: Authenticating using OAuth 2.0
+            href: setup-oauth-servicenow.md
           - name: Troubleshooting
             href: troubleshoot-servicenow-knowledge-connector.md
         - name: ServiceNow Tickets
@@ -355,7 +369,7 @@ items:
         href: connector-error-responses.md
       - name: Item delete notification
         href: connectors-viva-topics-item-delete-notification.md
-    - name: Deploy Microsoft Graph connectors in Teams admin center
+    - name: Deploy Microsoft 365 Copilot connectors in Teams admin center
       href: connectors-deploy-teams.md
   - name: Semantic index
     items:

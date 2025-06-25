@@ -21,10 +21,25 @@ For help on installation, refer to [this page](graph-connector-agent.md#installa
 
 [Download latest Graph Connector Agent](https://aka.ms/gca)
 
+## Version 3.1.10.0 (*June 18, 2025*)
+
+* Bug fixes and reliability improvements.
+
+## Version 3.1.9.0 (*May 23, 2025*)
+
+* Bug fixes and reliability improvements.
+
+## Version 3.1.8.0 (*April 28, 2025*)
+
+* Bug fixes and reliability improvements.
+
 ## Version 3.1.7.0 (*March 31, 2025*)
 
-* Bug fixes for SharePoint, Confluence, Jira, and Enterprise Websites on-prem connectors.
-* Added support for using the URL of SharePoint items as the searchable item ID.
+* Bug fixes and reliability improvements.
+
+## Version 3.1.5.0 (*February 10, 2025*)
+
+* Bug fixes and reliability improvements.
 
 ## Version 3.1.4.0 (*January 13, 2025*)
 
@@ -85,20 +100,20 @@ For help on installation, refer to [this page](graph-connector-agent.md#installa
 
 ## Version 2.3.2.0 (*March 20, 2024*)
 
-* Enterprise Websites Microsoft Graph connector: Added error reporting for redirection-related errors.
+* Enterprise Websites Microsoft 365 Copilot connector: Added error reporting for redirection-related errors.
 * Fixed identity sync crawl errors.
 * Other bug fixes and reliability improvements.
 
 ## Version 2.3.1.0 (*January 29, 2024*)
 
-* Enabled OAuth2 support for Confluence connector.
-* Added schema edit support for Graph connector SDK.
+* Enabled OAuth2 support for Confluence Microsoft 365 Copilot connector.
+* Added schema edit support for the Graph connector SDK.
 * Added support for SID or UPN identity type in Graph Connector Agent.
 * Bug fixes and reliability improvements.
 
 ## Version 2.3.0.0 (*December 12, 2023*)
 
-* Configurable payload size for File share connector to reduce ingestion failures
+* Configurable payload size for File Share Microsoft 365 Copilot connector to reduce ingestion failures
 * ID Sync framework improvements to resolve crawl errors
 * Bug fixes and reliability improvements
 
@@ -226,7 +241,7 @@ For help on installation, refer to [this page](graph-connector-agent.md#installa
 
 ## Version 1.3.1.0 (*not supported*) (*October 28, 2021*)
 
-* File-share connectors documents per second improvements
+* File-share Copilot connectors documents per second improvements
 * Other performance improvements
 * Bug fixes
 
@@ -247,6 +262,6 @@ For help on installation, refer to [this page](graph-connector-agent.md#installa
 
 ## Version 1.1.0.0 (*not supported*) (*July 9, 2021*)
 
-* Support for Exclusions rules for file-share connector
+* Support for Exclusions rules for the File Share Copilot connector
 * Performance improvements
 * Bug fixes

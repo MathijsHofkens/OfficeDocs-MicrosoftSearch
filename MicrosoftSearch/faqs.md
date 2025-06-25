@@ -75,4 +75,4 @@ If this setting is off, users won't get internal results when they search on Bin
 
 ## What does Microsoft Search cost?
 
-Microsoft Search is the search for your Microsoft 365 experience; there is no additional cost to search your data. Some features like [Microsoft Graph connectors](connectors-overview.md) come with quotas that are included on certain [licenses and have extra quota available for purchase](licensing.md).
+Microsoft Search is the search for your Microsoft 365 experience; there is no additional cost to search your data. Some features like [Microsoft 365 Copilot connectors](connectors-overview.md) come with quotas that are included on certain [licenses and have extra quota available for purchase](licensing.md).

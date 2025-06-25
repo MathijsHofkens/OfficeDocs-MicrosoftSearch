@@ -1,47 +1,47 @@
 --- 
 
-title: "Smartsheet Sheet Graph connector" 
+title: "Smartsheet Sheet Microsoft 365 Copilot connector (preview)" 
 ms.author: depang
 author: dennypanggh
 manager: jecui
 audience: Admin
 ms.audience: Admin 
-ms.topic: article 
+ms.topic: install-set-up-deploy
 ms.service: mssearch 
 ms.localizationpriority: Medium 
 search.appverid: 
 - BFB160 
 - MET150 
 - MOE150 
-description: "Set up the Smartsheet Sheet Graph connector for Microsoft Search and Microsoft 365 Copilot" 
+description: "Set up the Smartsheet Sheet Microsoft 365 Copilot connector." 
 ms.date: 03/13/2025
 ---
 
-# Smartsheet Sheet Microsoft Graph connector (Preview)
+# Smartsheet Sheet Microsoft 365 Copilot connector (preview)
 
-The Smartsheet Sheet Graph connector allows your organization to index sheet content from Smartsheet. After you configure the connector, end users can search for these content from Smartsheet in Microsoft Copilot and from any Microsoft Search client.
+The Smartsheet Sheet Microsoft 365 Copilot connector allows your organization to index sheet content from Smartsheet. After you configure the connector, end users can search for this content from Smartsheet in Microsoft Copilot and from any Microsoft Search client.
  
-This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors a Smartsheet Sheet Graph connector.
+This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors a Smartsheet Sheet Copilot connector.
 
 >[!NOTE]
->The Smartsheet Sheet connector is in public preview. If you wish to get access to try it, you need to enable [Targeted Release](/microsoft-365/admin/manage/release-options-in-office-365#set-up-the-release-option-in-the-admin-center) ring for your Admin account.
+>The Smartsheet Sheet Copilot connector is in public preview. If you wish to get access to try it, you need to enable [Targeted Release](/microsoft-365/admin/manage/release-options-in-office-365#set-up-the-release-option-in-the-admin-center) ring for your Admin account.
 
 ## Capabilities
 - Index Smartsheet Sheet content from Smartsheet Pro and Business edition.
 - Use [Semantic search in Copilot](semantic-index-for-copilot.md) to enable users to find relevant content based on keywords, personal preferences, and social connections.
 
 ## Limitations
-- Only content from the Smartsheet Sheet Pro and Business edition will be indexed.
+- Only content from the Smartsheet Sheet Pro and Business editions will be indexed.
 
 ## Prerequisites
 - You must be the **search admin** for your organization's Microsoft 365 tenant.
 - **Smartsheet Sheet instance region**: To connect to your Smartsheet Sheet data, you will need to choose the region for your organization's Smartsheet instance. Use one of the following Smartsheet instance regions: “Default” (`https://api.smartsheet.com`) or “Europe”(`https://api.smartsheet.eu`).
-- **Smartsheet Sheet account**: To connect to Smartsheet Sheet and allow Microsoft Graph Connector to update Smartsheet sheet content and metadata regularly, you need Smartsheet Sheet Access Tokens of System Admin Users to access published content and metadata.
+- **Smartsheet Sheet account**: To connect to Smartsheet Sheet and allow the Copilot to update Smartsheet sheet content and metadata regularly, you need Smartsheet Sheet Access Tokens of System Admin Users to access published content and metadata.
 
 ## Get Started
 
 ### 1. Display name 
-Choose a display name that helps users easily recognize associated file or item in a Copilot response.
+Choose a display name that helps users easily recognize the associated file or item in a Copilot response.
 
 ### 2. Smartsheet Sheet instance region
 The Smartsheet Sheet region is essential to correctly access and update data from. Use one of the following regional domain URLs: `https://api.smartsheet.com` (Non-Europe) or `https://api.smartsheet.eu` (Europe).
@@ -88,7 +88,7 @@ Custom setup is for those admins who want to edit the default values for setting
 
 **Access permissions**
 
-The Smartsheet Sheet Microsoft Graph connector supports search permissions visible to **Everyone** or **Only people with access to this data source**. If you choose **Everyone**, indexed data appears in the search results for all users. If you choose **Only people with access to this data source**, indexed data appears in the search results for users who have access to them.
+The Smartsheet Sheet Copilot connector supports search permissions visible to **Everyone** or **Only people with access to this data source**. If you choose **Everyone**, indexed data appears in the search results for all users. If you choose **Only people with access to this data source**, indexed data appears in the search results for users who have access to them.
 
 **Mapping identities**
 
@@ -125,11 +125,13 @@ Here, you can view available properties from your Smartsheet Sheet, assign a sch
 
 ### Sync
 
-The refresh interval determines how often your data is synced between the data source and the Smartsheet Sheet Microsoft Graph connector index. There are two types of refresh intervals - full crawl and incremental crawl. For more details, see [refresh settings](configure-connector.md#guidelines-for-sync-settings).
+The refresh interval determines how often your data is synced between the data source and the Smartsheet Sheet Copilot connector index. There are two types of refresh intervals - full crawl and incremental crawl. For more details, see [refresh settings](configure-connector.md#guidelines-for-sync-settings).
 
 You can change the default values of the refresh interval from here if you want to.
 
 ## Troubleshooting
 After publishing your connection, you can review the status under the **Data Sources** tab in the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).
+
+For more information about index browser search, see [How to get Smartsheet | Smartsheet Learning Center](https://help.smartsheet.com/articles/2482711-get-smartsheet-ids). 
 
 If you have issues or want to provide feedback, contact [Microsoft Graph | Support](https://developer.microsoft.com/en-us/graph/support).

@@ -1,18 +1,18 @@
 --- 
 ms.date: 02/26/2025
-title: "Troubleshooting the Veeva Vault Microsoft Graph connectors" 
+title: "Troubleshooting the Veeva Vault Microsoft 365 Copilot connector" 
 ms.author: dannyyao
 author: dannyyaou
 manager: jecui
 audience: Admin 
 ms.audience: Admin 
-ms.topic: article 
+ms.topic: troubleshooting-general
 ms.service: mssearch 
 ms.localizationpriority: medium 
-description: "Find troubleshooting information for the Veeva Vault Microsoft Graph connectors for Microsoft Search and Microsoft 365 Copilot." 
+description: "Find troubleshooting information for the Veeva Vault Microsoft 365 Copilot connector." 
 --- 
 
-# Troubleshooting the Veeva Vault Microsoft Graph connectors
+# Troubleshooting the Veeva Vault Microsoft 365 Copilot connector
 
 The following table lists common errors that can occur when you configure the Veeva Vault Microsoft Graph connectors.
 

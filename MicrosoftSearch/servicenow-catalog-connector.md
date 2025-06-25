@@ -1,27 +1,27 @@
 ---
 ms.date: 10/08/2019
-title: "ServiceNow Catalog Microsoft Graph connector"
+title: "ServiceNow Catalog Microsoft 365 Copilot connector"
 ms.author: kam1
 author: souravpoddar
 manager: souravpoddar001
 audience: Admin
 ms.audience: Admin
-ms.topic: article
+ms.topic: install-set-up-deploy
 ms.service: mssearch
 ms.localizationpriority: Medium
 search.appverid:
 - BFB160
 - MET150
 - MOE150
-description: "Set up the ServiceNow Catalog Microsoft Graph connector for Microsoft Copilot"
+description: "Set up the ServiceNow Catalog Microsoft 365 Copilot connector."
 ---
 <!---Previous ms.author: kam1 --->
 
-# ServiceNow Catalog Microsoft Graph connector
+# ServiceNow Catalog Microsoft 365 Copilot connector
 
-With the Microsoft Graph connector for ServiceNow, your organization can list [service catalog](https://www.servicenow.com/products/it-service-automation-applications/service-catalog.html) items that are visible to all users or restricted with user criteria permissions within your organization. After you configure the connector and index content from ServiceNow, end users can search for those catalog items in Microsoft Copilot and from any Microsoft Search client.
+With the ServiceNow Catalog Microsoft 365 Copilot connector, your organization can list [service catalog](https://www.servicenow.com/products/it-service-automation-applications/service-catalog.html) items that are visible to all users or restricted with user criteria permissions within your organization. After you configure the connector and index content from ServiceNow, end users can search for those catalog items in Microsoft Copilot and from any Microsoft Search client.
 
-This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors a ServiceNow Catalog Microsoft Graph  connector. It supplements the general instructions provided in the [Set up Microsoft Graph connectors in the Microsoft 365 admin center](configure-connector.md) article. If you haven't already done so, read the entire Set-up your Microsoft Graph connector article to understand the general setup process.
+This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors a ServiceNow Catalog Copilot connector. It supplements the general instructions provided in the [Set up Copilot connectors in the Microsoft 365 admin center](configure-connector.md) article. If you haven't already done so, read the entire setup your Copilot connector article to understand the general setup process.
 
 ## Capabilities
 - Index all types of Catalog items.
@@ -32,14 +32,14 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 
 ## Limitations
 
-ServiceNow Catalog Microsoft Graph connector has the following limitations in its latest release:
+ServiceNow Catalog Copilot connector has the following limitations in its latest release:
 
 - User criteria permissions configured at catalog category aren't supported.
 - User criteria with advanced scripts aren't supported in the current version.
 
 ## Prerequisites
 - **ServiceNow Instance URL**: To connect to your ServiceNow data, you need your organization's ServiceNow instance URL. Your organization's ServiceNow instance URL typically looks like `https://your-organization-name.service-now.com`. (Don’t have one? [Take a look at this YouTube video on how to create a test instance](https://www.youtube.com/watch?v=OTdzVLqpFHY)).
-- **Service Account**: To connect to ServiceNow and allow Microsoft Graph Connector to update catalog items regularly, you need a service account with read access to specific ServiceNow table records. The service account needs read access to the following **ServiceNow table records** to successfully crawl various entities.
+- **Service Account**: To connect to ServiceNow and allow Copilot connector to update catalog items regularly, you need a service account with read access to specific ServiceNow table records. The service account needs read access to the following **ServiceNow table records** to successfully crawl various entities.
 
 Feature | Read access required tables | Description
 --- | --- | ---
@@ -60,9 +60,9 @@ You can **create and assign a role** for the service account you use to connect 
 
 ## Get started
 
-[Add ServiceNow Catalog connector](https://admin.microsoft.com/adminportal/home#/MicrosoftSearch/Connectors/add?ms_search_referrer=MicrosoftSearchDocs_ServiceNowCatalog&type=ServiceNowCatalog​)
+[Add ServiceNow Catalog Copilot connector](https://admin.microsoft.com/adminportal/home#/MicrosoftSearch/Connectors/add?ms_search_referrer=MicrosoftSearchDocs_ServiceNowCatalog&type=ServiceNowCatalog​)
 
-[![Screenshot that shows connection creation screen for Microsoft Graph Connector for ServiceNow Catalog.](media/servicenow-catalog-create-page.png)](media/servicenow-catalog-create-page.png#lightbox)
+[![Screenshot that shows connection creation screen for the ServiceNow Catalog Microsoft 365 Copilot connector.](media/servicenow-catalog-create-page.png)](media/servicenow-catalog-create-page.png#lightbox)
 
 ### 1. Display name
 
@@ -87,7 +87,7 @@ To authenticate and sync content from ServiceNow, choose **one of three** suppor
    <details>
    <summary>[Click to expand] To use the ServiceNow OAuth for authentication, follow these steps.</summary>
     
-   A ServiceNow admin needs to provision an endpoint in your ServiceNow instance, so that the ServiceNow Catalog Microsoft Graph connector can access it. To learn more, see [Create an endpoint for clients to access the instance](https://docs.servicenow.com/bundle/xanadu-platform-security/page/administer/security/task/t_CreateEndpointforExternalClients.html) in the ServiceNow documentation.
+   A ServiceNow admin needs to provision an endpoint in your ServiceNow instance, so that the ServiceNow Catalog Copilot connector can access it. To learn more, see [Create an endpoint for clients to access the instance](https://docs.servicenow.com/bundle/xanadu-platform-security/page/administer/security/task/t_CreateEndpointforExternalClients.html) in the ServiceNow documentation.
 
    The following table provides guidance on how to fill out the endpoint creation form:
 
@@ -208,13 +208,13 @@ To authenticate and sync content from ServiceNow, choose **one of three** suppor
    </details>
 
 >[!NOTE]
-> The ServiceNow Catalog connector can index catalog items and user criteria permissions without advanced scripts.
+> The ServiceNow Catalog Copilot connector can index catalog items and user criteria permissions without advanced scripts.
 
 ### 4. Rollout to a limited audience
 
 Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. To know more about limited rollout, click [here](/MicrosoftSearch/staged-rollout-for-graph-connectors).
 
-At this point, you are ready to create the connection for ServiceNow Catalog. You can select the **Create** button and the ServiceNow Catalog Microsoft Graph connector starts indexing catalog items from your ServiceNow account.
+At this point, you are ready to create the connection for ServiceNow Catalog. You can select the **Create** button and the ServiceNow Catalog Copilot connector starts indexing catalog items from your ServiceNow account.
 
 For other settings, like Access permissions, Data inclusion rules, Schema, and Crawl frequency, we have set defaults based on what works best with ServiceNow data. You can see the default values below:
 
@@ -291,7 +291,7 @@ Use the preview results button to verify the sample values of the selected prope
 
 [![Screenshot that shows Sync tab where you can configure crawl frequency.](media/servicenow-catalog-sync-tab.png)](media/servicenow-catalog-sync-tab.png#lightbox)
 
-The refresh interval determines how often your data is synced between the data source and the ServiceNow Catalog Microsoft Graph connector index. There are two types of refresh intervals – full crawl and incremental crawl. For more details, click [here](/MicrosoftSearch/configure-connector#guidelines-for-sync-settings).
+The refresh interval determines how often your data is synced between the data source and the ServiceNow Catalog Copilot connector index. There are two types of refresh intervals – full crawl and incremental crawl. For more details, click [here](/MicrosoftSearch/configure-connector#guidelines-for-sync-settings).
 
 You can change the default values of the refresh interval from here if you want to.
 

@@ -1,42 +1,40 @@
 ---
-title: "GitLab Microsoft Graph connector"
+title: "GitLab  Microsoft 365 Copilot connector connector"
 ms.author: dannyyao
 author: dannyyaou
 manager: jecui
 audience: Admin
 ms.audience: Admin
-ms.topic: article
+ms.topic: install-set-up-deploy
 ms.service: mssearch
 ms.localizationpriority: Medium
 search.appverid:
 - BFB160
 - MET150
 - MOE150
-description: "Set up the GitLab Microsoft Graph connector for Microsoft Search and Microsoft 365 Copilot."
+description: "Set up the GitLab Microsoft 365 Copilot connector."
 ms.date: 02/14/2025
 ---
 
-# GitLab Microsoft Graph connector
+# GitLab Microsoft 365 Copilot connector
 
-The GitLab Microsoft Graph connector (GitLab Issue, GitLab Merge Request, and GitLab Knowledge) allows your organization to index merge requests, issues, wikis, and documentation stored in GitLab. After you configure the connector and index GitLab content, users can search and retrieve information via Microsoft Search and Microsoft 365 Copilot.
+The GitLab Microsoft 365 Copilot connector  allows your organization to index merge requests, issues, wikis, and documentation stored in GitLab. After you configure the connector and index GitLab content, users can search and retrieve information via Microsoft Search and Microsoft 365 Copilot.
 
-This article is intended for Microsoft 365 administrators or anyone who configures, runs, or monitors GitLab Microsoft Graph connectors.
+This article is intended for Microsoft 365 administrators or anyone who configures, runs, or monitors the GitLab Microsoft 365 Copilot connector.
 
 ## Capabilities
-
 - Index GitLab repositories, merge requests, and access issues, wikis, and documentation.
 - Enable Microsoft Search and Microsoft 365 Copilot to retrieve GitLab data efficiently.
 - Maintain GitLab ACLs and user permissions.
 - Allow administrators to customize crawl frequency and indexing preferences.
 
 ## Limitations
-
 - The connector does not support indexing GitLab CI/CD pipelines beyond status indexing.
 - Only repositories, issues, merge requests, .md, .txt files, and wikis are indexed.
 - Banning users is not supported as a permission rule. As a workaround, administrators can remove users from groups instead.
 - Restricting group access by IP address is not supported. We recommend that administrators create a private group to manage access.
 - Due to stability concerns identified during Microsoft's internal testing, support for the Planner role has been conservatively deprecated. Access is now restricted to Reporter roles and above. Users may encounter issues when assigning team members to the Planner role. To mitigate potential problems, please assign Reporter roles or higher. We closely monitor this feature and continue to work on improvements.
-- For the GitLab Server connectors, due to security considerations, access to merge requests for public projects with visibility restricted to project members is conservatively set to the reporter role and above.
+- For the GitLab Server Copilot connectors, due to security considerations, access to merge requests for public projects with visibility restricted to project members is conservatively set to the reporter role and above.
 
 ## Prerequisites
 Before setting up the connector, ensure the following:
@@ -46,7 +44,8 @@ Before setting up the connector, ensure the following:
 3. The authentication user account must have access to repositories, issues, merge requests, knowledge files, and wiki pages.   
 4. The **Client ID** and **Client Secret** must include the following scopes:
    - `read_api`  
-   - `read_repository`  
+   - `read_repository`
+   - `read_user`
 5. Users who access the indexed GitLab data must have corresponding **Microsoft Entra ID** identities for permission mapping.
 6. Set the appropriate **redirect URLs** during GitLab authentication setup:
    - **Microsoft 365 Enterprise**:  
@@ -54,7 +53,7 @@ Before setting up the connector, ensure the following:
    - **Microsoft 365 Government**:  
      `https://gcsgcc.office.com/v1.0/admin/oauth/callback`
   
-### GitLab server connector specifics
+### GitLab server Copilot connector specifics
 For **self-managed GitLab instances**, ensure the following:
 - The GitLab version must be 17.7 or later.
 - The Microsoft Graph connector agent version must be **3.1.8.0 or later**, and it must be installed on a server that can connect to the GitLab instance.  

@@ -1,28 +1,28 @@
 --- 
 
-title: "Veeva Vault PromoMats Microsoft Graph connector" 
+title: "Veeva Vault PromoMats Microsoft 365 Copilot connector" 
 ms.author: dannyyao
 author: dannyyaou
 manager: jecui
 audience: Admin
 ms.audience: Admin 
-ms.topic: article 
+ms.topic: install-set-up-deploy
 ms.service: mssearch 
 ms.localizationpriority: Medium 
 search.appverid: 
 - BFB160 
 - MET150 
 - MOE150 
-description: "Set up the Veeva Vault PromoMats Microsoft Graph connector for Microsoft Search and Microsoft 365 Copilot" 
+description: "Set up the Veeva Vault PromoMats Microsoft 365 Copilot connector." 
 ms.date: 02/26/2025
 ---
-# Veeva Vault PromoMats Microsoft Graph connector (preview)
+# Veeva Vault PromoMats Microsoft 365 Copilot connector (preview)
 
-The Veeva Vault PromoMats Microsoft Graph connector allows organizations to index promotional marketing materials from Veeva Vault into Microsoft Graph, making them accessible across Microsoft 365 experiences, including Microsoft 365 Copilot.
+The Veeva Vault PromoMats Microsoft 365 Copilot connector allows organizations to index promotional marketing materials from Veeva Vault into Microsoft Graph, making them accessible across Microsoft 365 experiences, including Microsoft 365 Copilot.
 
 The connector integrates Vault PromoMats' built-in permission model, ensuring that users only access authorized content, and supports faster content generation and review through content analysis and preparation. By enhancing efficiency throughout the content lifecycle, it helps maintain brand consistency. This functionality is beneficial for marketing, medical affairs, and regulatory teams, enabling informed decision-making and reducing the time-to-market for promotional materials.
 
-The following are the key benefits of the Veeva Vault PromoMats Microsoft Graph connector:
+The following are the key benefits of the Veeva Vault PromoMats Copilot connector:
 
 - **Enhanced content management and retrieval:** The connector suggests tags to organize and access relevant documents more easily.
 - **AI-assisted content reuse and localization:** Facilitates content adaptation for various markets, saving time while ensuring relevance for different audiences.
@@ -30,11 +30,11 @@ The following are the key benefits of the Veeva Vault PromoMats Microsoft Graph 
 
 Additionally, the connector boosts productivity by minimizing time spent searching for information across multiple sources. By integrating Microsoft 365 Copilot and Microsoft Search with PromoMats data, it streamlines content preparation and field use. It also improves efficiency by referencing existing compliant documents and content to help generate new messaging and prepare materials effectively.
 
-This guide is for Microsoft 365 administrators or anyone responsible for configuring, managing, and monitoring the Veeva Vault PromoMats Microsoft Graph connector.
+This guide is for Microsoft 365 administrators or anyone responsible for configuring, managing, and monitoring the Veeva Vault PromoMats Copilot connector.
 
 ## Capabilities
 
-The Veeva Vault PromoMats connector enables the following capabilities:
+The Veeva Vault PromoMats Copilot connector enables the following capabilities:
 
 - Generates summaries to understand and make decisions based on promotional materials and key documents.
 - Improves the searchability of promotional documents by using advanced Microsoft 365 search capabilities.
@@ -43,7 +43,7 @@ The Veeva Vault PromoMats connector enables the following capabilities:
 - Maintains data privacy and compliance by supporting ACL permissions and document-level permissions, simplifying the permission model and reducing the risk of misconfiguration.
 - Uses query string conditions to precisely control the synchronization of articles, ensuring efficient indexing.
 
-The following table lists example prompts that show how Microsoft 365 Copilot, integrated with the Veeva PromoMats connector, can significantly enhance productivity and streamline processes by using PromoMats data.
+The following table lists example prompts that show how Microsoft 365 Copilot, integrated with the Veeva PromoMats Copilot connector, can significantly enhance productivity and streamline processes by using PromoMats data.
 
 |Scenario|Example prompt|
 |:---|:---|
@@ -66,7 +66,7 @@ The following table lists example prompts that show how Microsoft 365 Copilot, i
 
 ## Prerequisites
 
-To configure Microsoft Entra ID OAuth 2.0/OpenID Connect for the Veeva Vault Microsoft Graph connector, follow these steps.
+To configure Microsoft Entra ID OAuth 2.0/OpenID Connect for the Veeva Vault Copilot connector, follow these steps.
 
 ### Register an application in Microsoft Entra ID
 
@@ -121,15 +121,15 @@ Use the **Client ID** from the newly created application in the Entra admin cent
 
 ## Get started
 
-### 1. Configure display name
+### Configure display name
 Provide a meaningful display name for your connector in the Microsoft 365 Admin Center. This name helps identify the connection in your workspace.
 
-### 2. Add the Veeva Vault URL
+### Add the Veeva Vault URL
 Enter the URL of your Veeva Vault instance. For example: `https://<your-vault-domain>.veevavault.com`.
 
-### 3. Provide authentication details
+### Provide authentication details
 
-To configure the Veeva Vault PromoMats connector, select **Azure Active Directory (OIDC)** and fill in the following information:
+To configure the Veeva Vault PromoMats Copilot connector, select **Azure Active Directory (OIDC)** and fill in the following information:
 
 - **Vault session ID URL:** You can find the session ID URL on the Veeva Vault interface under the path: **Admin panel** > **Settings** > **OAuth 2.0/ OpenID Connect Profiles** > the profile that's created for the connection > **Vault Session ID URL**.
 - **Client ID:** The application ID for your Entra application registered for Veeva Vault. 
@@ -138,7 +138,7 @@ To configure the Veeva Vault PromoMats connector, select **Azure Active Director
 > [!Important]
 > Configure both Microsoft Entra ID and Veeva Vault admin settings to enable Microsoft Entra ID authentication.
 
-### 4. Set up identity mapping
+### Set up identity mapping
 
 For customers who need the security settings of their Veeva PromoMats instance to be honored, click **Custom setup** > **User**. In **Map identities**, select **Non-ME-ID** as the identity type for your content source.
 
@@ -157,7 +157,7 @@ Deploy this connection to a limited group of users to validate indexing and acce
 
 ## Default settings
 
-The following table lists the default settings for the Veeva Vault PromoMats Microsoft Graph connector. To modify these default values, choose **Custom setup** during the configuration.
+The following table lists the default settings for the Veeva Vault PromoMats Copilot connector. To modify these default values, choose **Custom setup** during the configuration.
 
 | Section  | Setting               | Default value |
 |----------|-----------------------|---------------|
@@ -186,7 +186,7 @@ You can modify the frequency of full crawls to fit your organization's requireme
 
 ## Troubleshooting
 
-For information about troubleshooting, see [Troubleshooting the Veeva Vault Microsoft Graph connector](troubleshoot-veeva-vault-connectors.md).
+For information about troubleshooting, see [Troubleshooting the Veeva Vault Copilot connector](troubleshoot-veeva-vault-connectors.md).
 
 ## Next steps
 

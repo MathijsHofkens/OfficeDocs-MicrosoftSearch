@@ -1,26 +1,26 @@
 ---
 ms.date: 05/09/2024
-title: "ServiceNow Knowledge Microsoft Graph connector"
+title: "ServiceNow Knowledge Microsoft 365 Copilot connector"
 ms.author: souravpoddar
 author: souravpoddar001
 manager: harshkum
 audience: Admin 
 ms.audience: Admin
-ms.topic: article
+ms.topic: install-set-up-deploy
 ms.service: mssearch
 ms.localizationpriority: medium
 search.appverid:
 - BFB160
 - MET150
 - MOE150
-description: "Set up the ServiceNow Knowledge Microsoft Graph connector for Microsoft Search and Microsoft 365 Copilot."
+description: "Set up the ServiceNow Knowledge Microsoft 365 Copilot connector."
 ---
 
-# ServiceNow Knowledge Microsoft Graph connector
+# ServiceNow Knowledge Microsoft 365 Copilot connector
 
-With the ServiceNow Knowledge Microsoft Graph connector, your organization can index knowledge-base articles that are visible to all users or restricted with user criteria permissions within your organization. After you configure the connector and index content from ServiceNow, end users can search for those articles in Microsoft Copilot and from any Microsoft Search client.
+With the ServiceNow Knowledge Microsoft 365 Copilot connector, your organization can index knowledge-base articles that are visible to all users or restricted with user criteria permissions within your organization. After you configure the connector and index content from ServiceNow, end users can search for those articles in Microsoft Copilot and from any Microsoft Search client.
 
-This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors a ServiceNow Knowledge Microsoft Graph connector.
+This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors a ServiceNow Knowledge Copilot connector.
 
 ## Capabilities
 - Index all types of knowledge articles
@@ -29,15 +29,15 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
    - How to create a new VPN connection?
    - How do I apply for leaves?
 - Use [Semantic search in Copilot](semantic-index-for-copilot.md) to enable users to find relevant content based on keywords, personal preferences, and social connections.
+- Support for [Advanced user criteria permissions](https://docs.servicenow.com/bundle/xanadu-servicenow-platform/page/product/knowledge-management/task/create-user-criteria-record-in-knowledge-management.html).
 
 ## Limitations
-- Doesn't support [Advanced scripts](https://docs.servicenow.com/bundle/xanadu-servicenow-platform/page/product/knowledge-management/task/create-user-criteria-record-in-knowledge-management.html).
 - If both Knowledge base and Knowledge article level permissions are defined, then only article-level permissions are honored.
 - Does not index attachments.
 
 ## Prerequisites
 - **ServiceNow Instance URL**: To connect to your ServiceNow data, you need your organization's ServiceNow instance URL. Your organization's ServiceNow instance URL typically looks like `https://your-organization-name.service-now.com`. (Don’t have one? [Check how to create a test instance](https://www.youtube.com/watch?v=OTdzVLqpFHY))
-- **Service Account**: To connect to ServiceNow and allow the ServiceNow Knowledge Microsoft Graph connector to update knowledge articles regularly, you need a service account with read access to specific ServiceNow table records. The service account needs read access to the following **ServiceNow table records** to successfully crawl various entities.
+- **Service Account**: To connect to ServiceNow and allow the ServiceNow Knowledge Copilot connector to update knowledge articles regularly, you need a service account with read access to specific ServiceNow table records. The service account needs read access to the following **ServiceNow table records** to successfully crawl various entities.
 
    Feature | Read access required tables | Description
    --- | --- | ---
@@ -62,10 +62,10 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
    You can **create and assign a role** for the service account you use to connect with Microsoft Search. [Learn how to assign role for ServiceNow accounts](https://docs.servicenow.com/bundle/xanadu-platform-administration/page/administer/users-and-groups/task/t_AssignARoleToAUser.html). Read access to the tables can be assigned on the created role. To learn about setting read access to table records, see [Securing Table Records](https://developer.servicenow.com/dev.do#!/learn/learning-plans/xanadu/new_to_servicenow/app_store_learnv2_securingapps_xanadu_creating_and_editing_access_controls). 
 
    If you want to index properties from [extended tables](https://docs.servicenow.com/bundle/xanadu-platform-administration/page/administer/table-administration/concept/table-extension-and-classes.html) of *kb_knowledge*, provide read access to sys_dictionary and sys_db_object. Access to these tables is optional. You can index *kb_knowledge* table properties without access to the two additional tables.
-
+- **Scripted REST API**: If your ServiceNow instance uses **Advanced Scripts** in your Knowledge Base or Article-level user criteria, you'll need to use the **Advanced** flow. You will also need to create a Scripted REST API Endpoint. For more details, see [Use Advanced Flow for the ServiceNow Knowledge Copilot connector](/MicrosoftSearch/servicenow-knowledge-advanced-flow).
 ## Get started
 
-This video provides a step-by-step guide on adding the ServiceNow Knowledge Microsoft Graph connector.
+This video provides a step-by-step guide on adding the ServiceNow Knowledge Copilot connector.
 
 > [!VIDEO https://www.youtube-nocookie.com/embed/uS5JV-2M9kw]
 
@@ -73,11 +73,16 @@ This video provides a step-by-step guide on adding the ServiceNow Knowledge Micr
 
 A display name is used to identify each reference in Copilot, helping users easily recognize the associated file or item. Display name also signifies trusted content. Display name is also used as a [content source filter](/MicrosoftSearch/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize.
 
-### 2. ServiceNow URL
+### 2. Select Simple or Advanced based on your user criteria setup
+
+The Copilot connector for ServiceNow Knowledge supports two flows for user criteria permissions: **Simple** and **Advanced**. The default is **Simple**. If your ServiceNow instance uses **Advanced Scripts** in your Knowledge Base or Article-level user criteria, you'll need to use the **Advanced** flow. This ensures accurate permissions handling when ingesting content into Microsoft Graph.
+
+
+### 3. ServiceNow URL
 
 To connect to your ServiceNow data, you need your organization's ServiceNow instance URL. Your organization's ServiceNow instance URL typically looks like `https://your-organization-name.service-now.com`.
 
-### 3. Authentication type
+### 4. Authentication type
 
 To authenticate and sync content from ServiceNow, choose **one of three** supported methods:
 
@@ -91,7 +96,7 @@ To authenticate and sync content from ServiceNow, choose **one of three** suppor
    <details>
    <summary>[Click to expand] To use the ServiceNow OAuth for authentication, follow these steps.</summary>
     
-   A ServiceNow admin needs to provision an endpoint in your ServiceNow instance, so that the ServiceNow Knowledge Microsoft Graph connector can access it. To learn more, see [Create an endpoint for clients to access the instance](https://docs.servicenow.com/bundle/xanadu-platform-security/page/administer/security/task/t_CreateEndpointforExternalClients.html) in the ServiceNow documentation.
+   A ServiceNow admin needs to provision an endpoint in your ServiceNow instance, so that the ServiceNow Knowledge Copilot connector can access it. To learn more, see [Create an endpoint for clients to access the instance](https://docs.servicenow.com/bundle/xanadu-platform-security/page/administer/security/task/t_CreateEndpointforExternalClients.html) in the ServiceNow documentation.
 
    The following table provides guidance on how to fill out the endpoint creation form:
 
@@ -212,11 +217,15 @@ To authenticate and sync content from ServiceNow, choose **one of three** suppor
 
    </details>
 
-### 4. Rollout to a limited audience
+### 5. API Namespace (if you are using Advanced flow)
+If you are using the **Advanced** flow, enter the API namespace that you created in your ServiceNow instance. For more details, see [Advanced Flow for Microsoft Graph Connector for ServiceNow Knowledge](/MicrosoftSearch/servicenow-knowledge-advanced-flow).
+
+
+### 6. Rollout to a limited audience
 
 Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. To know more about limited rollout, click [here](/MicrosoftSearch/staged-rollout-for-graph-connectors).
 
-At this point, you are ready to create the connection for ServiceNow Knowledge. You can select the **Create** button and the ServiceNow Knowledge Microsoft Graph connector starts indexing articles from your ServiceNow account.
+At this point, you are ready to create the connection for ServiceNow Knowledge. You can select the **Create** button and the ServiceNow Knowledge Copilot connector starts indexing articles from your ServiceNow account.
 
 For other settings, like Access permissions, Data inclusion rules, Schema, and Crawl frequency, we have set defaults based on what works best with ServiceNow data. You can see the default values below:
 
@@ -237,7 +246,7 @@ For other settings, like Access permissions, Data inclusion rules, Schema, and C
 
 If you want to edit any of these values, you need to choose the **Custom Setup** option.
 
-[Get started with the ServiceNow Knowledge Microsoft Graph connector](https://admin.microsoft.com/adminportal/home#/MicrosoftSearch/Connectors/add?ms_search_referrer=MicrosoftSearchDocs_ServiceNowKB&type=ServiceNowKB)
+[Get started with the ServiceNow Knowledge Copilot connector](https://admin.microsoft.com/adminportal/home#/MicrosoftSearch/Connectors/add?ms_search_referrer=MicrosoftSearchDocs_ServiceNowKB&type=ServiceNowKB)
 
 ## Custom setup
 
@@ -251,12 +260,12 @@ Configure settings related to Users
 
 **Access permissions**
 
-The ServiceNow Knowledge Microsoft Graph connector supports access permissions visible to "Everyone" or "Only people with access to content in data source". Indexed data appears in results and is visible to all users in the organization or users who have access to them via user criteria permission respectively. Choose the one that is most appropriate for your organization.
+The ServiceNow Knowledge Copilot connector supports access permissions visible to "Everyone" or "Only people with access to content in the data source". Indexed data appears in results and is visible to all users in the organization or users who have access to it via user criteria permission, respectively. Choose the one that is most appropriate for your organization.
 
-If a knowledge article isn't enabled with a user criterion, it appears in the results of everyone in the organization.
+If a knowledge article isn't enabled with a user criterion, it appears in the results for everyone in the organization.
 
 >[!IMPORTANT]
-> In ServiceNow, while assessing read permissions for a user, both article-level permissions and KB-level permissions are looked at. The ServiceNow Knowledge Microsoft Graph connector treats permissions differently:
+> In ServiceNow, while assessing read permissions for a user, both article-level permissions and KB-level permissions are looked at. The ServiceNow Knowledge Copilot connector treats permissions differently:
 > 1. If the article contains '_Can Read_' user criteria, then they are stamped on the article during ingestion and Knowledge Base '_Can Read_' / '_Can Contribute_' user criteria are ignored.
 >
 > 2. If the article contains '_Cannot Read_' user criteria, and if the corresponding Knowledge base also contains '_Cannot Read_' user criteria, then both the user criteria are stamped on the article.
@@ -266,7 +275,7 @@ If a knowledge article isn't enabled with a user criterion, it appears in the re
 
 **Mapping identities**
 
-The default method for mapping your data source identities with Microsoft Entra ID is by checking whether the Email id of ServiceNow users is same as the UserPrincipalName (UPN), or Mail of the users in Microsoft Entra ID. If you believe the default mapping would not work for your organization, you can provide a custom mapping formula. To know more about, mapping Non-EntraID identities, click [here](/MicrosoftSearch/map-non-aad).
+The default method for mapping your data source identities with Microsoft Entra ID is by checking whether the email ID of ServiceNow users is the same as the UserPrincipalName (UPN), or Mail of the users in Microsoft Entra ID. If you believe the default mapping would not work for your organization, you can provide a custom mapping formula. To know more about, mapping Non-EntraID identities, click [here](/MicrosoftSearch/map-non-aad).
 
 ### Content
 
@@ -317,11 +326,11 @@ Preview data to validate your Query filter and Manage Properties settings
 Configure Crawl frequency
 :::image-end:::
 
-The refresh interval determines how often your data is synced between the data source and the ServiceNow Knowledge Microsoft Graph connector index. There are two types of refresh intervals – full crawl and incremental crawl. For more details, click [here](/MicrosoftSearch/configure-connector#guidelines-for-sync-settings).
+The refresh interval determines how often your data is synced between the data source and the ServiceNow Knowledge Copilot connector index. There are two types of refresh intervals – full crawl and incremental crawl. For more details, click [here](/MicrosoftSearch/configure-connector#guidelines-for-sync-settings).
 
 You can change the default values of the refresh interval from here if you want to.
 
-## Read and Deny Access to Knowledge Articles in the ServiceNow Knowledge Microsoft Graph connector
+## Read and Deny Access to Knowledge Articles in the ServiceNow Knowledge Copilot connector
 
 <details>
 <summary>[Click to expand] Here is a scenario-wise depiction of how the connector treats access permissions based on user criteria in ServiceNow Knowledge:</summary>
@@ -359,7 +368,7 @@ You can change the default values of the refresh interval from here if you want 
 
 ## Troubleshooting
 After publishing your connection, you can review the status under the **Data sources** tab in the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](./manage-connector.md).
-You can find troubleshooting steps for commonly seen issues here: [Troubleshooting the ServiceNow Knowledge Microsoft Graph connector](./troubleshoot-servicenow-knowledge-connector.md).
+You can find troubleshooting steps for commonly seen issues here: [Troubleshooting the ServiceNow Knowledge Copilot connector](./troubleshoot-servicenow-knowledge-connector.md).
 
 If you have issues or want to provide feedback, contact [Microsoft Graph | Support](https://developer.microsoft.com/en-us/graph/support).
 

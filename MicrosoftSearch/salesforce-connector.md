@@ -6,7 +6,7 @@ author: mecampos
 manager: umas
 audience: Admin
 ms.audience: Admin
-ms.topic: article
+ms.topic: install-set-up-deploy
 ms.service: mssearch
 ms.localizationpriority: medium
 search.appverid:
@@ -37,6 +37,7 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 
 ## Limitations
 
+- Visibility permissions applied via managed permission sets or permission set groups are not honoured, this can lead to fields not being indexed or included in search results.
 - The Salesforce Microsoft Graph connector doesn't currently support Apex-based, territory-based sharing and sharing using personal groups from Salesforce.
 - There's a known bug in the Salesforce API the connector uses, where the private org-wide defaults for leads aren't honored currently.  
 - If a field has field level security (FLS) set for a profile, the connector won't ingest that field for any profiles in that Salesforce org. As a result, users won't be able to search for values for those fields or  show up in the results.  
@@ -152,7 +153,7 @@ Deploy this connection to a limited user base if you want to validate it in Copi
 
 At this point, you're ready to create the connection for Salesforce CRM. You can click **Create** to publish your connection and index content from your Salesforce instance.
 
-For other settings, like **Access Permissions**, **Data Inclusion Rules**, **Schema**, and **Crawl frequency**, we have defaults based on what works best with Jira data. You can see the default values below:
+For other settings, like **Access Permissions**, **Data Inclusion Rules**, **Schema**, **Crawl frequency**, we have defaults based on what works best with Salesforce data. You can see the default values below:
 
 | Users | Description |
 |----|---|

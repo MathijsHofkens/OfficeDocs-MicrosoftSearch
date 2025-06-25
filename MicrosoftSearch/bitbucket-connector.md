@@ -1,36 +1,34 @@
 ---
-title: "Bitbucket Microsoft Graph connectors (preview)"
+title: "Bitbucket Microsoft 365 Copilot connector (preview)"
 ms.author: dannyyao
 author: dannyyaou
 manager: jecui
 audience: Admin
 ms.audience: Admin
-ms.topic: article
+ms.topic: install-set-up-deploy
 ms.service: mssearch
 ms.localizationpriority: Medium
 search.appverid:
 - BFB160
 - MET150
 - MOE150
-description: "Set up the Bitbucket Microsoft Graph connectors for Microsoft Search and Microsoft 365 Copilot."
+description: "Set up the Bitbucket Microsoft 365 Copilot connector."
 ms.date: 02/14/2025
 ---
 
-# Bitbucket Microsoft Graph connectors (preview)
+# Bitbucket Microsoft 365 Copilot connector (preview)
 
-The Bitbucket Microsoft Graph connectors (Bitbucket Cloud Pull Request and Bitbucket Cloud Knowledge) allow your organization to index pull requests and documentation (.txt and .md files) stored in BitBucket. After you configure the connector and index Bitbucket content, users can search and retrieve information via Microsoft Search and Microsoft 365 Copilot.
+The Bitbucket Microsoft 365 Copilot connector allows your organization to index pull requests and documentation (.txt and .md files) stored in BitBucket. After you configure the connector and index Bitbucket content, users can search and retrieve information via Microsoft Search and Microsoft 365 Copilot.
 
-This article is intended for Microsoft 365 administrators or anyone who configures, runs, or monitors Bitbucket Microsoft Graph connectors.
+This article is intended for Microsoft 365 administrators or anyone who configures, runs, or monitors the Bitbucket Copilot connector.
 
 ## Capabilities
-
 - Index Bitbucket repositories, pull requests, and documentation.
 - Enable Microsoft Search and Microsoft 365 Copilot to retrieve Bitbucket data efficiently.
 - Maintain Bitbucket ACLs and user permissions.
 - Allow administrators to customize crawl frequency and indexing preferences.
 
 ## Limitations
-
 - The connector does not support indexing Bitbucket CI/CD pipelines beyond status indexing.
 - Only repositories, pull requests, .md, and .txt files are indexed.
 - On-premises/self-hosted Bitbucket instances aren't currently supported.
@@ -38,46 +36,59 @@ This article is intended for Microsoft 365 administrators or anyone who configur
 
 ## Prerequisites
 
-Before you set up the connector, make sure that:
-
 1. Your Bitbucket instance is accessible via API.
-2. You generate a **Client ID** and **Client secret** from Bitbucket for authentication.
-3. The user account used for authentication has access to the repositories, pull requests, and knowledge files to be indexed.
-4. The client ID and client secret have the **repository:read**, **account:read,** and **pullrequest** permissions.
-5. Users who access indexed Bitbucket data have corresponding **Microsoft Entra ID** identities for permission mapping.
+2. The user account used for authentication has access to the repositories, pull requests, and knowledge files to be indexed.
+3. Users who access indexed Bitbucket data have corresponding **Microsoft Entra ID** identities for permission mapping.
+4. Set up an OAuth consumer on BitBucket
+    1. Go to your workspace page on BitBucket. 
+    2. Click the gear icon on the top right corner and select **Workspace settings**. 
+    3. On the left navigation, select OAuth Consumers located under the Workflows section. 
+    4. Click **Add consumer** and fill out according to the following redirect URLs: 
+    - For Microsoft 365 Enterprise, use `https://gcs.office.com/v1.0/admin/oauth/callback`
+    - For Microsoft 365 Government, use `https://gcsgcc.office.com/v1.0/admin/oauth/callback`  
+    5. Enable the key to have the following permissions configured to read issues:
+    - Account
+    - Repositories
+    - Pull requests
+    6. Save the configuration and copy the key and secret values 
 
-We recommend using separate user accounts for OAuth authentication with each connection as Bitbucket's rate limit is calculated individually per user.
+We recommend using separate user accounts for OAuth authentication with each connection, as Bitbucket's rate limit is calculated individually per user.
 
 ## Get started
 
-### 1. Choose display name
+### Choose display name
 Choose a display name that helps users recognize merge requests or documentation in a Copilot response.
 
-### 2. Bitbucket instance URL
+### Bitbucket instance URL
 Enter the URL of your Bitbucket instance (for example, `https://bitbucket.org/testinstance`).
 
-### 3. Authenticate
+### Authentication type
 
-- Enter your **Client ID** and **Client secret** from Bitbucket.
+- Enter your Client ID using the key from your Bitbucket OAuth consumer, and your Client Secret using the corresponding OAuth consumer secret.
 - Choose **Authorize** to sign in and grant access.
-- Grant the required API scopes.
+- Click **Authorize** to sign in and grant the required access permissions.
 
-### 4. Roll out to limited audience
+### Roll out to limited audience
 Before you deploy the connector, test the connection with a limited user base in Copilot and Microsoft Search.
 
 ## Custom setup
-Custom setup is for admins who want to edit the default values for any settings. When you choose **Custom setup**, you see three other tabs: **Users**, **Content**, and **Sync**. 
+In custom setup, you can edit any of the default values for users, content, and sync.
 
 ### Users
 #### Identity mapping
-By default, due to the limitation of Bitbucket API, the connector maps emails in Microsoft Entra ID using public names from Bitbucket.
+By default, due to the limitation of the Bitbucket API, the connector maps emails in Microsoft Entra ID using public names from Bitbucket.
 If this mapping does not align with your configuration, customize the identity mapping.
 
 To ensure correct permission enforcement, map Bitbucket user identities to Microsoft Entra ID. The following are the options:
   - **Full name:** Matches Bitbucket full names to Microsoft Entra ID user properties.
   - **Public name:** Maps Bitbucket public names with Microsoft Entra ID user properties.
 
-If direct mapping fails, use **regular expressions (regex)** for transformation.
+If direct mapping fails, use **regular expressions (regex)** for transformation. For example:
+
+1. Select **Mail** as the **Microsoft Entra user property**.
+2. Select **Full Name** as the **non-Microsoft Entra user property**.
+3. Use a regular expression such as `([^@]+)` to capture a sequence of one or more characters that are before the `@` symbol.
+4. Create a formula to complete the mapping, such as `{0}@<your-domain>`.
 
 ### Content
 On the **Content** tab, you can verify property mappings in the sample data for metadata such as **content**, **labels**, **description**, and **timestamps**.
