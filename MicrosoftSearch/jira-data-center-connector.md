@@ -129,6 +129,31 @@ Custom setup allows admins to edit the default values mentioned above. Once you 
 
 The Jira Data Center Microsoft Graph connector supports data visible to Only people with access to this data source (recommended) or Everyone. If you choose Everyone, indexed data appears in the search results for all users. 
 
+> [!NOTE]  
+> The Jira Data Center Copilot connector enforces access control based on Jira's native permission models to prevent oversharing of sensitive issue content. When indexing issues, the connector applies a hierarchical evaluation similar to Jira's internal permission logic. This ensures only authorized users can discover content via Copilot. The image below illustrates the evaluation logic that determines access rights to Jira issues.
+>  
+> ![Diagram showing the workflow of Jira Data Center Copilot connector ACL.](media/jira-data-center-gc-permission.png)
+>  
+> The connector uses the following access control hierarchy:
+>
+> 1. **Issue Security Level (Highest Priority)**  
+>    If an issue has an **Issue Security Level** configured, access is restricted to users, groups, or roles explicitly associated with that level.  
+>    - In this case, **Issue Security Level overrides all other permission settings**.  
+>    - Users not included in the security level definition are **denied** access, regardless of their project-level permissions.
+>
+> 2. **Fallback to Project-Level Permissions**
+> If no Issue Security Level is set, access is determined by the **Project’s Permission Scheme**.
+>    - Specifically, the user must be granted the **Browse Projects** permission for the corresponding project. The connector currently supports resolving the following types of `Browse Projects` permission assignments:
+>      - **Project Roles**
+>      - **Groups**
+>      - **Current Assignee**
+>      - **Reporter**
+>      - **Project Lead**
+>      - **Single Users**
+>        
+>    If the `Browse Projects` permission is configured using other types (e.g., Application access, public, Any logged in user, Group custom field value, User custom field value and Service Project Customer-Poratal Access), the connector **cannot evaluate those settings**. In such cases, access to the issue will be **denied** to ensure data security.
+
+
 If you choose Only people with access to this data source, you need to further choose whether your Jira Data Center has Microsoft Entra ID provisioned users or non-AAD users. 
 
 To identify which option is suitable for your organization: 
