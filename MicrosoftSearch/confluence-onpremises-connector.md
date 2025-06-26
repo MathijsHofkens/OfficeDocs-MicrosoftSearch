@@ -135,7 +135,17 @@ Custom setup is for those admins who want to edit the default values for setting
 **Access Permissions**
 
 The Confluence On-premises Copilot connector supports search permissions visible to Everyone or Only people with access to this data source. If you choose Everyone, indexed data appears in the search results for all users. If you choose Only people with access to this data source, indexed data appears in the search results for users who have access to it. 
-In Confluence On-premises, security permissions for users and groups are defined using space permissions and page restrictions. The Confluence On-premises Copilot connector applies effective permissions provided by [Content restrictions API](https://docs.atlassian.com/ConfluenceServer/rest/7.15.0/#api/content/%7Bid%7D/restriction)
+In Confluence On-premises, security permissions for users and groups are defined using space permissions and page restrictions. The permission evaluation follows these rules:
+- Retrieve the permission configuration from the page-level restrictions.
+- Retrieve the permission configuration from the parent page restrictions.
+- Retrieve the permission configuration from the space permissions.
+- Compute the intersection of the above three configurations to determine the final effective permission on the page.
+This final permission set is then synchronized to Microsoft 365 Copilot
+
+
+>[!IMPORTANT]
+>Anonymous access settings defined at the space level are not considered in this evaluation.
+
 
 If you choose Only people with access to this data source, you need to further choose whether your Confluence site has Microsoft Entra ID provisioned users or non-AAD users.
 
