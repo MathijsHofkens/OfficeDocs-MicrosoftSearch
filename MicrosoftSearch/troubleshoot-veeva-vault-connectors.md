@@ -6,7 +6,7 @@ author: dannyyaou
 manager: jecui
 audience: Admin 
 ms.audience: Admin 
-ms.topic: article 
+ms.topic: troubleshooting-general
 ms.service: mssearch 
 ms.localizationpriority: medium 
 description: "Find troubleshooting information for the Veeva Vault Microsoft 365 Copilot connector." 

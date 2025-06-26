@@ -6,7 +6,7 @@ author: ms-anggao
 manager: jecui
 audience: Admin
 ms.audience: Admin 
-ms.topic: article 
+ms.topic: install-set-up-deploy
 ms.service: mssearch 
 ms.localizationpriority: Medium 
 search.appverid: 
@@ -144,8 +144,12 @@ To sign up for Google Workspace, you need an internet domain name, like your-com
 
 ### 3. Provide Google Apps administrator account email
 Enter the email of a Google Apps administrator account in the `user@company.com` format.
+### 4. Service Account Key*
+Copy and paste the **content** of service account key file that you created when you authorized your Microsoft organization to access your users' Google Drive.
 
-### 4. Roll out to a limited audience
+_Note: It is not the actual key in Google admin but the contents of the json file_
+
+### 5. Roll out to a limited audience
 Deploy this connection to a limited user base if you want to validate it in Copilot and other search surfaces before expanding the rollout to a broader audience.
 
 For other settings, like Access permissions, Data inclusion rules, Schema, Crawl frequency, etc., we set defaults based on what works best with data in Google Drive. The default value settings are as follows.

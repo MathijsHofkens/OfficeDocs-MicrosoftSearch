@@ -225,6 +225,10 @@ items:
             href: gitlab-connector.md 
           - name: Troubleshooting
             href: troubleshoot-gitlab-connector.md
+        - name: Gong (preview)
+          items:
+          - name: Setup
+            href: gong-connector.md
         - name: Google Drive
           items:
           - name: Setup
