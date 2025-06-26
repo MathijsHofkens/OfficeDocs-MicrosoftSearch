@@ -121,7 +121,7 @@ Use the **Client ID** from the newly created application in the Entra admin cent
    2. Select a user who is the vault owner.
    3. Click **Edit**.
    4. In **Details** > **Security Policy**, change the values to the newly created policy.
-   5. In **Federated ID**, change it to the UPN claim of the admin identity, which is also used in the connector setup. 
+   5. In **Federated ID**, change it to the upn (User Principal Name) of the Entra ID account used to set up the connector (i.e. the admin account).
 
 ## Get started
 
