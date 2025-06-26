@@ -74,7 +74,7 @@ Enter your BambooHR instance URL, for example, https://contoso.bamboohr.com/
 
 Select OAuth 2.0 from the list of authentication types, and enter the client ID and client secret from BambooHR App portal.
 
-For other settings, like Access Permissions, Data inclusion rules, Schema, Crawl frequency, etc., we set defaults based on what works best with data in Egnyte. The default value settings are as follows.
+For other settings, like Access Permissions, Data inclusion rules, Schema, Crawl frequency, etc., we set defaults based on what works best with data in BambooHR. The default value settings are as follows.
 
 |Page|Settings|Default values|
 | :--- | :--- | :--- |
