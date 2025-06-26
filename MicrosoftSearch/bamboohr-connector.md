@@ -38,11 +38,11 @@ For more information, see [Microsoft 365 Copilot connector for people data](http
 
 1. Set up the application on the BambooHR developer portal.
 2. Configure a BambooHR app with a unique App name.  
-   ![Screenshot of Add application.](media/bamboohr-connector/bamboohr-addapp.png)
+   ![Screenshot of Add application.](media/bamboohr-connector/bamboohr-add-application.png)
 3. Add direct URLs into the **redirect URLs** field in the app details section.  
    For Microsoft M365 Enterprise, copy and paste: `https://gcs.office.com/v1.0/admin/oauth/callback`  
-   ![Screenshot of App Details.](media/bamboohr-connector/bamboohr-appdetails.png)  
-   ![Screenshot of Direct Urls form.](media/bamboohr-connector/bamboohr-redirecturis.png)
+   ![Screenshot of App Details.](media/bamboohr-connector/bamboohr-application-details.png)  
+   ![Screenshot of Direct Urls form.](media/bamboohr-connector/bamboohr-redirect-uri.png)
 4. On the application scopes field, select the following scopes with read access only:  
 
    | Category         | Required scopes                                                                                                                                          |
@@ -52,15 +52,15 @@ For more information, see [Microsoft 365 Copilot connector for people data](http
    | **Miscellaneous**| field<br>offline_access<br>public.user                                                                                                                   |
    | **Reports**      | report                                                                                                                                                   |
    
-   ![Screenshot of Select Scopes.](media/bamboohr-connector/bamboohr-selectscopes.png)  
-   ![Screenshot of Scope Selection.](media/bamboohr-connector/bamboohr-scopeselection.png)
+   ![Screenshot of Select Scopes.](media/bamboohr-connector/bamboohr-select-scopes.png)  
+   ![Screenshot of Scope Selection.](media/bamboohr-connector/bamboohr-scope-selection.png)
 5. Navigate to the **app credentials** to get the App client ID and App client secret.  
-   ![Screenshot of Client Id and Client Secret Section.](media/bamboohr-connector/bamboohr-clientidandsecret.png)
+   ![Screenshot of Client Id and Client Secret Section.](media/bamboohr-connector/bamboohr-client-id-and-secret.png)
 
 ## Get started
 
 [Add BambooHR Microsoft 365 Copilot connector.](https://admin.microsoft.com/adminportal/home?#/MicrosoftSearch/Connectors/add)
-![Screenshot of Adding BambooHR Microsoft 365 Copilot connector from the Catalogue.](media/bamboohr-connector/bamboohr-addconnector.png)
+![Screenshot of Adding BambooHR Microsoft 365 Copilot connector from the Catalogue.](media/bamboohr-connector/bamboohr-add-connector.png)
 
 ### 1. Choose a display name
 
@@ -78,8 +78,8 @@ For other settings, like Access Permissions, Data inclusion rules, Schema, Crawl
 
 |Page|Settings|Default values|
 | :--- | :--- | :--- |
-|Users | Access Permissions | All files that are accessible to anyone.|
-|Map identities| Data source identities mapped using Microsoft Entra IDs. *Note:** All data retrieved through BambooHR Copilot connector is visible to everyone in your Microsoft tenant. However, we aren't changing the system's behavior, such as respecting access restrictions. If a user is blocked from seeing another user's profile data, that profile data (including BambooHR Copilot data) won't be shared or stored in the blocked user's view. Access-restricted data will be included in future updates when user-level permission controls are implemented.|
+|Users | Access Permissions <br><br> _Note: All data retrieved through BambooHR Copilot connector is visible to everyone in your Microsoft tenant. However, we aren't changing the system's behavior, such as respecting access restrictions. If a user is blocked from seeing another user's profile data, that profile data (including BambooHR Copilot data) won't be shared or stored in the blocked user's view. Access-restricted data will be included in future updates when user-level permission controls are implemented._ | All profiles are accessible to anyone.|
+|Map identities| Data source identities mapped using Microsoft Entra IDs. |
 |Sync | Incremental crawl | Frequency: every 15 minutes.|
 |Sync | Full crawl | Frequency: every day.|
 
