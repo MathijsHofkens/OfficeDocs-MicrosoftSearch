@@ -96,6 +96,7 @@ For other settings, like Access Permissions, Data inclusion rules, Schema, Crawl
 | Employee Eeid | Employee's ID in BambooHR | webAccounts->userId<br><br>*Note: The employee's eeid is also utilized internally to periodically check for any updates for a given Employee in BambooHR.* |
 | Employment status | Employee's Status, for example, Full-Time, Contractor Etc. | position->detail->employeeType |
 | Original hire date time | Employee's data of hire | anniversaries->date[type='originalHireDate'] |
+| Hire date time | Employee's data of hire <br><br> _Note: When Original hire date time is null, we index the Hire Date Time_ | anniversaries->date[type='originalHireDate'] |
 | Job information job title | Employee's Job Title, for example, Senior HR Administrator | positions->detail->jobTitle |
 | Supervisor ID | Employee's Manager Identifier | positions->manager->userId<br><br>*Note: The supervisor ID is used to find the supervisor's email, which is then converted to the Microsoft Entra objectId of the manager for internal processing.* |
 | Mobile phone | Employee's Work Mobile Phone | phones->number(type=mobile) |
