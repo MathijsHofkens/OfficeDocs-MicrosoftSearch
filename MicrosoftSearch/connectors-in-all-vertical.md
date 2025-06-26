@@ -16,7 +16,7 @@ description: "Describes viewing Microsoft 365 Copilot connector results in All v
 ---
 # Manage connector results in All vertical
 
-When you use the Microsoft 365 Copilot connectors to add data sources, your users are able to search for them in the All vertical by default. They can see the results from Microsoft 365 Copilot connector data sources merged inline with all the other results from Microsoft apps (for example, SharePoint, OneDrive for Business, or Power BI) in SharePoint, Office.com, and Microsoft Search in Bing. 
+When you use the Microsoft 365 Copilot connectors to add data sources, your users are able to search for them in the All vertical by default. They can see the results from Microsoft 365 Copilot connector data sources merged inline with all the other results from Microsoft apps (for example, SharePoint, OneDrive for Business, or Power BI) in SharePoint and the Microsoft 365 App.
 
 Results in a result cluster are grouped together based on the search vertical configuration. Each result cluster only contains results from a single custom search vertical. To ensure the discovery of content in a result cluster, the system expects meaningful titles on your items.
 
