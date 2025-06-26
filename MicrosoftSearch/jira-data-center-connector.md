@@ -22,10 +22,6 @@ The Jira Data Center Microsoft Graph connector enables your organization to inde
 
 This article is intended for Microsoft 365 administrators who are responsible for configuring, running, and monitoring the Jira Data Center Microsoft Graph connector. It supplements the general instructions provided in [Set up Microsoft Graph connectors in the Microsoft 365 admin center](/microsoftsearch/configure-connector).
 
-
->[!NOTE]
->The Jira Data Center connector is in public preview. If you wish to get access to try it, you need to enable [Targeted Release](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide#set-up-the-release-option-in-the-admin-center) ring for your Admin account.
-
 ## Capabilities
 
 Enhanced Copilot Capabilities: Users can ask natural language questions about Jira issues and project data in Microsoft 365 Copilot. For example: 
@@ -132,7 +128,7 @@ The Jira Data Center Microsoft Graph connector supports data visible to Only peo
 > [!NOTE]  
 > The Jira Data Center Copilot connector enforces access control based on Jira's native permission models to prevent oversharing of sensitive issue content. When indexing issues, the connector applies a hierarchical evaluation similar to Jira's internal permission logic. This ensures only authorized users can discover content via Copilot. The image below illustrates the evaluation logic that determines access rights to Jira issues.
 >  
-> ![Diagram showing the workflow of Jira Data Center Copilot connector ACL.](media/jira-data-center-gc-permission.png)
+> ![Diagram showing the workflow of Jira Data Center Copilot connector ACL.](media/jira-data-center-copilot-connector-permission.png)
 >  
 > The connector uses the following access control hierarchy:
 >
