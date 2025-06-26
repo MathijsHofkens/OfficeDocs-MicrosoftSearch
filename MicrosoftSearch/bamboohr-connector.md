@@ -37,27 +37,25 @@ For more information, see [Microsoft 365 Copilot connector for people data](http
 ## Prerequisites
 
 1. Set up the application on the BambooHR developer portal.
-2. Configure a BambooHR app with a unique App name 
- ![Screenshot of Add application.](media/bamboohr-connector/bamboohr-addapp.png)
-3. Add direct URLs** into the "Redirect URLs" field in the app details section.
-   For M365 Enterprise, copy and paste: `https://gcs.office.com/v1.0/admin/oauth/callback` 
-
-   ![Screenshot of App Details.](media/bamboohr-connector/bamboohr-appdetails.png)
+2. Configure a BambooHR app with a unique App name.  
+   ![Screenshot of Add application.](media/bamboohr-connector/bamboohr-addapp.png)
+3. Add direct URLs into the **redirect URLs** field in the app details section.  
+   For Microsoft M365 Enterprise, copy and paste: `https://gcs.office.com/v1.0/admin/oauth/callback`  
+   ![Screenshot of App Details.](media/bamboohr-connector/bamboohr-appdetails.png)  
    ![Screenshot of Direct Urls form.](media/bamboohr-connector/bamboohr-redirecturis.png)
 4. On the application scopes field, select the following scopes with read access only:  
 
-   | Category | Required scopes |
-   | :--- | :--- |
-   | Claims | <table><tr><td>email</td></tr><tr><td>openid</td></tr></table> |
-   | Employee | <table><tr><td>employee</td></tr><tr><td>employee:contact</td></tr><tr><td>employee:identification</td></tr><tr><td>employee:job</td></tr><tr><td>employee:management</td></tr><tr><td>employee:name</td></tr><tr><td>employee_directory</td></tr><tr><td>sensitive_employee:protected_info</td></tr></table> |
-   | Miscellaneous | <table><tr><td>field</td></tr><tr><td>offline_access</td></tr><tr><td>public.user</td></tr></table> |
-   | Reports | <table><tr><td>report</td></tr></table> |
-
-   ![Screenshot of Select Scopes.](media/bamboohr-connector/bamboohr-selectscopes.png)
+   | Category         | Required scopes                                                                                                                                          |
+   | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+   | **Claims**       | email<br>openid                                                                                                                                          |
+   | **Employee**     | employee<br>employee:contact<br>employee:identification<br>employee:job<br>employee:management<br>employee:name<br>employee_directory<br>sensitive_employee:protected_info |
+   | **Miscellaneous**| field<br>offline_access<br>public.user                                                                                                                   |
+   | **Reports**      | report                                                                                                                                                   |
+   
+   ![Screenshot of Select Scopes.](media/bamboohr-connector/bamboohr-selectscopes.png)  
    ![Screenshot of Scope Selection.](media/bamboohr-connector/bamboohr-scopeselection.png)
-
-5. Navigate to the **app credentials** to get the App client ID and App client secret.   
- ![Screenshot of Client Id and Client Secret Section.](media/bamboohr-connector/bamboohr-clientidandsecret.png)
+5. Navigate to the **app credentials** to get the App client ID and App client secret.  
+   ![Screenshot of Client Id and Client Secret Section.](media/bamboohr-connector/bamboohr-clientidandsecret.png)
 
 ## Get started
 
@@ -126,7 +124,7 @@ The refresh interval determines how often your data is synced between the data s
 
 1. Invalid Credentials. Verify the credential information from BambooHR App.
 
-Ensure that the scopes are correctly configured in the BambooHR App, and verify that the client ID and secret entered match in the BambooHR App. 
+   Ensure that the scopes are correctly configured in the BambooHR App, and verify that the client ID and secret entered match in the BambooHR App. 
 
 ## Next steps
 
