@@ -39,7 +39,7 @@ The data on top of the chart displays how often users engage with search results
 - People
 - External (third-party connectors)
 
-The search application filter is limited to Microsoft Search for Bing, Microsoft365.com, SharePoint start page, and SharePoint sites.
+The search application filter is limited to Microsoft365.com, SharePoint start page, and SharePoint sites.
 
 ## Query distribution
 
