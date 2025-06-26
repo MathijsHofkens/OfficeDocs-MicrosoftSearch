@@ -67,14 +67,8 @@ additionalContent:
             url: manage-bookmarks.md
           - text: Manage acronyms
             url: manage-acronyms.md
-          - text: Manage floor plans
-            url: manage-floorplans.md
-          - text: Manage locations
-            url: manage-locations.md
           - text: Manage Power BI
             url: manage-powerbi.md
-          - text: Manage Q&A
-            url: manage-qas.md
           - text: Manage search apps
             url: manage-search-apps.md
               
@@ -105,5 +99,3 @@ additionalContent:
           links:
           - text: Understand Microsoft Search in SharePoint
             url: get-started-search-in-sharepoint-online.md
-          - text: Understand Microsoft Search in Bing
-            url: overview-microsoft-search-bing.md

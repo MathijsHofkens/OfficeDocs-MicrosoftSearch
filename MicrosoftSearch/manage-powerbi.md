@@ -26,7 +26,7 @@ Users need to find data and analytics so that they can take informed decisions. 
 
 ## What users experience
 
-Microsoft Search users can search for Power BI results from the Windows search box, SharePoint, Microsoft 365, and Bing. 
+Microsoft Search users can search for Power BI results from the Windows search box, SharePoint, and Microsoft 365. 
 
 Power BI results can be queried from All tab on the Search page
 
