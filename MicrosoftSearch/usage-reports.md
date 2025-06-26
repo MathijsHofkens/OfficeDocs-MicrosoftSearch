@@ -25,7 +25,7 @@ Search usage reports enable you to gain more understanding of how people in your
 
 :::image type="content" source="media/usage-reports/usage reports-key-metrics.png" alt-text="A dashboard showing key metrics for search and intelligence." lightbox="media/usage-reports/usage reports-key-metrics.png":::
 
-The [Microsoft Search usage reports](https://admin.microsoft.com/Adminportal/Home?#/MicrosoftSearch/insights) include graphs and tables generated from searches that are executed from the SharePoint Start Page, SharePoint Sites, Microsoft 365 app (formerly known as the Office app) at office.com, and Bing. User analytics is also available for Windows Search, Outlook, Teams, OneDrive and application search in Word, Excel and PowerPoint. You can see data from the last 28 days or for the previous year.
+The [Microsoft Search usage reports](https://admin.microsoft.com/Adminportal/Home?#/MicrosoftSearch/insights) include graphs and tables generated from searches that are executed from the SharePoint Start Page, SharePoint Sites, and Microsoft 365 app (formerly known as the Office app) at office.com. User analytics is also available for Windows Search, Outlook, Teams, OneDrive and application search in Word, Excel and PowerPoint. You can see data from the last 28 days or for the previous year.
 
 On some detail pages, you can filter reports by country, occupation, department, or division. To protect privacy, if any filters show data for five or less individuals, those results won't be included in the search usage reports. In addition, these filters can be toggled on or off for the entire organization on the Org settings page, in case your organization has specific privacy requirements.  
 
@@ -35,7 +35,7 @@ These are the search applications that are currently included in tenant level us
 
 | Search application | Description |
 |:-----|:-----|
-|Microsoft Search for Bing |A Bing search where the user is authenticated with organization credentials and the user navigated to the work tab in Microsoft Search in Bing.      |
+|M365.cloud.microsoft.com |Microsoft 365 Copilot (formerly known as the Microsoft365.com).  |
 |Microsoft365.com |The Microsoft 365 App at microsoft365.com (formerly known as the Office app at office.com).  |
 |SharePoint Sites |SharePoint Online, including both classic (enterprise/site/basic search center) and modern (hub, communication, and team) site searches. |
 |SharePoint Start page |The site available when selecting SharePoint in the Microsoft 365 app launcher with the URL ending in /SharePoint.aspx. |
@@ -78,7 +78,7 @@ At the top of the User analytics chart, you can use the following metrics to fil
 | Filter | Description |
 |:-----|:-----|
 |Date Range |The date range for the analytics shown on the page: Last 28 days and Last 12 months.  |
-|Search application |The search application where the user has performed the queries: Microsoft Search for Bing, Windows Search Work results, Outlook, Teams, OneDrive, Word/Excel/PowerPoint, SharePoint start page, SharePoint sites, Microsoft365.com or all applications combined. |
+|Search application |The search application where the user has performed the queries: Windows Search Work results, Outlook, Teams, OneDrive, Word/Excel/PowerPoint, SharePoint start page, SharePoint sites, Microsoft365.com or all applications combined. |
 
 ### Accessing search data prior to the start of new generation reports
 
