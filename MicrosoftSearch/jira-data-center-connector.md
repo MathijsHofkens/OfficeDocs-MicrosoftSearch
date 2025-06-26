@@ -53,6 +53,9 @@ To index your Jira Data Center content, you must install the **GCA** on a Window
 **2. Install Jira Data Center Plugin**
 
 Install the Jira Data Center plugin from [Microsoft Graph Connector for Jira Data Center | Atlassian Marketplace](https://marketplace.atlassian.com/apps/1235599/microsoft-graph-connector-for-jira-data-center?hosting=datacenter&tab=installation) by following the installation step there.  
+>[!Note]
+>This plugin works with Jira Data Center 8.10.0 - 10.5.1. 
+
 
 ## Get Started 
 
