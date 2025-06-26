@@ -1,24 +1,24 @@
 ---
-title: "GitHub Cloud Issues Microsoft Graph connector (preview)"
+title: "GitHub Cloud Issues Microsoft 365 Copilot connector (preview)"
 ms.author: dannyyao
 author: dannyyaou
 manager: jecui
 audience: Admin
 ms.audience: Admin
-ms.topic: article
+ms.topic: install-set-up-deploy
 ms.service: mssearch
 ms.localizationpriority: Medium
 search.appverid:
 - BFB160
 - MET150
 - MOE150
-description: "Set up the GitHub Cloud Issues Microsoft Graph connector for Microsoft Search and Microsoft 365 Copilot."
+description: "Set up the GitHub Cloud Issues Microsoft 365 Copilot connector."
 ms.date: 02/14/2025
 ---
 
-# GitHub Cloud Issues Microsoft Graph connector (preview)
-The GitHub Cloud Issues Microsoft Graph connector allows your organization to index issues stored in GitHub. After you configure the connector and index GitHub content, users can search and retrieve information via Microsoft Search and Microsoft 365 Copilot.
-This article is intended for Microsoft 365 administrators or anyone who configures, runs, or monitors GitHub Cloud Issues Microsoft Graph connector.
+# GitHub Cloud Issues Microsoft 365 Copilot connector (preview)
+The GitHub Cloud Issues Microsoft 365 Copilot connector allows your organization to index issues stored in GitHub. After you configure the connector and index GitHub content, users can search and retrieve information via Microsoft Search and Microsoft 365 Copilot.
+This article is intended for Microsoft 365 administrators or anyone who configures, runs, or monitors GitHub Cloud Issues Copilot connector.
 
 ## Capabilities
 - Index GitHub issues.
@@ -53,10 +53,10 @@ This article is intended for Microsoft 365 administrators or anyone who configur
 
 ## Get started
 
-### 1. Choose display name
+### Choose display name
 Choose a display name that helps users recognize the connection in a Copilot response.
 
-### 2. Provide authentication details
+### Provide authentication details
 - Enter your **Client ID** and **Client secret** from your GitHub App.
 - Choose **Authorize** to sign in and grant access. We recommend using separate user accounts for OAuth authentication with each connection, as GitHub's rate limit is calculated individually per user.
 - Grant the required API scopes.
@@ -89,7 +89,7 @@ You can configure incremental and full crawls. The following are the default val
   - Incremental crawl runs every 15 minutes by default.
   - Full crawl runs daily to ensure up-to-date indexing.
 
-## Firewall settings (for the Azure SQL Microsoft Graph connector only)
+## Firewall settings
 
 For added security, you may configure IP firewall rules for your Azure SQL Server or database. For more information, see [IP firewall rules](/azure/azure-sql/database/firewall-configure). 
 Add the following client IP ranges in the firewall settings.

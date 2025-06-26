@@ -92,7 +92,7 @@ Microsoft Graph grounded responses can utilize semantic understanding of user ma
 | PDF files                 | Supported      | Supported        |
 | Web pages (aspx)          | Supported      | Supported        |
 | OneNote files (one)       | Supported      | Supported        |
-| Graph Connector data      | Not applicable | Supported        |
+| Copilot connector data      | Not applicable | Supported        |
 
 >[!NOTE]
 >Files up to 512 MB are now supported for PDF, PPTX, and DOCX extensions. This enhancement allows Copilot users to effectively analyze, summarize, and generate insights from these large files.
@@ -132,7 +132,7 @@ Both Item insights and People insights don't cover personalization features base
 
 ## Incorporating third party information
 
-Using Copilot Connectors, organizations can bring organizational data or content from external sources into Microsoft Graph. Once in Microsoft Graph, that content is indexed so that Copilot may access it - while maintaining access controls for content. This expands the types of content sources that are searchable in your Microsoft 365 productivity apps and the broader Microsoft ecosystem. Note that this process works best when connector content is text rich. The third-party data can be hosted on-premises or in a public or private cloud. Learn more about graph connector licensing requirements for Microsoft 365 Enterprise and Microsoft 365 Copilot at [License requirements and pricing](licensing.md).
+Using Copilot connectors, organizations can bring organizational data or content from external sources into Microsoft Graph. Once in Microsoft Graph, that content is indexed so that Copilot may access it - while maintaining access controls for content. This expands the types of content sources that are searchable in your Microsoft 365 productivity apps and the broader Microsoft ecosystem. Note that this process works best when the connector content is text rich. The third-party data can be hosted on-premises or in a public or private cloud. Learn more about Copilot connector licensing requirements for Microsoft 365 Enterprise and Microsoft 365 Copilot at [License requirements and pricing](licensing.md).
 
 ## Privacy, compliance, and security
 

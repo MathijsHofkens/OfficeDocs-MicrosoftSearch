@@ -1,21 +1,21 @@
 ---
 ms.date: 10/08/2019
-title: "Troubleshooting the ServiceNow Catalog Microsoft Graph connector"
+title: "Troubleshooting the ServiceNow Catalog Microsoft 365 Copilot connector"
 ms.author: kam1
 author: TheKarthikeyan
 manager: harshkum
 audience: Admin
 ms.audience: Admin
-ms.topic: article
+ms.topic: troubleshooting-general
 ms.service: mssearch
 ms.localizationpriority: Medium
 search.appverid:
 - BFB160
 - MET150
 - MOE150
-description: "Troubleshooting the ServiceNow Catalog Microsoft Graph connector for Microsoft Search and Microsoft 365 Copilot"
+description: "Troubleshooting the ServiceNow Catalog Microsoft 365 Copilot connector."
 ---
-# Troubleshooting the ServiceNow Catalog Microsoft Graph connector
+# Troubleshooting the ServiceNow Catalog Microsoft 365 Copilot connector
 The following common errors are observed while configuring the connector, or during crawling and their possible reasons.
 
 ### 1. Unable to sign in due to Single Sign-on enabled ServiceNow instance
@@ -34,7 +34,7 @@ The connector uses an access token fetched on behalf of the service account for 
 
 #### 2.3. Check if the ServiceNow instance behind the firewall
 
-Your Microsoft Graph connector may not be able to reach your ServiceNow instance if it is behind a network firewall. You'll need to explicitly allow access to the connector service. You can find the public IP address range of the connector service in the table below. Based on your tenant region, add it to your ServiceNow instance network allowlist.
+Your Copilot connector may not be able to reach your ServiceNow instance if it is behind a network firewall. You'll need to explicitly allow access to the connector service. You can find the public IP address range of the connector service in the table below. Based on your tenant region, add it to your ServiceNow instance network allowlist.
 
  Environment | Region | Range
 --- | --- | ---

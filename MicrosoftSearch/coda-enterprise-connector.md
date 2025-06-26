@@ -1,38 +1,38 @@
 --- 
 
-title: "Coda Enterprise Microsoft Graph connector" 
+title: "Coda Enterprise Microsoft 365 Copilot connector" 
 ms.author: depang
 author: dennypanggh
 manager: jecui
 audience: Admin
 ms.audience: Admin 
-ms.topic: article 
+ms.topic: install-set-up-deploy
 ms.service: mssearch 
 ms.localizationpriority: Medium 
 search.appverid: 
 - BFB160 
 - MET150  
 - MOE150 
-description: "Set up the Coda Enterprise Microsoft Graph connector for Microsoft Search and Microsoft 365 Copilot" 
+description: "Set up the Coda Enterprise Microsoft 365 Copilot connector." 
 ms.date: 04/03/2025
 ---
 
-# Coda Enterprise Microsoft Graph connector (preview)
+# Coda Enterprise Microsoft 365 Copilot connector (preview)
 
-The Coda Enterprise Microsoft Graph connector allows your organization to index documents and pages from Coda. After you configure the connector, end users can search for this content from Coda in Microsoft Copilot and from any Microsoft Search client.
+The Coda Enterprise Microsoft 365 Copilot connector allows your organization to index documents and pages from Coda. After you configure the connector, end users can search for this content from Coda in Microsoft Copilot and from any Microsoft Search client.
  
-This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors a Coda Enterprise Microsoft Graph connector.
+This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors a Coda Enterprise Copilot connector.
 
 >[!NOTE]
->The Coda Enterprise Microsoft Graph connector is in public preview. If you wish to get access to try it, you need to enable [Targeted release](/microsoft-365/admin/manage/release-options-in-office-365#set-up-the-release-option-in-the-admin-center) ring for your Admin account.
+>The Coda Enterprise Copilot connector is in public preview. If you wish to get access to try it, you need to enable [Targeted release](/microsoft-365/admin/manage/release-options-in-office-365#set-up-the-release-option-in-the-admin-center) ring for your Admin account.
 
 ## Capabilities
-- Index documents and emails from Coda Enterprise instance while maintaining access control.
-- Use content filters to selectively index content based on criteria such as time range filter.
+- Index documents and emails from the Coda Enterprise instance while maintaining access control.
+- Use content filters to selectively index content based on criteria such as a time range filter.
 - Use [Semantic search](semantic-index-for-copilot.md) in Copilot to enable users to find relevant content.
 
 ## Limitations
-- Support the Enterprise edition as this connector is exclusively compatible with Coda Enterprise edition. 
+- Support the Enterprise edition, as this connector is exclusively compatible with the Coda Enterprise edition. 
 - Exclude Coda Free, Pro, and Team editions, as they are not supported due to Coda API restrictions on those editions.
 
 ## Prerequisites
@@ -46,13 +46,13 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 A display name is used to identify each reference in Copilot, helping users easily recognize the associated file or item. Display name also signifies trusted content.
 
 ### 2. Add the Coda Enterprise instance organization ID
-The Coda Enterprise organization ID is required to setup the connection, which usually follows this format, org-AbCDeFGHIj, and can be found in the page URL of Coda admin settings page such as `https://coda.io/organizations/org-AbCDeFGHIj/about`
+The Coda Enterprise organization ID is required to set up the connection, which usually follows this format, org-AbCDeFGHIj, and can be found in the page URL of Coda admin settings page such as `https://coda.io/organizations/org-AbCDeFGHIj/about`
 
 ### 3. Provide authentication details
 
 #### Coda API Key
 
-To connect to the Coda Enterprise instance and allow the Microsoft Graph connector to index the Coda documents and pages regularly, you need to create a Coda Enterprise API token from the Coda Org Admin account.
+To connect to the Coda Enterprise instance and allow the Coda Enterprise Copilot connector  to index the Coda documents and pages regularly, you need to create a Coda Enterprise API token from the Coda Org Admin account.
 
 Navigate to **Account settings** > **API Settings** of a Coda Org Admin account, and click **Generate API Token** to generate a new token. Use the default values.
 
@@ -60,10 +60,10 @@ Navigate to **Account settings** > **API Settings** of a Coda Org Admin account,
 |:--- |:---|
 |Type of restriction | Doc or table.|
 |Type of access | Read and write.|
-|Doc or table to grant access to | `not required, leave it to empty`.|
+|Doc or table to grant access to | `not required, leave it empty`.|
 
 ### 4. Roll out to limited audience
-Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. For more information about limited rollout, see [Staged rollout for Microsoft Graph connectors](staged-rollout-for-graph-connectors.md).
+Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. For more information about limited rollout, see [Staged rollout for Copilot connectors](staged-rollout-for-graph-connectors.md).
 To create the connection for Coda, click **create** to publish your connection and index content from your Coda account.
 
 For other settings, like **Access permissions**, **Schema**, and **Crawl frequency**, we have default values based on what works best with Coda data.
@@ -93,7 +93,7 @@ Custom setup is for those admins who want to edit the default values for setting
 
 #### Access permissions
 
-The Coda Enterprise Microsoft Graph connector supports search permissions visible to **Everyone** or **Only people with access to this data source**. If you choose **Everyone**, indexed data appears in the search results for all users. If you choose **Only people with access to this data source**, indexed data appears in the search results for users who have access to them.
+The Coda Enterprise Copilot connector supports search permissions visible to **Everyone** or **Only people with access to this data source**. If you choose **Everyone**, indexed data appears in the search results for all users. If you choose **Only people with access to this data source**, indexed data appears in the search results for users who have access to it.
 
 #### Mapping identities
 
@@ -107,7 +107,7 @@ To identify which option is suitable for your organization:
 ### Data
 
 #### Content filter
-Currently, Coda API limits are attached to a user/IP. To optimize the indexing performance, consider setting up multiple connections or utilizing content filter to reduce the number of items indexed per connection. 
+Currently, Coda API limits are attached to a user/IP. To optimize the indexing performance, consider setting up multiple connections or utilizing a content filter to reduce the number of items indexed per connection. 
 
 Define a time range for the content to index. Only content with a last modified date and time within the specified range to index. Select an appropriate time range based on the volume of content to index. 
 
@@ -116,7 +116,7 @@ Define a time range for the content to index. Only content with a last modified 
 
 #### Manage properties
 
-You can view the available properties from your Coda. Assign a schema to the property (define whether a property is searchable, queryable, retrievable, or refinable), change the semantic label and add an alias to the property. Properties that are selected by default in following list.
+You can view the available properties from your Coda. Assign a schema to the property (define whether a property is searchable, queryable, retrievable, or refinable), change the semantic label and add an alias to the property. Properties that are selected by default are in the following list.
 
 | Properties   | Semantic Label          | Schema                     | Description                                      |
 |:-------------|:------------------------|:---------------------------|:-------------------------------------------------|
@@ -135,7 +135,7 @@ You can view the available properties from your Coda. Assign a schema to the pro
 
 ### Crawl
 
-The refresh interval determines how often your data is synced between the data source and the Coda Microsoft Graph connector index. There are two types of refresh intervals - full crawl and incremental crawl. For more details, see [refresh settings](configure-connector.md#guidelines-for-sync-settings).
+The refresh interval determines how often your data is synced between the data source and the Coda Enterprise Copilot connector  index. There are two types of refresh intervals - full crawl and incremental crawl. For more details, see [refresh settings](configure-connector.md#guidelines-for-sync-settings).
 
 You can change the default values of the refresh interval from here if you want to.
 

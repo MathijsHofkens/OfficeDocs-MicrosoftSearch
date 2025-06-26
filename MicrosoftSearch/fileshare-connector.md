@@ -1,12 +1,12 @@
 ---
 ms.date: 11/12/2020
-title: "File share Microsoft Graph connector"
+title: "File Share Microsoft 365 Copilot connector"
 ms.author: danielabo
 author: danielabom
 manager: SteveWilkins1123
 audience: Admin
 ms.audience: Admin
-ms.topic: article
+ms.topic: how-to
 ms.service: mssearch
 ms.localizationpriority: medium
 search.appverid:
@@ -14,11 +14,11 @@ search.appverid:
 - MET150
 - MOE150
 ROBOTS: NoIndex
-description: "Set up the File Share Microsoft Graph connector for Microsoft Search and Microsoft 365 Copilot"
+description: "Set up the File Share Microsoft 365 Copilot connector"
 ---
-# File Share Microsoft Graph connector
+# File Share Microsoft 365 Copilot connector
 
-The File Share Microsoft Graph connector allows users in your organization to search on-premises Windows file shares.
+The File Share Microsoft 365 Copilot connector allows users in your organization to search on-premises Windows file shares.
 
 ## Before you get started
 
@@ -38,7 +38,7 @@ The maximum supported file size is 100 MB. Files that exceed 100 MB aren't index
 
 ## Step 1: Add a connector in the Microsoft 365 admin center
 
-[Add File Share Microsoft Graph connector](https://admin.microsoft.com/adminportal/home#/MicrosoftSearch/Connectors/add?ms_search_referrer=MicrosoftSearchDocs_FileShare&type=FileConnector)
+[Add File Share Copilot connector](https://admin.microsoft.com/adminportal/home#/MicrosoftSearch/Connectors/add?ms_search_referrer=MicrosoftSearchDocs_FileShare&type=FileConnector)
 
 (See general [setup instructions](./configure-connector.md) for more details)
 <!---If the above phrase does not apply, delete it and insert specific details for your data source that are different from general setup instructions.-->
@@ -122,23 +122,15 @@ You can choose to share ACLs only if the share path you provided follows UNC pat
 ## Step 10: Choose refresh settings
 
 Follow the general [setup instructions](./configure-connector.md).
-<!---If the above phrase does not apply, delete it and insert specific details for your data source that are different from general setup instructions.-->
 
 ## Step 11: Review connection
 
 Follow the general [setup instructions](./configure-connector.md).
-<!---If the above phrase does not apply, delete it and insert specific details for your data source that are different from general setup 
-instructions.-->
 
-<!---## Troubleshooting-->
-<!---Insert troubleshooting recommendations for this data source-->
 ## Troubleshooting
 After publishing your connection, you can review the status under the **Data sources** tab in the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).
 
 You can find troubleshooting steps for commonly seen issues [here](troubleshoot-file-share-connector.md).
 
 If you have issues or want to provide feedback, contact [Microsoft Graph | Support](https://developer.microsoft.com/en-us/graph/support).
-
-<!---## Limitations-->
-<!---Insert limitations for this data source-->
 

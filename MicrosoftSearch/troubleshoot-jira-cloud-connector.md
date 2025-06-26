@@ -1,24 +1,24 @@
 ---
-title: "Troubleshooting the Atlassian Jira Cloud Microsoft Graph connector"
+title: "Troubleshooting the Atlassian Jira Cloud Microsoft 365 Copilot connector"
 ms.author: mecampos
 author: mecampos
 manager: umas
 audience: Admin
 ms.audience: Admin
-ms.topic: article
+ms.topic: troubleshooting-general
 ms.service: mssearch
 ms.localizationpriority: medium
 search.appverid:
 - BFB160
 - MET150
 - MOE150
-description: "Troubleshooting the Atlassian Jira Cloud Graph connector for Microsoft Search and Microsoft 365 Copilot  "
+description: "Troubleshooting the Atlassian Jira Cloud Microsoft 365 Copilot connector."
 ms.date: 07/22/2021
 ---
 
-# Troubleshooting the Atlassian Jira Cloud Microsoft Graph connector
+# Troubleshooting the Atlassian Jira Cloud Microsoft 365 Copilot connector
 
-The following are common errors observed while configuring the connector, or during crawling, and their possible reasons.
+The following are common errors observed while configuring the connector or during crawling, and their possible reasons.
 
 | Step | Error message | Possible reason(s) |
 |:------------ |:------------ |:------------|

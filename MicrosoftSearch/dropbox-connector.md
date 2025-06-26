@@ -1,27 +1,27 @@
 --- 
 
-title: "Dropbox Graph connector for Microsoft Search and Copilot" 
+title: "Dropbox Microsoft 365 Copilot connector (preview)" 
 ms.author: anggao
 author: ms-anggao
 manager: jecui
 audience: Admin
 ms.audience: Admin 
-ms.topic: article 
+ms.topic: install-set-up-deploy
 ms.service: mssearch 
 ms.localizationpriority: Medium 
 search.appverid: 
 - BFB160 
 - MET150 
 - MOE150 
-description: "Set up the Dropbox Graph connector for Microsoft Search and Copilot" 
+description: "Set up the Dropbox Microsoft 365 Copilot connector" 
 ms.date: 11/26/2024
 ---
 
-# Dropbox Graph connector (Preview)
+# Dropbox Microsoft 365 Copilot connector (preview)
 
-With the Microsoft Graph connector, your organization in M365 can index files that are accessible to anyone in Dropbox, using Microsoft Copilot and Search. 
+With the Dropbox Microsoft 365 Copilot connector, your organization in M365 can index files that are accessible to anyone in Dropbox, using Microsoft Copilot and Search. 
 
-This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors Dropbox connector. 
+This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors Dropbox Copilot connector. 
 
 ## Capabilities
 - Access Dropbox files using the power of Semantic search
@@ -33,7 +33,7 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 - Folder, replies & comments aren't indexable 
 
 ## Prerequisites
-Before you create a Dropbox connector, you must:
+Before you create a Dropbox Copilot connector, you must:
 ### 1. Set up a team admin user
 Created a Dropbox account  for business and set up a team admin user.
 
@@ -121,7 +121,7 @@ Custom setup is for those admins who want to edit the default values for setting
 
 **Access permissions**
 
-The Dropbox Graph connector supports data visible to Only people with access to this data source (recommended) or Everyone. If you choose Everyone, indexed data appears in the search results for all users. 
+The Dropbox Copilot connector supports data visible to Only people with access to this data source (recommended) or Everyone. If you choose Everyone, indexed data appears in the search results for all users. 
 
 If you choose Only people with access to this data source, you need to further choose whether your  has Microsoft Entra ID provisioned users or non-AAD users. 
 

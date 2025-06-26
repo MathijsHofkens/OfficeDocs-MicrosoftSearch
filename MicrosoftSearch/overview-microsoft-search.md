@@ -18,7 +18,7 @@ description: "Get an overview of what Microsoft Search is, its benefits, and whi
 # Overview of Microsoft Search
 
 > [!IMPORTANT]
-> As of March 31, 2025, M365.cloud.microsoft (formerly Office.com and Microsoft365.com) and SharePoint Online are the new homes for Microsoft Search. Microsoft Search in Bing is no longer available. We encourage Microsoft Search in Bing users to update your bookmarks. [Learn more](/microsoftsearch/retirement-microsoft-search-bing). 
+> As of March 31, 2025, [M365.cloud.microsoft](https://M365.cloud.microsoft/search) (formerly Office.com and Microsoft365.com) and SharePoint Online are the new homes for Microsoft Search. Microsoft Search in Bing is no longer available. We encourage Microsoft Search in Bing users to update your bookmarks. [Learn more](/microsoftsearch/retirement-microsoft-search-bing). 
 
 Microsoft Search helps you find what you need to complete what you're working on. Whether you're searching for people, files, organization charts, sites, or answers to common questions, you can use Microsoft Search throughout your workday to get answers.
 
@@ -78,7 +78,7 @@ The search results that the user has **permission** to see are presented on the 
 
 In Microsoft Search only the content that a user has permission to see can appear in search results. A user might, for example, have permission to see a file because the user created it, it was shared with the user or with a larger group that includes the user, or it’s stored in a folder or location that the user has permission to access.
 
-When people filter on a person in SharePoint, they see results from content that the filtered person has worked on and that they have permission to see. If the filtered person or their organization have turned off item insights in Microsoft Graph, people only see results from content the filtered person has shared with them or from content that they both have worked on. [Learn about item insights](/graph/item-insights-overview).
+When people filter on a person in SharePoint, they see results from content that the filtered person has worked on and that they have permission to see. If the filtered person or their organization has turned off item insights in Microsoft Graph, people only see results from content the filtered person has shared with them or from content that they both have worked on. [Learn about item insights](/graph/item-insights-overview).
 
 When users get results for a search in Outlook, SharePoint Online, and M365.cloud.microsoft, the issued query is recorded in their search history. A user’s search history is personal, it isn’t shared with your organization or with Microsoft. Their search history helps them quickly get back to things they’ve found before. As they type a query, matches in their search history are suggested back to them in the search box.  
 

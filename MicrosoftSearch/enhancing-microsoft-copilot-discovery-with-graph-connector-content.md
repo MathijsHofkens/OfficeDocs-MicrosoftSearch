@@ -1,24 +1,24 @@
 ---
 ms.date: 06/17/2024
-title: "Enhancing Microsoft Copilot Discovery with Microsoft Graph connectors content"
+title: "Enhancing Microsoft Copilot Discovery with Microsoft 365 Copilot connectors content"
 ms.author: souravpoddar
 author: souravpoddar001
 manager: harshkum
 audience: Admin
 ms.audience: Admin
-ms.topic: article
+ms.topic: how-to
 ms.service: mssearch
 ms.localizationpriority: medium
 search.appverid:
 - BFB160
 - MET150
 - MOE150
-description: "Enhance the discoverability of Microsoft Graph connectors content within Microsoft Copilot."
+description: "Enhance the discoverability of Microsoft 365 Copilot connectors' content within Microsoft Copilot."
 ---
 
-# Enhancing Microsoft Copilot Discovery with Microsoft Graph connectors content
+# Enhancing Microsoft Copilot Discovery with Microsoft 365 Copilot connectors' content
 
-This document provides guidance on utilizing connection names and descriptions to enhance the likelihood for discoverability of Microsoft Graph connectors content within Microsoft Copilot. Choosing a meaningful connection name and descriptions can inform Microsoft Copilot that there is pertinent content and information in a connection that addresses the user's request.
+This document provides guidance on utilizing connection names and descriptions to enhance the likelihood of discoverability of Microsoft 365 Copilot connectors' content within Microsoft Copilot. Choosing a meaningful connection name and descriptions can inform Microsoft Copilot that there is pertinent content and information in a connection that addresses the user's request.
 
 ## Connection name
 
@@ -30,7 +30,7 @@ Pay attention to assigning a **representative and concise name** to each connect
 
 For Microsoft-built connectors, you have the flexibility to **modify the connection name and description** in the admin portal at any time to reflect updates or changes in the content. These modifications are swiftly propagated to the system, typically within minutes.
 
-   1. Go to the Microsoft 365 Copilot Admin portal. In the navigation pane, select **Settings**, and then select **Search & intelligence**. 
+1. Go to the Microsoft 365 Copilot Admin portal. In the navigation pane, select **Settings**, and then select **Search & intelligence**. 
    2. Select [Data sources](https://admin.microsoft.com/Adminportal/Home#/MicrosoftSearch/Connectors).
    3. Select the connector that you would like to update the description for and click 'Edit' at the bottom of the right panel.
 
@@ -41,14 +41,14 @@ For Microsoft-built connectors, you have the flexibility to **modify the conne
       [![Screenshot that shows Update the connection description](/MicrosoftSearch/media/update-the-connection-description.png)](/MicrosoftSearch/media/update-the-connection-description.png#lightbox)
 
    >[!Note]
-   >1. Microsoft Graph connectors for Jira, ServiceNow Tickets, ADO Work Items, and Salesforce have a default description tailored to the generic use of the connectors.
+   >1. Microsoft 365 Copilot connectors for Jira, ServiceNow Tickets, ADO Work Items, and Salesforce have a default description tailored to the generic use of the connectors.
    >2. We still advise reviewing and modifying the descriptions to tailor them to the specific terms/language used by your organization.
-   >3. For on-prem connectors, the connector description must be updated using the connector API. See more information here: [Microsoft Graph connector agent | Microsoft Learn](/MicrosoftSearch/graph-connector-agent)
+   >3. For on-prem connectors, the connector description must be updated using the connector API. See more information here: [Microsoft 365 Copilot connector agent | Microsoft Learn](/MicrosoftSearch/graph-connector-agent)
 
-   ### Good practices to write a connector description
+   ### Good practices for writing a connector description
 
    The connection description serves as a crucial element in aiding users to locate the desired content. Make sure that the following elements are present:
-   * A brief overview of the content type. 
+* A brief overview of the content type. 
    * The scope of the content available within the connection. 
    * Keywords that users might employ to find this content (ex. _Tickets_, _Wiki_, _Knowledge Base_, _How to_, etc.).
    * Alternative names for the connection that users might be familiar with. 
@@ -69,5 +69,5 @@ Here are three examples of effective connection names and descriptions:
 
    _The content in this connection can also be referred to as SFDC, Salesforce data or Salesforce Sales cloud._
    
-1. **BambooHR**: *This connection to BambooHR people data populates profiles of people in Microsoft 365 Copilot experiences like Teams or CoPilot. It's used to see or query about e.g., titles, emails, birthdays, and other people-related data.*
+1. **BambooHR**: *This connection to BambooHR people data populates profiles of people in Microsoft 365 Copilot experiences like Teams or CoPilot. It's used to see or query about e.g., titles, emails, managers, and other people-related data.*
 

@@ -1,43 +1,40 @@
 ---
-title: "GitHub Cloud Pull Requests Microsoft Graph connector (preview)"
+title: "GitHub Cloud Pull Requests Microsoft 365 Copilot connector (preview)"
 ms.author: dannyyao
 author: dannyyaou
 manager: jecui
 audience: Admin
 ms.audience: Admin
-ms.topic: article
+ms.topic: install-set-up-deploy
 ms.service: mssearch
 ms.localizationpriority: Medium
 search.appverid:
 - BFB160
 - MET150
 - MOE150
-description: "Set up the GitHub Cloud Pull Requests Microsoft Graph connector for Microsoft Search and Microsoft 365 Copilot."
+description: "Set up the GitHub Cloud Pull Requests Microsoft 365 Copilot connector."
 ms.date: 02/14/2025
 ---
 
-# GitHub Cloud Pull Requests Microsoft Graph connectors (preview)
+# GitHub Cloud Pull Requests Microsoft 365 Copilot connector (preview)
 
-The GitHub Cloud Pull Requests Microsoft Graph connectors allow your organization to index pull requests stored in GitHub. After you configure the connector and index GitHub content, users can search and retrieve information via Microsoft Search and Microsoft 365 Copilot.
+The GitHub Cloud Pull Requests Microsoft 365 Copilot connector allows your organization to index pull requests stored in GitHub. After you configure the connector and index GitHub content, users can search and retrieve information via Microsoft Search and Microsoft 365 Copilot.
 
-This article is intended for Microsoft 365 administrators or anyone who configures, runs, or monitors GitHub Cloud Pull Requests Microsoft Graph connectors.
+This article is intended for Microsoft 365 administrators or anyone who configures, runs, or monitors GitHub Cloud Pull Requests Copilot connector.
 
 ## Capabilities
-
 - Index GitHub pull requests.
 - Enable Microsoft Search and Microsoft 365 Copilot to retrieve GitHub data efficiently.
 - Maintain GitHub ACLs and user permissions.
 - Allow administrators to customize crawl frequency and indexing preferences.
 
 ## Limitations
-
 - The connector does not support indexing GitHub CI/CD pipelines beyond status indexing.
 - On-premises/self-hosted GitHub instances aren't currently supported.
 - Comments and the information about the commits are not crawled.
 - The connector is designed to support GitHub Enterprise. Users on Free or Team plans may experience limited functionality or reduced support.
 
 ## Prerequisites
-
 Before you set up the connector:
 
 1. Make sure that your GitHub instance is accessible via API.
@@ -61,20 +58,20 @@ Before you set up the connector:
 
 ## Get started
 
-### 1. Choose display name
+### Choose display name
 Choose a display name that helps users recognize the connection in a Copilot response.
 
-### 2. Authenticate
+### Provide authentication type
 
 - Enter your **Client ID** and **Client secret** from your GitHub App.
 - Choose **Authorize** to sign in and grant access. We recommend using separate user accounts for OAuth authentication with each connection, as GitHub's rate limit is calculated individually per user.
 - Grant the required API scopes.
 
-### 3. Roll out to limited audience
+### Roll out to limited audience
 Before you deploy the connector, test the connection with a limited user base in Copilot and Microsoft Search.
 
 ## Custom setup
-Custom setup is for admins who want to edit the default values for any settings. When you choose **Custom setup**, you see three other tabs: **Users**, **Content**, and **Sync**. 
+In custom setup you can edit any of the default values for users, content, and sync.
 
 ### Users
 #### Identity mapping
@@ -99,7 +96,7 @@ You can configure incremental and full crawls. The following are the default val
   - Incremental crawl runs every 15 minutes by default.
   - Full crawl runs daily to ensure up-to-date indexing.
 
-## Firewall settings (for the Azure SQL Microsoft Graph connector only)
+## Firewall settings
 
 For added security, you may configure IP firewall rules for your Azure SQL Server or database. For more information, see [IP firewall rules](/azure/azure-sql/database/firewall-configure).
 Add the following client IP ranges in the firewall settings.

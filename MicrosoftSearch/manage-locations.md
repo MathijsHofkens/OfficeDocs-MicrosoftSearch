@@ -4,7 +4,7 @@ ms.author: davidedwards
 author: dawholl
 manager: kellis
 ms.audience: Admin
-ms.topic: article
+ms.topic: how-to
 ms.service: mssearch
 ms.localizationpriority: medium
 search.appverid:

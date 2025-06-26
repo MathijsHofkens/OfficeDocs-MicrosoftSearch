@@ -1,12 +1,12 @@
 --- 
 
-title: "Zendesk Ticket Microsoft Graph connector (preview)" 
+title: "Zendesk TicketMicrosoft 365 Copilot connector (preview)" 
 ms.author: anggao
 author: ms-anggao
 manager: jecui
 audience: Admin
 ms.audience: Admin 
-ms.topic: article 
+ms.topic: install-set-up-deploy
 ms.service: mssearch 
 ms.localizationpriority: Medium 
 search.appverid: 
@@ -17,29 +17,26 @@ description: "Set up the Zendesk Ticket Graph connector for Microsoft Search and
 ms.date: 02/27/2025
 ---
 
-# Zendesk Ticket Microsoft Graph connector (preview)
+# Zendesk Ticket Microsoft 365 Copilot connector (preview)
 
-The Zendesk Ticket Microsoft Graph connector allows your organization to index tickets from Zendesk. After you configure the connector, users can search for these tickets from Zendesk in Microsoft 365 Copilot and from any Microsoft Search client.
+The Zendesk Ticket Microsoft 365 Copilot connector allows your organization to index tickets from Zendesk. After you configure the connector, users can search for these tickets from Zendesk in Microsoft 365 Copilot and from any Microsoft Search client.
 
-This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors a Zendesk Ticket Microsoft Graph connector.
+This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors a Zendesk Ticket Copilot connector.
 
 >[!NOTE]
->The Zendesk Ticket connector is in public preview. To get access to the connector, enable the [Targeted Release](/microsoft-365/admin/manage/release-options-in-office-365#set-up-the-release-option-in-the-admin-center) ring for your Admin account.
+>The Zendesk Ticket Copilot connector is in public preview. To get access to the connector, enable the [Targeted Release](/microsoft-365/admin/manage/release-options-in-office-365#set-up-the-release-option-in-the-admin-center) ring for your Admin account.
 
 ## Capabilities
-
 - Index Ticket tickets.
 - Use [Semantic search in Copilot](semantic-index-for-copilot.md) to enable users to find relevant content based on keywords, personal preferences, and social connections.
 
 ## Limitations
-
 - Doesn't index attachments.
 
 ## Prerequisites
-
 - You must be the **search admin** for your organization's Microsoft 365 tenant.
 - **Zendesk Instance URL**: To connect to your Zendesk Ticket data, you need your organization's Zendesk instance URL, which is typically the following: `https://<your-organization-domain>.zendesk.com`. If you don't have an instance already, for information about how to create a test instance, see [How do I create a Support trial account?](https://support.zendesk.com/hc/en-us/articles/4408823799962-How-do-I-create-a-Support-trial-account).
-- **Service Account**: To connect to Zendesk Ticket and allow the Microsoft Graph Connector to update knowledge tickets regularly, you need a service account with read permissions granted to the service account. The service account must have either the Admin, Agent, or Light agent role. The Contributor role does not provide read permissions in Zendesk.
+- **Service Account**: To connect to Zendesk Ticket and allow the Zendesk Ticket Copilot connector to update knowledge tickets regularly, you need a service account with read permissions granted to the service account. The service account must have either the Admin, Agent, or Light agent role. The Contributor role does not provide read permissions in Zendesk.
 
 ## Get Started
 
@@ -74,7 +71,7 @@ Enter the client ID (unique identifier) and secret to connect to your instance. 
 
 ### 4. Roll out to limited audience
 
-Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before you expand the rollout to a broader audience. For more information, see [Staged rollout for Microsoft Graph connectors](staged-rollout-for-graph-connectors.md).
+Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before you expand the rollout to a broader audience. For more information, see [Staged rollout for Zendesk Ticket Copilot connectors](staged-rollout-for-graph-connectors.md).
 
 Now you're ready to create the connection for Zendesk Ticket. Choose **Create** to publish your connection and index tickets from your Zendesk account.
 
@@ -104,7 +101,7 @@ Custom setup is for admins who want to edit the default values for any settings.
 
 #### Access permissions
 
-The Zendesk Ticket Microsoft Graph connector supports **Everyone** or **Only people with access to this data source** search permissions. If you choose **Everyone**, indexed data appears in the search results for all users. If you choose **Only people with access to this data source**, indexed data appears in the search results for users who have access to them.
+The Zendesk Ticket Copilot connector supports **Everyone** or **Only people with access to this data source** search permissions. If you choose **Everyone**, indexed data appears in the search results for all users. If you choose **Only people with access to this data source**, indexed data appears in the search results for users who have access to them.
 
 #### Mapping identities
 
@@ -158,12 +155,12 @@ Use the preview results button to verify the sample values of the selected prope
 
 ### Sync
 
-The refresh interval determines how often your data is synced between the data source and the Zendesk Ticket Microsoft Graph connector index. There are two types of refresh intervals: full crawl and incremental crawl. For more information, see [refresh settings](configure-connector.md#guidelines-for-sync-settings).
+The refresh interval determines how often your data is synced between the data source and the Zendesk Ticket Copilot connector index. There are two types of refresh intervals: full crawl and incremental crawl. For more information, see [refresh settings](configure-connector.md#guidelines-for-sync-settings).
 
 You can change the default values of the refresh interval.
 
 ## Next steps
 
-After you publish your connection, you can review the status under the **Data Sources** tab in the [admin center](https://admin.microsoft.com). For more information, see [Manage your connector](manage-connector.md).
+After you publish your connection, you can review the status under **Data Sources** in the [admin center](https://admin.microsoft.com). For more information, see [Manage your connector](manage-connector.md).
 
 For help and support, see [Microsoft Graph support](https://developer.microsoft.com/en-us/graph/support).

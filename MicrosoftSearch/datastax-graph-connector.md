@@ -1,40 +1,40 @@
 --- 
-title: "DataStax Microsoft Graph connector" 
+title: "DataStax Microsoft 365 Copilot connector" 
 ms.author:  kailiang
 author: Kai-Cloud
 manager: zezhangzhao
 audience: Admin
 ms.audience: Admin 
-ms.topic: article 
+ms.topic: install-set-up-deploy
 ms.service: mssearch 
 ms.localizationpriority: medium 
 search.appverid: 
-description: "Set up the DataStax Microsoft Graph connector for Microsoft 365 Copilot and Microsoft Search." 
+description: "Set up the DataStax Microsoft 365 Copilot connector." 
 ms.date: 04/08/2025
 ---
 
-# DataStax Microsoft Graph connector
+# DataStax Microsoft 365 Copilot connector
 
-The DataStax Microsoft Graph connector allows your organization to index records in your DataStax Astra DB collections. After you configure the connector and index content from the DataStax databases, users can search for those items in Microsoft 365 Copilot.
+The DataStax Microsoft 365 Copilot connector allows your organization to index records in your DataStax Astra DB collections. After you configure the connector and index content from the DataStax databases, users can search for those items in Microsoft 365 Copilot.
 
-This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors the DataStax Microsoft Graph connector.
+This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors the DataStax Copilot connector.
 
 ## Capabilities
 - Index records in DataStax Astra DB collections.
 - Enable your users to ask for advice based on the knowledge from DataStax in Copilot. For example, you have configured the connector to access the collection of movie reviews in DataStax:
-   - Recommend a movie based on review texts and your interest.
+   - Recommend a movie based on review texts and your interests.
    - Summarize the review text on movie Paa.
-   - Identify the movie generating heated discussions.
+   - Identify the movie that generates heated discussions.
 
 ## Limitations
-- The connector doesn't index Non-Vector DB.
-- The connector doesn't index Langflow.
-- The connector doesn't support search verticals.
+- Doesn't index Non-Vector DB.
+- Doesn't index Langflow.
+- Doesn't support search verticals.
 
 ## Prerequisites
 - You must be the search admin for your organization's Microsoft 365 tenant.
 - To connect to your DataStax database, you need the DataStax API Endpoint and database ID.
-- To connect to DataStax and allow the Microsoft Graph connector to update DataStax tasks regularly, you need an application token with read permissions.
+- To connect to DataStax and allow the Copilot connector to update DataStax tasks regularly, you need an application token with read permissions.
 
 ## Get started
 
@@ -54,7 +54,7 @@ To use **DataStax Application Token** for authentication, a DataStax admin needs
 
 [![Screenshot that shows the DataStax API Endpoint, Database ID and Generate Token in the Astra DB overview.](media/datastax-api-endpoint.png)](media/datastax-api-endpoint.png#lightbox)
 
-Copy the generated application token from the token details which is typically a long string starts with "AstraCS:..." and paste it in the connector setup. Choose **Authorize**, and use the same token to authenticate permission to crawl.
+Copy the generated application token from the token details, which is typically a long string that  starts with "AstraCS:..." and paste it in the connector setup. Choose **Authorize**, and use the same token to authenticate permission to crawl.
 
 ### 5. Roll out to a limited audience
 Deploy the connection to a limited user base if you want to validate it in Copilot and other Search surfaces before you roll it out to a broader audience. For more information, see [Staged rollout for connectors](staged-rollout-for-graph-connectors.md).
@@ -86,7 +86,7 @@ In custom setup you can edit any of the default values for users, content, and s
 
 #### Access permissions
 
-The DataStax Microsoft Graph connector supports search permissions visible to **Everyone** or **Only people with access to this data source**. If you choose **Everyone**, indexed data appears in the search results for all users. If you choose **Only people with access to this data source**, indexed data appears in the search results for users who have access to them. In Atlassian DataStax, security permissions are defined using project permission schemes containing site-level groups and project roles. Task-level security can also be defined using task-level permission schemes.
+The DataStax Copilot connector supports search permissions visible to **Everyone** or **Only people with access to this data source**. If you choose **Everyone**, indexed data appears in the search results for all users. If you choose **Only people with access to this data source**, indexed data appears in the search results for users who have access to them. In Atlassian DataStax, security permissions are defined using project permission schemes containing site-level groups and project roles. Task-level security can also be defined using task-level permission schemes.
 
 #### Mapping identities
 
@@ -121,7 +121,7 @@ Use the preview results button to verify the sample values of the selected prope
 
 [![Screenshot that shows Sync tab where you can configure crawl frequency.](media/DataStax-sync-tab.png)](media/DataStax-sync-tab.png#lightbox)
 
-The refresh interval determines how often your data is synced between the data source and the DataStax Microsoft Graph connector index. The DataStax graph connector only supports the refresh interval - full crawl. For more information, see [refresh settings](configure-connector.md#guidelines-for-sync-settings).
+The refresh interval determines how often your data is synced between the data source and the DataStax Copilot connector index. The DataStax graph connector only supports the refresh interval - full crawl. For more information, see [refresh settings](configure-connector.md#guidelines-for-sync-settings).
 
 You can change the default values of the refresh interval.
 

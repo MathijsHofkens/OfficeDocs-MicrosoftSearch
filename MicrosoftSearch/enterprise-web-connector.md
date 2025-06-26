@@ -1,29 +1,29 @@
 ---
 ms.date: 10/08/2019
-title: "Enterprise Websites cloud Microsoft Graph connector"
+title: "Enterprise Websites cloud Microsoft 365 Copilot connector"
 ms.author: vivg
 author: vivg
 manager: harshkum
 audience: Admin
 ms.audience: Admin
-ms.topic: article
+ms.topic: install-set-up-deploy
 ms.service: mssearch
 ms.localizationpriority: medium
 search.appverid:
 - BFB160
 - MET150
 - MOE150
-description: "Set up the Enterprise Websites cloud Microsoft Graph connector for Microsoft Search and Microsoft 365 Copilot"
+description: "Set up the Enterprise Websites cloud Microsoft 365 Copilot connector."
 ---
 
-# Enterprise Websites cloud Microsoft Graph connector
+# Enterprise Websites cloud Microsoft 365 Copilot connector
 
-The Enterprise Websites cloud Microsoft Graph connector allows your organization to index webpages and **content from your company-owned websites** or public websites on the internet. After you configure the connector and index content from the website, end users can search for that content in Microsoft Search and Microsoft 365 Copilot.
+The Enterprise Websites cloud Microsoft 365 Copilot connector allows your organization to index webpages and **content from your company-owned websites** or public websites on the internet. After you configure the connector and index content from the website, end users can search for that content in Microsoft Search and Microsoft 365 Copilot.
 
-This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors an Enterprise Websites cloud Microsoft Graph connector. 
+This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors an Enterprise Websites cloud Microsoft 365 Copilot connector. 
 
 >[!IMPORTANT]
->You may utilize the [Enterprise Websites on-premises Microsoft Graph connector](enterprise-web-connector-onprem.md) to index websites hosted on-premises or on private clouds.
+>You may utilize the [Enterprise Websites on-premises Copilot connector](enterprise-web-connector-onprem.md) to index websites hosted on-premises or on private clouds.
 
 ## Capabilities
 - Index webpages from cloud accessible websites.
@@ -31,9 +31,9 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 - Exclude webpages from crawl using exclusion rules.
 - Use [Semantic search in Copilot](semantic-index-for-copilot.md) to enable users to find relevant content.
 
-**Supported file types**
+These are the supported file types.
 
-| File Extension | File Type | Description | 
+| File extension | File type | Description | 
 | -------------- | --------- | ----------- |
 | .pdf | PDF | Portable Document Format |
 | .odt | OpenDocument Text | OpenDocument Text Document |
@@ -52,38 +52,59 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 | .md | Markdown | Markdown File |
 | .rtf | Rich Text Format | Rich Text Format |
 | .tsv | Tab Separated Values | Tab-Separated Values |
+| .gif | GIF | Graphics Interchange Format |
+| .jpeg | JPEG | JPEG Image |
+| .jpg | JPG | JPEG Image |
+| .png | PNG | Portable Network Graphics |
+| .mp3 | MP3 | MPEG Audio Layer III |
+| .wav | WAV | Waveform Audio File Format |
+| .aiff | AIFF | Audio Interchange File Format |
+| .flac | FLAC | Free Lossless Audio Codec |
+| .aac | AAC | Advanced Audio Coding |
+| .alac | ALAC | Apple Lossless Audio Codec |
+| .wma | WMA (Lossy) | Windows Media Audio (Lossy) |
+| .wma | WMA (Lossless) | Windows Media Audio (Lossless) |
+| .ogg | OGG | Ogg Vorbis Audio Format |
+| .pcm | PCM | Pulse-Code Modulation Audio |
+| .mp4 | MP4 | MPEG-4 Video File |
+| .mkv | MKV | Matroska Video File |
+| .avi | AVI | Audio Video Interleave |
+| .wmv | WMV | Windows Media Video |
+| .mov | MOV | Apple QuickTime Movie |
+| .flv | FLV | Flash Video Format |
+| .avchd | AVCHD | Advanced Video Coding High Definition |
+| .webm | WebM | Web Media File |
+| .mpeg | MPEG-2 | Moving Picture Experts Group Format |
+| .hevc | HEVC/H.265 | High Efficiency Video Coding |
 
-**Supported MIME types**
+These are the supported MIME types.
 
-| MIME Type | Description |
+| MIME type | Description |
 | --------- | ----------- |
 | text/html | HyperText Markup Language (HTML) used to format the structure of a webpage. |
 | text/webviewhtml | MIME type used for web content rendered in WebView controls. |
 | text/x-server-parsed-html | Server-parsed HTML documents, often used for Server Side Includes (SSI). |
 
 ## Limitations
-- The connector doesn't support authentication mechanisms like SAML, JWT token, Forms-based authentication, etc.
-- The connector doesn't support crawling of dynamic content in webpages.
+- Doesn't support authentication mechanisms like SAML, JWT token, Forms-based authentication, etc.
+- Doesn't support crawling of dynamic content in webpages.
 
 ## Prerequisites
 - You must be the **search admin** for your organization's Microsoft 365 tenant.
 - **Website URLs**: To connect to your website content, you need the URL to the website. You can index multiple websites (up to 50) in a single connection. 
-- **Service Account (optional)**: A service account is only needed when your websites require authentication. Public websites don't require authentication and can be crawled directly. For websites requiring authentication, it's advised to have a dedicated account to authenticate and crawl the content.
+- **Service Account (optional)**: A service account is only needed when your websites require authentication. Public websites don't require authentication and can be crawled directly. For websites requiring authentication, it is advisable to have a dedicated account to authenticate and crawl the content.
 
 ## Get Started
 
-[![Screenshot that shows connection creation screen for Microsoft Graph Connector for Enterprise Websites cloud.](media/enterprise-web-connector/enterprise-website-cloud-create-page.png)](media/enterprise-web-connector/enterprise-website-cloud-create-page.png#lightbox)
+[![Screenshot that shows connection creation screen for Enterprise Websites cloud Copilot connector.](media/enterprise-web-connector/enterprise-website-cloud-create-page.png)](media/enterprise-web-connector/enterprise-website-cloud-create-page.png#lightbox)
 
-### 1. Display name 
+### Display name 
 A display name is used to identify each citation in Copilot, helping users easily recognize the associated file or item. Display name also signifies trusted content. Display name is also used as a [content source filter](/MicrosoftSearch/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize.
 
-### 2. Website URLs to index
-Specify the root of the website that you'd like to crawl. The Enterprise Websites cloud Microsoft Graph connector uses this URL as the starting point and follow all the links from this URL for its crawl. You can index up to 50 different site URLs in a single connection. In the URLs field, enter the site URLs separated by commas (,). For example, `https://www.contoso.com,https://www.contosoelectronics.com`.
+### Add Website URLs to index
+Specify the root of the website that you'd like to crawl. The Enterprise Websites cloud Copilot connector uses this URL as the starting point and follows all the links from this URL for its crawl. You can index up to 50 different site URLs in a single connection.
 
-> [!NOTE]
-> The connector always starts crawling from the root of the URL. For example - if your provided URL is `https://www.contoso.com/electronics`, then the connector starts crawl from `https://www.contoso.com`.
-
-The connector only crawls webpages in the domain of root URLs and doesn't support crawling of out-of-domain URLs. Redirection is only supported within the same domain. If there are redirections in the webpages to be crawled, you may add the redirected URL directly in list of URLs to be crawled.
+The connector only crawls webpages in the domain of root URLs and doesn't support crawling of out-of-domain URLs. Redirection is only supported within the same domain. If there are redirections in the webpages to be crawled, you may add the redirected URL directly in the list of URLs to be crawled.
 
 **Use sitemap for crawling**
 
@@ -99,7 +120,14 @@ c. The crawler then crawls all webpages as listed in the sitemap files.
 
 d. If there's failure in any of the above steps, the crawler performs a deep crawl of the website, without throwing any error.
 
-### 3. Authentication Type
+**Index only pages under the specified subdirectory**
+
+The Website connector offers an option to index only webpages that are under the specified subdirectory specified. 
+
+- When this option is **not checked**, the connector always starts crawling from the root of the URL. For example - if your provided URL is `https://www.contoso.com/electronics`, then the connector starts crawl from `https://www.contoso.com`.
+- When this option is **checked**, the connector starts crawling from the exact input URL. For example - if your provided URL is `https://www.contoso.com/electronics`, then the connector starts crawl from `https://www.contoso.com/electronics`.
+
+### Provide authentication type
 The authentication method you choose applies for all websites you provided to index in a connection. To authenticate and sync content from websites, choose **one of the five** supported methods:<br>
 
 a. **None** <br>
@@ -136,13 +164,13 @@ The resource ID, client ID, and client secret values depend on how you did the s
       > [!div class="mx-imgBorder"]
       > [ ![Image showing the settings section on the branding page.](media/enterprise-web-connector/connectors-enterpriseweb-branding.png) ](media/enterprise-web-connector/connectors-enterpriseweb-branding.png#lightbox)
     
-    * View of the settings in authentication section:
+    * View of the settings in the authentication section:
     
       > [!div class="mx-imgBorder"]
       > [ ![Image showing the settings section on the authentication page.](media/enterprise-web-connector/connectors-enterpriseweb-authentication.png) ](media/enterprise-web-connector/connectors-enterpriseweb-authentication.png#lightbox)
     
       > [!NOTE]
-      > It isn't required to have the above-specified route for Redirect URI on your website. Only if you use the user token sent by Azure in your website for authentication you need to have the route.
+      > It isn't required to have the above-specified route for the redirect URI on your website. Only if you use the user token sent by Azure in your website for authentication you need to have the route.
     
     * View of the client ID on the **Essentials** section:
     
@@ -174,7 +202,7 @@ The resource ID, client ID, and client secret values depend on how you did the s
       After configuring the resource app, create the client app and give it permission to access the resource app by adding the app role configured above in the API permissions of the client app. 
     
       > [!NOTE]
-      > To see how to grant permissions to the client app see [Quickstart: Configure a client application to access a web API](/azure/active-directory/develop/quickstart-configure-app-access-web-apis).
+      > To see how to grant permissions to the client app, see [Quickstart: Configure a client application to access a web API](/azure/active-directory/develop/quickstart-configure-app-access-web-apis).
     
     The following screenshots show the section to grant permissions to the client app.
     
@@ -242,7 +270,7 @@ For other settings, like **Access Permissions**, **Data Inclusion Rules**, **Sch
 
 | Users | Description |
 |----|---|
-| Access permissions | _Everyone in your organization will see this content_ |
+| Access permissions | _Everyone in your organization sees this content_ |
 
 | Content | Description |
 |---|---|
@@ -258,15 +286,15 @@ If you want to edit any of these values, you need to choose the "Custom Setup" o
 
 ## Custom Setup
 
-Custom setup is for those admins who want to edit the default values for settings listed in the above table. Once you click on the "Custom Setup" option, you see three more tabs - Users, Content, and Sync.
+In custom setup, you can edit any of the default values for users, content, and sync.
 
 ### Users
 
 [![Screenshot that shows Users tab](media/enterprise-web-connector/enterprise-website-cloud-users-tab.png)](media/enterprise-web-connector/enterprise-website-cloud-users-tab.png#lightbox)
 
-**Access Permissions**
+#### Access permissions
 
-The Enterprise Websites cloud connector supports search permissions visible to **Everyone** only. Indexed data appears in the search results for all users in your organization.
+The Enterprise Websites cloud Copilot connector supports search permissions visible to **Everyone** only. Indexed data appears in the search results for all users in your organization.
 
 ### Content
 
@@ -283,6 +311,13 @@ There are two ways to prevent pages from being crawled: disallow them in your ro
 2. Add URLs to exclude
 
     You can optionally create an **Exclusion list** to exclude some URLs from getting crawled if that content is sensitive or not worth crawling. To create an exclusion list, browse through the root URL. You can add the excluded URLs to the list during the configuration process.
+
+**Site configuration**
+
+The connector supports two options to customize crawler behavior.
+
+1. Index pages containing a "noindex" directive in their "meta" tag or X-Robots-Tag HTTP response header: Selecting this option forces the crawler to index these pages and override the default crawler behaviour.
+2. Ignore 'Allow' and 'Disallow' directives specified in the "robots.txt" file: Selecting this option forces the crawler to ignore the crawl directives in robots.txt file.
 
 **Manage Properties**
 
@@ -301,7 +336,7 @@ Here, you can add or remove available properties from your websites, assign a sc
 | Title | Title | The title of the item that you want shown in Copilot and other search experiences | Retrieve, Search |
 | URL | url | The target URL of the item in the data source | Retrieve |
 
-The Enterprise Website cloud connector supports two types of source properties:
+The Enterprise Website cloud Copilot connector supports two types of source properties:
 
 1. Meta tag
 
@@ -332,15 +367,15 @@ To learn more about regex expressions, see [.NET regular expressions](/dotnet/st
 
 [![Screenshot that shows Sync tab where you can configure crawl frequency.](media/enterprise-web-connector/enterprise-website-cloud-sync-tab.png)](media/enterprise-web-connector/enterprise-website-cloud-sync-tab.png#lightbox)
 
-The refresh interval determines how often your data is synced between the data source and the Graph connector index. There are two types of refresh intervals - full crawl and incremental crawl. For more information, see [refresh settings](configure-connector.md#guidelines-for-sync-settings).
+The refresh interval determines how often your data is synced between the data source and the Copilot connector index. There are two types of refresh intervals - full crawl and incremental crawl. For more information, see [refresh settings](configure-connector.md#guidelines-for-sync-settings).
 
-You can change the default values of refresh interval from here if you want to.
+You can change the default values of the refresh interval from here if you want to.
 
 > [!NOTE]
 > Incremental crawl is only supported when the sitemap crawling option is selected.
 
 ## Troubleshooting
-After publishing your connection, you can review the status under the **Data Sources** tab in the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).
+After publishing your connection, you can review the status **Data Sources** in the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).
 You can find troubleshooting steps for commonly seen issues [here](troubleshoot-enterprise-web-connector.md).
 
 If you have issues or want to provide feedback, contact [Microsoft Graph | Support](https://developer.microsoft.com/en-us/graph/support).

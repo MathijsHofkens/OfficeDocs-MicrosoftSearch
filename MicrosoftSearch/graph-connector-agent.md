@@ -5,14 +5,14 @@ author: kam1
 manager: jameslau 
 audience: Admin
 ms.audience: Admin 
-ms.topic: article 
+ms.topic: install-set-up-deploy
 ms.service: mssearch 
 ms.localizationpriority: medium 
 search.appverid: 
 - BFB160 
 - MET150 
-- MOE150 
-description: "Overview of the Microsoft Graph connector agent to index on-premises content using Microsoft built connectors for File-shares, SQL, Confluence, etc." 
+- MOE150
+description: "Overview of the Microsoft Graph connector agent to index on-premises content using Microsoft-built connectors for File-shares, SQL, Confluence, etc." 
 ms.date: 08/02/2021
 ---
 
@@ -239,11 +239,11 @@ The agent is considered offline if it isn't able to contact the Microsoft Graph 
    Follow these steps:
     * From PowerShell, run the following command:
 
-    ```powershell
-    tnc gcs.office.com -Port 443
-    ```
+       ```powershell
+       tnc gcs.office.com -Port 443
+       ```
 
-    The response should contain the output “TcpTestSucceeded: True” as shown:
+    The response should contain the output "TcpTestSucceeded: True" as shown:
 
     ![Screenshot of tnc.](media/onprem-agent/tnc_gcs_1.png)
 
@@ -251,9 +251,9 @@ The agent is considered offline if it isn't able to contact the Microsoft Graph 
 
     * For a more specific test, or if you can't run tnc because ICMP ping is blocked in your network, run the following command:
 
-    ```powershell
-    wget https://gcs.office.com/v1.0/admin/AdminDataSetCrawl/healthcheck
-    ```
+       ```powershell
+       wget https://gcs.office.com/v1.0/admin/AdminDataSetCrawl/healthcheck
+       ```
 
     The output should contain  “StatusCode: 200”.
 
@@ -287,7 +287,7 @@ Using the service bus namespace provided in the error details, follow these step
     tnc <yournamespacename>.servicebus.windows.net -port 443
     ```
 
-   The response should contain the output “TcpTestSucceeded: True”:
+   The response should contain the output "TcpTestSucceeded: True":
 
    ![Screenshot of tnc 2.](media/onprem-agent/tnc_gcs_namespace.png)
 
@@ -317,7 +317,7 @@ If the error persists after 30 minutes, follow these steps:
 1. Check if the agent is running - Sign in to the machine where the agent is installed and check if it's running. In Task Manager, go to **Services**, and check if GcaHostService is in a running state. If not, right-click and start the service.
 ![Screenshot of services in Task Manager 2.](media/onprem-agent/GcaHostService_GcaUpdateService.png)
 
-1. If the issue is still seen, send an email to [Microsoft Graph | Support](https://developer.microsoft.com/en-us/graph/support), and provide the two latest log files. Manually traverse to the location to access the logs and share the same with the team - C:\Windows\System32\config\systemprofile\AppData\Local\Microsoft\GraphConnectorAgent\AgentUpdateApp\logs
+1. If the issue is still seen, send an email to [Microsoft Graph | Support](https://developer.microsoft.com/en-us/graph/support), and provide the two latest log files. Manually traverse to the location to access the logs and share the same with the team - C:\Windows\System32\config\systemprofile\AppData\Local\Microsoft\GraphConnectorAgent\AgentUpdateApp\logs+
 
 ### Connection failure
 

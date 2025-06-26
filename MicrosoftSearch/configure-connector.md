@@ -1,29 +1,29 @@
 ---
 ms.date: 10/08/2019
-title: "Set up Microsoft Graph connectors in the Microsoft 365 admin center"
+title: "Set up Microsoft 365 Copilot connectors in the Microsoft 365 admin center"
 ms.author: souravpoddar
 author: souravpoddar001
 manager: harshkum
 audience: Admin 
 ms.audience: Admin
-ms.topic: article
+ms.topic: install-set-up-deploy
 ms.service: mssearch
 ms.localizationpriority: medium
 search.appverid:
 - BFB160
 - MET150
 - MOE150
-description: "Learn how to configure your Microsoft Graph connector for Microsoft Copilot."
+description: "Learn how to configure your Microsoft 365 Copilot connectors for Microsoft Copilot."
 ---
 
 <!-- markdownlint-disable no-trailing-punctuation -->
 
-# Set up Microsoft Graph connectors in the Microsoft 365 admin center
+# Set up Microsoft 365 Copilot connectors in the Microsoft 365 admin center
 
-This article outlines the steps to set up a Microsoft Graph connector in the Microsoft 365 admin center. The setup process is streamlined, with minimal inputs that simplify connection creation. However, you can opt for a custom setup to fine-tune specific settings.
+This article outlines the steps to set up a Microsoft 365 Copilot connector in the Microsoft 365 admin center. The setup process is streamlined, with minimal inputs that simplify connection creation. However, you can opt for a custom setup to fine-tune specific settings.
 
 > [!NOTE]
-> The setup process is similar for all the Microsoft Graph connectors but isn't exactly the same. In addition to reading this article, be sure to read the connector-specific information for your data source.
+> The setup process is similar for all the Copilot connectors, but it isn't exactly the same. In addition to reading this article, be sure to read the connector-specific information for your data source.
 
 > [!TIP]
 > **Product survey**
@@ -34,12 +34,12 @@ This article outlines the steps to set up a Microsoft Graph connector in the Mic
 
 Before you begin, ensure the following:
 
-- **Admin access:** You must have either of the following roles in the Microsoft 365 admin center to configure a Graph connector - Global admin, Search admin or Copilot admin.
+- **Admin access:** You must have either of the following roles in the Microsoft 365 admin center to configure a Copilot connector - Global admin, Search admin, or Copilot admin.
 - **Data source credentials:** Collect the necessary credentials and permissions for the data source you want to connect.
 - **Service account (if applicable):** If your data source requires a service account, ensure it has the necessary roles or permissions.
 ---
-## Step 1: Add a Microsoft Graph connector
-Complete the following steps to configure any of the Microsoft Graph connectors (or [click here](https://admin.microsoft.com/adminportal/home#/MicrosoftSearch/Connectors/add?ms_search_referrer=MicrosoftSearchDocs_Configure_connector) to directly access the connector catalog):
+## Step 1: Add a Copilot connector
+Complete the following steps to configure any of the Copilot connectors (or [click here](https://admin.microsoft.com/adminportal/home#/MicrosoftSearch/Connectors/add?ms_search_referrer=MicrosoftSearchDocs_Configure_connector) to directly access the connector catalog):
 
 > [!div class="mx-imgBorder"]
    > ![Data sources available include: ADLS Gen2, Enterprise websites, Microsoft SQL server, Azure SQL, Oracle SQL database, ServiceNow Knowledge, ServiceNow Catalog, File share, Azure DevOps, and MediaWiki.](media/add-connector.png)
@@ -60,7 +60,7 @@ Complete the following steps to configure any of the Microsoft Graph connectors 
 
 ## Step 2: Enter basic connection details
 
-![Screenshot that shows Connection creation screen for ServiceNow Knowledge Microsoft Graph connector.](media/servicenow-knowledge-create-page.png "Add Microsoft Graph connector for ServiceNow Knowledge")
+![Screenshot that shows Connection creation screen for ServiceNow Knowledge Copilot connector.](media/servicenow-knowledge-create-page.png "Add Microsoft Graph connector for ServiceNow Knowledge")
 
 
 1. **Display name:**
@@ -85,7 +85,7 @@ Complete the following steps to configure any of the Microsoft Graph connectors 
 
 - Click **Create** to set up the connection. The connector begins indexing content from your data source using default settings.
 
-![Screenshot that shows success screen once Microsoft Graph connector is created.](media/configure-connector-success-page.png "Connection created successfully")
+![Screenshot that shows success screen once a Copilot connector is created.](media/configure-connector-success-page.png "Connection created successfully")
 
 Once the connection is created, you can add a description for the connection in the success screen. To help Copilot enhance connection results for users, the description should answer the following questions briefly:  
 * What kind of content does this connection have? 
@@ -93,7 +93,7 @@ Once the connection is created, you can add a description for the connection in 
 * What part of the workflow do users refer to this content in their day-to-day work? 
 * What are some characteristics of the content?
 
-To learn more, refer to the [Enhancing Microsoft Copilot discovery with Graph Connector Content](enhancing-microsoft-copilot-discovery-with-graph-connector-content.md) article.
+To learn more, refer to the [Enhancing Microsoft Copilot discovery with Copilot connector Content](enhancing-microsoft-copilot-discovery-with-graph-connector-content.md) article.
 
 ---
 
@@ -109,10 +109,10 @@ Admins who want more control over the configuration can choose the **Custom setu
 1. **Access Permissions:**
    - Choose whether indexed data is visible to:
      - **Everyone** in the organization.
-     - **Only people with access to content in the data source.**
+     - **Only people with access to the content in the data source.**
 
 2. **Map Identities:**
-   - By default, users are mapped by checking whether their email in the data source matches with a `UserPrincipalName` or  `Mail` in Microsoft Entra ID.
+   - By default, users are mapped by checking whether their email in the data source matches a `UserPrincipalName` or  `Mail` in Microsoft Entra ID.
    - If this default doesn’t work for your organization, provide a custom mapping formula.
 
 ---
@@ -133,7 +133,7 @@ Admins who want more control over the configuration can choose the **Custom setu
 ![Screenshot that shows Sync tab where you can configure crawl frequency](media/servicenow-knowledge-sync-tab.png "Configure Crawl frequency")
 
 **Refresh intervals:**
-   - Configure the frequency of data syncs between the data source and the Graph connector index.
+   - Configure the frequency of data syncs between the data source and the Copilot connector index.
      - **Full crawl:** Synchronizes all data at scheduled intervals.
      - **Incremental crawl:** Updates only the changed or new data.
    - Adjust the default sync settings as required for your organization.
@@ -170,13 +170,13 @@ Label | Description
 **Created date time** | Time when the item was created
 **Last modified date time** | Time when the item was most recently edited
 **File name** | Name of the file item
-**File extension** | Type of file item such as pdf or doc
+**File extension** | Type of file item, such as PDF or DOC
 
 The properties on this page are pre-selected based on your data source, but you can change this selection if there's a different property that is better suited for a particular label.  
 
 The label **title** is the most important label. We *strongly recommend* that you have a property assigned to this label for your connection to participate in the [result cluster experience](result-cluster.md).
 
-Incorrectly mapping labels causes a deteriorated search experience. It's okay for some labels to not have a property assigned to it.  
+Incorrectly mapping labels causes a deteriorated search experience. It's okay for some labels not to have a property assigned to them.  
 
 #### Search schema attributes
 > [!NOTE]
@@ -184,7 +184,7 @@ Incorrectly mapping labels causes a deteriorated search experience. It's okay fo
 
 You can set the search schema attributes to control the search functionality of each source property. A search schema helps determine what results are displayed on the search results page and what information end users can view and access.
 
-Search schema attributes include options to **Query**, **Search**, **Retrieve**, and **Refine**. The following table lists each of the attributes that Microsoft Graph connectors support and explains their functions.
+Search schema attributes include options to **Query**, **Search**, **Retrieve**, and **Refine**. The following table lists each of the attributes that Copilot connectors support and explains their functions.
 
 Search schema attribute | Function | Example
 --- | --- | ---
@@ -193,7 +193,7 @@ QUERY | Searches by query for a match for a particular property. The property na
 RETRIEVE | Only retrievable properties can be used in the result type and displayed in the search result. |
 REFINE | The refine option can be used on the Microsoft Search results page. | Users in your organization can [filter](custom-filters.md) by **URL** on the search results page if the refine property is marked during connection setup.
 
-For all connectors except the File share connector, custom types must be set manually. To activate search capabilities for each field, you need a search schema mapped to a list of properties. The connection configuration assistant automatically selects a search schema based on the set of source properties you choose. You can modify this schema by selecting the check boxes for each property and attribute on the search schema page.
+For all connectors except the File share Copilot connector, custom types must be set manually. To activate search capabilities for each field, you need a search schema mapped to a list of properties. The connection configuration assistant automatically selects a search schema based on the set of source properties you choose. You can modify this schema by selecting the check boxes for each property and attribute on the search schema page.
 
 :::image type="content" alt-text="Screenshot that shows the schema for a connector can be customized by adding or removing Query, Search, and Retrieve functions." source="media/manageschema.png" lightbox="media/manageschema.png":::
 
@@ -246,7 +246,7 @@ You can configure full and incremental crawls based on the advanced scheduling o
 
 Here are certain points to note while configuring the crawl schedule:
 
-* If you leave any of the fields empty, or unselected, Graph connectors pick the best time to start a crawl. For example if you choose a crawl Recurrence as "Day" and don't select the start time, Graph connectors choose the time based on your last crawl to start the new crawl. If you don't want to specify a start time of the crawl, it's a good practice to let the connector decide when to start the crawl.
+* If you leave any of the fields empty, or unselected, Copilot connectors pick the best time to start a crawl. For example if you choose a crawl Recurrence as "Day" and don't select the start time, Copilot connectors choose the time based on your last crawl to start the new crawl. If you don't want to specify a start time of the crawl, it's a good practice to let the connector decide when to start the crawl.
 * Even if the start time is mentioned, the crawl start may delay by an hour. This delay can be because of reasons such as network load etc.
 * If the previous crawl overruns to the time of the next crawl, we don't stop the ongoing crawl and queue the next crawl. After the ongoing crawl is complete, we run the queued crawl only if it is of a different type (full/incremental) than the previous crawl. For example, if an incremental crawl overruns the next full crawl, we don't suspend the incremental crawl and queue the full crawl. After the completion of the incremental crawl, since the queued crawl is of different type (full), we start the full crawl immediately.
 
@@ -274,7 +274,7 @@ Here selecting the "Run once in a day" checkbox lets you choose the "Start time"
 
 ### IP Firewall rules
 
-IP firewall rules are configured to secure access to your data source by allowing only specific IP addresses. In such scenario, permit access to the Graph connectors service IP ranges to allow access to your data source. Specify the following IP ranges in the firewall settings of your SaaS platform.
+IP firewall rules are configured to secure access to your data source by allowing only specific IP addresses. In such a scenario, permit access to the Copilot connectors service IP ranges to allow access to your data source. Specify the following IP ranges in the firewall settings of your SaaS platform.
 
 | Region | Microsoft 365 Enterprise | Microsoft 365 Government
 | ------------ | ------------ | ------------ |

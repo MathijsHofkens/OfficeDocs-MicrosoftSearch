@@ -1,18 +1,18 @@
 --- 
 ms.date: 08/28/2024 
-title: "Troubleshooting the Azure File Share Microsoft Graph connector" 
+title: "Troubleshooting the Azure File Share Microsoft 365 Copilot connector" 
 ms.author: dannyyao
 author: dannyyaou
 manager: jecui
 audience: Admin 
 ms.audience: Admin 
-ms.topic: article 
+ms.topic: troubleshooting-general
 ms.service: mssearch 
 ms.localizationpriority: medium 
-description: "Troubleshooting the Azure File Share Graph connector for Microsoft Search and Microsoft 365 Copilot" 
+description: "Troubleshooting the Azure File Share Microsoft 365 Copilot connector" 
 --- 
 
-# Troubleshooting the Azure File Share Microsoft Graph connector  
+# Troubleshooting the Azure File Share Microsoft 365 Copilot connector 
 
 ###  Common errors observed while configuring the connector
 

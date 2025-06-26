@@ -1,6 +1,6 @@
 ---
 ms.date: 05/13/2025
-title: "Advanced Flow for Microsoft Graph Connector for ServiceNow Knowledge"
+title: "Advanced Flow for the ServiceNow Knowledge Microsoft 365 Copilot connector"
 ms.author: souravpoddar
 author: souravpoddar001
 manager: kavempar
@@ -13,18 +13,18 @@ search.appverid:
 - BFB160
 - MET150
 - MOE150
-description: "Setup the Advanced Flow for Microsoft Graph Connector for ServiceNow Knowledge to handle advanced user criteria."
+description: "Set up the Advanced Flow for the Servicenow Knowledge Microsoft 365 Copilot connector to handle advanced user criteria."
 ---
 
-# Advanced Flow for Microsoft Graph Connector for ServiceNow Knowledge
+# Advanced Flow for the ServiceNow Knowledge Microsoft 365 Copilot connector
 
 If your ServiceNow instance uses **Advanced Scripts** in your Knowledge Base or Article-level user criteria, you'll need to use the **Advanced** flow. This ensures accurate permissions handling when ingesting content into Microsoft Graph.
 
 ## Step 1: Select Advanced Flow in Setup
 
-When setting up the Microsoft Graph Connector for ServiceNow Knowledge, select the **Advanced** option under the field 'Select based on your user criteria setup in ServiceNow'. This is crucial for handling advanced user criteria correctly.
+When setting up the ServiceNow Knowledge Copilot connector, select the **Advanced** option under the field 'Select based on your user criteria setup in ServiceNow'. This is crucial for handling advanced user criteria correctly.
 
-![Screenshot containing the Advanced flow selection in the Graph connector setup.](media/servicenow-knowledge-advanced-mode.png)
+![Screenshot containing the Advanced flow selection in the Copilot connector setup.](media/servicenow-knowledge-advanced-mode.png)
 
 ## Step 2: Configure Scripted REST API in ServiceNow
 
@@ -89,12 +89,12 @@ To allow the connector to fetch advanced user criteria, you must create a **Scri
    ```
 2. Click **Update** to save the configuration.
 
-## Step 3: Enter the API Namespace in the Graph Connector Setup Experience
-In the Microsoft Graph Connector setup, enter the **API Namespace** you created in ServiceNow.
+## Step 3: Enter the API Namespace in the Copilot Connector Setup Experience
+In the Copilot connector setup, enter the **API Namespace** you created in ServiceNow.
 
    >[!NOTE]
    > You can find the API namespace in the Resource Path field shown in Step 2.5. You only need the namespace portion - not the full path.
 
    > For example: If the Resource Path is ```/api/abcdef/microsoft_copilot/user_criteria```, then the API namespace is ```abcdef```.
 
-   ![Screenshot containing the API Namespace in the Graph connector setup.](media/servicenow-knowledge-advanced-api-namespace.png)
+   ![Screenshot containing the API Namespace in the Copilot connector setup.](media/servicenow-knowledge-advanced-api-namespace.png)

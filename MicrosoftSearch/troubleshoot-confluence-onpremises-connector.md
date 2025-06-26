@@ -1,21 +1,21 @@
 ---
 ms.date: 02/02/2022
-title: "Troubleshooting the Confluence On-premises Microsoft Graph connector (preview)"
+title: "Troubleshooting the Confluence On-premises Microsoft 365 Copilot connector (preview)"
 ms.author: kam1
 author: TheKarthikeyan
 manager: harshkum
 audience: Admin
 ms.audience: Admin
-ms.topic: article
+ms.topic: troubleshooting-general
 ms.service: mssearch
 ms.localizationpriority: high
 search.appverid:
 - BFB160
 - MET150
 - MOE150
-description: "Troubleshooting the Confluence On-premises Microsoft Graph connector for Microsoft Search and Microsoft 365 Copilot"
+description: "Troubleshooting the Confluence On-premises Microsoft 365 Copilot connector"
 ---
-# Troubleshooting the Confluence On-premises Microsoft Graph connector
+# Troubleshooting the Confluence On-premises Microsoft 365 Copilot connector
 
 The following common errors are observed while configuring the connector and their possible reasons.
 

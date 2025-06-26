@@ -1,27 +1,27 @@
 ---
 
-title: "Freshservice Microsoft Graph connector (preview)" 
+title: "Freshservice Microsoft 365 Copilot connector (preview)" 
 ms.author: wangchen
 author: wangchen
 manager: zezhangzhao
 audience: Admin
 ms.audience: Admin 
-ms.topic: article 
+ms.topic: install-set-up-deploy
 ms.service: mssearch 
 ms.localizationpriority: Medium 
 search.appverid: 
 - BFB160 
 - MET150 
 - MOE150 
-description: "Set up the Freshservice Microsoft Graph connector for Microsoft Search and Microsoft 365 Copilot." 
+description: "Set up the Freshservice Microsoft 365 Copilot connector." 
 ms.date: 03/27/2025
 ---
 
-# Freshservice Microsoft Graph connector (preview)
+# Freshservice Microsoft 365 Copilot connector (preview)
 
-The Freshservice Microsoft Graph connector enables your organization to index Freshservice solution article data to make it available to Microsoft 365 Copilot and Microsoft Search. 
+The Freshservice Microsoft 365 Copilot connector enables your organization to index Freshservice solution article data to make it available to Microsoft 365 Copilot and Microsoft Search. 
 
-This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors the Freshservice Microsoft Graph connector. 
+This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors the Freshservice Copilot connector. 
 
 ## Capabilities
 - Access Freshservice solution articles using the power of semantic search.
@@ -33,20 +33,20 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 
 ## Prerequisites
 1. Create a Freshservice account with administrator permission in the Freshservice application.
-2. Navigate to the user profile setting page with the administrator account in the Freshservice application. Create an API key and copy it.
+2. Navigate to the user profile setting page with the administrator account in the Freshservice application. For more information, see [Where do I find my API key](https://support.freshservice.com/support/solutions/folders/50000000029) for details.
 
 ## Get started
 
-### 1. Choose display name   
+### Choose display name   
 Choose a display name that helps users easily recognize associated files or items in a Copilot response.
 
-### 2. Add the domain URL
+### Add the domain URL
 Enter the domain URL of your Freshservice account.
 
-### 3. Provide authentication type
+### Provide authentication type
 Select the available authentication type and enter the API key you obtained from your Freshservice user profile setting page.
 
-### 4. Roll out to a limited audience
+### Roll out to a limited audience
 Deploy this connection to a limited user base to validate it in Copilot and other search surfaces before you roll it out to a broader audience.
 
 ## Custom setup 
@@ -56,7 +56,7 @@ In custom setup you can edit any of the default values for users, content, and s
 
 #### Access permissions
 
-Only public solution articles with folder visibility to all are indexed using the Freshservice Microsoft Graph connector. These solution articles will be visible to all Microsoft 365 users in your tenant, from Microsoft Search or Copilot.
+Only public solution articles with folder visibility to all are indexed using the Freshservice Copilot connector. These solution articles will be visible to all Microsoft 365 users in your tenant, from Microsoft Search or Copilot.
 
 ### Content 
 
@@ -80,7 +80,7 @@ To view available properties from your iManage Cloud data source, assign a schem
 |Tags	|  | The tags associated with the solution article. |
 
 ### Sync 
-Only full crawl is supported by the Freshservice Microsoft Graph connector. The default schedule of the full crawl is set for every day. If needed, you can adjust these schedules to fit your data refresh needs. 
+Only full crawl is supported by the Freshservice Copilot connector. The default schedule of the full crawl is set for every day. If needed, you can adjust these schedules to fit your data refresh needs. 
 
 ## Troubleshooting
 The following are common errors that can occur and how to resolve them.

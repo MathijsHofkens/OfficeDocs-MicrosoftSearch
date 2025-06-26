@@ -1,6 +1,6 @@
 ---
 ms.date: 05/13/2025
-title: "Authenticate ServiceNow Knowledge Connector using OAuth 2.0"
+title: "Authenticate ServiceNow Knowledge Microsoft 365 Copilot connector using OAuth 2.0"
 ms.author: souravpoddar
 author: souravpoddar001
 manager: kavempar
@@ -13,7 +13,7 @@ search.appverid:
 - BFB160
 - MET150
 - MOE150
-description: "Steps to authenticate the ServiceNow Knowledge Microsoft Graph connector using OAuth2.0."
+description: "Steps to authenticate the ServiceNow Knowledge Microsoft 365 Copilot connector using OAuth2.0."
 ---
 # Authenticating using OAuth 2.0
 

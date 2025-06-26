@@ -1,31 +1,31 @@
 ---
 ms.date: 10/08/2019
-title: "ServiceNow Tickets Microsoft Graph connector"
+title: "ServiceNow Tickets Microsoft 365 Copilot connector"
 ms.author: kam1
 author: TheKarthikeyan
 manager: harshkum
 audience: Admin
 ms.audience: Admin
-ms.topic: article
+ms.topic: install-set-up-deploy
 ms.service: mssearch
 ms.localizationpriority: medium
 search.appverid:
 - BFB160
 - MET150
 - MOE150
-description: "Set up the ServiceNow Tickets Microsoft Graph connector for Microsoft Search and Microsoft 365 Copilot"
+description: "Set up the ServiceNow Tickets Microsoft 365 Copilot connector."
 ---
-# ServiceNow Tickets Microsoft Graph connector
+# ServiceNow Tickets Microsoft 365 Copilot connector
 
-With the ServiceNow Tickets Microsoft Graph connector, your organization can index various tickets that are serviced to users. After you configure the connector and index content from ServiceNow, end users can search for those tickets from any Microsoft Search and Microsoft 365 Copilot client.  
+With the ServiceNow Tickets Microsoft 365 Copilot connector, your organization can index various tickets that are serviced to users. After you configure the connector and index content from ServiceNow, end users can search for those tickets from any Microsoft Search and Microsoft 365 Copilot client.  
 
-This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors a ServiceNow Tickets Microsoft Graph connector. It supplements the general instructions provided in the [Set up Microsoft Graph connectors in the Microsoft 365 admin center](configure-connector.md) article. 
+This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors a ServiceNow Tickets Copilot connector. It supplements the general instructions provided in the [Set up Microsoft Graph connectors in the Microsoft 365 admin center](configure-connector.md) article. 
 
-Each step in the setup process is listed below, along with either a note that indicates you should follow the general setup instructions OR other instructions that apply to only the ServiceNow Microsoft Graph connector including information about [Troubleshooting](#troubleshooting) and [Limitations](#limitations).  
+Each step in the setup process is listed below, along with either a note that indicates you should follow the general setup instructions or other instructions that apply to only the ServiceNow Copilot connector, including information about [Troubleshooting](#troubleshooting) and [Limitations](#limitations).  
 
 ## Step 1: Add a connector in the Microsoft 365 admin center.
 
-[Add the ServiceNow Tickets Microsoft Graph connector](https://admin.microsoft.com/adminportal/home#/MicrosoftSearch/Connectors/add?ms_search_referrer=MicrosoftSearchDocs_ServiceNowTickets&type=ServiceNowTickets​)
+[Add the ServiceNow Tickets Copilot connector](https://admin.microsoft.com/adminportal/home#/MicrosoftSearch/Connectors/add?ms_search_referrer=MicrosoftSearchDocs_ServiceNowTickets&type=ServiceNowTickets​)
 
 Follow the general [setup instructions](./configure-connector.md).
 
@@ -48,7 +48,7 @@ The service account you use to configure a connection **must have** read access 
 --- | --- | ---
 Index base [Task table fields](https://docs.servicenow.com/bundle/sandiego-platform-administration/page/administer/task-table/reference/r_ImportantTaskTableFields.html#r_ImportantTaskTableFields) | `task` | For crawling default fields from out of the box task tables
 Sync user tables | `sys_user` | To index user access details for tickets
-Select a custom table from your organization| `sys_db_object` | Find the list of extended task tables including custom tables
+Select a custom table from your organization| `sys_db_object` | Find the list of extended task tables, including custom tables
 
 If you want to index custom properties from [extended tables](https://docs.servicenow.com/bundle/washingtondc-application-development/page/administer/table-administration/concept/table-extension-and-classes.html) of *task* table, provide read access to sys_dictionary and sys_db_object. 
 It is an **optional** feature. You'll be able to index *task* table properties without access to the two extra tables.
@@ -213,7 +213,7 @@ Use the preview results button to verify the sample values of the selected prope
 
 ## Step 5: Manage search permissions
 
-The ServiceNow Tickets Microsoft Graph connector supports search permissions visible to **Only people with access to this data source**. Indexed tickets appear in the search results and are visible to users who have access to them via `assigned_to` and `opened_by` fields.
+The ServiceNow Tickets Copilot connector supports search permissions visible to **Only people with access to this data source**. Indexed tickets appear in the search results and are visible to users who have access to them via `assigned_to` and `opened_by` fields.
 
 When you choose **Only people with access to this data source**, you need to further choose whether your ServiceNow instance has Microsoft Entra ID provisioned users or non-Azure AD users.
 
@@ -249,10 +249,10 @@ Follow the general [setup instructions](./configure-connector.md).
 After publishing the connection, you need to customize the search results page. To learn about customizing search results, see [Customize the search results page](/microsoftsearch/configure-connector#next-steps-customize-the-search-results-page).
 
 ## Limitations
-The ServiceNow Tickets Microsoft Graph connector has the following limitations in its latest release:
+The ServiceNow Tickets Copilot connector has the following limitations in its latest release:
 
 - *Everyone* feature under the Manage Search permissions step doesn't process any permissions. Don't select this option unless you want to test the connection between selected team members in an isolated environment.
 
 ## Troubleshooting
-After publishing your connection, and customizing the results page, you can review the status under the **Data Sources** tab in the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).
+After publishing your connection and customizing the results page, you can review the status under **Data Sources** in the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).
 You can find troubleshooting steps for commonly seen issues [here](troubleshoot-servicenow-tickets-connector.md).

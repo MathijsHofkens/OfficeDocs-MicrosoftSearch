@@ -1,27 +1,27 @@
 --- 
 
-title: "Adobe Experience Manager(AEM) Assets Microsoft Graph connector" 
+title: "Adobe Experience Manager(AEM) Assets Microsoft 365 Copilot connector" 
 ms.author: rantang
 author: ranran1998
 manager: jecui
 audience: Admin
 ms.audience: Admin 
-ms.topic: article 
+ms.topic: install-set-up-deploy
 ms.service: mssearch 
 ms.localizationpriority: Medium 
 search.appverid: 
 - BFB160 
 - MET150 
 - MOE150 
-description: "Set up the Adobe Experience Manager Assets Microsoft Graph connector for Microsoft Search and Microsoft 365 Copilot" 
+description: "Set up the Adobe Experience Manager Assets Microsoft 365 Copilot connector for Microsoft Search and Microsoft 365 Copilot" 
 ms.date: 03/14/2025
 ---
 
-# Adobe Experience Manager Assets Microsoft Graph connector (preview)
+# Adobe Experience Manager Assets Microsoft 365 Copilot connector (preview)
 
-With the Adobe Experience Manager Assets Microsoft Graph connector, your organization can index published assets of your Adobe Experience Manager Assets instance. After you configure the connector and index content from Adobe Experience Manager Assets, end users can search for those published assets in Microsoft Copilot and from any Microsoft Search client. 
+With the Adobe Experience Manager Assets Microsoft 365 Copilot connector, your organization can index published assets of your Adobe Experience Manager Assets instance. After you configure the connector and index content from Adobe Experience Manager Assets, end users can search for those published assets in Microsoft Copilot and from any Microsoft Search client. 
 
-This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors an Adobe Experience Manager Assets Microsoft Graph connector. 
+This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors an Adobe Experience Manager Assets Microsoft 365 Copilot connector. 
 
 ## Capabilities
 - Index the published assets of your Adobe Experience Manager Assets.
@@ -32,13 +32,13 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 
 ## Limitations
 - Doesn't index comments.
-- Doesn't crawl user identities and access permissions. All published assets indexed using the Adobe Experience Manager Assets Microsoft Graph connector are visible to all Microsoft 365 users in your tenant, from Microsoft Search or Copilot.   
+- Doesn't crawl user identities and access permissions. All published assets indexed using the Adobe Experience Manager Assets Microsoft 365 Copilot connector are visible to all Microsoft 365 users in your tenant, from Microsoft Search or Copilot.   
 ## Prerequisites
 1. You must be the **search admin** for your organization's Microsoft 365 tenant.
 2. To connect to your Adobe Experience Manager Assets data, you need your organization's Adobe Experience Cloud instance author and publish environment URL.
   Your organization's Adobe Experience Cloud instance author environment URL typically looks like: `https://author-p<PROGRAM_ID>-e<ENVIRONMENT_ID>.<REGION>.adobeaemcloud.com`.
   Your organization's Adobe Experience Cloud instance publish environment URL typically looks like: `https://publish-p<PROGRAM_ID>-e<ENVIRONMENT_ID>.<REGION>.adobeaemcloud.com`. 
-3. To connect to Adobe Experience Cloud and allow the Adobe Experience Manager Assets Graph connector to regularly update published assets and metadata, you need a technical account of your Adobe Experience Manager Assets with the credentials to access published assets and metadata. The technical account is the secure, service-based account for external access to Adobe Experience Manager Assets. Find more details [here](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis#generate-a-jwt-token-and-exchange-it-for-an-access-token).
+3. To connect to Adobe Experience Cloud and allow the Adobe Experience Manager Assets 365 Copilot connector to regularly update published assets and metadata, you need a technical account of your Adobe Experience Manager Assets with the credentials to access published assets and metadata. The technical account is the secure, service-based account for external access to Adobe Experience Manager Assets. Find more details [here](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/generating-access-tokens-for-server-side-apis#generate-a-jwt-token-and-exchange-it-for-an-access-token).
 
 ## Get started
 
@@ -60,7 +60,7 @@ For other settings, like Access Permissions, Data inclusion rules, Schema, Crawl
 
 |Page |Settings |Default values|
 |--- | ---- | ---|
-|Users | Access permissions | All published assets or posts indexed using the Adobe Experience Manager Assets Microsoft Graph connector are visible to all Microsoft 365 users in your tenant, from Microsoft Search or Copilot.|
+|Users | Access permissions | All published assets or posts indexed using the Adobe Experience Manager Assets Microsoft 365 Copilot connector are visible to all Microsoft 365 users in your tenant, from Microsoft Search or Copilot.|
 |Content | Index content | All published assets are selected by default. |
 |Content | Manage properties | To check default properties and their schema, [click here](#content).|
 |Sync | Incremental crawl | Frequency: Every 15 mins.|
@@ -74,7 +74,7 @@ In custom setup, you can edit any of the default values for users, content, and 
 
 #### Access permissions
 
-Currently, only published assets from your Adobe Experience Manager Assets are indexed. All data indexed using the Adobe Experience Manager Assets Microsoft Graph connector is visible to all Microsoft 365 users in your tenant, from Microsoft Search or Copilot.
+Currently, only published assets from your Adobe Experience Manager Assets are indexed. All data indexed using the Adobe Experience Manager Assets Microsoft 365 Copilot connector is visible to all Microsoft 365 users in your tenant, from Microsoft Search or Copilot.
 
 ### Content 
 
@@ -92,32 +92,32 @@ You can also set ingestion filters based on the value of **metadata properties**
 
 To find and verify the property path, see [Query builder debugger console| Adobe Experience Manager](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/developing/full-stack/search/query-builder-api#testing-and-debugging).
 
-1. Open the query builder bebugger with `http://<host>:<port>/libs/cq/search/content/querydebug.html` and input the following query
+1. Open the query builder debugger with `http://<host>:<port>/libs/cq/search/content/querydebug.html` and input the following query
 
-```plaintext
-p.limit=10
-p.guessTotal=true
-p.hits=full
-type=dam:Asset
-p.nodedepth=2
-property=jcr:content/cq:lastReplicationAction
-property.value=Activate
-```
+    ```plaintext
+    p.limit=10
+    p.guessTotal=true
+    p.hits=full
+    type=dam:Asset
+    p.nodedepth=2
+    property=jcr:content/cq:lastReplicationAction
+    property.value=Activate
+    ```
 
-2. Click "**search**"
+2. Click **search**.
 
 3. After the results are successfully returned, click **JSON query builder link**, to see the JSON content with all properties.
 
-![Screenshot that shows the Adobe Experience Manager Assets Query Builder Debugger.](media/aem-assets-query-builder-debugger.png)
+   [![Screenshot that shows the Adobe Experience Manager Assets Query Builder Debugger.](media/aem-assets-query-builder-debugger.png)](media/aem-assets-query-builder-debugger.png#lightbox)
 
 4. Find the property and JSON path of the property. For example, the JSON path of the property `dc:format` shown in the following snapshot is `hits.jcr:content.metadata.dc:format`
 
-![Screenshot that shows a sample of a JCR path.](media/aem-assets-jcrpath-sample.png)
+   ![Screenshot that shows a sample of a JCR path.](media/aem-assets-jcrpath-sample.png)
 
-|Operators and target values in query conditions|Description|
-|:---|:---|
-|Operator|A drop-down menu for setting `"="`, `"!="`, `"In"`, `"Not In"`.|
-|Target-value| Single-value and multi-value settings are different.
+   |Operators and target values in query conditions|Description|
+   |:---|:---|
+   |Operator|A drop-down menu for setting `"="`, `"!="`, `"In"`, `"Not In"`.|
+   |Target-value| Single-value and multi-value settings are different.
 - Single-value usage in (=) and (!=) conditions: Give a single value without any quotes.
 - Multi-value usage in (In) and (Not In) conditions: If multi-value is a group of text, enclose them in double quotes and square brackets []. If it’s a group of numbers, a user only needs to enclose them in square brackets []. It doesn’t matter if there are quotes or not. |
 
@@ -128,7 +128,7 @@ The following table shows examples of correct and incorrect user input:
 Use the preview results button to verify the sample values of the selected properties and filters. 
 
 #### Manage properties
-To add or remove available properties from your Egnyte data source, assign a schema to the property (define whether a property is searchable, queryable, retrievable, or refinable), change the semantic label, and add an alias to the property. Some properties are selected by default.
+To check available standard properties from your Adobe Experience Manager Assets, assign a schema to the property (define whether a property is searchable, queryable, retrievable, or refinable), change the semantic label, and add an alias to the property. The following standard properties are indexed by default.
 
 | Source property | Semantic label       | Description                                                                | Schema                  |
 |----------------------|--------------------------|---------------------------------------------------------------------------------|-----------------------------|
@@ -150,11 +150,14 @@ To add or remove available properties from your Egnyte data source, assign a sch
 | Width   |None       | Width        | Query, Retrieve   |
 | Tags                | None                  | Tags defined in Adobe Experience Manager Assets metadata. In Adobe Experience Manager, tags are organized hierarchically   | Query, Retrieve, Search.     |
 
-![Screenshot that shows how to add a property.](media/aem-assets-add-property.png)
+
+To edit any of these values, choose "Custom setup".
+
+[![Screenshot that shows how to add a property.](media/aem-assets-add-property.png)](media/aem-assets-add-property.png#lightbox)
 
 ### Sync 
 You can configure full and incremental crawls based on the scheduling options present here. By default, incremental crawl is set for every 15 minutes, and full crawl is set for every day. If needed, you can adjust these schedules to fit your data refresh needs.
 
 ## Next steps
 After you publish your connection, you can review the status under **Data sources** in the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).
-If you have issues or want to provide feedback, see [Microsoft Graph support](https://developer.microsoft.com/graph/support).
+If you have issues or want to provide feedback, see [Microsoft 365 Copilot support](https://developer.microsoft.com/graph/support).

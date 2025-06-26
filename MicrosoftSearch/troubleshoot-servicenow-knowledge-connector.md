@@ -1,23 +1,23 @@
 ---
 ms.date: 10/08/2019
-title: "Troubleshooting the ServiceNow Knowledge Microsoft Graph connector"
+title: "Troubleshooting the ServiceNow Knowledge Microsoft 365 Copilot connector"
 ms.author: souravpoddar
 author: souravpoddar001
 manager: harshkum
 audience: Admin 
 ms.audience: Admin
-ms.topic: article
+ms.topic: troubleshooting-general
 ms.service: mssearch
 ms.localizationpriority: medium
 search.appverid:
 - BFB160
 - MET150
 - MOE150
-description: "Troubleshooting the ServiceNow Knowledge Microsoft Graph connector for Microsoft Search and Microsoft 365 Copilot."
+description: "Troubleshooting the ServiceNow Knowledge Microsoft 365 Copilot connector."
 ---
-# Troubleshooting the ServiceNow Knowledge Microsoft Graph connector
+# Troubleshooting the ServiceNow Knowledge Microsoft 365 Copilot connector
 
-The following common errors are observed while configuring the connector, or during crawling and their possible reasons.
+The following common errors are observed while configuring the connector or during crawling, and their possible reasons.
 
 ### 1. Not able to find ServiceNow Knowledge articles on Microsoft 365 Copilot or Microsoft Search.
    
@@ -30,14 +30,14 @@ The following common errors are observed while configuring the connector, or dur
 
    ![Screenshot of Mapping identity error.](media/troubleshooting-servicenow-knowledge-connector-map-identity-error.png)
 
-3. Check if there's an Advanced script in any of the user criteria granting access to the article. (Note: Advanced scripts aren't supported in the current version of the ServiceNow Knowledge Microsoft Graph connector.)
+3. Check if there's an Advanced script in any of the user criteria granting access to the article. (Note: Advanced scripts aren't supported in the current version of the ServiceNow Knowledge Copilot connector.)
     1. If there's an Advanced script configured in any of the '_Cannot Read_' user criteria in the knowledge base level, all articles in the knowledge base are stamped with deny access in the indexed data.
 
     2. If there's an Advanced script configured in any of the '_Cannot Read_' user criteria in the article level, the article is stamped with deny access in the indexed data.
 
 4. Check if there's an empty criterion present at the knowledge base level - '_Cannot Read_', '_Cannot Contribute_'. Also, check if there's an empty criterion at the article level - '_Cannot Read_'. Empty criteria are a user criterion with empty fields. If there's an empty criterion present, the article is stamped with deny access in the indexed data.
 
-5. If you're still not able to identify the root cause, reach out to [the Microsoft Graph connector support team](mailto:MicrosoftGraphConnectorsFeedback@service.microsoft.com) with the following details.
+5. If you're still not able to identify the root cause, reach out to [the Copilot connector support team](mailto:MicrosoftGraphConnectorsFeedback@service.microsoft.com) with the following details.
     1. Tenant ID
     2. Connection ID
     3. Article Sys ID
@@ -83,7 +83,7 @@ If you are using OAuth2.0, check if the account password is correct or hasn't be
 
 <details><summary>(Click to expand) Follow the steps to change the URL of the knowledge article.</summary><br>
 
-The ServiceNow Knowledge Microsoft Graph connector computes the AccessUrl property using sys_id in the `<instance_url>/kb_view.do?sys_kb_id<sysId>` format. It opens the knowledge article in the backend system view. If you prefer redirecting the article to a different URL, follow these instructions.
+The ServiceNow Knowledge Copilot connector computes the AccessUrl property using sys_id in the `<instance_url>/kb_view.do?sys_kb_id<sysId>` format. It opens the knowledge article in the backend system view. If you prefer redirecting the article to a different URL, follow these instructions.
 1. In the customization tab in the *Search & Intelligence* section of the Microsoft 365 admin center, navigate to edit the result type configured for your ServiceNow Knowledge connection.
 ![Screenshot shows where to click for editing Result Type](media/servicenow-knowledge-connector/edit-result-type.png)
 

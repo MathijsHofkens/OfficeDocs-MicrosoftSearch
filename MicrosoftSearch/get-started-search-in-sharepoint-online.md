@@ -4,7 +4,7 @@ ms.author: tlarsen
 author: tlarsen
 manager: mnirkhe
 ms.audience: Admin
-ms.topic: article
+ms.topic: get-started
 ms.service: mssearch
 ms.localizationpriority: medium
 search.appverid:
@@ -18,7 +18,7 @@ ms.date: 04/23/2019
 
 # Get started with Microsoft Search in SharePoint
 
-Microsoft Search in SharePoint is the modern search experience in [SharePoint Online](https://products.office.com/sharepoint/collaboration). SharePoint Online also offers a classic search experience. As a search administrator, you can’t turn either of these search experiences on or off. They're both on by default. Which search experience your users get depends on where they search from:
+Microsoft Search in SharePoint is the modern search experience in [SharePoint Online](https://products.office.com/sharepoint/collaboration). SharePoint Online also offers a classic search experience. Both search experiences are on by default, so as a search administrator, you can’t turn either of these on or off. Which search experience your users get depends on where they search from:
 
 - Users get the Microsoft Search box on the [SharePoint](https://sharepoint.com/) start page, hub sites, communication sites, and modern team sites.
 - Users get the classic search box on publishing sites, classic team sites, and in the [SharePoint Search Center](/sharepoint/manage-search-center).
@@ -27,9 +27,9 @@ To get your organization going with Microsoft Search in SharePoint, take the ste
 
 ## Prepare for Microsoft Search in SharePoint
 
-Users can only find [SharePoint](https://sharepoint.com/) content that's been indexed. Microsoft Search and classic search share the same index for SharePoint content, which is crawled and indexed automatically. 
+Users can only find [SharePoint](https://sharepoint.com/) content that is indexed. Microsoft Search and classic search share the same index for SharePoint content, which is crawled and indexed automatically. 
 
-Some organizations use both classic search and Microsoft Search in SharePoint. To learn how to avoid impact from classic search settings on Microsoft Search in SharePoint, see [Differences between the classic and modern search experiences in SharePoint Online](/sharepoint/differences-classic-modern-search).
+Some organizations use both classic search and Microsoft Search in SharePoint. Classic search settings might impact Microsoft Search in SharePoint. Learn how to avoid such impact in [Differences between the classic and modern search experiences in SharePoint Online](/sharepoint/differences-classic-modern-search).
 
 Follow the guidelines to [set up Microsoft Search](./setup-microsoft-search.md).
 

@@ -1,27 +1,27 @@
 --- 
 ms.date: 10/26/2023
-title: "Staged rollout for Microsoft Graph connectors" 
+title: "Staged rollout for Microsoft 365 Copilot connectors" 
 ms.author: souravpoddar 
 author: souravpoddar 
 manager: srramam
 audience: Admin
 ms.audience: Admin 
-ms.topic: article 
+ms.topic: how-to
 ms.service: mssearch 
 ms.localizationpriority: medium 
 search.appverid: 
 - BFB160 
 - MET150 
 - MOE150 
-description: "Use Stage Rollout to gradually roll out a Microsoft Graph connector to your users." 
+description: "Use Stage Rollout to gradually roll out a Microsoft 365 Copilot connector to your users." 
 ---
 
-# Staged rollout for Microsoft Graph connectors
+# Staged rollout for Microsoft 365 Copilot connectors
 
 Staged rollout is a feature that allows you to gradually introduce Microsoft Graph connectors to a select group of users in your production environment. You can use it to deploy an existing or new connection to a limited set of users, monitor the performance, and adjust settings as needed. You can expand or shrink the scope of the rollout at any time. When you're ready, you can end the staged rollout and deploy the connection to the entire organization (or to all applicable users).
 
 > [!NOTE]
-> **Microsoft Graph connectors** enable you to connect and index data from various external sources, such as ServiceNow, Salesforce, Azure Data Lake Storage, Jira Cloud, Confluence Cloud, and more. With Microsoft Graph connectors, you can enrich your Microsoft Search experience with relevant and diverse content from your organization. For details about how to set up Microsoft Graph connectors, see [**Setup for your Microsoft Graph connector**](configure-connector.md).
+> **Microsoft 365 Copilot connectors** enable you to connect and index data from various external sources, such as ServiceNow, Salesforce, Azure Data Lake Storage, Jira Cloud, Confluence Cloud, and more. With Copilot connectors, you can enrich your Microsoft Search experience with relevant and diverse content from your organization. For details about how to set up Copilot connectors, see [**Setup for your Copilot connector**](configure-connector.md).
 
 This document guides you through the steps to apply staged rollout to a Microsoft Graph connection, and also how to edit staging settings when needed.
 
@@ -33,7 +33,7 @@ This document guides you through the steps to apply staged rollout to a Microsof
 <!---## Steps to apply staged rollout to a connection-->
 ## Apply staged rollout to a connection
 
-Go to the [Microsoft 365 admin center](https://admin.microsoft.com) and complete the following steps to apply a staged rollout to a Microsoft Graph connector.
+Go to the [Microsoft 365 admin center](https://admin.microsoft.com) and complete the following steps to apply a staged rollout to a Copilot connector.
 
 
 1. **Go to the Search & Intelligence portal**. Choose **Show all** on the left panel and under **Settings**, select **Search & Intelligence**.
@@ -95,7 +95,7 @@ The staged rollout feature has the following limitations in the current release:
 
 ## Conclusion
 
-Staged rollout is a powerful and flexible way to introduce Microsoft Graph connectors to your organization. It also reduces the risk of disrupting your existing search experience and allows you to fine-tune your connection settings before you roll it out to the entire organization. We hope you find this feature useful and valuable.
+Staged rollout is a powerful and flexible way to introduce Copilot connectors to your organization. It also reduces the risk of disrupting your existing search experience and allows you to fine-tune your connection settings before you roll it out to the entire organization. We hope you find this feature useful and valuable.
 
 <!---Insert limitations for this data source-->
 
