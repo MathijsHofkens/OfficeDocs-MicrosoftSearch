@@ -23,7 +23,7 @@ Organizations don't always have a single reference for their standard terminolog
 
 ## What users experience
 
-Microsoft Search users can get definitions with Acronyms in [Bing](https://Bing.com), [SharePoint](https://products.office.com/sharepoint/collaboration), [Office 365](https://Office.com), Outlook on the web, Outlook Mobile (Android), and Teams Mobile (iOS and Android). In the **Search** box, users enter queries like these examples:
+Microsoft Search users can get definitions with Acronyms in [SharePoint](https://products.office.com/sharepoint/collaboration), [Office 365](https://Office.com), Outlook on the web, Outlook Mobile (Android), and Teams Mobile (iOS and Android). In the **Search** box, users enter queries like these examples:
 
 - DNN
 - *What is* DNN
@@ -111,11 +111,11 @@ Microsoft Search makes sure that only users with access and permissions to a doc
 
 **Q: How do users trigger acronyms answers?**
 
-**A:** To get acronyms answers, users must enter specific query patterns in a [Bing](https://bing.com), [SharePoint](https://products.office.com/sharepoint/collaboration), [Office 365](https://Office.com), Outlook on the web, Outlook Mobile (Android), or Teams Mobile (iOS and Android) **Search** box.
+**A:** To get acronyms answers, users must enter specific query patterns in a [SharePoint](https://products.office.com/sharepoint/collaboration), [Office 365](https://Office.com), Outlook on the web, Outlook Mobile (Android), or Teams Mobile (iOS and Android) **Search** box.
 
 **Q: Can users enter just the acronym when searching?**
 
-**A:** On Bing, SharePoint, and Office 365 users can now find acronym answers just by searching for an acronym, a keyword is no longer needed. This same experience will be enabled for other Microsoft Search entry points in phases.
+**A:** On SharePoint and Office 365 users can now find acronym answers just by searching for an acronym, a keyword is no longer needed. This same experience will be enabled for other Microsoft Search entry points in phases.
 
 **Q: How long does it take for admin-curated acronyms to be visible in Microsoft Search after they’re published?**
 
