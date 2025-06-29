@@ -6,7 +6,7 @@ author: mansipakhale
 manager: harshkum
 audience: Admin
 ms.audience: Admin
-ms.topic: article
+ms.topic: install-set-up-deploy
 ms.service: mssearch
 ms.localizationpriority: Medium
 search.appverid:
@@ -86,7 +86,7 @@ Complete the connection settings step using the **Client ID** and **Secret**.
 
 Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. To know more about the limited rollout, click [here](./staged-rollout-for-graph-connectors.md).
 
-At this point, you are ready to create the connection for ServiceNow Knowledge. You can click the "Create" button, and the Confluence Cloud Copilot connector starts indexing the page from your Confluence account.
+At this point, you are ready to create the connection for Confluence Knowledge. You can click the "Create" button and the Confluence Cloud Microsoft Graph connector starts indexing page from your Confluence account.
 
 For other settings, like Access Permissions, Data inclusion rules, Schema, Crawl frequency etc., we set defaults based on what works best with Confluence data. The default values are as follows:
 

@@ -3,7 +3,7 @@ title: "Search Usage Reports- Analytics"
 ms.author: misvenso
 author: wobba
 manager: scotv
-ms.topic: article
+ms.topic: concept-article
 ms.service: mssearch
 audience: Admin
 ms.audience: Admin
@@ -21,7 +21,7 @@ recommendations: false
 
 # Microsoft Search Usage Reports - Answer Analytics
 
-In the [Microsoft Search Usage Report](/microsoftsearch/usage-reports), the Answer analytics section gives you information on how the editorial Bookmarks, Acronyms and Q&A are performing within the organization.  
+In the [Microsoft Search Usage Report](/microsoftsearch/usage-reports), the Answer analytics section gives you information on how the editorial Bookmarks, Acronyms, and Q&A are performing within the organization.  
 
 :::image type="content" source="media/usage-reports/answer-analytics.png" alt-text="A dashboard showing usage reports for answer analytics." lightbox="media/usage-reports/answer-analytics.png":::
 
@@ -38,21 +38,21 @@ You can view the **Answer Analytics details** page by selecting the **View
 
 ## Answer analytics details page 
 
-The Answer analytics details page provides you with details on Bookmark, Acronym and Q&A impressions trends, average impressions and number of items that are above and below the average impressions. These metrics are also available at an individual answer level. For example, you can use these reports to know how a particular Bookmark like “Outlook web” is performing.  
+The Answer analytics details page provides you with details on Bookmark, Acronym, and Q&A impressions trends, average impressions and number of items that are above and below the average impressions. These metrics are also available at an individual answer level. For example, you can use these reports to know how a particular Bookmark like "Outlook web" is performing.  
 
 In the **Filters** menu, use one or more of the following to filter the data in the reports:
 
 | Filter| Description |
 |:-----|:-----|
 |Date Range |The date range for the analytics shown on the page. Available options are Last 28 days and Last 12 months   |
-|Search Application |The search application where the user has performed the queries: SharePoint start page, SharePoint sites, Office (Microsoft 365 app), Bing, or all four applications combined.   |
+|Search Application |The search application where the user has performed the queries: SharePoint start page, SharePoint sites, Microsoft 365, Microsoft 365 Copilot, or all applications combined.   |
 
-The **Answer Analytics** details page contains the following three reports for each Bookmarks, Acronyms and Q&As. 
+The **Answer Analytics** details page contains the following three reports for each Bookmarks, Acronyms, and Q&As. 
 
 **Bookmark Analytics**
 
 - Bookmark impressions and click through rate trends. 
-- Average click rate and number of items that are above and below the average click rate. 
+- Average click rate and number of items that're above and below the average click rate. 
 - Impressions, click rate, and user queries list of individual bookmarks.  
 
  **Acronym Analytics**
@@ -92,8 +92,8 @@ Use the Average click rate to segregate the bookmarks that are performing well a
 | Metric| Description |
 |:-----|:-----|
 |Average click rate  |Average click rate = [Bookmark clicks]/[Bookmark impressions]. For example, in a selected time period of seven days, Average click rate is the [total bookmark clicks in seven days]/[total bookmark impressions in seven days]. This is represented as a percentage. |
-|Bookmarks above average  |Number of Bookmarks that have a click rate that is above the Average click rate. These Bookmarks are performing well.
-|Bookmarks below average  |Number of Bookmarks that have a click rate that is below or equal to the Average click rate. These Bookmarks have potential for improvement.  |
+|Bookmarks above average  |Number of Bookmarks that have a click rate that's above the Average click rate. These Bookmarks are performing well.
+|Bookmarks below average  |Number of Bookmarks that have a click rate that's below or equal to the Average click rate. These Bookmarks have potential for improvement.  |
 
 ### Bookmark Item Insights
 
@@ -115,14 +115,14 @@ A detailed list of user queries for a bookmark is available in the details panel
 
 ## Acronyms Usage Report  
 
-The Acronyms section provides information on impressions trends for acronyms as whole and for individual acronyms that have impressed in the selected time period. Acronyms can include both admin curated and system curated acronyms. [Learn more about acronym curation](/microsoftsearch/manage-acronyms#set-up-acronyms-answers)
+The Acronyms section provides information on impressions trends for acronyms as whole and for individual acronyms that have impressed in the selected time period. Acronyms can include both admin curated and system curated acronyms. [Learn more about acronym curation](/microsoftsearch/manage-acronyms#set-up-acronyms-answers).
 
 :::image type="content" source="media/usage-reports/answer-analytics-acronyms-usage-reports.png" alt-text="A dashboard showing acronyms usage reports." lightbox="media/usage-reports/answer-analytics-acronyms-usage-reports.png":::
 
 | Metric| Description |
 |:-----|:-----|
 |Admin curated  |Number of searches where admin curated acronyms were shown to users  |
-|System curated  |Number of searches where system curated acronyms were shown to users 
+|System curated  |Number of searches where system curated acronyms were shown to users |
 
 ### Acronyms Impressions Trends
 Use this graph to understand the acronym impression trends within your organization. The graph shows trends for both admin curated and system curated acronyms. 
@@ -132,7 +132,7 @@ Use this graph to understand the acronym impression trends within your organizat
 | Metric| Description |
 |:-----|:-----|
 |Admin curated impressions  |Number of searches where admin curated acronyms were shown to users, represented as a line chart. |
-|System curated impressions   |Number of searches where system curated acronyms were shown to users, represented as a line chart. 
+|System curated impressions   |Number of searches where system curated acronyms were shown to users, represented as a line chart. |
 
 ### Average Impressions 
 Use Average impressions to segregate acronyms that are performing well and acronyms that need improvements to improve the impression. The Average impressions and Acronym item insights apply only to admin curated acronyms. 
@@ -205,7 +205,7 @@ Detailed list of user queries for which the Q&A impressed is available in the de
 :::image type="content" source="media/usage-reports/answer-analytics-q&a-usage-user-queries.png" alt-text="A dashboard showing q&a usage for the last 31 days." lightbox="media/usage-reports/answer-analytics-q&a-usage-user-queries.png":::
 
 > [!NOTE]
-> Answer Analytics is currently not supported for the 12-month filter range and for certain types of tenants. In case you don't see Answer Analytics feature on your test tenant drop us an email at searchadminxteam@service.microsoft.com and we will reach out to you for further investigation.
+> Answer Analytics is currently not supported for the 12-month filter range and for certain types of tenants. In case you don't see Answer Analytics feature on your test tenant drop us an email at searchadminxteam@service.microsoft.com and we'll reach out to you for further investigation.
 
 ## Related articles
 

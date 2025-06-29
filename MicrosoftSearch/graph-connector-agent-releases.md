@@ -21,6 +21,10 @@ For help on installation, refer to [this page](graph-connector-agent.md#installa
 
 [Download latest Graph Connector Agent](https://aka.ms/gca)
 
+## Version 3.1.10.0 (*June 18, 2025*)
+
+* Bug fixes and reliability improvements.
+
 ## Version 3.1.9.0 (*May 23, 2025*)
 
 * Bug fixes and reliability improvements.

@@ -27,7 +27,7 @@ These changes also apply to users in organizations with education service plans 
 
 Users can find work and school search results on M365.cloud.microsoft and SharePoint Online rather than on Bing.com. Likewise, the Microsoft Edge for Business address bar and the Microsoft search box send users to work and school results on M365.cloud.microsoft rather than Bing.com. Bing's dedicated pages for work results (the "Work" tab) and school results (the "School" tab) are retired, so M365.cloud.microsoft and SharePoint Online are the new homes for Microsoft Search. Search boxes that IT admins configured to point to Microsoft Search in Bing no longer provide work results. People who go directly to or have bookmarks for www.bing.com/work are sent to M365.cloud.microsoft through June 30, 2025.
 
-Some Microsoft Search answers are no longer available, including Q&As and location answers. Recommended bookmarks are also retired—you can keep them by manually publishing or exporting them by April 30, 2025.
+Some Microsoft Search answers are no longer available, including floor plans, Q&As and location answers. Recommended bookmarks are also retired—you can keep them by manually publishing or exporting them by April 30, 2025.
 
 > [!NOTE]
 > The Google Chrome browser extension that sets Bing as the default search engine is also retired as of March 31, 2025. Users of Google Chrome, Microsoft Edge, and other browsers can still select their default search engine in the browser settings. [Learn how to change your default search engine](https://support.microsoft.com/en-us/microsoft-edge/change-your-default-search-engine-f863c519-5994-a8ed-6859-00fbc123b782).

@@ -6,7 +6,7 @@ author: vivg
 manager: harshkum
 audience: Admin
 ms.audience: Admin 
-ms.topic: article
+ms.topic: how-to
 ms.service: mssearch 
 ms.localizationpriority: medium 
 description: "Set up the Azure DevOps Work Items Microsoft 365 Copilot connector." 

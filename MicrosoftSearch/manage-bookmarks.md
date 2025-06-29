@@ -4,7 +4,7 @@ ms.author: bstucker
 author: bstuck
 manager: bstucker
 ms.audience: Admin
-ms.topic: article
+ms.topic: how-to
 ms.service: mssearch
 ms.localizationpriority: medium
 ms.date: 01/08/2024
@@ -18,7 +18,7 @@ description: "Create and update bookmarks and ways to bulk edit bookmark results
 # Manage bookmarks
 
 > [!IMPORTANT]
-> Microsoft Search in Bing is being retired on March 31, 2025. Recommended bookmarks are also being retired—you can keep them by manually publishing or exporting them by April 30, 2025. [Learn more](/microsoftsearch/retirement-microsoft-search-bing)
+> Microsoft Search in Bing was retired on March 31, 2025. Recommended bookmarks were also retired at that time, but they may still be operable in your organization if you manually published or exported them by April 30, 2025. [Learn more](/microsoftsearch/retirement-microsoft-search-bing)
 
 Bookmarks help people quickly find important sites and tools with just a search. Each bookmark includes a title, URL, a set of user-friendly keywords to trigger the bookmark, and a category.
 
@@ -106,9 +106,6 @@ To reduce the manual effort required to add bookmarks, Microsoft Search can eval
 
 :::image type="content" alt-text="Screenshot of Recommended bookmark settings in the Microsoft 365 admin portal." source="media/bookmarks-recommendedsettings.png":::
 
-> [!NOTE]
-> Manually published bookmarks will appear in Bing and SharePoint results. Autopublished bookmarks will only appear in Bing results.
-
 If recommended bookmarks are enabled, the recommendation engine will evaluate SharePoint sites in your organization to identify high-traffic links. After an initial evaluation period, the recommended bookmarks will either be autopublished or added to the list of suggested bookmarks. The next cycle—a 30-day evaluation period followed by autopublishing or adding suggested bookmarks—will then begin.
 
 We suggest Search admins or editors review these autopublished or suggested bookmarks regularly. Also, recommended bookmarks will never include URLs found in existing Published, Suggested, Scheduled, or Excluded bookmarks.
@@ -171,4 +168,4 @@ A bookmark can have several keywords and share the same keyword, but reserved ke
 
 **Q: Will bookmarks appear in Microsoft Teams search results?
 
-**A**: Yes, Microsoft Search bookmarks will appear in the Microsoft Teams client search results. However, the results may be different from what appears in SharePoint or microsoft365.com as search will rank the results with machine learning algorithm. If the bookmark result does not meet the machine learning ranker threshold, then the results will be suppressed in the Microsoft Teams client. This is by design and aligned to feedback received from many customers.
+**A**: Yes, Microsoft Search bookmarks will appear in the Microsoft Teams client search results. However, the results may be different from what appears in SharePoint or the Microsoft 365 app as search will rank the results with machine learning algorithm. If the bookmark result does not meet the machine learning ranker threshold, then the results will be suppressed in the Microsoft Teams client. This is by design and aligned to feedback received from many customers.
