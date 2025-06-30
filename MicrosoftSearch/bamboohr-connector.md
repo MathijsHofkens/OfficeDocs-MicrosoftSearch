@@ -37,24 +37,30 @@ For more information, see [Microsoft 365 Copilot connector for people data](http
 ## Prerequisites
 
 1. Set up the application on the BambooHR developer portal.
-2. Configure a BambooHR app with a unique App name.  
+2. Configure a BambooHR app with a unique App name.
+   
    ![Screenshot of Add application.](media/bamboohr-connector/bamboohr-add-application.png)
-3. Add direct URLs into the **redirect URLs** field in the app details section.  
-   For Microsoft M365 Enterprise, copy and paste: `https://gcs.office.com/v1.0/admin/oauth/callback`  
+   
+4. Add direct URLs into the **redirect URLs** field in the app details section.  
+   For Microsoft 365 Enterprise, copy and paste: `https://gcs.office.com/v1.0/admin/oauth/callback`
+   
    ![Screenshot of App Details.](media/bamboohr-connector/bamboohr-application-details.png)  
    ![Screenshot of Direct Urls form.](media/bamboohr-connector/bamboohr-redirect-uri.png)
-4. On the application scopes field, select the following scopes with read access only:  
+   
+5. On the application scopes field, select the following scopes with read access only:  
 
    | Category         | Required scopes                                                                                                                                          |
-   | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-   | **Claims**       | email<br>openid                                                                                                                                          |
-   | **Employee**     | employee<br>employee:contact<br>employee:identification<br>employee:job<br>employee:management<br>employee:name<br>employee_directory<br>sensitive_employee:protected_info |
-   | **Miscellaneous**| field<br>offline_access<br>public.user                                                                                                                   |
-   | **Reports**      | report                                                                                                                                                   |
+   |: ---------------- |: -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+   | Claims         | email<br>openid                                                                                                                                          |
+   | Employee     | employee<br>employee:contact<br>employee:identification<br>employee:job<br>employee:management<br>employee:name<br>employee_directory<br>sensitive_employee:protected_info |
+   | Miscellaneous| field<br>offline_access<br>public.user                                                                                                                   |
+   | Reports      | report                                                                                                                                                   |
    
    ![Screenshot of Select Scopes.](media/bamboohr-connector/bamboohr-select-scopes.png)  
    ![Screenshot of Scope Selection.](media/bamboohr-connector/bamboohr-scope-selection.png)
-5. Navigate to the **app credentials** to get the App client ID and App client secret.  
+   
+6. Navigate to the **app credentials** to get the App client ID and App client secret.
+   
    ![Screenshot of Client Id and Client Secret Section.](media/bamboohr-connector/bamboohr-client-id-and-secret.png)
 
 ## Get started
@@ -91,18 +97,18 @@ For other settings, like access permissions, data inclusion rules, schema, crawl
 | Email | Employee's work email address | emails->address[type='work']<br><br>*Note: Email is converted to the Microsoft Entra objectId of the end user and is used for internal processing.* |
 | Birth date | Employee's date of birth | anniversaries->date[type='birthday'] |
 | Job information department | Employee's job department, for example, human resources | positions->detail->company->department |
-| Job information division | Employee's Job Division, for example, North America | position->detail->company->division |
+| Job information division | Employee's job division, for example, North America | position->detail->company->division |
 | Employee number | Employee's number | position->detail->employeeId |
 | Employee Eeid | Employee's ID in BambooHR | webAccounts->userId<br><br>*Note: The employee's eeid is also utilized internally to periodically check for any updates for a given Employee in BambooHR.* |
 | Employment status | Employee's Status, for example, full-time, contractor, Etc. | position->detail->employeeType |
 | Original hire date time | Employee's data of hire | anniversaries->date[type='originalHireDate'] |
 | Hire date time | Employee's data of hire <br><br> _Note: When Original hire date time is null, we index the Hire Date Time_ | anniversaries->date[type='originalHireDate'] |
 | Job information job title | Employee's job title, for example, Senior HR Administrator | positions->detail->jobTitle |
-| Supervisor ID | Employee's Manager Identifier | positions->manager->userId<br><br>*Note: The supervisor ID is used to find the supervisor's email, which is then converted to the Microsoft Entra objectId of the manager for internal processing.* |
+| Supervisor ID | Employee's manager identifier | positions->manager->userId<br><br>*Note: The supervisor ID is used to find the supervisor's email, which is then converted to the Microsoft Entra objectId of the manager for internal processing.* |
 | Mobile phone | Employee's work mobile phone | phones->number(type=mobile) |
 | Work phone | Employee's work phone | phones->number(type=work) |
 | Job information location | Employee's office location | positions->positionDetail->companyDetail->officeLocation |
-| Status | Employee's Status, for example, active or inactive | N/A<br><br>*Note: Internal use for filtering inactive employees, ensuring they're excluded from BambooHR data retrieval.* |
+| Status | Employee's status, for example, active or inactive | N/A<br><br>*Note: Internal use for filtering inactive employees, ensuring they're excluded from BambooHR data retrieval.* |
 
 ## Custom setup
 
@@ -111,7 +117,7 @@ In custom setup, you can edit any of the default values for users, content, and 
 ### Users
 
 The BambooHR Copilot connector only supports data visible to Everyone. This means indexed data appears in the search results for all users.
-The BambooHR Copilot connector only supports mapping your data source identities with Microsoft Entra ID by checking whether the email address of BambooHR profiles is the same as UserPrincipalName (UPN), or the mail of users in Microsoft Entra ID. 
+The BambooHR Copilot connector only supports mapping your data source identities with Microsoft Entra ID by checking whether the email address of BambooHR profiles is the same as UserPrincipalName (UPN), or the email of users in Microsoft Entra ID. 
 
 ### Content
 
