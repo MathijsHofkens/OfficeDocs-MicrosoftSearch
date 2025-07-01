@@ -39,17 +39,18 @@ For more information, see [Microsoft 365 Copilot connector for people data](/gra
 ## Prerequisites
 
 1. Set up the application on the BambooHR developer portal.
-2. Configure a BambooHR app with a unique App name.
+1. Configure a BambooHR app with a unique App name.
    
-   ![Screenshot of Add application.](media/bamboohr-connector/bamboohr-add-application.png)
+   [![Screenshot of Add application.](media/bamboohr-connector/bamboohr-add-application.png)](media/bamboohr-connector/bamboohr-add-application.png#lightbox)
    
-4. Add direct URLs into the **redirect URLs** field in the app details section.  
+1. Add direct URLs into the **redirect URLs** field in the app details section.  
    For Microsoft 365 Enterprise, copy and paste: `https://gcs.office.com/v1.0/admin/oauth/callback`
    
-   ![Screenshot of App Details.](media/bamboohr-connector/bamboohr-application-details.png)  
-   ![Screenshot of Direct Urls form.](media/bamboohr-connector/bamboohr-redirect-uri.png)
+   [![Screenshot of App Details.](media/bamboohr-connector/bamboohr-application-details.png)](media/bamboohr-connector/bamboohr-application-details.png#lightbox)  
+
+   [![Screenshot of Direct Urls form.](media/bamboohr-connector/bamboohr-redirect-uri.png)](media/bamboohr-connector/bamboohr-redirect-uri.png#lightbox)
    
-5. On the application scopes field, select the following scopes with read access only:  
+1. On the application scopes field, select the following scopes with read access only:  
 
    | Category         | Required scopes                                                                                                                                          |
    |: ---------------- |: -------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -58,17 +59,19 @@ For more information, see [Microsoft 365 Copilot connector for people data](/gra
    | Miscellaneous| field<br>offline_access<br>public.user                                                                                                                   |
    | Reports      | report                                                                                                                                                   |
    
-   ![Screenshot of Select Scopes.](media/bamboohr-connector/bamboohr-select-scopes.png)  
-   ![Screenshot of Scope Selection.](media/bamboohr-connector/bamboohr-scope-selection.png)
+   :::image type="content" source="media/bamboohr-connector/bamboohr-select-scopes.png" alt-text="Screenshot of Select Scopes." lightbox="media/bamboohr-connector/bamboohr-select-scopes.png":::
    
-6. Navigate to the **app credentials** to get the App client ID and App client secret.
+   [![Screenshot of Scope Selection.](media/bamboohr-connector/bamboohr-scope-selection.png)](media/bamboohr-connector/bamboohr-scope-selection.png#ligthbox)
    
-   ![Screenshot of Client Id and Client Secret Section.](media/bamboohr-connector/bamboohr-client-id-and-secret.png)
+1. Navigate to the **app credentials** to get the App client ID and App client secret.
+   
+   :::image type="content" source="media/bamboohr-connector/bamboohr-client-id-and-secret.png" alt-text="Screenshot of Client Id and Client Secret Section." lightbox="media/bamboohr-connector/bamboohr-client-id-and-secret.png":::
 
 ## Get started
 
 [Add BambooHR Microsoft 365 Copilot connector.](https://admin.microsoft.com/adminportal/home?#/MicrosoftSearch/Connectors/add)
-![Screenshot of Adding BambooHR Microsoft 365 Copilot connector from the Catalogue.](media/bamboohr-connector/bamboohr-add-connector.png)
+
+:::image type="content" source="media/bamboohr-connector/bamboohr-add-connector.png" alt-text="Screenshot of Adding BambooHR Microsoft 365 Copilot connector from the Catalogue." lightbox="media/bamboohr-connector/bamboohr-add-connector.png":::
 
 ### 1. Choose a display name
 
