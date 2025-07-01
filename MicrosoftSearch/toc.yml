@@ -139,7 +139,7 @@ items:
             href: MSSQL-connector.md
           - name: Troubleshooting
             href: troubleshoot-mssql-connector.md
-        - name: BambooHR
+        - name: BambooHR (preview)
           items:
           - name: Setup
             href: bamboohr-connector.md    
