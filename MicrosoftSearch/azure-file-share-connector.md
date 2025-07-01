@@ -51,6 +51,9 @@ Use the same credentials for:
 - Running the Graph Connector Agent.
 - Configuring the connector in the Microsoft 365 Admin Center.
 
+ > [!NOTE]
+ > Please make sure the user has access to all the files and directories under the source folder paths
+
 ##Get started
 
 ### Choose a display name
