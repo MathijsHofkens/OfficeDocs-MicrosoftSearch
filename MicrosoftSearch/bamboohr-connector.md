@@ -28,7 +28,7 @@ This guide is for Microsoft 365 administrators or anyone responsible for configu
 - Enable your end users to ask questions related to BambooHR profiles. 
 - Use [Semantic search](semantic-index-for-copilot.md) in Copilot to enable users to find relevant profiles based on keywords, personal preferences, and social connections. 
 
-For more information, see [Microsoft 365 Copilot connector for people data](https://learn.microsoft.com/graph/peopleconnectors).
+For more information, see [Microsoft 365 Copilot connector for people data](/graph/peopleconnectors).
 
 ## Limitations
 
@@ -89,7 +89,7 @@ For other settings, like access permissions, data inclusion rules, schema, crawl
 |Sync | Incremental crawl | Frequency: every 15 minutes.|
 |Sync | Full crawl | Frequency: every day.|
 
-| Schema property |Description | [Property in Microsoft 365 User Profile Schema](https://learn.microsoft.com/graph/api/resources/profile) |
+| Schema property |Description | [Property in Microsoft 365 user profile schema](/graph/api/resources/profile) |
 | :--- | :--- | :--- |
 | First name | Employee's first Name | names->first |
 | Last name | Employee's last Name | names->last |
