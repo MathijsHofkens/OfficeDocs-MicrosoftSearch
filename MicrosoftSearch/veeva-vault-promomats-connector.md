@@ -188,6 +188,33 @@ You can modify the frequency of full crawls to fit your organization's requireme
 - Incremental crawl - 15 minutes.
 - Full crawl - daily.
 
+### Content 
+
+#### Manage properties
+You can view properties crawled from your Veeva PromoMats.
+
+| Default property         | Label                | Description                                                                                                     | Schema                      |
+|--------------------------|----------------------|-----------------------------------------------------------------------------------------------------------------|-----------------------------|
+| Name                     | fileName             | The name of the document as recorded in the Veeva Vault system.                                                 | Search, Query, Retrieve.    |
+| Status                   |                      | The current status of the document (e.g., draft, review, approved).                                              | Search, Query, Retrieve.    |
+| Document No.             |                      | A unique identifier for the document.                                                                           | Search, Query, Retrieve.    |
+| Version number           |                      | The version identifier combining major and minor version numbers.                                               | Search, Query, Retrieve.    |
+| Doc Type                 |                      | Specifies the document type (e.g., SOP, training material).                                                      | Search, Query, Retrieve.    |
+| Doc Subtype              |                      | A further classification within the document type.                                                              | Search, Query, Retrieve.    |
+| Product ID               |                      | The identifier of the product associated with the document.                                                     | Search, Query, Retrieve.    |
+| Product Name             |                      | The name of the product related to the document, derived from product metadata.                                   | Search, Query, Retrieve.    |
+| Country ID               |                      | The identifier of the country associated with the document.                                                      | Search, Query, Retrieve.    |
+| Country Name             |                      | The name of the country related to the document, derived from country metadata.                                   | Search, Query, Retrieve.    |
+| Doc Format               |                      | The format of the document (e.g., PDF, Word).                                                                    | Search, Query, Retrieve.    |
+| CreationTime             | createdDateTime      | The date and time when the document was created.                                                                 | Search, Query, Retrieve.    |
+| Last-Modified            | lastModifiedDateTime | The date and time when the document was last modified.                                                           | Search, Query, Retrieve.    |
+| CreatedBy ID             |                      | The identifier of the user who created the document.                                                             | Search, Query, Retrieve.    |
+| CreatedBy Name           | createdBy            | The full name of the user who created the document, derived from user metadata.                                   | Search, Query, Retrieve.    |
+| LastModifiedBy           |                      | The identifier of the user who last modified the document.                                                       | Search, Query, Retrieve.    |
+| LastModifiedBy Name      | lastModifiedBy       | The full name of the user who last modified the document, derived from user metadata.                            | Search, Query, Retrieve.    |
+| Lifecycle                |                      | The lifecycle stage of the document (e.g., draft, review, final approval).                                      | Search, Query, Retrieve.    |
+
+
 ## Troubleshooting
 
 For information about troubleshooting, see [Troubleshooting the Veeva Vault Copilot connector](troubleshoot-veeva-vault-connectors.md).
