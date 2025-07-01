@@ -1,5 +1,5 @@
 ---
-title: "BambooHR Microsoft 365 Copilot connector"
+title: "BambooHR Microsoft 365 Copilot connector (preview)"
 ms.author: zmwangi
 author: zarrko
 manager: helgesol
@@ -16,13 +16,13 @@ description: "Set up the BambooHR Microsoft 365 Copilot connector."
 ms.date: 04/07/2025
 ---
 
-# BambooHR Microsoft 365 Copilot connector
+# BambooHR Microsoft 365 Copilot connector (preview)
 
 The [Microsoft 365 Copilot connector for people data](/graph/peopleconnectors) allows organizations to index data from third-party systems into Microsoft 365. BambooHR is one of these third-party systems. 
 
 The BambooHR Microsoft 365 Copilot connector allows organizations to index profiles from BambooHR into Microsoft Graph, making them accessible across Microsoft 365 experiences, including Microsoft 365 Copilot. 
 
-This guide is for Microsoft 365 administrators or anyone responsible for configuring, managing, and monitoring the BambooHR  Copilot connector. 
+This guide is for Microsoft 365 administrators or anyone responsible for configuring, managing, and monitoring the BambooHR Copilot connector. 
 
 ## Capabilities
 
@@ -104,7 +104,7 @@ For other settings, like access permissions, data inclusion rules, schema, crawl
 | Job information department | Employee's job department, for example, human resources | positions->detail->company->department |
 | Job information division | Employee's job division, for example, North America | position->detail->company->division |
 | Employee number | Employee's number | position->detail->employeeId |
-| Employee Eeid | Employee's ID in BambooHR | webAccounts->userId<br><br>*Note: The employee's eeid is also utilized internally to periodically check for any updates for a given Employee in BambooHR.* |
+| Employee Eeid | Employee's ID in BambooHR | webAccounts->userId<br><br>*Note: The employee's eeid is also utilized internally to periodically check for any updates for a given Employee in BambooHR*. |
 | Employment status | Employee's Status, for example, full-time, contractor, Etc. | position->detail->employeeType |
 | Original hire date time | Employee's data of hire | anniversaries->date[type='originalHireDate'] |
 | Hire date time | Employee's data of hire <br><br> _Note: When Original hire date time is null, we index the Hire Date Time_ | anniversaries->date[type='originalHireDate'] |
