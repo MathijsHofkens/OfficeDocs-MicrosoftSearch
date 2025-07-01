@@ -118,7 +118,7 @@ Use the **Client ID** from the newly created application in the Entra admin cent
 
 5. Link user with the security policy.
    1. Go to **Admin** > **Users & Groups**.
-   2. Select a user—ideally the vault owner, but otherwise anyone with permission to run VQL queries, use the RESTful API, export documents to file staging, and download them from staging.
+   2. Select a user—ideally the vault owner, but otherwise anyone with permission to run VQL queries, use the RESTful API, export documents to file staging, and download them from file staging.
    3. Click **Edit**.
    4. In **Details** > **Security Policy**, change the values to the newly created policy.
    5. In **Federated ID**, change it to the upn (User Principal Name) of the Entra ID account used to set up the connector (i.e. the admin account).
