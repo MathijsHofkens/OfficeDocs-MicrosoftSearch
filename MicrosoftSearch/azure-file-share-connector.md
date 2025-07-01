@@ -43,7 +43,7 @@ Ensure the following requirements are met before starting the setup process:
 
 ### Azure File Share Configuration
 - Mount your Azure File Share on a device.
-- Install and register the **Graph Connector Agent (GCA)** on the same device.
+- Install and register the **Graph Connector Agent (GCA)** on the same device. The version must be 3.1.8.0 or later.
 
 ### User Credentials
 Use the same credentials for:
