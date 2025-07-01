@@ -97,7 +97,7 @@ Use the preview results button to verify the sample values of the selected prope
 To add or remove available properties from your WordPress.org data source, assign a schema to the property (define whether a property is searchable, queryable, retrievable, or refinable), and change the semantic label and add an alias to the property. Some properties are selected by default.
 
 |Source property | Label |Description|Schema|
-|:--- | ---- | --- | ---
+|:--- | ---- | --- | ---| 
 |Author | Authors | Name of all the people who participated/collaborated on the item in the data source.  | Search, Query, Retrieve|
 |Categories  |  |  | Query, Retrieve, Refine|
 |Content |  | | Search, Retrieve |
