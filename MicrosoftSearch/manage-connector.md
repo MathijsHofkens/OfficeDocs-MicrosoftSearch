@@ -1,8 +1,8 @@
 ---
-title: "Monitor Microsoft Graph connectors for Microsoft Search"
+title: "Monitor Microsoft 365 Copilot connectors"
 ms.author: danielabo
 author: danielabom
-manager: SteveWilkins1123
+manager: calvind
 audience: Admin
 ms.audience: Admin
 ms.topic: how-to
@@ -13,16 +13,16 @@ search.appverid:
 - MET150
 - MOE150
 description: "Monitor your connection state and index quota utilization."
-ms.date: 10/08/2019
+ms.date: 07/02/2025
 ---
 
 # Monitor your connections
 
-To access and manage your Microsoft Graph connectors, you must be designated as a search administrator for your organization. Contact your administrator to assign you the search administrator role.
+To access and manage your Microsoft 365 Copilot connectors, you must be a search administrator for your organization. Contact your administrator to assign you the search administrator role.
 
 ## Connection operations
 
-In the [Microsoft 365 admin center](https://admin.microsoft.com), go to the [**connectors**](https://admin.microsoft.com/Adminportal/Home#/MicrosoftSearch/Connectors).
+In the [Microsoft 365 admin center](https://admin.microsoft.com), go to [**connectors**](https://admin.microsoft.com/#/copilot/connectors ).
 
 For each connector type, the Microsoft 365 admin center supports the operations shown in the following table.
 

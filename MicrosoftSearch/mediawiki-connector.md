@@ -88,7 +88,7 @@ The MediaWiki Microsoft Graph connector has these limitations in the preview rel
 * Doesn't support Access Control Lists (ACLs). Thus, indexed pages are visible to all users in the organization.
 
 ## Troubleshooting
-After publishing your connection, you can review the status under the **Data sources** tab in the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).
+After publishing your connection, you can review the status in the **Agents and connectors** section of the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).
 
 You can find troubleshooting steps for commonly seen issues [here](troubleshoot-media-wiki-connector.md).
 

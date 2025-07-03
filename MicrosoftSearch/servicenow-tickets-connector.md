@@ -254,5 +254,5 @@ The ServiceNow Tickets Copilot connector has the following limitations in its la
 - *Everyone* feature under the Manage Search permissions step doesn't process any permissions. Don't select this option unless you want to test the connection between selected team members in an isolated environment.
 
 ## Troubleshooting
-After publishing your connection and customizing the results page, you can review the status under **Data Sources** in the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).
+After publishing your connection and customizing the results page, you can review the status in the **Agents and connectors** section of the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).
 You can find troubleshooting steps for commonly seen issues [here](troubleshoot-servicenow-tickets-connector.md).

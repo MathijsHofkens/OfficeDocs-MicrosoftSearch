@@ -108,6 +108,6 @@ To manage schema and assign labels to properties, follow the [general setup inst
 For more information, see [Troubleshooting Guide](troubleshoot-azure-file-share-connector.md).
 
 ## Next Steps
-After publishing your connector, you can review the status under **Data sources** in the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).
+After publishing your connector, you can review the status in the **Agents and connectors** section of the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).
 
 If you have issues or want to provide feedback, see [Microsoft Graph support](https://developer.microsoft.com/graph/support).

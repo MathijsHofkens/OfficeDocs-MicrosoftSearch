@@ -80,10 +80,10 @@ Microsoft-built 365 Copilot connectors provide several benefits, including:
 Microsoft 365 Copilot custom connectors allow you to integrate your own data sources into Microsoft Graph, enabling you to bring external data into Microsoft 365 experiences. It helps in making your data searchable and accessible within your organization. For more information, see [Microsoft 365 Copilot connectors overview](/graph/connecting-external-content-connectors-overview#get-started-with-custom-connectors).
 
 ## 5. How do I build a custom Microsoft 365 Copilot connector?
-To build a custom Microsoft 365 Copilot connector, you can use the Microsoft Graph API. The API provides full control over the connection. **Learn more:** [Build your first custom Microsoft Graph connector](/graph/connecting-external-content-build-quickstart)
+To build a custom Microsoft 365 Copilot connector, you can use the Microsoft Graph API. The API provides full control over the connection. **Learn more:** [Build your first custom Copilot connector](/graph/connecting-external-content-build-quickstart)
 
 ## 6. What are the prerequisites for creating a custom connector?
-To create a custom connector, you need a Microsoft work or school account with the Global administrator role, and access to a Microsoft 365 tenant. If you don't have a Microsoft 365 tenant, you might qualify for one through the [Microsoft 365 Developer Program.](/office/developer-program/microsoft-365-developer-program) **Learn more:** [Build your first custom Microsoft Graph connector](/graph/custom-connector-sdk-sample-create#prerequisites)
+To create a custom connector, you need a Microsoft work or school account with the Global administrator role, and access to a Microsoft 365 tenant. If you don't have a Microsoft 365 tenant, you might qualify for one through the [Microsoft 365 Developer Program.](/office/developer-program/microsoft-365-developer-program) **Learn more:** [Build your first custom Copilot connector](/graph/custom-connector-sdk-sample-create#prerequisites)
 
 ## 7. What is the difference between full crawl and incremental crawl?
 **Full Crawl:** 

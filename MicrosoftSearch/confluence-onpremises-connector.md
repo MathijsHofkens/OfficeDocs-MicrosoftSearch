@@ -105,7 +105,7 @@ To authenticate and synchronize content from Confluence On-prem, choose **one of
 
 Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. For more information, see [Staged rollout for Microsoft 365 Copilot connectors](./staged-rollout-for-graph-connectors.md).
 
-At this point, you are ready to create the connection for Confluence. You can click on the "Create" button and the Microsoft Graph connector starts indexing page from your Confluence account.
+At this point, you're ready to create the connection for Confluence. Choose **Create** and the Copilot connector starts indexing page from your Confluence account.
 
 For other settings, like access permissions, data inclusion rules, schema, and crawl frequency. We set defaults based on what works best with Confluence data. The default values are as follows:
 
@@ -218,7 +218,7 @@ For Microsoft Search, if you need to customize the search results page. To learn
 
 ## Troubleshooting
 
-After publishing your connection, you can review the status under the **Data sources** tab in the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).
+After publishing your connection, you can review the status in the **Agents and connectors** section of the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).
 For more information, see [Troubleshooting the Confluence On-premises Copilot connector](troubleshoot-confluence-onpremises-connector.md).
 
 If you have issues or want to provide feedback, contact [Microsoft Graph | Support](https://developer.microsoft.com/en-us/graph/support).

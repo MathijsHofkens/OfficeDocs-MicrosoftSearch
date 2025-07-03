@@ -159,6 +159,6 @@ Your credential information has expired. Refresh the Miro app and copy the lates
 This is a common credential error. Go back to the Miro App and verify that the scopes in **Permissions** are correctly configured.
 
 ## Next steps
-After you publish your connection, you can review the status under **Data Sources** in the [admin center](https://admin.microsoft.com). For more information, see [Manage your connector](manage-connector.md).
+After you publish your connection, you can review the status in the **Agents and connectors** section of the [admin center](https://admin.microsoft.com). For more information, see [Manage your connector](manage-connector.md).
 
 If you have issues or want to provide feedback, see [Microsoft Graph support](https://developer.microsoft.com/graph/support).
