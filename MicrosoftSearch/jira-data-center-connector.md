@@ -24,7 +24,7 @@ This article is intended for Microsoft 365 administrators who are responsible fo
 
 
 >[!NOTE]
->The Jira Data Center connector is in public preview. If you wish to get access to try it, you need to enable [Targeted Release](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide#set-up-the-release-option-in-the-admin-center) ring for your Admin account.
+>The Jira Data Center connector is in public preview. If you wish to get access to try it, you need to enable [Targeted Release](/microsoft-365/admin/manage/release-options-in-office-365) ring for your Admin account.
 
 ## Capabilities
 
@@ -52,7 +52,7 @@ To index your Jira Data Center content, you must install the **GCA** on a Window
 
 **2. Install Jira Data Center Plugin**
 
-Install the Jira Data Center plugin from [Microsoft Graph Connector for Jira Data Center | Atlassian Marketplace](https://marketplace.atlassian.com/apps/1235599/microsoft-graph-connector-for-jira-data-center?hosting=datacenter&tab=installation) by following the installation step there.  
+Install the Jira Data Center plugin from [Microsoft Graph Connector for Jira Data Center | Atlassian Marketplace](https://marketplace.atlassian.com/apps/1235599/microsoft-graph-connector-for-jira-data-center) by following the installation step there.  
 
 ## Get Started 
 
