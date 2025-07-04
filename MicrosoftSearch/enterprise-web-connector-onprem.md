@@ -132,7 +132,7 @@ The Graph connector agent acts as a bridge between your website instance and the
 If you haven't installed the [Microsoft Graph connector agent](https://www.microsoft.com/download/details.aspx?id=104045) already, you can [download the agent installer](https://www.microsoft.com/download/details.aspx?id=104045) and follow the installation instructions to set it up. Once installed, ensure that the agent is configured correctly to connect your on-premises websites with the connector.
 
 ### Provide authentication type
-The authentication method you choose applies for all websites you have provided to index in a connection. To authenticate and sync content from websites, choose **one of the five** supported methods:<br>
+The authentication method you choose applies for all websites you have provided to index in a connection. To authenticate and sync content from websites, choose **one of the six** supported methods:<br>
 
 a. **None** <br>
     Select this option if your websites are publicly accessible without any authentication requirements. <br>
@@ -230,6 +230,24 @@ The resource ID, client ID, and client secret values depend on how you did the s
     
     Once the permissions are assigned, you need to create a new client secret for this application by going to the Certificates & secrets section.
     Copy the client secret value shown on the page, as it isn't displayed again. Use the application ID from this app as the client ID, the secret from this app as the client secret, and the application ID of the first app as the resource ID.
+
+f. **Microsoft Entra SAML 2.0** <br>
+
+> [!NOTE]
+> This authentication method is in **preview**. Please raise a support ticket to request access to this authentication method.
+
+This authentication method is an implementation of forms-based authentication. This method strictly assumes that the website challenges a user with the microsoft login page, which is `https://login.microsoftonline.com`.
+
+Prerequisites:
+1. Download the [chromium browser](https://playwright.azureedge.net/builds/chromium/1169/chromium-win64.zip).
+2. Extract the files to the path: `C:\Users\<username>\AppData\Local\Microsoft\GraphConnectorAgent\Tools\CustomPlaywright`.
+   Finally, you should have the chrome.exe file in the following path: `C:\Users\<username>\AppData\Local\Microsoft\GraphConnectorAgent\Tools\CustomPlaywright\chromium-1169\chrome-win\chrome.exe`
+3. You may delete the zip file post extraction 
+
+Once you select this authentication method in the admin center, provide the user id and password as you would enter in the Microsoft login screen as a user.
+
+> [!IMPORTANT]
+> This auth method requires MFA to be switched off for the user account.
 
 ### 4. Roll out to limited audience
 Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. To know more about limited rollout, see [staged rollout](staged-rollout-for-graph-connectors.md).
