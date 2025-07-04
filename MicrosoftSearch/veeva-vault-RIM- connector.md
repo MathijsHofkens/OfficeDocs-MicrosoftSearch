@@ -1,6 +1,6 @@
 --- 
 
-title: "Veeva Vault RIM Microsoft 365 Copilot connector" 
+title: "Veeva Vault RIM Microsoft 365 Copilot connector (preview)"  
 ms.author: anggao
 author: anggao
 manager: jecui
