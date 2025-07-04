@@ -52,7 +52,7 @@ Use the same credentials for:
 - Configuring the connector in the Microsoft 365 Admin Center.
 
  > [!NOTE]
- > Please make sure the user has access to all the files and directories under the source folder paths
+ > Please make sure the user has access to all the files and directories under the source folder paths.
 
 ##Get started
 
