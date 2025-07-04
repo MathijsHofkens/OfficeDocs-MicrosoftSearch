@@ -244,7 +244,7 @@ Prerequisites:
    Finally, you should have the chrome.exe file in the following path: `C:\Users\<username>\AppData\Local\Microsoft\GraphConnectorAgent\Tools\CustomPlaywright\chromium-1169\chrome-win\chrome.exe`
 3. You may delete the zip file post extraction 
 
-Once you select this authentication method in the admin center, provide the user id and password as you would enter in the Microsoft login screen as a user.
+Once you select this authentication method in the admin center, provide the user ID and password as you would enter in the Microsoft login screen as a user.
 
 > [!IMPORTANT]
 > This auth method requires MFA to be switched off for the user account.
