@@ -26,9 +26,9 @@ The following are the key benefits of the Veeva Vault RIM Copilot connector:
 
 - **Enhanced content management and retrieval:** The connector suggests tags to organize and access relevant documents more easily.
 - **AI-assisted content reuse and localization:** Facilitates content adaptation for various markets, saving time while ensuring relevance for different audiences.
-- **Comprehensive document review and summarization:** AI tools help grammar, spelling, semantics, and regulatory compliance, ensuring accuracy and up-to-date regulatory submissions and compliance documents.
+- **Comprehensive document review and summarization:** AI tools help with grammar, spelling, semantics, and regulatory compliance, ensuring accuracy and up-to-date regulatory submissions and compliance documents.
 
-Additionally, the connector boosts productivity by minimizing time spent searching for information across multiple sources. By integrating Microsoft 365 Copilot and Microsoft Search with RIM data, it streamlines content preparation and field use. It also improves efficiency by referencing existing regulatory submissions and compliance documents and content to help generate new materials effectively.
+Additionally, the connector boosts productivity by minimizing time spent searching for information across multiple sources. By integrating Microsoft 365 Copilot and Microsoft Search with RIM data, it streamlines content preparation and field use. It also improves efficiency by referencing existing regulatory submissions and compliance documents, and content to help generate new materials effectively.
 
 This guide is for Microsoft 365 administrators or anyone responsible for configuring, managing, and monitoring the Veeva Vault RIM Copilot connector.
 
@@ -40,7 +40,7 @@ The Veeva Vault RIM Copilot connector enables the following capabilities:
 - Improves the searchability of regulatory submissions and compliance documents by using advanced Microsoft 365 search capabilities.
 - Gains insights and recommendations from indexed data to enhance workflow efficiency, including checking the usage of specific phrases in RIM documents.
 - Indexes RIM content to create a unified search experience across Microsoft 365 environments.
-- Maintains data privacy and compliance by supporting ACL permissions and document-level permissions, simplifying the permission model and reducing the risk of misconfiguration.
+- Maintains data privacy and compliance by supporting ACL permissions and document-level permissions, simplifying the permission model, and reducing the risk of misconfiguration.
 - Uses query string conditions to precisely control the synchronization of articles, ensuring efficient indexing.
 
 ## Prerequisites
@@ -67,12 +67,12 @@ To configure Microsoft Entra ID OAuth 2.0/OpenID Connect for the Veeva Vault Cop
    1. Go to **Admin** > **Settings** > **OAuth 2.0 / OpenID Connect Profiles**.
    2. Fill out the label, name, and description as your preference.
    3. Set **Status** as active.
-   4. In **Authorization Server Provider**, select **Azure AD**.
-   5. Click **Upload AS metadata** and select **Provide Authorization Server Metadata URL**.
+   4. In **Authorization server provider**, select **Azure AD**.
+   5. Click **Upload AS metadata** and select **Provide authorization server metadata URL**.
    6. Use the link below, replace {tenant-id} with your tenant ID, and paste it into the field.
       `https://login.microsoftonline.com/{tenant-id}/v2.0/.well-known/openid-configuration`
    7. Select **Identity is in another claim** and enter the **upn** of the claim.
-   8. In **User ID Type**, select **Federated ID**, and uncheck **Perform Strict Audience Restriction validation**.
+   8. In **User ID Type**, select **Federated ID**, and uncheck **Perform strict audience restriction validation**.
 
    > [!NOTE]
    > Make sure your upn is the same as your federated ID.
@@ -143,12 +143,12 @@ Deploy this connection to a limited group of users to validate indexing and acce
 The following table lists the default settings for the Veeva Vault RIM Copilot connector. To modify these default values, choose **Custom setup** during the configuration.
 
 | Section  | Setting               | Default value |
-|----------|-----------------------|---------------|
-| **Users**   | Access permissions   | Respects Veeva Vault permissions; only viewable documents are accessible. |
-| **Content** | Index metadata       | Indexes key metadata, such as document name, owner, and lifecycle stage. |
-| **Content** | Manage properties    | Enables metadata like title, created by, and last modified by. |
-| **Sync**    | Full crawls          | Every day.|
-| **Sync**  | Full crawl frequency|Every day.|
+|:----------|:-----------------------|:---------------|
+| Users   | Access permissions   | Respects Veeva Vault permissions; only viewable documents are accessible. |
+| Content | Index metadata       | Indexes key metadata, such as document name, owner, and lifecycle stage. |
+| Content | Manage properties    | Enables metadata like title, created by, and last modified by. |
+| Sync    | Full crawls          | Every day.|
+| Sync  | Full crawl frequency|Every day.|
 
 ## Custom setup
 
