@@ -45,8 +45,8 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
    Index knowledge articles available to _Everyone_ | kb_knowledge | For crawling knowledge articles
    Index and support user criteria permissions | kb_uc_can_read_mtom | Who can read this knowledge base
    | | kb_uc_can_contribute_mtom | Who can contribute to this knowledge base
-   | | kb_uc_cannot_read_mtom | Who cannot read this knowledge base
-   | | kb_uc_cannot_contribute_mtom | Who cannot contribute to this knowledge base
+   | | kb_uc_cannot_read_mtom | Who can't read this knowledge base
+   | | kb_uc_cannot_contribute_mtom | Who can't contribute to this knowledge base
    | | sys_user | Read user table
    | | sys_user_has_role | Read role information of users
    | | sys_user_grmember | Read group membership of users
@@ -220,14 +220,14 @@ To authenticate and sync content from ServiceNow, choose **one of three** suppor
    </details>
 
 ### 5. API Namespace (if you are using Advanced flow)
-If you are using the **Advanced** flow, enter the API namespace that you created in your ServiceNow instance. For more details, see [Advanced Flow for Microsoft Graph Connector for ServiceNow Knowledge](/MicrosoftSearch/servicenow-knowledge-advanced-flow).
+If you're using the **Advanced** flow, enter the API namespace that you created in your ServiceNow instance. For more details, see [Advanced Flow for Microsoft Graph Connector for ServiceNow Knowledge](/MicrosoftSearch/servicenow-knowledge-advanced-flow).
 
 
 ### 6. Rollout to a limited audience
 
 Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. To know more about limited rollout, click [here](/MicrosoftSearch/staged-rollout-for-graph-connectors).
 
-At this point, you are ready to create the connection for ServiceNow Knowledge. You can select the **Create** button and the ServiceNow Knowledge Copilot connector starts indexing articles from your ServiceNow account.
+At this point, you're ready to create the connection for ServiceNow Knowledge. You can select the **Create** button and the ServiceNow Knowledge Copilot connector starts indexing articles from your ServiceNow account.
 
 For other settings, like Access permissions, Data inclusion rules, Schema, and Crawl frequency, we have set defaults based on what works best with ServiceNow data. You can see the default values below:
 
@@ -277,7 +277,7 @@ If a knowledge article isn't enabled with a user criterion, it appears in the re
 
 **Mapping identities**
 
-The default method for mapping your data source identities with Microsoft Entra ID is by checking whether the email ID of ServiceNow users is the same as the UserPrincipalName (UPN), or Mail of the users in Microsoft Entra ID. If you believe the default mapping would not work for your organization, you can provide a custom mapping formula. To know more about, mapping Non-EntraID identities, click [here](/MicrosoftSearch/map-non-aad).
+The default method for mapping your data source identities with Microsoft Entra ID is by checking whether the email ID of ServiceNow users is the same as the UserPrincipalName (UPN), or Mail of the users in Microsoft Entra ID. If you believe the default mapping wouldn't work for your organization, you can provide a custom mapping formula. To know more about, mapping Non-EntraID identities, click [here](/MicrosoftSearch/map-non-aad).
 
 ### Content
 
