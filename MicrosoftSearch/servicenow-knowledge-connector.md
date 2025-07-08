@@ -32,8 +32,9 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 - Support for [Advanced user criteria permissions](https://docs.servicenow.com/bundle/xanadu-servicenow-platform/page/product/knowledge-management/task/create-user-criteria-record-in-knowledge-management.html).
 
 ## Limitations
-- If both Knowledge base and Knowledge article level permissions are defined, then only article-level permissions are honored.
-- Does not index attachments.
+- If both Knowledge base and Knowledge article level permissions are defined, then only article-level permissions are honored. Knowledge base level permissions are not considered & hence does not apply to the artciles
+- Does not index attachments & comments.
+- Does not support reading contents from out of the box or custom knowledge article templates like FAQs, How to, What Is or KCS article templates.
 
 ## Prerequisites
 - **ServiceNow Instance URL**: To connect to your ServiceNow data, you need your organization's ServiceNow instance URL. Your organization's ServiceNow instance URL typically looks like `https://your-organization-name.service-now.com`. (Don’t have one? [Check how to create a test instance](https://www.youtube.com/watch?v=OTdzVLqpFHY))
@@ -58,6 +59,7 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
    | | core_company | Read company attributes
    Index extended table properties (optional) | sys_db_object | Read extended table details
    | | sys_dictionary | Read extended table properties
+   | | sys_properties | Read properties to evaluate permissions
 
    You can **create and assign a role** for the service account you use to connect with Microsoft Search. [Learn how to assign role for ServiceNow accounts](https://docs.servicenow.com/bundle/xanadu-platform-administration/page/administer/users-and-groups/task/t_AssignARoleToAUser.html). Read access to the tables can be assigned on the created role. To learn about setting read access to table records, see [Securing Table Records](https://developer.servicenow.com/dev.do#!/learn/learning-plans/xanadu/new_to_servicenow/app_store_learnv2_securingapps_xanadu_creating_and_editing_access_controls). 
 
