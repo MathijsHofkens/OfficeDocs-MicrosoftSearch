@@ -32,9 +32,9 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 - Support for [Advanced user criteria permissions](https://docs.servicenow.com/bundle/xanadu-servicenow-platform/page/product/knowledge-management/task/create-user-criteria-record-in-knowledge-management.html).
 
 ## Limitations
-- If both Knowledge base and Knowledge article level permissions are defined, then only article-level permissions are honored. Knowledge base level permissions are not considered & hence does not apply to the artciles
-- Does not index attachments & comments.
-- Does not support reading contents from out of the box or custom knowledge article templates like FAQs, How to, What Is or KCS article templates.
+- If both knowledge base and knowledge article-level permissions are defined, only the article-level permissions are honored. Knowledge base-level permissions are disregarded and therefore don't apply to the articles.
+- Doesn't index attachments & comments.
+- Doesn't support reading content from out-of-the-box or custom knowledge article templates, such as FAQs, How-to, What Is, or KCS article templates.
 
 ## Prerequisites
 - **ServiceNow Instance URL**: To connect to your ServiceNow data, you need your organization's ServiceNow instance URL. Your organization's ServiceNow instance URL typically looks like `https://your-organization-name.service-now.com`. (Don’t have one? [Check how to create a test instance](https://www.youtube.com/watch?v=OTdzVLqpFHY))
