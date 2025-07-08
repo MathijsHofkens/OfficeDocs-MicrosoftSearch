@@ -3,7 +3,7 @@ title: "Microsoft Search usage report – connection analytics"
 ms.author: efrene
 author: efrene
 manager: scotv
-ms.topic: article
+ms.topic: concept-article
 ms.service: mssearch
 audience: Admin
 ms.audience: Admin
@@ -57,7 +57,7 @@ In the **Filters** menu, use one or more of the following to filter the data in 
 | Filter | Description |
 |:-----|:-----|
 |Date range |The date range for the analytics shown on the page. Available options are Last 28 days and Last 12 months.|
-|Search application  |The search application where the user has performed the queries: SharePoint start page, SharePoint sites, Office (Microsoft 365 app), Bing, or all four applications combined. |
+|Search application  |The search application where the user has performed the queries: SharePoint start page, SharePoint sites, Microsoft 365, Microsoft 365 Copilot, or all applications combined. |
 |Country  |The country of the user performing the query based on their **country** attribute in Microsoft Entra ID. |
 |Occupation    |The occupation of the user performing the query based on their **title** attribute in Microsoft Entra ID.  |
 |Department or division    |The department or division of the user performing the query, based on the **department** attribute of the second top-level user in the management chain of the user performing the search in Microsoft Entra ID. |

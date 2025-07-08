@@ -6,7 +6,7 @@ author: mecampos
 manager: lsheppard
 audience: Admin
 ms.audience: Admin
-ms.topic: article
+ms.topic: concept-article
 ms.service: mssearch
 ms.localizationpriority: medium
 search.appverid:

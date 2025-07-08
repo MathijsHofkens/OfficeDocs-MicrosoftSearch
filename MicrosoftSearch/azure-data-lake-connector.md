@@ -6,7 +6,7 @@ author: mecampos
 manager: umas
 audience: Admin
 ms.audience: Admin
-ms.topic: article
+ms.topic: how-to
 ms.service: mssearch
 ms.localizationpriority: medium
 search.appverid:

@@ -3,7 +3,7 @@ title: "Microsoft Search Usage Report – User analytics"
 ms.author: efrene
 author: efrene
 manager: scotv
-ms.topic: article
+ms.topic: concept-article
 ms.service: mssearch
 audience: Admin
 ms.audience: Admin
@@ -66,7 +66,7 @@ The User analytics details page shows how people in your organization use Micros
 | Filter | Description |
 |:-----|:-----|
 |Date range |The date range for the analytics shown on the page. The available options are Last 28 days, and Last 12 months.|
-|Search application  |The search application where the user performed the queries: Windows Search Work results, Microsoft Search for Bing, Outlook, Teams, OneDrive, Word/Excel/Powerpoint, SharePoint start page, SharePoint sites, Microsoft365.com, Bing, or all applications combined. |
+|Search application  |The search application where the user performed the queries: Windows Search Work results, Outlook, Teams, OneDrive, Word/Excel/Powerpoint, SharePoint start page, SharePoint sites, Microsoft365.com, or all applications combined. |
 |Country  |The country of the user performing query based on their **country** attribute in Microsoft Entra ID. |
 |Occupation    |The occupation of the user performing the query based on their **title** attribute in Microsoft Entra ID.  |
 |Department or division    |The department or division of the user performing the query, based on the **department** attribute of the second top-level user in the management chain of the user performing the search in Microsoft Entra ID. |

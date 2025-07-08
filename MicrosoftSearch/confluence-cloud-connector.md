@@ -6,7 +6,7 @@ author: mansipakhale
 manager: harshkum
 audience: Admin
 ms.audience: Admin
-ms.topic: article
+ms.topic: install-set-up-deploy
 ms.service: mssearch
 ms.localizationpriority: Medium
 search.appverid:
@@ -30,12 +30,10 @@ This article is intended for Microsoft 365 administrators who are responsible fo
 - You must be the admin for your organization's Microsoft 365 tenant and the admin for your organization's Confluence site.
 - Make sure you have authentication credentials with the right access. 
 
-## Limitations
-- Doesn't index attachment files or comments.
-
 >[!IMPORTANT]
 > * In January 2024, Atlassian deprecated a set of Confluence cloud APIs (version 1) and released new APIs (version 2). For more information, see [changelog updates](https://developer.atlassian.com/cloud/confluence/changelog/#CHANGE-864) and [general updates](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fcommunity.developer.atlassian.com%2Ft%2Frfc-19-deprecation-of-confluence-cloud-rest-api-v1-endpoints%2F71752&data=05%7C01%7Cvivg%40microsoft.com%7Cb8d049f07c3544de6b2c08dbe98b2a02%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C638360556187110970%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=DIw8xhEwulo59mAm8T0f0TTKvbtRr4tIMTMpQYgPDDQ%3D&reserved=0). Some of these deprecated v1 APIs are used by the connector for **OAuth connections** only. Hence, after this change, your existing Confluence connections may stop working.
 > * In December 2023, a new set of v2 APIs was released to all customers. After the release, your existing connections needed reauthentication. The new v2 APIs also require some more scopes (as compared to the previous v1 APIs), which need to be provided during re-authentication. New set of scopes required (complete list) – `read:group:confluence`, `read:user:confluence`, `read:content-details:confluence`, `Read:space:confluence`, `Read:permission:confluence`, `read:audit-log:confluence`, `read:content.metadata:confluence` and `read:page:confluence`.
+> * Starting from July 2025, Confluence Cloud connector supports indexing comments and attchement on the pages. To leverage this new capability, your existing connections needed reauthentication and two more scopes ( `read:comment:confluence`, `read:attachment:confluence`) must be added to the OAuth 2 integation app.
 
 ## Get started
 
@@ -76,6 +74,8 @@ The following steps provide guidance on how to register the app:
    | View spaces | `read:space:confluence` | To access space details to support permissions.|
    | View content summaries | `read:content.metadata:confluence` | To access information about the content to support permissions.
    | View content restrictions and space permissions | `read:permission:confluence` | To access content restrictions and space permission details to support permissions.|
+   | View comments | `read:comment:confluence` | View comments on pages or blogposts.|
+   | View and download content attachments | `read:attachment:confluence` | View and download attachments of a page or blogpost that you have access to.|
 6. Click **Save**.
 7. Navigate to `Authorization` from the navigation pane on the left. Add the callback URL, for **Microsoft 365 Enterprise**: `https://gcs.office.com/v1.0/admin/oauth/callback`, for **Microsoft 365 Government**: `https://gcsgcc.office.com/v1.0/admin/oauth/callback` and save the changes.
 8. Navigate to **Settings** from the navigation pane on the left. You get the **Client ID** and **Secret** from this page.
@@ -86,7 +86,7 @@ Complete the connection settings step using the **Client ID** and **Secret**.
 
 Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. To know more about the limited rollout, click [here](./staged-rollout-for-graph-connectors.md).
 
-At this point, you are ready to create the connection for ServiceNow Knowledge. You can click the "Create" button, and the Confluence Cloud Copilot connector starts indexing the page from your Confluence account.
+At this point, you are ready to create the connection for Confluence Knowledge. You can click the "Create" button and the Confluence Cloud Microsoft Graph connector starts indexing page from your Confluence account.
 
 For other settings, like Access Permissions, Data inclusion rules, Schema, Crawl frequency etc., we set defaults based on what works best with Confluence data. The default values are as follows:
 
@@ -100,7 +100,7 @@ For other settings, like Access Permissions, Data inclusion rules, Schema, Crawl
 |Include/Exclude space|_All_|
 |Manage Properties|_To check default properties and their schema, click here_|
 
-|ync|&nbsp;|
+|Sync|&nbsp;|
 |---|---|
 |Incremental Crawl|_Frequency: Every 15 mins_|
 |Full Crawl|_Frequency: Every Day_|

@@ -4,7 +4,7 @@ ms.author: jypal
 author: jypal6
 manager: bstucker
 ms.audience: Admin
-ms.topic: article
+ms.topic: how-to
 ms.service: mssearch
 ms.localizationpriority: medium
 ms.date: 03/15/2022
@@ -21,12 +21,12 @@ Search verticals are tabs on the search result page that show results of a speci
 
 You can manage verticals at two levels:
 
-- **Organization level** – A vertical at the organization level appears on the search results page when users search from their [SharePoint](https://sharepoint.com/) start page, [Microsoft Office](https://office.com), and Microsoft Search in [Bing](https://bing.com).
+- **Organization level** – A vertical at the organization level appears on the search results page when users search from their [SharePoint](https://sharepoint.com/) start page, and [Microsoft Office](https://office.com).
 - **Site level** – A vertical at the site level appears on the search results page when users search on a SharePoint site. For example, you might want to enable your customer service employees to search for Severity 1 incidents directly from their department’s SharePoint site.
 
 ## Default verticals
 
-Default verticals are present at the organization level in experiences like [SharePoint](https://sharepoint.com/), [Microsoft Office](https://office.com/), and Microsoft Search in [Bing](https://bing.com/) or at the SharePoint site level in each site's search result page. 
+Default verticals are present at the organization level in experiences like [SharePoint](https://sharepoint.com/), [Microsoft Office](https://office.com/), or at the SharePoint site level in each site's search result page.
 
 Here's a summary of customization capabilities on out-of-the-box verticals.
 
@@ -60,7 +60,7 @@ The vertical management experience is wizard-driven, you're guided through steps
 
 ## View the vertical in the search result page
 
-A [search result layout](manage-result-types.md) is needed for Microsoft Graph connector results to render on the search vertical page. To ensure that the appropriate result layout is present, you can enable the search vertical. After you enable or update a vertical, there's a delay of a few hours before you can view the changes on the search page. You can append cacheClear=true to the URL in SharePoint and Office to view the changes. In Bing, append &features=uncachedVerticals to the work vertical URL to view the changes. Both changes may take up to 30 minutes to appear.
+A [search result layout](manage-result-types.md) is needed for Microsoft Graph connector results to render on the search vertical page. To ensure that the appropriate result layout is present, you can enable the search vertical. After you enable or update a vertical, there's a delay of a few hours before you can view the changes on the search page. You can append cacheClear=true to the URL in SharePoint and Office to view the changes. The change may take up to 30 minutes to appear.
 
 > [!NOTE]
 > Added verticals aren't visible on [SharePoint](https://sharepoint.com/) and [Office](https://office.com) when viewed from mobile web browsers.
@@ -179,7 +179,6 @@ Here are more examples of query string expansion.
 - Adding query isn't supported on the People vertical. 
 - Vertical modification and new verticals aren't visible to guest users in an organization. 
 - Vertical re-ordering isn't supported.
-- Vertical renaming for All tab isn't supported in Microsoft Search in Bing.
 - Query string variables can only be used in SharePoint sites.
 
 ## Troubleshooting
