@@ -21,7 +21,7 @@ The GitHub Server Pull Requests Microsoft 365 Copilot connector allows your orga
 This article is intended for Microsoft 365 administrators or anyone who configures, runs, or monitors GitHub Server Pull Requests Copilot connector.
 
 ## Capabilities
-- Index GitHub pull requests.
+- Index GitHub pull requests from all public repositories and the internal repositories within organizations where the corresponding GitHub App is installed.
 - Enable Microsoft Search and Microsoft 365 Copilot to retrieve GitHub data efficiently.
 - Maintain GitHub ACLs and user permissions.
 - Allow administrators to customize crawl frequency and indexing preferences.
