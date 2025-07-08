@@ -21,7 +21,7 @@ The GitHub Server Issues Microsoft 365 Copilot connector allows your organizatio
 This article is intended for Microsoft 365 administrators or anyone who configures, runs, or monitors GitHub Server Issues Copilot connector.
 
 ## Capabilities
-- Index GitHub issues.
+- Index GitHub issues from all public repositories and the internal repositories within organizations where the corresponding GitHub App is installed.
 - Enable Microsoft Search and Microsoft 365 Copilot to retrieve GitHub data efficiently.
 - Maintain GitHub ACLs and user permissions.
 - Allow administrators to customize crawl frequency and indexing preferences.
