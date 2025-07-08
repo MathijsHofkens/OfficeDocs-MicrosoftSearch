@@ -3,7 +3,7 @@ title: "Microsoft Search Usage Report – Queries "
 ms.author: camillepack
 author: camillepack
 manager: scotv
-ms.topic: article
+ms.topic: concept-article
 ms.service: mssearch
 audience: Admin
 ms.audience: Admin
@@ -38,6 +38,8 @@ The data on top of the chart displays how often users engage with search results
 - File
 - People
 - External (third-party connectors)
+
+The search application filter is limited to Microsoft365.com, SharePoint start page, and SharePoint sites.
 
 ## Query distribution
 

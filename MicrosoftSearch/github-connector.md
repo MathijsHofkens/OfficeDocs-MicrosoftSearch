@@ -5,7 +5,7 @@ author: vivg
 manager: ereza
 audience: Admin
 ms.audience: Admin 
-ms.topic: article 
+ms.topic: install-set-up-deploy
 ms.service: mssearch 
 ms.localizationpriority: medium 
 search.appverid: 
@@ -22,9 +22,6 @@ The GitHub Cloud Knowledge Microsoft 365 Copilot connector allows you to index c
 
 This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors a GitHub Cloud Knowledge Copilot connector.
 
->[!NOTE]
->The GitHub Cloud Knowledge Copilot connector is in preview. If you wish to get early access to try it, sign up using [this form](https://forms.office.com/r/JniPmK5bzm).
-
 ## Capabilities
 - Index GitHub Cloud repositories and markdown files to make project documentation accessible in Microsoft 365.
 - Enable end users to ask questions in Copilot related to project documentation and technical guides.
@@ -37,7 +34,6 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 ## Limitations
 - Only repository metadata and markdown files are indexed. Other GitHub entities such as issues, pull requests, and comments aren't indexed.
 - Only markdown files up to 1 MB in size are supported. Larger files aren't indexed.
-- The GitHub Cloud Knowledge Copilot connector does not support access to internal repositories in GitHub.
 
 ## Prerequisites
 - You must be the **search admin** for your organization's Microsoft 365 tenant.
@@ -129,7 +125,6 @@ To ensure correct permission enforcement, map GitHub user identities to Microsof
 
 If direct mapping fails, use regular expressions (regex) to transform the data. For example: [a-zA-Z0-9]+ For personal accounts, mapping accuracy may be impacted due to variations in email domains and individual email visibility settings.
 
-The GitHub Cloud Knowledge Copilot connector supports search permissions visible to **Everyone** with access to this data source. For Everyone, indexed data appears in the search results for all users.
 For identity transformation, refer to the [Map your non-Azure AD Identities](map-non-aad.md).
 
 For more information about identity transformation, see [Map your non-Azure AD Identities](map-non-aad.md).

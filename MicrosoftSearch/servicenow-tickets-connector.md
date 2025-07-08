@@ -6,7 +6,7 @@ author: TheKarthikeyan
 manager: harshkum
 audience: Admin
 ms.audience: Admin
-ms.topic: article
+ms.topic: install-set-up-deploy
 ms.service: mssearch
 ms.localizationpriority: medium
 search.appverid:

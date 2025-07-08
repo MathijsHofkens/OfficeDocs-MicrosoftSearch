@@ -6,7 +6,7 @@ author: dennypanggh
 manager: jecui
 audience: Admin
 ms.audience: Admin 
-ms.topic: article 
+ms.topic: install-set-up-deploy
 ms.service: mssearch 
 ms.localizationpriority: Medium 
 search.appverid: 
@@ -131,5 +131,7 @@ You can change the default values of the refresh interval from here if you want 
 
 ## Troubleshooting
 After publishing your connection, you can review the status under the **Data Sources** tab in the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).
+
+For more information about index browser search, see [How to get Smartsheet | Smartsheet Learning Center](https://help.smartsheet.com/articles/2482711-get-smartsheet-ids). 
 
 If you have issues or want to provide feedback, contact [Microsoft Graph | Support](https://developer.microsoft.com/en-us/graph/support).

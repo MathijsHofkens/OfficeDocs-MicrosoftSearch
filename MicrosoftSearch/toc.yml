@@ -101,6 +101,10 @@ items:
           items:
           - name: Setup
             href: aha-cloud-connector.md
+        - name: Amazon S3
+          items:
+          - name: Setup
+            href: amazon-s3-graph-connector.md
         - name: Asana
           items:
           - name: Setup
@@ -135,6 +139,10 @@ items:
             href: MSSQL-connector.md
           - name: Troubleshooting
             href: troubleshoot-mssql-connector.md
+        - name: BambooHR (preview)
+          items:
+          - name: Setup
+            href: bamboohr-connector.md    
         - name: Bitbucket
           items:
           - name: Setup
@@ -221,6 +229,10 @@ items:
             href: gitlab-connector.md 
           - name: Troubleshooting
             href: troubleshoot-gitlab-connector.md
+        - name: Gong (preview)
+          items:
+          - name: Setup
+            href: gong-connector.md
         - name: Google Drive
           items:
           - name: Setup

@@ -6,7 +6,7 @@ author: danielabom
 manager: SteveWilkins1123
 audience: Admin
 ms.audience: Admin
-ms.topic: article
+ms.topic: install-set-up-deploy
 ms.service: mssearch
 ms.localizationpriority: medium
 description: "Set up the Azure SQL and Microsoft SQL Server Microsoft 365 Copilot connectors."

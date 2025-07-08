@@ -4,7 +4,7 @@ ms.author: misvenso
 author: revathi-b
 manager: wobba
 ms.audience: Admin
-ms.topic: article
+ms.topic: concept-article
 ms.service: mssearch
 ms.localizationpriority: medium
 ms.date: 11/22/2021
@@ -27,7 +27,7 @@ There are three types of filters available on the search page.
 
 ## Out-of-the-box filters
 
-Out-of-the-box filters are available by default in search verticals such as All, Files, Images, and News. On the ‘All' and ‘File' verticals, you can see the "File type" filter on the FileType property and the "Last modified" filter on the LastModifiedTime property. These filters are available in SharePoint Home, Office.com, SharePoint Sites, and Work vertical in Bing.
+Out-of-the-box filters are available by default in search verticals such as All, Files, Images, and News. On the ‘All' and ‘File' verticals, you can see the "File type" filter on the FileType property and the "Last modified" filter on the LastModifiedTime property. These filters are available in SharePoint Home, the Microsoft 365 app, and SharePoint Sites.
 
 ## Content source filters 
 

@@ -7,17 +7,52 @@
         },
         {
             "source_path": "MicrosoftSearch/add-a-location.md",
-            "redirect_url": "/MicrosoftSearch/manage-locations",
-            "redirect_document_id": true
+            "redirect_url": "/MicrosoftSearch/retirement-microsoft-search-bing",
+            "redirect_document_id": false
         },
         {
             "source_path": "MicrosoftSearch/bulk-create-locations.md",
-            "redirect_url": "/MicrosoftSearch/manage-locations",
+            "redirect_url": "/MicrosoftSearch/retirement-microsoft-search-bing",
             "redirect_document_id": false
         },
         {
             "source_path": "MicrosoftSearch/locations.md",
-            "redirect_url": "/MicrosoftSearch/manage-locations",
+            "redirect_url": "/MicrosoftSearch/retirement-microsoft-search-bing",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "MicrosoftSearch/manage-locations.md",
+            "redirect_url": "/MicrosoftSearch/retirement-microsoft-search-bing",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "MicrosoftSearch/manage-floorplans.md",
+            "redirect_url": "/MicrosoftSearch/retirement-microsoft-search-bing",
+            "redirect_document_id": false
+        },
+                {
+            "source_path": "MicrosoftSearch/bulk-create-qas.md",
+            "redirect_url": "/MicrosoftSearch/retirement-microsoft-search-bing",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "MicrosoftSearch/create-and-manage-qas.md",
+            "redirect_url": "/MicrosoftSearch/retirement-microsoft-search-bing",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "MicrosoftSearch/create-qas.md",
+            "redirect_url": "/MicrosoftSearch/retirement-microsoft-search-bing",
+            "redirect_document_id": false
+        },    
+        {
+            "source_path": "MicrosoftSearch/manage-qas.md",
+            "redirect_url": "/MicrosoftSearch/retirement-microsoft-search-bing",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "MicrosoftSearch/manage-search-apps.md",
+            "redirect_url": "/MicrosoftSearch/overview-microsoft-search",
             "redirect_document_id": false
         },
         {
@@ -173,21 +208,6 @@
         {
             "source_path": "MicrosoftSearch/integrate-powerapps.md",
             "redirect_url": "/MicrosoftSearch/manage-bookmarks",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "MicrosoftSearch/bulk-create-qas.md",
-            "redirect_url": "/MicrosoftSearch/manage-qas",
-            "redirect_document_id": true
-        },
-        {
-            "source_path": "MicrosoftSearch/create-and-manage-qas.md",
-            "redirect_url": "/MicrosoftSearch/manage-qas",
-            "redirect_document_id": false
-        },
-        {
-            "source_path": "MicrosoftSearch/create-qas.md",
-            "redirect_url": "/MicrosoftSearch/manage-qas",
             "redirect_document_id": false
         },
         {

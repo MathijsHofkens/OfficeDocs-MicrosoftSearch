@@ -6,7 +6,7 @@ author: gladysa
 manager: brian.jackett 
 audience: Admin 
 ms.audience: Admin 
-ms.topic: article 
+ms.topic: troubleshooting-general
 ms.service: mssearch 
 ms.localizationpriority: medium 
 description: "Troubleshoot issues with the Salesforce Microsoft 365 Copilot connector" 

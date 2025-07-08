@@ -11,24 +11,30 @@ description: "Learn how to use the crossover browser extension for Microsoft 365
 ---
 # The Microsoft 365 Copilot extension for Copilot connectors
 
+
+> [!IMPORTANT]
+> - This documentation is for preview customers only and is subject to change. Features described here may not be available in all regions and are not intended for production use.
+> - The extension exclusively operates with Microsoft 365 Copilot connectors that your organization’s administrator has approved and enabled, and it only recognizes and uses data from apps once those connections are in place.
+
 The Microsoft 365 Copilot extension is a browser add-on designed to enhance your Microsoft 365 Copilot search experience. It works by delivering personalized, highly relevant Copilot results from your work-related applications, directly within Microsoft 365 Copilot. 
 
-This extension bridges the gap between Microsoft 365 and the non-Microsoft applications you use at work, bringing their data into your Copilot experience. 
-
-> [!Important]
-> The extension exclusively operates with Microsoft 365 Copilot connectors that your organization’s administrator has approved and enabled, and it only recognizes and uses data from apps once those connections are in place.
+This extension enables Copilot Search to enhance the relevance of third-party content, applications, and connectors, bridging the gap between Microsoft 365 and the non-Microsoft applications you use at work.
 
 ## Smart results from across your work tools 
 The Microsoft 365 Copilot extension brings together tickets, files, documents, and tasks from multiple applications, empowering you to resolve issues, collaborate with teammates, and move projects forward, from Microsoft 365 Copilot. With every search, you’re equipped to make faster decisions, complete tasks efficiently, and drive productivity throughout your day. 
 
+The Microsoft 365 Copilot extension makes your Copilot search results more personal. It ensures that the things you have spent time on are prioritized for you. To illustrate this, imagine two employees searching for the same thing, "Q3 plan". Without the extension, they both get a list of relevant documents matching "Q3 plan," primarily from Microsoft 365 applications. 
+
+With the extension, one employee might see the Confluence page they just read about Q3 marketing plans at the top. In contrast, another employee might see a different result, perhaps a Google Drive doc they opened recently, at the top. Each user receives a result tailored to their specific task, bridging the gap between Microsoft 365 and third-party apps used at work.
+
 ## Getting started with the Microsoft 365 Copilot extension 
-To experience the benefits of the extension and related features, install the Microsoft 365 Copilot extension. You can install it in one of 2 ways: 
+To experience the benefits of the extension and related features, install the Microsoft 365 Copilot extension. You can install it in 1 of 2 ways: 
 
-1. Install the extension on your browser from the [Microsoft Edge add-ons](https://microsoftedge.microsoft.com/addons/) website or the [Chrome web store](https://chrome.google.com/webstore). 
+1. Install the extension on your browser from the [Microsoft Edge add-ons](https://microsoftedge.microsoft.com/addons/detail/m365-search-relevance-ext/danmflhegmadnfikaeoakocddjockglk) website. 
 
-2. Your tenant admins can install and manage the extension for your organization from the [Microsoft Edge add-ons](https://microsoftedge.microsoft.com/addons/) website. For more information, see [Microsoft Edge extensions](/deployedge/microsoft-edge-manage-extensions) 
+2. Your tenant admins can install and manage the extension for your organization from the [Microsoft Edge add-ons](https://microsoftedge.microsoft.com/addons/detail/m365-search-relevance-ext/danmflhegmadnfikaeoakocddjockglk/) website. For more information, see [Microsoft Edge extensions](/deployedge/microsoft-edge-manage-extensions).
 
-Once installed, the extension runs automatically in the background—no extra steps or new apps required. You can simply keep browsing as you normally would.
+Once installed, the extension runs automatically in the background—no extra steps or new apps required. You can keep browsing as you normally would.
 
 ### Accessing the extension
 1. Type edge://extensions directly into the address bar. The Microsoft 365 Copilot extension appears in a card-like format with a description, its permissions, and access information.  

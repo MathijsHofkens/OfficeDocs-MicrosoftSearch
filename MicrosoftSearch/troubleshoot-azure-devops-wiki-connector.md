@@ -5,7 +5,7 @@ author: vivg
 manager: harshkum
 audience: Admin
 ms.audience: Admin
-ms.topic: article
+ms.topic: troubleshooting-general
 ms.service: mssearch
 ms.localizationpriority: Medium
 search.appverid:
