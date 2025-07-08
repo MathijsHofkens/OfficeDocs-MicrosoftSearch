@@ -41,9 +41,9 @@ This article is intended for Microsoft 365 administrators or anyone who configur
 5. For enterprise-managed users who authenticate via Single Sign-On (SSO), the account must be signed in before performing any actions, as the GitHub authentication flow does not currently support SSO login.
 
 ### Set Up a GitHub App for authentication 
-Follow the steps below to create a GitHub App for use with your Graph Connector:
+Follow the steps below to create a GitHub App for use with your Copilot Connector:
 
-1. In GitHub, click your profile photo (top right), select **Your organizations**, and choose the organization where the Graph Connector should pull data from.
+1. In GitHub, click your profile photo (top right), select **Your organizations**, and choose the organization where the Copilot Connector should pull data from.
 
    :::image type="content" alt-text="Screenshot that shows how to access 'Your organizations'." source="media/github-connector/organizations-nav.png" lightbox="media/github-connector/organizations-nav.png":::
 
