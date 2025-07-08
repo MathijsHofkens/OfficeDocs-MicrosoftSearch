@@ -148,7 +148,7 @@ For customers who need the security settings of their Veeva PromoMats instance t
 Enter the required information for identity mapping. For example, if you want to map identities based on email addresses, you can follow these steps.
 
 1. Select **Mail** as the **Microsoft Entra user property**.
-2. Under **non-Microsoft Entra user property**, select **Add identity property**. Select **Email** as the user identity property and use a expression such as `([^@]+)` to capture a sequence of one or more characters that are not the `@` symbol.
+2. Under **non-Microsoft Entra user property**, select **Add identity property**. Select **Email** as the user identity property and use an expression such as `([^@]+)` to capture a sequence of one or more characters that are not the `@` symbol.
 3. Create a formula to complete the mapping, such as `{0}@<your-domain>`.
 
 This process ensures that user identity mappings are correctly established and security permissions are properly enforced.
