@@ -96,7 +96,7 @@ To configure Microsoft Entra ID OAuth 2.0/OpenID Connect for the Veeva Vault Cop
    8. In **User ID Type**, select **Federated ID**, and uncheck **Perform Strict Audience Restriction validation**.
 
    > [!NOTE]
-   > Make sure your upn is the same as your federated ID.
+   > Make sure your UPN is the same as your federated ID.
 
 2. In the newly created profile page, click **Client Applications** > **Add**. 
 Use the **Client ID** from the newly created application in the Entra admin center for both fields: **Application Client ID** and **Authorization Server Client ID**. For **Application Label**, enter any label as your preference.
