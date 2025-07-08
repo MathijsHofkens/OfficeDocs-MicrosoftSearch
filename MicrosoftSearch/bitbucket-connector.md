@@ -18,7 +18,7 @@ ms.date: 02/14/2025
 
 # Bitbucket Microsoft 365 Copilot connector (preview)
 
-The Bitbucket Microsoft 365 Copilot connector allows your organization to index pull requests and documentation (.txt and .md files) stored in BitBucket. After you configure the connector and index Bitbucket content, users can search and retrieve information via Microsoft Search and Microsoft 365 Copilot.
+The Bitbucket Microsoft 365 Copilot connector allows your organization to index pull requests and documentation (.txt and .md files) stored in Bitbucket. After you configure the connector and index Bitbucket content, users can search and retrieve information via Microsoft Search and Microsoft 365 Copilot.
 
 This article is intended for Microsoft 365 administrators or anyone who configures, runs, or monitors the Bitbucket Copilot connector.
 
@@ -39,8 +39,8 @@ This article is intended for Microsoft 365 administrators or anyone who configur
 1. Your Bitbucket instance is accessible via API.
 2. The user account used for authentication has access to the repositories, pull requests, and knowledge files to be indexed.
 3. Users who access indexed Bitbucket data have corresponding **Microsoft Entra ID** identities for permission mapping.
-4. Set up an OAuth consumer on BitBucket
-    1. Go to your workspace page on BitBucket. 
+4. Set up an OAuth consumer on Bitbucket
+    1. Go to your workspace page on Bitbucket. 
     2. Click the gear icon on the top right corner and select **Workspace settings**. 
     3. On the left navigation, select OAuth Consumers located under the Workflows section. 
     4. Click **Add consumer** and fill out according to the following redirect URLs: 
@@ -63,10 +63,9 @@ Choose a display name that helps users recognize merge requests or documentation
 Enter the URL of your Bitbucket instance (for example, `https://bitbucket.org/testinstance`).
 
 ### Authentication type
-
-- Enter your Client ID using the key from your Bitbucket OAuth consumer, and your Client Secret using the corresponding OAuth consumer secret.
-- Choose **Authorize** to sign in and grant access.
-- Click **Authorize** to sign in and grant the required access permissions.
+1. Enter your Client ID using the key from your Bitbucket OAuth consumer, and your Client Secret using the corresponding OAuth consumer secret.
+2. Choose **Authorize** to sign in and grant access.
+3. Click **Authorize** to sign in and grant the required access permissions.
 
 ### Roll out to limited audience
 Before you deploy the connector, test the connection with a limited user base in Copilot and Microsoft Search.
@@ -101,5 +100,6 @@ You can configure **incremental** and **full** crawls. The following are the def
 
 ## Next steps
 
-- Review the connection status in the Microsoft 365 Admin Center. 
-- If you have issues or need support, see [Microsoft Graph support](https://developer.microsoft.com/en-us/graph/support).
+- Review the connection status in the Microsoft 365 Admin Center.
+  
+If you have issues or want to provide feedback, contact [Microsoft Graph support](https://developer.microsoft.com/en-us/graph/support).
