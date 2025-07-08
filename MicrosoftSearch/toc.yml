@@ -223,6 +223,12 @@ items:
             href: GitHub-cloud-issue-connector.md 
           - name: Setup - GitHub Cloud Pull Requests
             href: GitHub-cloud-pull-request-connector.md 
+          - name: Setup - GitHub Server Knowledge
+            href: GitHub-server-knowledge-connector.md 
+          - name: Setup - GitHub Server Issues
+            href: GitHub-server-issue-connector.md 
+          - name: Setup - GitHub Server Pull Requests
+            href: GitHub-server-pull-request-connector.md 
         - name: GitLab (preview)
           items:
           - name: Setup
