@@ -67,7 +67,7 @@ Custom setup is for admins who want to edit the default values for settings. Onc
 #### Access Permissions
 The Unily Copilot connector supports search permissions visible to **Only people with access to this data source** (default) or **Everyone**.
 
-If you choose **Only people with access to this data source**, indexed data appears in search results only for users who have access to it in Unily. This means that if a user has access to specific content or a page in Unily, they will see it in Copilot. If they do not have access, it will not appear for them in Copilot either.
+If you choose **Only people with access to this data source**, indexed data appears in search results only for users who have access to it in Unily. This means that if a user has access to specific content or a page in Unily, they see it in Copilot. If they don't have access, it doesn't appear for them in Copilot either.
 If you choose **Everyone**, indexed data appears in the search results for all users.
 
 #### Mapping Identities
