@@ -191,26 +191,30 @@ You can modify the frequency of full crawls to fit your organization's requireme
 #### Manage properties
 You can view properties crawled from your Veeva PromoMats.
 
-| Default property         | Label                | Description                                                                                                     | Schema                      |
-|--------------------------|----------------------|-----------------------------------------------------------------------------------------------------------------|-----------------------------|
-| Name                     | fileName             | The name of the document as recorded in the Veeva Vault system.                                                 | Search, Query, Retrieve.    |
-| Status                   |                      | The current status of the document (e.g., draft, review, approved).                                              | Search, Query, Retrieve.    |
-| Document No.             |                      | A unique identifier for the document.                                                                           | Search, Query, Retrieve.    |
-| Version number           |                      | The version identifier combining major and minor version numbers.                                               | Search, Query, Retrieve.    |
-| Doc Type                 |                      | Specifies the document type (e.g., SOP, training material).                                                      | Search, Query, Retrieve.    |
-| Doc Subtype              |                      | A further classification within the document type.                                                              | Search, Query, Retrieve.    |
-| Product ID               |                      | The identifier of the product associated with the document.                                                     | Search, Query, Retrieve.    |
-| Product Name             |                      | The name of the product related to the document, derived from product metadata.                                   | Search, Query, Retrieve.    |
-| Country ID               |                      | The identifier of the country associated with the document.                                                      | Search, Query, Retrieve.    |
-| Country Name             |                      | The name of the country related to the document, derived from country metadata.                                   | Search, Query, Retrieve.    |
-| Doc Format               |                      | The format of the document (e.g., PDF, Word).                                                                    | Search, Query, Retrieve.    |
-| CreationTime             | createdDateTime      | The date and time when the document was created.                                                                 | Search, Query, Retrieve.    |
-| Last-Modified            | lastModifiedDateTime | The date and time when the document was last modified.                                                           | Search, Query, Retrieve.    |
-| CreatedBy ID             |                      | The identifier of the user who created the document.                                                             | Search, Query, Retrieve.    |
-| CreatedBy Name           | createdBy            | The full name of the user who created the document, derived from user metadata.                                   | Search, Query, Retrieve.    |
-| LastModifiedBy           |                      | The identifier of the user who last modified the document.                                                       | Search, Query, Retrieve.    |
-| LastModifiedBy Name      | lastModifiedBy       | The full name of the user who last modified the document, derived from user metadata.                            | Search, Query, Retrieve.    |
-| Lifecycle                |                      | The lifecycle stage of the document (e.g., draft, review, final approval).                                      | Search, Query, Retrieve.    |
+| Properties             | Semantic Label         | Description                                                    | Schema                 |
+|------------------------|------------------------|----------------------------------------------------------------|------------------------|
+| Content                |                        | Main text or body content extracted from the document          | Search                 |
+| Country                |                        | Country or region related to the document                      | Query, Retrieve       |
+| CreatedBy              | CreatedBy              | User who initially created the document                        | Query, Retrieve       |
+| CreatedByByUserId      |                        | Internal user identifier for document creator                  | Query, Retrieve       |
+| DocumentCreationDate   | createdDateTime      | The date and time the document was originally created          | Query, Retrieve       |
+| Extension              |                     | File type extension such as PDF, DOCX, PPTX                    | Query, Retrieve, Search |
+| FileName               | fileName                  | Name or title of the document file                             | Query, Retrieve, Search |
+| Format                 |                        | Document format or content type                                | Query, Retrieve       |
+| Id                     |                        | Unique identifier of the document in the system                | Query, Retrieve       |
+| LastModifiedBy         | lastModifiedBy         | User who last modified the document                            | Query, Retrieve       |
+| LastModifiedByUserId   |                        | Internal user identifier for last modifier                     | Query, Retrieve       |
+| Lifecycle             |                        | Lifecycle status of the document (e.g., Draft, Approved)      | Query, Retrieve       |
+| MajorVersion           |                        | Main version number of the document                            | Query, Retrieve       |
+| MinorVersion           |                        | Minor version or revision number                               | Query, Retrieve       |
+| Product               |                        | Product associated with the document content                   | Query, Retrieve       |
+| Size                  |                        | File size of the document                                      |                        |
+| Status                |                        | Document status (e.g., Active, Archived)                      | Query, Retrieve       |
+| Subtype              |                        | Specific subtype or document classification                    | Query, Retrieve       |
+| Type                  |                        | General type or category of the document                       | Query, Retrieve       |
+| Url                    | url                    | Direct URL to access or preview the document                   | Query, Retrieve       |
+| VersionId            |                        | Unique identifier for a specific document version              | Query, Retrieve       |
+| VersionModifiedDate  | lastModifiedDateTime   | Date and time when this version was last modified              | Query, Retrieve       |
 
 
 ## Troubleshooting
