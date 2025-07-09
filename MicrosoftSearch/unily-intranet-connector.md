@@ -37,7 +37,7 @@ This documentation is for Microsoft 365 administrators or anyone who configures,
 
 ## Prerequisites
 - To create a new connection, you must be the search admin for your organization's Microsoft 365 tenant.
-- To create a new connection, use your organization’s Unily instance URL. Contact Unily directly to obtain the correct URL. This URL is the specific web address used to access and interact with Unily API services for content retrieval, which usually looks like https://[your-organization-name]-api.unily.com
+- To create a new connection, use your organization’s Unily instance URL. Contact Unily directly to obtain the correct URL. This URL is the specific web address used to access and interact with Unily API services for content retrieval, which usually looks like `https://[your-organization-name]-api.unily.com`.
 - To complete the authentication, you need a Client ID and Client Secret. To get your Unily Client ID and Secret, contact Unily directly. A Unily instance may have multiple applications, each with different permissions. Ensure that you obtain the correct credentials for the application to be used for the Copilot connector.
 
 
@@ -81,7 +81,7 @@ If the default mapping doesn't work for your organization (for example, if email
 
 ### Content
 
-#### Manage propertie
+#### Manage properties
 
 Here, you can add or remove available properties from your Unily data source, assign a schema to the property (define whether a property is searchable, queryable, retrievable, or refinable), change the semantic label, and add an alias to the property. Properties that are selected by default are listed below:
 
