@@ -30,8 +30,7 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 - Create workflows using this connection and plugins from Microsoft Copilot Studio.
 
 ## Limitations
-- Folder replies & comments aren't indexable.
-- Currently, only files that are accessible to anyone in Google Drive are indexed and visible to all Microsoft 365 users in your tenant, from Microsoft Search or Microsoft 365 Copilot
+- Folder, replies & comments aren't indexable.
 
 ## Prerequisites
 Before you create a Google Drive Copilot connector, you must:
@@ -188,23 +187,26 @@ To identify which option is suitable for your organization:
 ### Content 
 
 #### Manage properties
-You can add or remove available properties from your PagerDuty Escalation Policy data source. Assign a schema, change the semantic label, and add an alias to the property. Some properties are indexed by default.
+You can add or remove available properties from your Google Drive data source. Assign a schema, change the semantic label, and add an alias to the property. Some properties are indexed by default.
 
-|Default property|Label|Description|Schema|
-|--- | ---- | --- | ---|
-|createdTime | Created date time | The time at which the file was created.  | Search, Query, Retrieve.|
-|description |  | A short description of the file.| 
-|fileExtension | File extension | The final component of fullFileExtension. This parameter is only available for files with binary content in Google Drive.  | Query, Refine, Retrieve.|
-|fileType |  | The type of the file.  | 
-|iconLink | IconUrl | A static, unauthenticated link to the file's icon.  | Retrieve.|
-|lastModifingUser | lastModifiedDateTime | The last user to modify the file. This field is only populated when the last modification was performed by a signed-in user.  | Query, Retrieve, Search.|
-|modifiedTime	| Last modified by | The last time the file was modified by anyone (Request For Comments 3339 date-time).  | Query, Retrieve, Search.|
-|link | url | A link for opening the file in a relevant Google editor or viewer in a browser.  | Retrieve.|
-|name | File Name | The name of the file.  | Query, Retrieve, Search.|
-|owner | Created by | The owner of this file. Only certain legacy files may have more than one owner. This field isn't populated for items in shared drives.  | Search, Query, Retrieve.|
-|parentFolderLink |  |  A link for the parent folder containing the file.  | Retrieve.|
-|parentFolderName |  | The name of the parent folder containing the file.  | Search, Query, Retrieve.|
-|size |  | Size in bytes of blobs and first-party editor files.  | Search, Query, Retrieve.|
+|	Default property	|	Label	|	Description	|	Schema	|
+|	---	|	---	|	---	|	---	|
+|	file.name	|	Title	|	File Name	|	Search, Query, Retrieve	|
+|	file.fileExtension	|	ItemType	|	The type of indexed item	|	Query, Retrieve	|
+|	file.description	|		|	A short description of the file.	|		|
+|	file.fileExtension	|	fileExtension	|	Output only. The final component of fullFileExtension. This is only available for files with binary content in Google Drive.	|	Query, Retrieve	|
+|	file.size	|		|	Output only. Size in bytes of blobs and first party editor files. Won't be populated for files that have no size, like shortcuts and folders.	|		|
+|	file.parents	|	ParentId	|	The ID of the parent folder containing the file.A file can only have one parent folder; specifying multiple parents isn't supported.	|	Query, Retrieve	|
+|	file.owners	|	createdBy	|	Output only. The owner of this file. Only certain legacy files may have more than one owner. This field isn't populated for items in shared drives	|	Search, Query, Retrieve	|
+|	file.owners	|	authors	|		|	Query, Retrieve	|
+|	file.webViewLink	|	url	|	Output only. A link for opening the file in a relevant Google editor or viewer in a browser.	|	Retrieve	|
+|	file.createdTime	|	createdDateTime	|	The time at which the file was created (RFC 3339 date-time).	|	Query, Retrieve	|
+|	file.modifiedTime 	|	lastModifiedDateTime	|	The last time the file was modified by anyone (RFC 3339 date-time).	|	Query, Retrieve	|
+|	file.lastModifyingUser	|	lastModifiedBy	|	Output only. The last user to modify the file. This field is only populated when the last modification was performed by a signed-in user.	|	Search, Query, Retrieve	|
+|	Created from fileExtension	|	iconUrl	|	A static, unauthenticated link to the file's icon.	|	Retrieve	|
+|	folders.name	|	containerName	|	The name of the shared drive that the file belongs to 	|	Query, Retrieve	|
+|	folders.webViewLink	|	containerURL	|	URL to access the  parent folder	|	Query, Retrieve	|
+
 
 
 ### Sync 
