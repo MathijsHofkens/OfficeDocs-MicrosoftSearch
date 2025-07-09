@@ -187,13 +187,9 @@ After publishing your connection, you can review the status under the **Data Sou
 
 ### Finding items in Index Browser
 If you want to investigate a specific Knowledge Article in the Index Browser, you’ll first need its **KnowledgeArticleId** (the master ID that links all versions of the article). Here’s how to get it from Salesforce:
-1. Get the article version Id from the URL: Open the article in Salesforce. Copy the Id from the URL. For example:
-     ```
-     /lightning/r/Knowledge__kav/kav1234567890ABC/view
-     ```
-     Here, `kav1234567890ABC` is the Id.
+1. Get the article version ID from the URL: Open the article in Salesforce. Copy the ID from the URL. For example: `/lightning/r/Knowledge__kav/kav1234567890ABC/view`. Here, `kav1234567890ABC` is the ID.
 2.  Open the [Developer Console](https://help.salesforce.com/s/articleView?id=platform.code_dev_console_opening.htm&type=5)
-3. Run the SOQL Query: Go to the **Query Editor** tab and run the following query (replace with your Id).
+3. Run the SOQL Query: Go to the **Query Editor** tab and run the following query (replace with your ID).
      ```sql
      SELECT Id, KnowledgeArticleId, Title 
      FROM KnowledgeArticleVersion 
