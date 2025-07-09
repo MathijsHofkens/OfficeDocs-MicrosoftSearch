@@ -13,7 +13,7 @@ search.appverid:
 - MET150 
 - MOE150 
 description: "Set up the Unily Microsoft 365 Copilot connector." 
-ms.date: 03/19/2025
+ms.date: 07/06/2025
 ---
 
 # Unily Microsoft 365 Copilot connector (preview)
@@ -37,7 +37,7 @@ This documentation is for Microsoft 365 administrators or anyone who configures,
 
 ## Prerequisites
 - To create a new connection, you must be the search admin for your organization's Microsoft 365 tenant.
-- To create a new connection, use your organization’s Unily instance URL. This URL is the specific web address used to access and interact with Unily API services for content retrieval, which usually looks like https://[your-organization-name].unily.com
+- To create a new connection, use your organization’s Unily instance URL. Contact Unily directly to obtain the correct URL. This URL is the specific web address used to access and interact with Unily API services for content retrieval, which usually looks like https://[your-organization-name]-api.unily.com
 - To complete the authentication, you need a Client ID and Client Secret. To get your Unily Client ID and Secret, contact Unily directly. A Unily instance may have multiple applications, each with different permissions. Ensure that you obtain the correct credentials for the application to be used for the Copilot connector.
 
 
@@ -64,11 +64,20 @@ At this point, you're ready to create the connection for Unily. You can click on
 Custom setup is for admins who want to edit the default values for settings. Once you click on the 'Custom Setup' option, you see three other tabs: Users, Content, and Sync.
 
 ### Users
+#### Access Permissions
+The Unily Copilot connector supports search permissions visible to **Only people with access to this data source** (default) or **Everyone**.
 
-#### Access permissions
+If you choose **Only people with access to this data source**, indexed data appears in search results only for users who have access to it in Unily. This means that if a user has access to specific content or a page in Unily, they will see it in Copilot. If they do not have access, it will not appear for them in Copilot either.
+If you choose **Everyone**, indexed data appears in the search results for all users.
 
-All the data indexed using the Unily Copilot connector is visible to all Microsoft 365 users in your tenant, accessible through Microsoft Copilot or Search.
-The Unily  Copilot connector is currently in preview. Once it becomes generally available, Access Control Lists (ACLs) will be valid. This capability ensures that all user permissions and group access available in Unily are supported through the connector in Microsoft apps like Copilot and Search.
+#### Mapping Identities
+To enforce correct permissions, you need to map user identities from Unily to Microsoft Entra ID (ME-ID). There are two options:
+1. **Microsoft Entra ID (ME-ID) mapping (default):**<br>
+By default, the system attempts to match users by comparing the **user's email in Unily** with either the **UserPrincipalName** (UPN) or **Mail** attribute in Microsoft Entra ID. This method works when the email addresses align between systems.
+2. **Non-Microsoft Entra ID (non ME-ID) mapping (custom):** <br>
+If the default mapping doesn't work for your organization (for example, if email formats differ) you can define a custom mapping formula to link users across systems.
+
+[Click here](map-non-aad.md) to learn more about mapping non-Entra ID identities.
 
 ### Content
 
