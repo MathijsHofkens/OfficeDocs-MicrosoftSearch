@@ -95,7 +95,7 @@ The example demonstrates a selection of five data columns that hold the data for
 Select data columns as shown in this example query: 
  `SELECT orderId, orderTitle, orderDesc, allowedUsers, allowedGroups, deniedUsers, deniedGroups, createdDateTime, isDeleted`
 
-The Oracle SQL Copilot connector don't allow column names with non-alphanumeric characters in the SELECT clause. Remove any non-alphanumeric characters from column names using an alias. Example - SELECT *column_name* AS *columnName*
+The Oracle SQL Copilot connector doesn't allow column names with non-alphanumeric characters in the SELECT clause. Remove any non-alphanumeric characters from column names using an alias. Example - SELECT *column_name* AS *columnName*
 
 To manage access to the search results, you can specify one or more ACL columns in the query. The Oracle SQL Copilot connector allows you to control access at per per-record level. You can choose to have the same access control for all records in a table. If the ACL information is stored in a separate table, you might have to do a join with those tables in your query.
 
