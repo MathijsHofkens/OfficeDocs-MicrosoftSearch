@@ -39,6 +39,9 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 - **Service Account**: To connect to your SQL database and allow the Copilot connector to update records regularly, you need a service account with read permissions granted to the service account.
 
 >[!NOTE]
+> If you have previously installed the GCA, ensure it is updated to version 3.1.3.0 or later.  
+
+>[!NOTE]
 >If you use Windows authentication while configuring the Oracle SQL Copilot connector, the user with which you are trying to sign in needs to have interactive login rights to the machine where the connector agent is installed. For more information, see [login policy management](/windows/security/threat-protection/security-policy-settings/allow-log-on-locally#policy-management).
 
 ## Get Started with Setup
