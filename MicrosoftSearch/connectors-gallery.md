@@ -308,7 +308,7 @@ The following connectors are under IT Service Management Tools (ITSM).
 |ServiceNow Tickets|Microsoft|Allows your organization to index incidents, change requests, and problem statuses from ServiceNow instances for end-user consumption. For more information, see [ServiceNow Tickets Microsoft Graph connector](/MicrosoftSearch/servicenow-tickets-connector).|
 |Veeva Vault|BA Insight|Securely indexes both the full text and metadata of Veeva Vault objects into Microsoft Search. It enables users to retrieve a single result set for content within Veeva Vault and Microsoft 365. For more information, see [Veeva Vault connector](https://www.bainsight.com/connectors/veeva-vault-connector-sharepoint-azure-elasticsearch/).|
 
-## Project management
+<!-- ## Project management
 
 The following connectors are under Project management.
 
@@ -330,6 +330,7 @@ The following connectors are under Support.
 |Connector name|Publisher|Description|
 |:------ |:----------- |:----------- |
 
+-->
 
 ## Other
 
@@ -338,7 +339,6 @@ The following connectors are under other categories.
 |Connector name|Publisher|Description|
 |:------ |:----------- |:----------- |
 |Website Crawler|BA Insight|Resurfaces content from any website in a single consolidated search index, along with content from other repositories. For more information, see [Website Crawler connector](https://www.bainsight.com/connectors/website-connector-for-sharepoint-azure-elasticsearch/).|
-
 
 <!-- ## Learning
 
