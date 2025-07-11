@@ -92,6 +92,9 @@ These are the supported  MIME types.
 - **Website URLs**: To connect to your website content, you need the URL to the website. You can index multiple websites (up to 50) in a single connection. 
 - **Service Account (optional)**: A service account is only needed when your websites require authentication. Public websites don't require authentication and can be crawled directly. For websites requiring authentication, it's advisable to have a dedicated account to authenticate and crawl the content.
 
+>[!NOTE]
+> If you have previously installed the GCA, ensure it is updated to version 3.1.10.0 or later.  
+
 ## Get started
 
 [![Screenshot that shows connection creation screen for the Enterprise Websites on-premises Microsoft 365 Copilot connector.](media/enterprise-web-connector/enterprise-website-onprem-create-page.png)](media/enterprise-web-connector/enterprise-website-onprem-create-page.png#lightbox)
