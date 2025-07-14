@@ -115,7 +115,7 @@ Set up the Graph connector agent in a device with access to your GitHub instance
 Before you deploy the connector, test the connection with a limited user base in Copilot and Microsoft Search.
 
 ## Custom setup
-In custom setup you can edit any of the default values for users, content, and sync.
+In custom setup, you can edit any of the default values for users, content, and sync.
 
 ### Users
 #### Identity mapping
