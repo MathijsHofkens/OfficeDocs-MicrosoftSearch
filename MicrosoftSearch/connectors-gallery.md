@@ -275,7 +275,7 @@ The following connectors are under enterprise resource planning (ERP).
 |Salesforce|BA Insight|Integrates Salesforce’s Service, Sales, and Marketing Cloud with Microsoft Search, making all the content within Salesforce available to all employees through this portal. For more information, see [Salesforce connector](https://www.bainsight.com/connectors/salesforce-connector-sharepoint-azure-elasticsearch/).|
 |Windream ECM-System|Raytion|Secure enterprise search connector for reliably indexing content from Windream ECM-System and intelligently searching it with Microsoft Graph. It robustly indexes files and folders including the comprehensive sets of metadata associated by Windream ECM-System in near real-time. The connector fully supports Windream ECM-System’s permission model and the user and group management in the associated Microsoft Entra ID. For more information, see [Windream ECM-System connector](https://www.servicenow.com/search-result.html?q=connectors&p=1).|
 
-## Files systems
+## File systems
 
 The following connectors are under File Systems.
 
