@@ -29,7 +29,7 @@ The Copilot connectors in this gallery are broken down into the following catego
 - [Databases](#databases)
 - [Developer tools](#developer-tools)
 - [Enterprise resource planning (ERP)](#enterprise-resource-planning-erp)
-- [File systems]
+- [File systems](#file-systems)
 - [Human resources & recruiting](#human-resources--recruiting)
 - [IT service management tools (ITSM)](#it-service-management-tools-itsm)
 - [Project management](#project-management)
