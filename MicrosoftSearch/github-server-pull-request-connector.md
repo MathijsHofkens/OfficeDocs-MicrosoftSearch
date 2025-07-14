@@ -139,7 +139,7 @@ You can configure incremental and full crawls. The following are the default val
   - Incremental crawl runs every 15 minutes by default.
   - Full crawl runs daily to ensure up-to-date indexing.
 
-## Security Consideration
+## Security consideration
 When you install the GitHub Server Connector’s GCA agent on your device, it will perform a git clone of the target repository directly into the content-storage path you specify. Because this path lives on your local system, any other user account or process with read (or higher) permissions to that directory will be able to access the full contents of the cloned repositories, including potentially sensitive source code, configuration files, credentials, or secret data.
 
 **Best Practices**
