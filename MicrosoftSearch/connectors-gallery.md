@@ -17,29 +17,16 @@ ms.date: 10/29/2019
 
 # Microsoft 365 Copilot connectors gallery
 
-The Microsoft 365 Copilot connectors gallery includes a brief description of each of the connectors created by Microsoft and our partners, and a link to each partner's website.
+Microsoft 365 Copilot connectors (formerly Microsoft Graph connectors) allow you to ingest unstructured line-of-business data into your organization's implementation of Microsoft 365 Copilot.
+For more information, see [Microsoft 365 Copilot connectors overview](https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/overview-copilot-connector)
+
+In addition to being able to create custom connectors, there are also a large number of prebuilt connectors available. This article provides a brief description of each of the prebuilt connectors created by Microsoft and our partners, and a link to each partner's website.
 
 With more than 100 connectors currently available, you can connect to popular Microsoft and non-Microsoft services. These connectors include Azure services, Box, Confluence, Google services, MediaWiki, Salesforce, ServiceNow, and many more.
 
-The Copilot connectors in this gallery are broken down into the following categories:
-- [Collaboration & communications](#collaboration--communications)
-- [Content management systems](#content-management-systems)
-- [Customer relationship management](#customer-relationship-management)
-- [Data visualization](#data-visualization)
-- [Databases](#databases)
-- [Developer tools](#developer-tools)
-- [Enterprise resource planning (ERP)](#enterprise-resource-planning-erp)
-- [File systems](#file-systems)
-- [Human resources & recruiting](#human-resources--recruiting)
-- [IT service management tools (ITSM)](#it-service-management-tools-itsm)
-- [Project management](#project-management)
-- [Sales](#sales)
-- [Support](#support)
-- [Other](#other)
-
 ## Collaboration & communications
 
-The following connectors are under collaboration & communications.
+The following table lists the collaboration and communications connectors that are available.
 
 |Connector name|Publisher|Description|
 |:------ |:----------- |:----------- |
@@ -62,9 +49,9 @@ The following connectors are under collaboration & communications.
 |Azure DevOps | Microsoft|Allows your organization to search for, and seamlessly track, work items in your Azure DevOps instance. For more information, see [Azure DevOps Copilot connector](/MicrosoftSearch/azure-devops-connector).|
 |Box|Accenture|Box connector crawls content from a Box repository. The connector retrieves the supported elements using the RESTful API (Content API Basics 2.0 version); for authentication, it uses Box API (that uses OAuth 2). Each file is submitted with its metadata (size, location, last accessed, etc.). Updates are discovered automatically. For more information, contact Accenture.|
 |CB Insights|CB Insights|Integrate CB Insights’ proprietary data and insights directly into Microsoft Copilot to instantly generate unique insights across all Microsoft 365 applications. Access data for public and private companies like funding events, business relationships, predictive outlook, and more. The CBI connector allows you to research, analyze, and share trusted, data-backed insights to bet on the right markets, source the right companies, and stay ahead of competitors. All teams across an organization can benefit from the connector, from sales, to IT, to finance, to help make informed, data-driven decisions. For more information, see [CB Insights connector](https://www.cbinsights.com/copilot-connector/).|
-| Coda enterprise | Microsoft | (Preview) Enables integration with Coda enterprise for improved workflow management and team Collaboration. |
+| Coda enterprise (Preview) | Microsoft | Enables integration with Coda enterprise for improved workflow management and team Collaboration. |
 |Deltek|BA Insight|BA Insight's Deltek Vision connector honors the security of the source system and provides both full and incremental crawls so that users have the latest information available to them all the time. It indexes content from Deltek Vision into Azure, SharePoint Online, or SharePoint 2016/2013, surfacing it through BA Insight’s SmartHub to provide users with integrated search results. For more information, see [Deltek connector](https://www.bainsight.com/connectors/deltek-connector-sharepoint-azure-elasticsearch/).|
-| Egnyte | Microsoft | (Preview) Allows organizations to integrate with Egnyte for seamless workflow automation. |
+| Egnyte (Preview) | Microsoft | Allows organizations to integrate with Egnyte for seamless workflow automation. |
 |Elite/3E|BA Insight|BA Insight’s Elite connector provides a single point of access for lawyers to access firm content and knowledge in line with Elite content using Microsoft Search. For more information, see [Elite/3E connector](https://www.bainsight.com/connectors/elite-connector-sharepoint-azure-elasticsearch/).|
 |Jira Cloud|Microsoft|Allows your organization to index Jira issues and tickets for seamless issue tracking. For more information, see [Atlassian Jira Cloud connector](/MicrosoftSearch/jira-connector).|
 |Symantec Enterprise Vault|Raytion| Secure enterprise search connector for reliably indexing content from Symantec Enterprise Vault and intelligently searching it with Microsoft Graph. It robustly indexes archived data, such as e-mails, attachments, files, calendar items, and contacts from Enterprise Vault in near real-time. The connector fully supports Symantec Enterprise Vault’s authentication models Basic, NTLM, and Kerberos authentication. For more information, see [Symantec Enterprise Vault connector](https://www.servicenow.com/search-result.html?q=connectors&p=1).|
@@ -73,7 +60,7 @@ The following connectors are under collaboration & communications.
 |Facebook Workplace|BA Insight|Organizations that use Workplace by Facebook can now extend the reach of this data into their existing search indexes via the BA Insight Workplace by Facebook connector. For more information, see [Facebook Workplace connector](https://www.bainsight.com/connectors/connector-for-workplace-by-facebook/).|
 |Facebook Workplace|Raytion|Secure enterprise search connector for reliably indexing content from Facebook Workplace and intelligently searching it with Microsoft Graph. It robustly indexes project groups, conversations, and shared documents from Facebook Workplace in near real-time. The connector fully supports Facebook Workplace’s built-in user and group management. For more information, see [Facebook Workplace connector](https://www.raytion.com/connectors/raytion-facebook-workplace-connector).|
 |GitHub Enterprise Cloud|RheinInsights| Reliably indexes all repositories, versioned files, wikis, issues, or discussions from GitHub Enterprise Cloud. Comes with full metadata sets, advanced processing pipelines, and full support for GitHub Enterprise Cloud's permission model. For more information, see [GitHub Enterprise Cloud connector](https://www.rheininsights.com/en/connectors/github-enterprise-cloud.php).|
-| GMail | Microsoft | (Preview) Allows users to access and manage email content for seamless communication and collaboration. | 
+| GMail (Preview) | Microsoft | Allows users to access and manage email content for seamless communication and collaboration. | 
 |Google Drive|BA Insight|The BA Insight Google Drive connector makes it possible to surface content from Google Drive in a single consolidated search index referencing Google Drive content, along with content from other repositories. For more information, see [Google Drive connector](https://www.bainsight.com/connectors/google-drive-connector-sharepoint-azure-elasticsearch/).|
 |Google Drive|Raytion|Secure enterprise search connector for reliably indexing content from Google Drive and intelligently searching it with Microsoft Graph. It robustly indexes files, folders, and comments on personal drives and team drives from Google Drive in near real-time. The connector fully supports Google Drive’s built-in permission model and the user and group management by the Google Admin Directory. For more information, see [Google Drive connector](https://www.raytion.com/connectors/raytion-google-drive-connector).|
 |Google Drive|RheinInsights| Reliably indexes all Google Drive documents from personal and shared drives in your organization. Comes with full metadata sets, advanced processing pipelines, and full support for Google Drive's permission model. For more information, see [Google Drive connector](https://www.rheininsights.com/en/connectors/google-drive.php).|
@@ -98,7 +85,7 @@ The following connectors are under collaboration & communications.
 |Microsoft Exchange Public Folders|BA Insight|Using the BA Insight Microsoft Exchange Public Folders Connector, users can retrieve content from Exchange through various search platforms. For more information, see [Microsoft Exchange Public Folders connector](https://www.bainsight.com/connectors/microsoft-exchange-connector-sharepoint-azure-elasticsearch/).|
 |Microsoft Exchange Server|BA Insight|Using the BA Insight Microsoft Exchange Connector, users can retrieve content from Exchange through various search engines. For more information, see [Microsoft Exchange Server connector](https://www.bainsight.com/connectors/microsoft-exchange-server-connector-sharepoint-azure-elasticsearch/).|
 |Microsoft Teams| BA Insight|Indexes content from Microsoft Teams alongside content from other enterprise systems to provide unified results. For more information, see [Microsoft Teams connector](https://www.bainsight.com/connectors/microsoft-teams-connector-for-sharepoint-azure-elasticsearch/).|
-| Miro | Microsoft | (Public preview) Allows an organization to integrate with Miro's collaborative whiteboarding platform.|
+| Miro (Public preview) | Microsoft | Allows an organization to integrate with Miro's collaborative whiteboarding platform.|
 |Mural|Mural|Enables an enterprise to bring a continuously updated copy of Mural data into an indexed database inside their Microsoft tenant. It enhances Mural's Copilot plugin to help users answer questions about mural content, summarize the content inside murals, and more. It also unlocks the ability to access murals and mural content from Microsoft Search hubs like SharePoint or the Microsoft 365 app. For more information, see [Mural connector](https://support.mural.co/s/article/Mural-s-Microsoft-Graph-connector-admin).|
 |Notes|Raytion|Secure enterprise search connector for reliably indexing content from IBM Notes (formerly Lotus Note) and intelligently searching it with Microsoft Graph. It robustly indexes records from a configurable set of Notes databases in near real-time. The connector fully supports IBM Notes’ built-in user and group management. For more information, see [Notes connector](https://www.raytion.com/connectors/raytion-notes-connector).|
 |Notion|RheinInsights| Reliably indexes databases, pages, attachments, and files for Notion. Comes with full metadata sets, advanced processing pipelines, and connector-based support for Notion's permission model. For more information, see [Notion connector](https://www.rheininsights.com/en/connectors/notion.php).|
@@ -109,20 +96,20 @@ The following connectors are under collaboration & communications.
 |Slack|Raytion|Secure enterprise search connector for reliably indexing content from Slack and intelligently searching it with Microsoft Graph. It robustly indexes messages, threads, and shared files from all public channels from Slack in near real-time. For more information, see [Slack connector](https://www.raytion.com/connectors/raytion-slack-connector).|
 |Slack|Rhein Insights|Enables the Enterprise search and Microsoft 365 connector for indexing Slack. Reliably indexes public and private channels, messages, threads, and attached files. Comes with full metadata sets, advanced processing pipelines, and full support for Slack's permission model. For more information, see [Slack connector](https://www.rheininsights.com/en/connectors/slack.php).|
 |TeamForge|Accenture|Crawls content from a TeamForge server through its SOAP services. For more information, contact Accenture.|
-|Trello | Microsoft | (Public preview) Allows organizations to enhance their project management by connecting with Trello's visual project management tools. |
+|Trello (Public preview)| Microsoft | Allows organizations to enhance their project management by connecting with Trello's visual project management tools. |
 |Trello|Rhein Insights|Enables the Enterprise search and Microsoft 365 connector for indexing Trello. Reliably indexes Trello boards, cards, comments, and attachments. Comes with full metadata sets, advanced processing pipelines, and full support for Trello's permission model. For more information, see [Trello connector](https://www.rheininsights.com/en/connectors/trello.php).|
 
 ## Content management systems
 
-The following connectors are under content management systems.
+The following table lists the content management system connectors that are available.
 
 |Connector name|Publisher|Description|
 |:------ |:----------- |:----------- |
 |Adobe AEM|Raytion|Secure enterprise search connector for reliably indexing content from the Adobe Active Experience Manager (AEM) and intelligently searching it with Microsoft Graph. It robustly indexes pages, attachments, and other generated document types from Adobe AEM in near real-time. The connector fully supports Adobe AEM’s permission model, its built-in user and group management, and AEM installations based on Entra ID or other directory services. For more information, see [Adobe AEM connector](https://www.raytion.com/connectors/adobe-experience-manager-aem).|
 |Adobe Experience Manager (AEM)|Accenture|The Adobe Experience Manager (AEM) connector crawls content from an Adobe Experience Manager server. The connector fetches access control lists for document-level security (currently only Closed Users Groups). It can filter content based on properties using expected values or patterns or pages based on the scheduled on and off time. For more information, contact Accenture.|
-| Adobe Experience Manager Assets | Microsoft | (Public preview) Allows an organization to manage and deliver digital experiences across the org.|
+| Adobe Experience Manager Assets (Public preview) | Microsoft | Allows an organization to manage and deliver digital experiences across the org.|
 |Alfresco|Raytion|Secure enterprise search connector for reliably indexing content from Alfresco One and intelligently searching it with Microsoft Graph. It robustly indexes files, folders, and user profiles from Alfresco One in near real-time. The connector fully supports Alfresco One’s permission model, its built-in user and group management, and Alfresco One installations based on Entra ID and other directory services. For more information, see [Alfresco connector](https://www.raytion.com/connectors/raytion-alfresco-connector).|
-| Adobe Experience Manager Sites | Microsoft | (Public preview) Allows an organization to manage and deliver digital experiences across web properties.|
+| Adobe Experience Manager Sites (Public preview)| Microsoft | Allows an organization to manage and deliver digital experiences across web properties.|
 |Aspider Web Crawler|Accenture|Crawls content from one or more websites. The content is submitted along with any metadata provided by the server. For more information, contact Accenture.|
 |Bentley|BA Insight|The BA Insight Bentley AssetWise connector makes it possible to surface content from AssetWise into a single consolidated search index, along with content from other repositories. For more information, see [Bentley connector](https://www.bainsight.com/connectors/bentley-connector-for-sharepoint-azure-elasticsearch/).|
 |Confluence Cloud|Microsoft|Confluence Cloud connector allows your organization to index Confluence pages and blogs. For more information, see [Confluence Cloud](/MicrosoftSearch/confluence-cloud-connector).|
@@ -135,8 +122,8 @@ The following connectors are under content management systems.
 |Elasticsearch|Accenture|The Elasticsearch connector crawls content from an Elastic index using a user-defined query. It can identify updates automatically or use a timestamp in the index. For more information, contact Accenture.|
 |Enterprise Websites|Microsoft|Allows your organization to search any non-SharePoint enterprise website. For more information, see [Enterprise Websites Copilot connector](/MicrosoftSearch/enterprise-web-connector).|
 |FirstSpirit|Raytion|Secure enterprise search connector for reliably indexing content from e-Spirit FirstSpirit and intelligently searching it with Microsoft Graph. It robustly indexes pages, attachments, and other generated document types from FirstSpirit in near real-time. The connector fully supports e-Spirit FirstSpirit’s built-in user, group, and permission management, and FirstSpirit installations based on Entra ID and other directory services. For more information, see [FirstSpirit connector](https://www.raytion.com/connectors/raytion-firstspirit-connector).|
-| FreshService | Microsoft | (Preview) Allows organizations to connect to FreshService to enhance team collaboration.|
-| Guru | Microsoft | (Public preview) Allows integration with Guru's knowledge management platform to capture, store, and share organizational knowledge. |
+| FreshService (Preview) | Microsoft | Allows organizations to connect to FreshService to enhance team collaboration.|
+| Guru (Public preview) | Microsoft | Allows integration with Guru's knowledge management platform to capture, store, and share organizational knowledge. |
 |HP Consolidated Archive (EAS)|BA Insight|BA Insight’s HP Consolidated Archive connector securely indexes both the full text and metadata of documents in archives into various search engines, including SharePoint Search and Azure Search. It enables a single searchable result set across content from multiple repositories. It allows organizations to tap into the wealth of information accessible within Consolidated Archive, SharePoint, and other repositories, making that data instantly actionable to users through search. For more information, see [HP Consolidated Archive (EAS) connector](https://www.bainsight.com/connectors/hp-consolidated-archive-connector-sharepoint-azure-elasticsearch/).|
 |IBM Content Manager|BA Insight|BA Insight's IBM Content Manager Connector honors the security of source applications and provides both full and incremental crawls so the users have the latest information available to them all the time. For more information, see [IBM Content Manager connector](https://www.bainsight.com/connectors/ibm-content-manager-connector-sharepoint-azure-elasticsearch/).|
 |IBM WebSphere|BA Insight|Indexes both the full text and metadata of WebSphere objects into Microsoft's search engine, enabling a single searchable result set across content from multiple repositories. It allows organizations to tap into the wealth of information accessible within Microsoft platforms and makes that data instantly actionable to users through search. For more information, see [IBM WebSphere connector](https://www.bainsight.com/connectors/ibm-websphere-connector-sharepoint-azure-elasticsearch/).|
@@ -183,17 +170,17 @@ The following connectors are under content management systems.
 |SharePoint 2019|Accenture|Crawls content from any SharePoint 2019 site collection URL. The connector supports lists, pages, and sites, and updates are identified either automatically or via the SharePoint change log. For more information, contact Accenture.|
 |SharePoint Online|BA Insight|Allows you to connect to SharePoint Online, fetch data from any site, document library, or list; and index this content securely. For more information, see [SharePoint Online connector](https://www.bainsight.com/connectors/sharepoint-online-connector/).|
 |SharePoint Online|Accenture|The SharePoint Online connector crawls content from any SharePoint Online site collection URL. The connector retrieves Sites, Lists, Folders, List Items, attachments, and other pages (in .aspx format). This connector supports SharePoint running in the Microsoft 365 offering. Support for crawling the on-premises offerings of SharePoint is supported by SharePoint 2010/2007 Connector and SharePoint 2013 Connector. For more information, see [SharePoint Online connector](https://www.rheininsights.com/en/connectors/sharepoint-online.php).|
-| SharePoint | Microsoft | (Public preview) Lets organizations connect to on-premises SharePoint sites for collaborating on and managing documents.|
+| SharePoint (Public preview)| Microsoft | Lets organizations connect to on-premises SharePoint sites for collaborating on and managing documents.|
 |SharePoint Online|Rhein Insights|Enables the Enterprise search and Microsoft 365 connector for indexing Microsoft SharePoint Online. Reliably indexes all SharePoint sites, pages, lists, list items, and documents also in multi-geo scenarios. Comes with full metadata sets, advanced processing pipelines, document preview integrations, and full support for SharePoint Online's permission model. For more information, see [SharePoint Online connector](https://www.rheininsights.com/en/connectors/sharepoint-online.php).|
 |Sitecore|BA Insight|BA Insight's Sitecore connector honors the security of the source system and provides both full and incremental crawls so the users have the latest information available to them all the time. For more information, see [Sitecore connector](https://www.bainsight.com/connectors/sitecore-connector-sharepoint-azure-elasticsearch/).|
 |Sitecore|Raytion|Secure enterprise search connector for reliably indexing content from Sitecore and intelligently searching it with Microsoft Graph. It robustly indexes pages and attachments, and further generates document types in near real-time. The connector fully supports Sitecore’s permission model and the user and group management in the associated Entra ID. For more information, see [Sitecore connector](https://www.raytion.com/connectors/raytion-sitecore-connector).|
 |Stack Overflow|Microsoft|Enables your organization to seamlessly index and search Stack Overflow questions and answers within Microsoft Copilot and Microsoft Search, enhancing productivity and knowledge sharing. Unlock the potential of technical expertise by integrating Stack Overflow content directly into your workflow. For more information, see [Stack Overflow connector](/MicrosoftSearch/stack-overflow-connector).|
-| Unily | Microsoft| (Public preview) Allows Copilot integration with Unily's digital workplace platform for enhanced communication and employee experience. |
-| Veeva Quality Docs | Microsoft | (Preview) Enables integration with Veeva Vault for quality content management. |
+| Unily (Public preview)| Microsoft| Allows Copilot integration with Unily's digital workplace platform for enhanced communication and employee experience. |
+| Veeva Quality Docs (Preview) | Microsoft | Enables integration with Veeva Vault for quality content management. |
 |Veeva Vault PromoMats|Microsoft|Empowers life sciences organizations to seamlessly integrate their compliant promotional content and regulatory content from Veeva Vault PromoMats into Microsoft 365 Copilot. This Copilot connector developed by Microsoft with Veeva best practices and support provides robust indexing of documents, metadata, approval statuses, and version histories. This ensures comprehensive access for use with Microsoft 365 Copilot. For more information, see [Veeva Vault PromoMats Copilot connector](/MicrosoftSearch/veeva-vault-promomats-connector).|
 |Veritas Enterprise Vault (Symantec eVault)|BA Insight|BA Insight's Veritas Enterprise Vault connector honors the security of the source system and provides full and incremental crawls. Hence, the users have the latest information available to them all the time. For more information, see [Veritas Enterprise Vault (Symantec eVault) connector](https://www.bainsight.com/connectors/enterprise-vault-connector-sharepoint-azure-elasticsearch/).|
 |West km|BA Insight|The BA Insight West km connector supports search across transaction and litigation documents, including the creation of custom search results pages. For more information, see [West km connector](https://www.bainsight.com/connectors/westkm-connector-sharepoint-azure-elasticsearch/).|
-| WordPress.org | Microsoft | (Public preview) Allows an organization to seamlessly build on-premises WordPress websites. |
+| WordPress.org (Public preview) | Microsoft | Allows an organization to seamlessly build on-premises WordPress websites. |
 |Xerox DocuShare|BA Insight|Users of BA Insight's Xerox DocuShare connector are able to search for the content housed in DocuShare repositories directly from within Microsoft Search, eliminating the need to perform multiple searches to locate needed content. For more information, see [Xerox DocuShare connector](https://www.bainsight.com/connectors/docushare-connector-sharepoint-azure-elasticsearch/).|
 |Xerox DocuShare|Raytion|Secure enterprise search connector for reliably indexing content from Xerox DocuShare and intelligently searching it with Microsoft Graph. It robustly indexes data repositories, folders, profiles, groups, and files from DocuShare in near real-time. The connector fully supports Xerox DocuShare’s built-in user and group management. For more information, see [Xerox DocuShare connector](https://www.raytion.com/connectors/raytion-xerox-docushare-connector).|
 |Zendesk Guide|Raytion|Secure enterprise search connector for reliably indexing content from Zendesk Guide and intelligently searching it with Microsoft Search. It robustly indexes pages, comments, and attachments from Zendesk Guide instances in near real-time. The connector fully supports Zendesk Guide's built-in user and group management and Zendesk Guide installations based on Entra ID and other directory services. For more information, see [Zendesk Guide connector](https://www.raytion.com/connectors/raytion-zendesk-guide-connector).|
@@ -201,24 +188,23 @@ The following connectors are under content management systems.
 
 ## Customer relationship management
 
-The following connectors are under Customer relationship management.
+The following table lists the Customer relationship management connectors that are available.
 
 |Connector name|Publisher|Description|
 |:------ |:----------- |:----------- |
 |Salesforce|Microsoft|Allows your organization to search your Salesforce instance for contacts, opportunities, leads, and accounts objects. For more information, see [Salesforce Copilot connector](/MicrosoftSearch/salesforce-connector).|
 
-
 ## Data visualization
 
-The following connectors are under Data visualization.
+The following table lists the data visualization connectors that are available.
 
 |Connector name|Publisher|Description|
 |:------ |:----------- |:----------- |
-| Tableau | Microsoft | (Public preview) Enables organizations to connect to Tableau Cloud for advanced data visualization and business intelligence functionality. |
+| Tableau (Public preview) | Microsoft | Enables organizations to connect to Tableau Cloud for advanced data visualization and business intelligence functionality. |
 
-## Databases
+## Database
 
-The following connectors are under databases.
+The following table lists the database connectors that are available.
 
 |Connector name|Publisher|Description|
 |:------ |:----------- |:----------- |
@@ -228,7 +214,7 @@ The following connectors are under databases.
 |Azure SQL Database|BA Insight|BA Insight’s Azure SQL Database connector is built upon industry-standard database access methods, so it can equally support databases from other systems such as Oracle, MySQL, and IBM DB2. For more information, see [Azure SQL Database connector](https://www.bainsight.com/connectors/azure-sql-database-connector-sharepoint-azure-elasticsearch/).|
 |CSV|Microsoft|Enables your organization to search for content stored in CSV files. For more information, see [CSV Copilot connector](/MicrosoftSearch/csv-connector).|
 |Database Server|Accenture|The Database Server connector crawls content from a Relational Database server. The crawler discovers databases and tables and indexes all content. Updates are discovered. For more information, contact Accenture.|
-| DataStax | Microsoft | (Preview) Enables integration with DataStax for real-time data access. |
+| DataStax (Preview) | Microsoft | Enables integration with DataStax for real-time data access. |
 |Google Cloud SQL|BA Insight|BA Insight's Google Cloud SQL connector indexes content from Google Cloud SQL into the Microsoft Search index surfacing it through BA Insight’s SmartHub to provide users with integrated search results. For more information, see [Google Cloud SQL connector](https://www.bainsight.com/connectors/google-cloud-sql-connector-sharepoint-azure-elasticsearch/).|
 |HBase|Accenture|The HBase connector crawls data from an HBase Server. For more information, contact Accenture.|
 |IBM Db2|BA Insight|BA Insight's Db2 connector allows organizations to tap into the wealth of data stored within DB2 databases and applications, and make that data instantly actionable to users through search. For more information, see [IBM Db2 connector](https://www.bainsight.com/connectors/ibm-db2-connector-sharepoint-azure-elasticsearch/).|
@@ -247,21 +233,21 @@ The following connectors are under databases.
 
 ## Developer tools
 
-The following connectors are under developer tools.
+The following table lists the developer tool connectors that are available.
 
 |Connector name|Publisher|Description|
 |:------ |:----------- |:----------- |
-| BitBucket knowledge | Microsoft | (Preview) Enables integration with BitBucket for Git repository management and collaboration. |
-| BitBucket Pull Requests | Microsoft | (Preview) Allow organizations to integrate with BitBucket's pull request functionality for code review and collaboration.|
-| GitHub Cloud Issues | Microsoft | (Preview) Allows organizations to connect to GitHub Issues for streamlined project planning and issue tracking.|
-| GitHub Cloud Pull Requests | Microsoft | (Preview) Enables developers to collaborate on code reviews and GitHub pull requests. |
-| GitLab Server Issues | Microsoft | (Preview) Lets developers track and manage projects using GitLab Server. |
-| GitLab Server Knowledge| Microsoft | (Preview) Provides access to internal documentation from GitLab server. |
-| GitLab Server Pull Requests| Microsoft | (Preview) Lets developers review and merge code with GitLab Server pull requests. |
+| BitBucket knowledge (Preview) | Microsoft | Enables integration with BitBucket for Git repository management and collaboration. |
+| BitBucket Pull Requests (Preview) | Microsoft | Allow organizations to integrate with BitBucket's pull request functionality for code review and collaboration.|
+| GitHub Cloud Issues (Preview) | Microsoft | Allows organizations to connect to GitHub Issues for streamlined project planning and issue tracking.|
+| GitHub Cloud Pull Requests (Preview) | Microsoft | Enables developers to collaborate on code reviews and GitHub pull requests. |
+| GitLab Server Issues (Preview) | Microsoft | Lets developers track and manage projects using GitLab Server. |
+| GitLab Server Knowledge (Preview) | Microsoft | Provides access to internal documentation from GitLab server. |
+| GitLab Server Pull Requests (Preview) | Microsoft | Lets developers review and merge code with GitLab Server pull requests. |
 
 ## Enterprise Resource Planning (ERP)
 
-The following connectors are under enterprise resource planning (ERP).
+The following table lists the enterprise resource planning (ERP)connectors that are available.
 
 |Connector name|Publisher|Description|
 |:------ |:----------- |:----------- |
@@ -275,9 +261,9 @@ The following connectors are under enterprise resource planning (ERP).
 |Salesforce|BA Insight|Integrates Salesforce’s Service, Sales, and Marketing Cloud with Microsoft Search, making all the content within Salesforce available to all employees through this portal. For more information, see [Salesforce connector](https://www.bainsight.com/connectors/salesforce-connector-sharepoint-azure-elasticsearch/).|
 |Windream ECM-System|Raytion|Secure enterprise search connector for reliably indexing content from Windream ECM-System and intelligently searching it with Microsoft Graph. It robustly indexes files and folders including the comprehensive sets of metadata associated by Windream ECM-System in near real-time. The connector fully supports Windream ECM-System’s permission model and the user and group management in the associated Microsoft Entra ID. For more information, see [Windream ECM-System connector](https://www.servicenow.com/search-result.html?q=connectors&p=1).|
 
-## File systems
+## File system
 
-The following connectors are under file systems.
+The following table lists the file system connectors that are available.
 
 |Connector name|Publisher|Description|
 |:------ |:----------- |:----------- |
@@ -298,7 +284,7 @@ The following connectors are under file systems.
 |File System|Raytion|Secure enterprise search connector for reliably indexing content from locally mounted file systems and intelligently searching it with Microsoft Graph. It robustly indexes files and folders from file systems in near real-time. For more information, see [File System connector](https://www.raytion.com/connectors/raytion-file-system-connector).|
 |File Transfer Protocol (FTP)|Accenture|The Aspire File Transfer Protocol (FTP) connector provides access to files and folders on an FTP server. Each file is submitted with its metadata (size, location, last accessed, etc.). Updates are discovered automatically. For more information, contact Accenture.|
 |Hadoop Distributed File System (HDFS)|Accenture|The Hadoop Distributed File System (HDFS) connector crawls content from any given HDFS Cluster using the WebHDFS HTTP interface. Each file is submitted with its metadata (size, location, last accessed, etc.). Updates are discovered automatically. For more information, contact Accenture.|
-| Google Drive | Microsoft | (Public preview) Enables integration wilt Google Drive for file synchronization and storage. |
+| Google Drive (Public preview)| Microsoft | Enables integration wilt Google Drive for file synchronization and storage. |
 |IBM FileNet P8|Insight|BA Insight's IBM FileNet Content Manager connector allows SharePoint, and other portal users, to securely search for content stored in FileNet repositories.  Access to content is determined by security established in FileNet, ensuring that your content is as safe when accessed through any other portal as it is directly within FileNet. For more information, see [IBM FileNet P8 connector](https://www.bainsight.com/connectors/ibm-filenet-sharepoint-azure-elasticsearch/).|
 |Microsoft Windows File Server|Raytion|Secure enterprise search connector for reliably indexing content from Microsoft Windows File Server including its Distributed File System (DFS) and intelligently searching it with Microsoft Graph. It robustly indexes files and folders from the Windows File Server in near real-time. The connector fully supports Microsoft Windows File Server’s document-level security and the latest versions of the Server Message Block 2(SMB2) and Server Message Block 3 (SMB3) protocols. For more information, see [Microsoft Windows File Server connector](https://www.servicenow.com/search-result.html?q=connectors&p=1).|
 |Nasuni File Share|Nasuni|Integrates external file share data into Microsoft 365, enhancing search, AI-driven content discovery, and advanced analytics. This connector allows seamless indexing of Nasuni data, enabling organizations to unlock the full potential of their distributed content through a unified search experience and personalized, AI-powered insights. It supports scalability with up to 20 paths per connector and optimizes performance for large datasets. For more information, see [Nasuni File Share connector](https://www.nasuni.com/partners/alliance-cloud-partners/graph-connector/).|
@@ -314,18 +300,18 @@ The following connectors are under file systems.
 
 ## Human resources & recruiting
 
-The following connectors are under Human resources & recruiting. More information can be found in the [overview page](/graph/peopleconnectors).
+The following table lists the human resources & recruiting connectors that are available. More information can be found in the [overview page](/graph/peopleconnectors).
 
 |Connector name|Publisher|Description|
 | -------- | -------- | -------- |
-| 15Five High Fives | Microsoft | (Public preview) Lets your organization connect with the High Five feature from 15Five to enhance collaboration and team recognition. |
-|BambooHR |Microsoft | (Preview) Allows your organization to populate People Experiences like profiles in Teams or Copilot with people data from the BambooHR system. For more information, see [BambooHR connector](bamboohr-connector.md). |
-| SAP SuccessFactors | Microsoft | (Preview) Allows organizations to securely synchronize organization data and organize HR functions with SAP. |
-| Workday | Microsoft | (Preview) Lets organizations integrate with Workday to securely synchronize organization data and manage HR functions. |
+| 15Five High Fives (Public preview) | Microsoft | Lets your organization connect with the High Five feature from 15Five to enhance collaboration and team recognition. |
+|BambooHR (Preview) |Microsoft | Allows your organization to populate People Experiences like profiles in Teams or Copilot with people data from the BambooHR system. For more information, see [BambooHR connector](bamboohr-connector.md). |
+| SAP SuccessFactors (Preview) | Microsoft | Allows organizations to securely synchronize organization data and organize HR functions with SAP. |
+| Workday | Microsoft (Preview) | Lets organizations integrate with Workday to securely synchronize organization data and manage HR functions. |
 
 ## IT Service Management Tools (ITSM)
 
-The following connectors are under IT Service Management Tools (ITSM).
+The following table lists the IT Service Management Tools (ITSM) connectors that are available.
 
 |Connector name|Publisher|Description|
 |:------ |:----------- |:----------- |
@@ -346,52 +332,43 @@ The following connectors are under IT Service Management Tools (ITSM).
 
 ## Learning
 
-These are the connectors under learning.
+The following table lists the learning connectors that are available.
 
 |Connector name|Publisher|Description|
 |:------ |:----------- |:----------- |
 |getAbstract|getAbstract|The getAbstract Microsoft Graph connector enhances your Microsoft Copilot with verified business knowledge from leading experts. The connector delivers fully indexed and licensed knowledge from domains like leadership & strategy, sales, marketing, corporate Finance, digital transformation, and many more, helping your employees solve business issues right in the flow of work. For more information, see [getAbstract connector](https://www.getabstract.com/en/connector).|
 |Go1|Go1|Go1 integration with Microsoft Search allows your employees to find and access learning from Microsoft Search, in places like the Microsoft 365 app or SharePoint. Your employees can learn directly from Microsoft Search in their normal day-to-day routine. For more information, see [Go1 connector](https://www.go1.com/integrations/microsoft).|
 
-## Other
-
-The following connectors are under the Other category.
-
-|Connector name|Publisher|Description|
-|:------ |:----------- |:----------- |
-|Website Crawler|BA Insight|Resurfaces content from any website in a single consolidated search index, along with content from other repositories. For more information, see [Website Crawler connector](https://www.bainsight.com/connectors/website-connector-for-sharepoint-azure-elasticsearch/).|
-| Zoom Meetings | Microsoft | (Preview) Allows access to Zoom meeting content and insights to enhance collaboration and decision making. |
-
 ## Project management
 
-The following connectors are under Project management.
+The following table lists the project management connectors that are available.
 
 |Connector name|Publisher|Description|
 |:------ |:----------- |:----------- |
-| Airtable | Microsoft | (Preview) Lets organizations integrate with Airtable's project management platform for improved project management functionality. |
-| Asana | Microsoft | (Public preview) Allows your organization to integrate with Asana's project management platform. |
-| Jira Data Center | Microsoft | (Public preview) Enables seamless project management and issue tracking with Jira. |
+| Airtable (Preview)  | Microsoft | Lets organizations integrate with Airtable's project management platform for improved project management functionality. |
+| Asana (Public preview)| Microsoft | Allows your organization to integrate with Asana's project management platform. |
+| Jira Data Center (Public preview) | Microsoft | Enables seamless project management and issue tracking with Jira. |
 
 ## Sales
 
-The following connectors are under Sales.
+The following table lists the sales connectors that are available.
 
 |Connector name|Publisher|Description|
 |:------ |:----------- |:----------- |
-| Gong | Microsoft | (Preview) Lets organizations integrate with Gong sales call transcripts to better uncover actionable insights. |
+| Gong (Preview) | Microsoft | Lets organizations integrate with Gong sales call transcripts to better uncover actionable insights. |
 
 ## Support
 
-The following connectors are under Support.
+The following table lists the support connectors that are available.
 
 |Connector name|Publisher|Description|
 |:------ |:----------- |:----------- |
-| Zendesk Help Center | Microsoft | (Public preview) Allows an organization to connect to Zendesk Help Center for seamless integration of self-service knowledge base content for customers. |
-| Zendesk Tickets | Microsoft | (Public preview) Enables integration with Zendesk's customer service ticketing system. |
+| Zendesk Help Center (Public preview)| Microsoft | Allows an organization to connect to Zendesk Help Center for seamless integration of self-service knowledge base content for customers. |
+| Zendesk Tickets (Public preview)| Microsoft | Enables integration with Zendesk's customer service ticketing system. |
 
-## Social Networks
+## Social network
 
-The following connectors are under social networks.
+The following table lists the social network connectors that are available.
 
 |Connector name|Publisher|Description|
 |:------ |:----------- |:----------- |
@@ -402,10 +379,19 @@ Yammer|Raytion|Secure enterprise search connector for reliably indexing content 
 
 ## Website (HTTP)
 
-The following connectors are under website.
+The following table lists the website (HTTP) connectors that are available.
 
 |Connector name|Publisher|Description|
 |:------ |:----------- |:----------- |
 |RSS|Accenture|Allows you to retrieve feed information and trigger flows when new items are published in an RSS feed. For more information, contact Accenture.|
 |Selenium|Accenture|Crawls content from websites using an internet browser to retrieve the pages. For more information, contact Accenture.|
 |Web Pages|RheinInsights| Reliably and easily indexes web pages from a given site. Comes with full metadata sets, advanced processing pipelines, flexible metadata extraction, and support for custom permission models. For more information, see [Web Pages connector](https://www.rheininsights.com/en/connectors/web-pages.php).|
+
+## Other
+
+The following table lists the other connectors that are available.
+
+|Connector name|Publisher|Description|
+|:------ |:----------- |:----------- |
+|Website Crawler|BA Insight|Resurfaces content from any website in a single consolidated search index, along with content from other repositories. For more information, see [Website Crawler connector](https://www.bainsight.com/connectors/website-connector-for-sharepoint-azure-elasticsearch/).|
+| Zoom Meetings | Microsoft | (Preview) Allows access to Zoom meeting content and insights to enhance collaboration and decision making. |
