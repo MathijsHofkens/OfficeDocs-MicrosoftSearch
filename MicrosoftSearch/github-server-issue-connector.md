@@ -40,6 +40,10 @@ Before you set up the connector:
 4. Make sure that users who access indexed GitHub data have corresponding **Microsoft Entra ID** identities for permission mapping.
 5. Install and register the Graph Connector Agent (GCA) on the a device with access to the GitHub instance. The version must be 3.1.11.0 or later.
 
+> [!NOTE] Security Consideration
+> When you install the GitHub Server Connector’s GCA agent on your device, it performs a git clone of the target repository directly into the content-storage path you specify. Because this path exists on your local system, any other user account or process with read (or higher) permissions to that directory can access the full contents of the cloned repositories, including potentially sensitive source code, configuration files, credentials, or secret data.
+> The best practice is to strictly isolate clone storage. Keep the directory used for GCA’s repository clones separate from any shared or personal files so that only the connector process accesses it. Avoid sharing or syncing that folder. Don’t grant read access or include it in any network-share or cloud-sync configuration — this ensures no unintended user or service stumbles upon your code.By isolating GCA’s clone output in a locked-down directory, you prevent unintended data exposure to other local users or processes while still allowing the connector to upload repository contents to Microsoft Graph as intended.
+
 ### Set Up a GitHub App for Authentication 
 Follow the steps below to create a GitHub App for use with your Copilot Connector:
 
@@ -151,14 +155,6 @@ Add the following client IP ranges in the firewall settings.
 | APC    | 52.139.188.212/30, 20.43.146.44/30        | NA           
 
 Setting up an IP restriction could cause the connector to stop working and lead to crawl failures. Administrators can resolve this issue and resume crawling by adding the connector's IP address to the allowlist according to the above table.
-
-## Security Consideration
-When you install the GitHub Server Connector’s GCA agent on your device, it will perform a git clone of the target repository directly into the content-storage path you specify. Because this path lives on your local system, any other user account or process with read (or higher) permissions to that directory will be able to access the full contents of the cloned repositories, including potentially sensitive source code, configuration files, credentials, or secret data.
-
-**Best Practices**
-- Strictly isolate clone storage. Keep the directory used for GCA’s repository clones separate from any shared or personal files so that only the connector process can touch it.
-Avoid sharing or syncing that folder. Don’t grant read access or include it in any network-share or cloud-sync configuration—this ensures no unintended user or service can stumble upon your code.
-- By isolating GCA’s clone output in a locked-down directory, you prevent unintended data exposure to other local users or processes while still allowing the connector to upload repository contents to Microsoft Graph as intended.
 
 ## Next steps
 - Click Auto generation to quickly populate your connection description with recommended defaults. It saves time and ensures consistency in your setup.
