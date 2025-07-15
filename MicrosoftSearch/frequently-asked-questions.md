@@ -147,18 +147,54 @@ If you're using the [Copilot connectors SDK](/graph/custom-connector-sdk-sample-
 
 ## Copilot Search results page questions
 
-<!-->
-## Microsoft Graph Connector Agent
+### Why do Copilot Search and Workplace Search show different search result layouts?
 
-### How does the connector agent interact with its system, and where is the indexed data stored?
-The agent is installed on-premises and needs access to the data source. Once the account is authorized, the agent crawls the data and talks to the Microsoft 365 Copilot connector services to push data to the index. The data indexed through Microsoft 365 Copilot connectors sit in the same place.
+Adaptive Card layouts aren't supported in Copilot Search; instead, semantic labels are used to generate the result layout. To make sure that key elements such as title and URL are represented accurately in the results, apply semantic label mappings to the fields.
+
+### Which icons are shown as part of search results for connector data? 
+
+When the search result shows connector data, the connector icon is displayed. If a connector icon isn't available, the data source icon is displayed.
+
+### How is activity information updated in search results?
+
+The activity information is determined by the most recent activity information associated with the **LastModifiedBy** label; for example, "Modified by Adam 4 hours ago."
+
+> [!NOTE]
+> Activity information isn't available for the Azure DevOps and ServiceNow connectors.
+
+### How do I change the value of the LastModifiedBy label?
+
+To update the **LastModifiedBy** label:
+
+- Determine which property you can to use for **LastModifiedBy/DateTime**. 
+- Update the logic to adjust the value that you want to show; for example: empty if not available, same as created, some static value, last crawl time, actual modified time.
+- Use the [update schema API](/graph/api/externalconnectors-externalconnection-patch-schema) to map the label to the right property.
+- Use the [update externalConnection API](/graph/api/externalconnectors-externalconnection-update) to update all items.
+
+### How are type filter values generated?
+
+The type filter is populated with default values for the most common Copilot connectors, such as Confluence, Google Drive, and Jira.
+
+## Microsoft Graph Connector Agent questions
+
+### How does the Microsoft Graph Connector agent interact with its system, and where is the indexed data stored?
+
+The agent is installed on-premises and needs access to the data source. When the account is authorized, the agent crawls the data and communicates with the Microsoft 365 Copilot connector services to push data to the index. The data indexed through Microsoft 365 Copilot connectors is in the same location.
 
 ### Where should the Microsoft Graph Connector Agent be installed?
-Install the agent on a computer on the same network as the data source, but not necessarily the same computer that hosts the data source. The data source URL must be accessible from the connector agent computer.
+
+Install the agent on a computer on the same network as the data source. It doesn't have to be installed on the same computer that hosts the data source. The data source URL must be accessible to the Microsoft Graph Connector Agent.
 
 ### Why does the Microsoft Graph Connector Agent require the ExternalConnection.ReadWrite.OwnedBy permission?
+
 The `ExternalConnection.ReadWrite.OwnedBy` permission allows the agent to read and write external connection settings on behalf of the admin, but it can't access or modify anything beyond its granted permissions.
 
-### Can the Connector Agent be installed on multiple servers, and does the service run on both?
+### Can the Microsoft Graph Connector Agent be installed on multiple servers, and does the service run on both?
+
 You can install the Microsoft Graph Connector Agent on multiple computers, for multiple connections. One agent can handle multiple connections. The crawl performance depends on the number of connections used, crawl frequency, and number of items. We recommend using no more than three connections per agent.
--->
+
+## Related content
+
+- [Connectors overview](/microsoftsearch/connectors-overview)
+- [Connectors gallery](/microsoftsearch/connectors-gallery)
+- [Copilot Search overview](/microsoftsearch/overview-copilot-search)
