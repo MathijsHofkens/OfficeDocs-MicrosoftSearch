@@ -133,6 +133,20 @@ Results might not be displayed in Microsoft Search after a Copilot connector is 
 - **Supported file types and sizes** - Verify that the file types and sizes are supported by the connector. Unsupported file types or sizes might not be indexed.
 - **Custom verticals** - Create a custom vertical for each data source to help with troubleshooting and ensure that the data is indexed correctly.
 
+## Copilot Search data source filter questions
+
+### How are connector names and icons generated in the data source filter?
+
+Prebuilt connectors display standard connector names and icons as data sources. For custom connectors built with the [Copilot connectors SDK](/graph/custom-connector-sdk-sample-overview), the connection name and icon that the developer supplies is displayed as the data source. For custom connectors built with the [Connectors API](/graph/connecting-external-content-connectors-api-overview), a default connection name and icon are displayed as the data source.
+
+### How can I change the name of a custom connector built with the SDK?
+
+To change the display name or description for a custom connector built with the [Connectors API](/graph/connecting-external-content-connectors-api-overview), see [Update externalConnection](/graph/api/externalconnectors-externalconnection-update).
+
+If you're using the [Copilot connectors SDK](/graph/custom-connector-sdk-sample-overview) to build your custom connectors, be sure to set the name that you want when you [publish your connector](/graph/custom-connector-sdk-sample-publish).
+
+## Copilot Search results page questions
+
 <!-->
 ## Microsoft Graph Connector Agent
 
