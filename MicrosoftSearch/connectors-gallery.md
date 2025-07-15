@@ -12,13 +12,13 @@ search.appverid:
 - MET150
 - MOE150
 description: "Lists all of the Microsoft 365 Copilot connectors."
-ms.date: 10/29/2019
+ms.date: 07/14/2024
 ---
 
 # Microsoft 365 Copilot connectors gallery
 
 Microsoft 365 Copilot connectors (formerly Microsoft Graph connectors) allow you to ingest unstructured line-of-business data into your organization's implementation of Microsoft 365 Copilot.
-For more information, see [Microsoft 365 Copilot connectors overview](https://learn.microsoft.com/en-us/microsoft-365-copilot/extensibility/overview-copilot-connector)
+For more information, see [Microsoft 365 Copilot connectors overview](https://learn.microsoft.com/microsoft-365-copilot/extensibility/overview-copilot-connector)
 
 In addition to being able to create custom connectors, there are also a large number of prebuilt connectors available. This article provides a brief description of each of the prebuilt connectors created by Microsoft and our partners, and a link to each partner's website.
 
