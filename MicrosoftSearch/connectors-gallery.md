@@ -12,19 +12,20 @@ search.appverid:
 - MET150
 - MOE150
 description: "Lists all of the Microsoft 365 Copilot connectors."
-ms.date: 07/14/2024
+ms.date: 07/14/2025
 ---
 
 # Microsoft 365 Copilot connectors gallery
 
-Microsoft 365 Copilot connectors (formerly Microsoft Graph connectors) allow you to ingest unstructured line-of-business data into your organization's implementation of Microsoft 365 Copilot. For more information, see [Microsoft 365 Copilot connectors overview](/microsoft-365-copilot/extensibility/overview-copilot-connector)
+Microsoft 365 Copilot connectors (formerly Microsoft Graph connectors) allow you to ingest unstructured line-of-business data into your organization's implementation of Microsoft 365 Copilot. For more information, see [Microsoft 365 Copilot connectors overview](/microsoft-365-copilot/extensibility/overview-copilot-connector).  
 
-In addition to being able to create custom connectors, there are also a large number of prebuilt connectors available. This article provides a brief description of each of the prebuilt connectors created by Microsoft and our partners, and a link to each partner's website.
+Developers can use the [Connectors API](/graph/connecting-external-content-connectors-api-overview) to create custom connectors. In addition, Microsoft and partner organizations provide over 100 prebuilt connectors that connect to popular Microsoft and non-Microsoft services, including Azure services, Box, Confluence, Google services, MediaWiki, Salesforce, ServiceNow, and more. This article provides a list of the prebuilt connectors that are available across a variety of categories, along with a description of each and a link to the connector website.  
 
 With more than 100 connectors currently available, you can connect to popular Microsoft and non-Microsoft services. These connectors include Azure services, Box, Confluence, Google services, MediaWiki, Salesforce, ServiceNow, and many more.
 
-## Collaboration & communications
-The following connectors are under collaboration & communications.
+## Collaboration and communications
+
+The following table lists the collaboration and communications connectors that are available.
 
 |Connector name|Publisher|Description|
 |:------ |:----------- |:----------- |
@@ -96,7 +97,7 @@ The following connectors are under collaboration & communications.
 
 ## Content Management Systems
 
-The following connectors are under content management systems.
+The following table lists the content management system connectors that are available.
 
 |Connector name|Publisher|Description|
 |:------ |:----------- |:----------- |
@@ -171,7 +172,7 @@ The following connectors are under content management systems.
 
 ## Databases
 
-The following connectors are under databases.
+The following table lists the database connectors that are available.
 
 |Connector name|Publisher|Description|
 |:------ |:----------- |:----------- |
@@ -198,7 +199,7 @@ The following connectors are under databases.
 
 ## Enterprise Resource Planning (ERP), Customer Relationship Management (CRM), Sales, and Support
 
-The following connectors are under enterprise resource planning (ERP), customer relationship management (CRM), sales, and support.
+The following table lists the enterprise resource planning (ERP) connectors that are available.
 
 |Connector name|Publisher|Description|
 |:------ |:----------- |:----------- |
@@ -215,8 +216,7 @@ The following connectors are under enterprise resource planning (ERP), customer 
 
 ## File Systems
 
-The following connectors are under file systems.
-
+he following table lists the collaboration and communications connectors that are available.
 |Connector name|Publisher|Description|
 |:------ |:----------- |:----------- |
 |Amazon S3|BA Insight|BA Insight's Amazon S3 connector works with all content stored in S3. Organizations can use the connector to securely connector to S3 and index content from S3 buckets. Powerful filtering capabilities give organizations control over what content found in S3 should be indexed. For more information, see [Amazon S3 connector](https://www.bainsight.com/connectors/amazon-s3-connector-sharepoint-azure-elasticsearch/).|
@@ -250,7 +250,7 @@ The following connectors are under file systems.
 
 ## IT Service Management Tools (ITSM)
 
-The following connectors are under IT Service Management Tools (ITSM).
+he following table lists the IT service management tools (ITSM).connectors that are available.
 
 |Connector name|Publisher|Description|
 |:------ |:----------- |:----------- |
@@ -270,16 +270,16 @@ The following connectors are under IT Service Management Tools (ITSM).
 
 ## Learning
 
-These are the connectors under learning.
+The following table lists the learning connectors that are available.
 
 |Connector name|Publisher|Description|
 |:------ |:----------- |:----------- |
 |getAbstract|getAbstract|The getAbstract Microsoft Graph connector enhances your Microsoft Copilot with verified business knowledge from leading experts. The connector delivers fully indexed and licensed knowledge from domains like leadership & strategy, sales, marketing, corporate Finance, digital transformation, and many more, helping your employees solve business issues right in the flow of work. For more information, see [getAbstract connector](https://www.getabstract.com/en/connector).|
 |Go1|Go1|Go1 integration with Microsoft Search allows your employees to find and access learning from Microsoft Search, in places like the Microsoft 365 app or SharePoint. Your employees can learn directly from Microsoft Search in their normal day-to-day routine. For more information, see [Go1 connector](https://www.go1.com/integrations/microsoft).|
 
-## People, Human Resources Information Systems (HRIS) 
+## Human resources and recruiting
 
-The following connectors are under people and Human Resource Information Systems (HRIS). More information can be found in the [overview page](/graph/peopleconnectors).
+The following table lists the human resources and recruiting connectors that are available. More information can be found on the [overview page](/graph/peopleconnectors).
 
 |Connector name|Publisher|Description|
 | -------- | -------- | -------- |
@@ -287,7 +287,7 @@ The following connectors are under people and Human Resource Information Systems
 
 ## Social Networks
 
-The following connectors are under social networks.
+The following table lists the social network connectors that are available.
 
 |Connector name|Publisher|Description|
 |:------ |:----------- |:----------- |
@@ -298,7 +298,7 @@ Yammer|Raytion|Secure enterprise search connector for reliably indexing content 
 
 ## Website (HTTP)
 
-The following connectors are under website.
+The following table lists the website connectors that are available.
 
 |Connector name|Publisher|Description|
 |:------ |:----------- |:----------- |
@@ -309,7 +309,7 @@ The following connectors are under website.
 
 ## Other
 
-The following connectors are under other categories.
+The following table lists the other connectors that are available.
 
 |Connector name|Publisher|Description|
 |:------ |:----------- |:----------- |
