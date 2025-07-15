@@ -2,7 +2,7 @@
 title: "Microsoft 365 Copilot connectors gallery"
 ms.author: danielabo
 author: danielabom
-manager: SteveWilkins1123
+manager: calvind
 ms.audience: Admin
 ms.topic: landing-page
 ms.service: mssearch
@@ -11,7 +11,7 @@ search.appverid:
 - BFB160
 - MET150
 - MOE150
-description: "Lists all of the Microsoft 365 Copilot connectors."
+description: "Find a list of over 100 prebuilt Microsoft 365 Copilot connectors, organized by categories, including a description and link to each connector website."
 ms.date: 07/14/2025
 ---
 
