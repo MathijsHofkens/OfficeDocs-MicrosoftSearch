@@ -21,7 +21,7 @@ description: "Set up the SharePoint Server Microsoft 365 Copilot connector."
 SharePoint server graph connector allows users in your organization to search for content stored in an on-premises SharePoint server(supports SP server 2013, 2016, 2019 and Subscription edition) or use the content in Copilot for specific use cases and scenarios. It crawls over Documents and site pages from the on-premises instance.
 
 > [!NOTE]
-> Active directory synchronization is a prerequisite for enabling security trimming in SharePoint Server content search. For more information, see [Microsoft Entra Connect Sync: Understand and customize synchronization](/entra/identity/hybrid/connect/how-to-connect-sync-whatis.md).
+> Active directory synchronization is a prerequisite for enabling security trimming in SharePoint Server content search. For more information, see [Microsoft Entra Connect Sync: Understand and customize synchronization](/entra/identity/hybrid/connect/how-to-connect-sync-whatis).
 
 ## Capabilities
 
