@@ -43,8 +43,8 @@ Before you set up the connector:
 4. Make sure that users who access indexed GitHub data have corresponding **Microsoft Entra ID** identities for permission mapping.
 5. For enterprise-managed users who authenticate via Single Sign-On (SSO), the account must be signed in before performing any actions, as the GitHub authentication flow does not currently support SSO login.
 
-### Set Up a GitHub App for Authentication 
-Follow the steps below to create a GitHub App for use with your Graph Connector:
+### Set up a GitHub App for authentication 
+Follow the steps below to create a GitHub App for use with your Copilot connector:
 
 1. In GitHub, click your profile photo (top right), select **Your organizations**, and choose the organization where the Graph Connector should pull data from.
 
