@@ -17,8 +17,7 @@ ms.date: 07/14/2024
 
 # Microsoft 365 Copilot connectors gallery
 
-Microsoft 365 Copilot connectors (formerly Microsoft Graph connectors) allow you to ingest unstructured line-of-business data into your organization's implementation of Microsoft 365 Copilot.
-For more information, see [Microsoft 365 Copilot connectors overview](/microsoft-365-copilot/extensibility/overview-copilot-connector)
+Microsoft 365 Copilot connectors (formerly Microsoft Graph connectors) allow you to ingest unstructured line-of-business data into your organization's implementation of Microsoft 365 Copilot. For more information, see [Microsoft 365 Copilot connectors overview](/microsoft-365-copilot/extensibility/overview-copilot-connector)
 
 In addition to being able to create custom connectors, there are also a large number of prebuilt connectors available. This article provides a brief description of each of the prebuilt connectors created by Microsoft and our partners, and a link to each partner's website.
 
@@ -316,7 +315,4 @@ The following connectors are under other categories.
 |:------ |:----------- |:----------- |
 |CSV|Microsoft|Enables your organization to search for content stored in CSV files. For more information, see [CSV Copilot connector](/MicrosoftSearch/csv-connector).|
 |Website Crawler|BA Insight|Resurfaces content from any website in a single consolidated search index, along with content from other repositories. For more information, see [Website Crawler connector](https://www.bainsight.com/connectors/website-connector-for-sharepoint-azure-elasticsearch/).|
-<<<<<<< HEAD
-=======
-| Zoom Meetings | Microsoft | (Preview) Allows access to Zoom meeting content and insights to enhance collaboration and decision making. |
->>>>>>> 7392c957a06c13593235b1527c609888a8d752f5
+| Zoom Meetings (Preview) | Microsoft | Allows access to Zoom meeting content and insights to enhance collaboration and decision making. |
