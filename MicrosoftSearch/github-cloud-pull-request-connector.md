@@ -46,7 +46,7 @@ Before you set up the connector:
 ### Set up a GitHub App for authentication 
 Follow the steps below to create a GitHub App for use with your Copilot connector:
 
-1. In GitHub, click your profile photo (top right), select **Your organizations**, and choose the organization where the Graph Connector should pull data from.
+1. In GitHub, click your profile photo (top right), select **Your organizations**, and choose the organization where the  Copilot connector should pull data from.
 
    :::image type="content" alt-text="Screenshot that shows how to access 'Your organizations'." source="media/github-connector/organizations-nav.png" lightbox="media/github-connector/organizations-nav.png":::
 
