@@ -1,5 +1,5 @@
 ---
-title: "Microsoft 365 Copilot connectors FAQ"
+title: "Microsoft 365 Copilot Connectors FAQ"
 ms.author: gladysa
 author: gladysaj
 manager: brian.j
@@ -7,122 +7,144 @@ ms.audience: Admin
 ms.topic: reference
 ms.service: mssearch
 ms.localizationpriority: medium
-ms.date: 09/11/2024
-description: "This FAQ answers questions related to Microsoft 365 Copilot  connectors"
+ms.date: 07/15/2025
+description: "Find answers to frequently asked questions about Copilot connectors."
 ---
 
-# Microsoft 365 Copilot connectors FAQs
+# Microsoft 365 Copilot connectors FAQ
 
-## 1. What are Microsoft 365 Copilot connectors?
-Microsoft 365 Copilot connectors increase the discoverability and engagement of your enterprise data by deeply integrating your data into the Microsoft 365 Copilot experience. With Copilot connectors, you can make the most of your external data for functions like enriched data analysis, giving Copilot the ability to access and summarize your diverse datasets from different sources, enabling more comprehensive insights.
+Microsoft 365 Copilot connectors increase the discoverability of and engagement with your enterprise data by integrating your data into the Microsoft 365 Copilot experience. With Copilot connectors, you can make the most of your external data for functions like enriched data analysis to allow Copilot to access and summarize diverse datasets from different sources and provide more comprehensive insights.
 For more information, see [Microsoft 365 Copilot connectors overview](/graph/connecting-external-content-connectors-overview).
 
-## 2. How do I set up a Microsoft 365 Copilot connector?
-There are three main steps to set up a Copilot connector:
+This article provides answers to frequently asked questions related to Copilot connectors.
+
+## General questions
+
+### How do I set up a Microsoft 365 Copilot connector?
+
+To set up a Copilot connector:
 
 1. Create a connection.
 2. Register your schema.
-3. Ingest your content to the Microsoft Graph. Each item is sent with properties that match the schema you registered to power your content as discoverable in Microsoft 365 App.
+3. Ingest your content into Microsoft Graph. Each item is sent with properties that match the schema you registered to power your content as discoverable in Microsoft 365 Copilot app.
+
 For more information, see [Set up Microsoft 365 Copilot connectors in the Microsoft 365 admin center](/microsoftsearch/configure-connector).
 
-## 3. Can I edit the query string once the connection is published?
-Currently, the capability to edit the query string once the connection is published isn't supported. You need to create a new connection. However, the editability of the query string as a feature is in the roadmap and targeting availability by the end of CY24H2.
-> [!NOTE]
-> * As of publish date, query strings are available for ServiceNow Knowledge, ServiceNow Catalog, Confluence Cloud.
+### Can I edit the query string after the connection is published?
 
-## 4. How do Copilot connectors work Microsoft 365 Copilot?
-Copilot connectors allow external content to be stored in Microsoft Graph, enabling a way to surface external content in various Microsoft 365 experiences. This integration allows for Microsoft 365 Copilot to access and summarize your diverse datasets from different sources, enhancing the ways your users are already searching for answers.
+Currently, editing the query string after the connection is published isn't supported. You need to create a new connection. 
+
+> [!NOTE]
+> Query strings are available for ServiceNow Knowledge, ServiceNow Catalog, Confluence Cloud.
+
+### How do Copilot connectors work Microsoft 365 Copilot?
+
+Copilot connectors allow external content to be stored in Microsoft Graph, which provides a way to surface external content in various Microsoft 365 experiences. This integration allows for Microsoft 365 Copilot to access and summarize your diverse datasets from different sources, enhancing the ways your users are already searching for answers.
+
 For more information, see [Build Copilot connectors for Microsoft Copilot for Microsoft 365](/microsoft-365-copilot/extensibility/overview-graph-connector).
 
-## 5. Is my data secure with Copilot connectors?
-Yes, one crucial aspect of bringing content into Microsoft 365 is maintaining security and data access controls. When implementing Copilot connectors, you map existing access control lists to objects in Microsoft 365 and Microsoft Entra ID, ensuring that only individuals with the right permissions can access the content.
+### Is my data secure when I use connectors?
 
-## 6. Where is the data stored when it is in Microsoft? 
-When data enters the Microsoft cloud through the Copilot connectors platform, it is automatically stored in the same region where the customer's Microsoft 365 tenant is located. We would also be adding options for customers to override the default region (upcoming feature).
-**Learn More:** [Where your Microsoft 365 customer data is stored](/microsoft-365/enterprise/o365-data-locations).
+When you use connectors to bring your content into Microsoft 365, your security and data access controls are maintained. You map existing access control lists to objects in Microsoft 365 and Microsoft Entra ID to ensure that only individuals with the right permissions can access the content.
 
-## 7. Is the data ingested into Microsoft Graph connections encrypted? What encryption algorithm is used?  
-Yes, the data is encrypted. Here are the details: 
+### Where is the data stored when it is ingested?
 
-- **Data at rest (in customer's master store):** Encrypted using DEK (Data Encryption Key) & KEK (Key Encryption Key) supplied to the partner. 
-- **Data in transit:** Secure tunnel. 
-- **Data at rest (in Office 365):** Encrypted using Office 365 encryption key by default (customers can provide their own encryption key) 
-- Learn more about encryption in [Microsoft cloud](/purview/office-365-encryption-in-the-microsoft-cloud-overview). 
+When data enters the Microsoft cloud through the Copilot connectors platform, it is stored in the region where your Microsoft 365 tenant is located. For more information, see [Where your Microsoft 365 customer data is stored](/microsoft-365/enterprise/o365-data-locations).
 
-## 8. If customer data were already encrypted, would Microsoft now have access to the document encryption keys?
-No, Microsoft would not have (or need) access to partner encryption keys. Content in the Microsoft cloud would be encrypted using Office 365 encryption keys by default. Customers can provide their own encryption key. For more information, see [Service encryption with customer key](/purview/customer-key-overview).
+### Is the data ingested into Microsoft Graph encrypted? What encryption algorithm is used?
 
-## 9. How long are copies of the customer content retained for when in Microsoft?
-We adhere to a general Microsoft 365 data retention period. For more information, see [Data retention, deletion, and destruction in Microsoft 365](/compliance/assurance/assurance-data-retention-deletion-and-destruction-overview).
+Data ingested via Copilot connectors encrypted as follows:
 
-## 10. What are the best practices to test a connection?
+- **Data at rest (in customer's master store)** - Encrypted using DEK (Data Encryption Key) & KEK (Key Encryption Key) supplied to the partner. 
+- **Data in transit** - Secure tunnel. 
+- **Data at rest (in Microsoft 365)** - Encrypted using Microsoft 365 encryption key by default (you can provide your own encryption key). 
+
+For more information, see [Encryption in the Microsoft cloud](/purview/office-365-encryption-in-the-microsoft-cloud-overview). 
+
+### If data is encrypted, does Microsoft have access to the encryption keys?
+
+Microsoft does not have (or need) access to partner encryption keys. Content in the Microsoft cloud is encrypted using Microsoft 365 encryption keys by default. You can provide your own encryption key. For more information, see [Service encryption with customer key](/purview/customer-key-overview).
+
+### How long are copies of the data retained?
+
+Content is retained in adherence to the general Microsoft 365 data retention period. For more information, see [Data retention, deletion, and destruction in Microsoft 365](/compliance/assurance/assurance-data-retention-deletion-and-destruction-overview).
+
+### What are the best practices for testing a connection?
+
+Apply the following best practices when you test a connection:
+
 - Create users in the test environment for ACL testing.
-- Ensure you're using the right credentials to test the tenant.
-- Ensuring users are assigned to the test tenant for staged rollouts and test for only those users.
-- Use the [Index browser](/microsoftsearch/configure-connector) to verify if an item is indexed.
+- Make sure you're using the right credentials to test the tenant.
+- Make sure that users are assigned to the test tenant for staged rollouts and test for only those users.
+- Use the [Index browser](/microsoftsearch/configure-connector) to verify that an item is indexed.
 
-## Connectors specific FAQs
+## Prebuilt and custom Copilot connectors questions
 
-## 1. What are Copilot offered connectors?
-Copilot offered connectors are pre-built connectors provided by Microsoft that allow you to integrate various third-party content sources into Microsoft 365. These connectors help you bring external data into Microsoft 365, making it searchable and accessible within your organization. **Learn more:** [Copilot connectors gallery](/microsoftsearch/connectors-gallery)
+### What are prebuilt Copilot connectors?
 
-## 2. What are some examples of Microsoft-built 365 Copilot connectors?
-Some examples of Microsoft-built 365 Copilot connectors include connectors for popular services like Salesforce, ServiceNow, Confluence, and many others. These connectors enable you to integrate data from these services into Microsoft 365, enhancing your organization's ability to search and access this information and power Microsoft 365 Copilot experiences. **Learn more:** [Microsoft 365 Copilot connectors gallery](/microsoftsearch/connectors-gallery).
+Prebuilt connectors are connectors that Microsoft and partner organizations provide that allow you to integrate third-party content sources like Salesforce, ServiceNow, Confluence, and more into Microsoft 365. These connectors help you bring external data into Microsoft 365. For more information, see [Copilot connectors gallery](/microsoftsearch/connectors-gallery).
 
-## 3. What are the benefits of using Microsoft-built  365 Copilot connectors?
-Microsoft-built 365 Copilot connectors provide several benefits, including: 
+### What are the benefits of using prebuilt Copilot connectors?
 
-- **Simplified integration:** Microsoft-built 365 Copilot connectors are pre-built and ready to use, reducing the time and effort required to integrate external data sources. 
-- **Enhanced searchability:** By bringing external data into Microsoft 365, Microsoft-built 365 Copilot connectors make it easier for users to search and access this information. 
-- **Improved productivity:** With Microsoft-built 365 Copilot connectors, users can access all relevant information from within Microsoft 365, reducing the need to switch between different applications and platforms.
+Prebuilt Copilot connectors provide the following benefits:
 
-## 4. What are Microsoft 365 Copilot custom connectors? 
-Microsoft 365 Copilot custom connectors allow you to integrate your own data sources into Microsoft Graph, enabling you to bring external data into Microsoft 365 experiences. It helps in making your data searchable and accessible within your organization. For more information, see [Microsoft 365 Copilot connectors overview](/graph/connecting-external-content-connectors-overview#get-started-with-custom-connectors).
+- **Simplified integration** - Prebuilt connectors reduce the time and effort required to integrate external data sources. 
+- **Enhanced searchability** - By bringing external data into Microsoft 365, prebuilt Copilot connectors make it easier for users to search and access this information.
+- **Improved productivity** - Users can access all relevant information from within Microsoft 365, reducing the need to switch between different applications and platforms.
 
-## 5. How do I build a custom Microsoft 365 Copilot connector?
-To build a custom Microsoft 365 Copilot connector, you can use the Microsoft Graph API. The API provides full control over the connection. **Learn more:** [Build your first custom Microsoft Graph connector](/graph/connecting-external-content-build-quickstart)
+### What are custom Copilot connectors?
 
-## 6. What are the prerequisites for creating a custom connector?
-To create a custom connector, you need a Microsoft work or school account with the Global administrator role, and access to a Microsoft 365 tenant. If you don't have a Microsoft 365 tenant, you might qualify for one through the [Microsoft 365 Developer Program.](/office/developer-program/microsoft-365-developer-program) **Learn more:** [Build your first custom Microsoft Graph connector](/graph/custom-connector-sdk-sample-create#prerequisites)
+Custom connectors allow you to integrate your own data sources into Microsoft Graph to bring external data into Microsoft 365 experiences. For more information, see [Microsoft 365 Copilot connectors overview](/graph/connecting-external-content-connectors-overview).
 
-## 7. What is the difference between full crawl and incremental crawl?
-**Full Crawl:** 
+### How do I build a custom Copilot connector?
+
+You can use the [Microsoft 365 Agents Toolkit](/microsoft-365-copilot/extensibility/build-your-first-connector) or the [Copilot connectors SDK](/graph/custom-connector-sdk-sample-overview) to build a custom Copilot connector.
+
+### What are the prerequisites for creating a custom connector?
+
+To create a custom connector, you need a Microsoft work or school account with the Global administrator role, and access to a Microsoft 365 tenant. If you don't have a Microsoft 365 tenant, you might qualify for one through the [Microsoft 365 Developer Program.](/office/developer-program/microsoft-365-developer-program).
+
+### What is the difference between full crawl and an incremental crawl?
+
+A full crawl:
+
 - Crawls the entire data source.
 - Updates the index with all items.
 - Reflects any deletions from the data source in the index.
 - Updates the permissions.  
 
-**Incremental crawl:**
+An incremental crawl:
+
 - Only updates items that changed since the last crawl.
 - Doesn't handle deletions, so items removed from the data source remain in the index. 
 - Incremental crawls do not currently support processing of updates to permissions. 
 
-For more details on crawl schedules and refresh settings, see [Microsoft 365 Copilot  connectors refresh settings](/microsoftsearch/configure-connector#step-8-refresh-settings).
+For more information about crawl schedules and refresh settings, see [Crawl scheduling](/microsoftsearch/configure-connector#crawl-scheduling).
 
-## 8. Why don't we get results displayed in Microsoft Search?
-There could be several reasons why results are not displayed in Microsoft Search after configuring the Microsoft 365 Copilot connector. Here are some common issues and troubleshooting steps: 
+### Why aren't results displayed in Microsoft Search?
 
-- **Indexing delays:** Sometimes, it takes a while for the data to be indexed and displayed in search results. It can vary based on the volume of data and the complexity of the data source.
-- **All vertical setting:** Ensure *“include results in All vertical”* is enabled. It should be enabled by default for Microsoft-built 365 Copilot connectors. For custom-built and third-party Microsoft 365 Copilot connectors, it needs to be enabled explicitly. 
-- **Permissions issues:** Ensure that the correct permissions are set for the data source. If the permissions are not configured correctly, the data might not be accessible for indexing.
-- **Configuration Errors:** Double-check the configuration settings of the Microsoft 365 Copilot connector. Any misconfiguration can lead to issues with data indexing and search results.
-- **Staged Rollout:** If you are using a [staged rollout](/microsoftsearch/staged-rollout-for-graph-connectors), validate which users are in the staged rollout. If staged rollout is no longer needed, you can end the staged rollout and make the connection available to all applicable users.
-- **Supported file types and sizes:** Verify that the file types and sizes are supported by the Microsoft 365 Copilot connector. Unsupported file types or sizes might not be indexed.
-- **Custom Verticals:** Creating a custom vertical for each data source can help in troubleshooting and ensuring that the data is indexed correctly.
+Results might not be displayed in Microsoft Search after a Copilot connector is configured for several reasons:
 
-> [!NOTE]
-> * If you have checked these common issues and are still facing problems, contact [Microsoft Graph | Support](https://developer.microsoft.com/en-us/graph/support). 
+- **Indexing delays** - Sometimes, it takes a while for the data to be indexed and displayed in search results. It can vary based on the volume of data and the complexity of the data source.
+- **All vertical setting** - Make sure that **include results in All vertical** is enabled. This setting should be enabled by default for prebuilt Copilot connectors. For custom connectors, the setting must be enabled. 
+- **Permissions issues** - Make sure that the correct permissions are set for the data source. If the permissions are not configured correctly, the data might not be accessible for indexing.
+- **Configuration errors** - Double-check the configuration settings of the Copilot connector. Any misconfiguration can lead to issues with data indexing and search results.
+- **Staged rollout** - If you're using a [staged rollout](/microsoftsearch/staged-rollout-for-graph-connectors), validate which users are in the staged rollout. 
+- **Supported file types and sizes** - Verify that the file types and sizes are supported by the connector. Unsupported file types or sizes might not be indexed.
+- **Custom verticals** - Create a custom vertical for each data source to help with troubleshooting and ensure that the data is indexed correctly.
 
-## Microsoft Graph Connector Agent (GCA) specific 
+<!-->
+## Microsoft Graph Connector Agent
 
-## 1. How does GCA interact with its system, and where is the indexed data stored?
+### How does the connector agent interact with its system, and where is the indexed data stored?
 The agent is installed on-premises and needs access to the data source. Once the account is authorized, the agent crawls the data and talks to the Microsoft 365 Copilot connector services to push data to the index. The data indexed through Microsoft 365 Copilot connectors sit in the same place.
 
-## 2. Where should the Microsoft Graph Connector Agent be installed?
-The agent should be installed on a machine on the same network as the data source, not necessarily the same machine hosting the data source. The data source URL must be accessible from the GCA machine.
+### Where should the Microsoft Graph Connector Agent be installed?
+Install the agent on a computer on the same network as the data source, but not necessarily the same computer that hosts the data source. The data source URL must be accessible from the connector agent computer.
 
-## 3. Why does GCA require the ExternalConnection.ReadWrite.OwnedBy permission?
-This permission allows GCA to read and write external connection settings on behalf of the Admin, but it can't access or modify anything beyond its granted permissions.
+### Why does the Microsoft Graph Connector Agent require the ExternalConnection.ReadWrite.OwnedBy permission?
+The `ExternalConnection.ReadWrite.OwnedBy` permission allows the agent to read and write external connection settings on behalf of the admin, but it can't access or modify anything beyond its granted permissions.
 
-## 4. Can GCA be installed on multiple servers, and does the service run on both?
-Yes, GCA can be installed on multiple machines, for multiple connections. One GCA can handle multiple connections. The crawl performance depends on the number of connections used for one GCA, crawl frequency, number of items, etc. We recommend using not more than 3 connections per agent.
+### Can the Connector Agent be installed on multiple servers, and does the service run on both?
+You can install the Microsoft Graph Connector Agent on multiple computers, for multiple connections. One agent can handle multiple connections. The crawl performance depends on the number of connections used, crawl frequency, and number of items. We recommend using no more than three connections per agent.
+-->

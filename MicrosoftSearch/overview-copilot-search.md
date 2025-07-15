@@ -37,7 +37,7 @@ Copilot connectors provide the following benefits:
 
 - **Unified indexing** - External data is indexed alongside Microsoft 365 content, enabling a single, comprehensive search experience.
 - **Personalized results** - Signals from Microsoft Graph and connector-ingested data help tailor results based on user roles, behaviors, and organizational relationships.
-- **Copilot extension** - A browser add-on that enhances search relevance by incorporating signals from third-party work-related sites—without tracking general browsing activity.
+- **Copilot extension** - A browser add-on that enhances search relevance by incorporating signals from external work-related sites—without tracking general browsing activity.
 
 The extensive connector ecosystem makes Copilot Search an enterprise-wide knowledge discovery platform that helps users find what they need, when they need it—no matter where the data lives.
 
