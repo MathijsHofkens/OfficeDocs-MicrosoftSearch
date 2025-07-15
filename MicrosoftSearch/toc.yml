@@ -42,6 +42,8 @@ items:
     href: manage-qas.md
   - name: Search apps
     href: manage-search-apps.md
+- name: Copilot Search overview
+  href: overview-copilot-search.md
 - name: Data sources
   items:
   - name: Microsoft 365 Copilot connectors
