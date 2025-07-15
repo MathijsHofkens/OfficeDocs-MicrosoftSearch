@@ -19,9 +19,7 @@ ms.date: 07/14/2025
 
 Microsoft 365 Copilot connectors (formerly Microsoft Graph connectors) allow you to ingest unstructured line-of-business data into your organization's implementation of Microsoft 365 Copilot. For more information, see [Microsoft 365 Copilot connectors overview](/microsoft-365-copilot/extensibility/overview-copilot-connector).  
 
-Developers can use the [Connectors API](/graph/connecting-external-content-connectors-api-overview) to create custom connectors. In addition, Microsoft and partner organizations provide over 100 prebuilt connectors that connect to popular Microsoft and non-Microsoft services, including Azure services, Box, Confluence, Google services, MediaWiki, Salesforce, ServiceNow, and more. This article provides a list of the prebuilt connectors that are available across a variety of categories, along with a description of each and a link to the connector website.  
-
-With more than 100 connectors currently available, you can connect to popular Microsoft and non-Microsoft services. These connectors include Azure services, Box, Confluence, Google services, MediaWiki, Salesforce, ServiceNow, and many more.
+Developers can use the [Connectors API](/graph/connecting-external-content-connectors-api-overview) to create custom connectors. In addition, Microsoft and partner organizations provide over 100 prebuilt connectors that connect to popular Microsoft and non-Microsoft services, including Azure services, Box, Confluence, Google services, MediaWiki, Salesforce, ServiceNow, and more. This article provides a list of the prebuilt connectors that are available across a variety of categories, along with a description of each and a link to the connector website. 
 
 ## Collaboration and communications
 
