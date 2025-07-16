@@ -8,7 +8,7 @@ ms.topic: reference
 ms.service: mssearch
 ms.localizationpriority: medium
 ms.date: 07/15/2025
-description: "Find answers to frequently asked questions about Copilot connectors."
+description: "Find answers to frequently asked questions about Copilot connectors and connectors for Copilot Search."
 ---
 
 # Microsoft 365 Copilot connectors FAQ
