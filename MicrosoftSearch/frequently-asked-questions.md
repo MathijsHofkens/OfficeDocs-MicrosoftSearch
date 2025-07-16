@@ -37,7 +37,7 @@ Currently, editing the query string after the connection is published isn't supp
 > [!NOTE]
 > Query strings are available for ServiceNow Knowledge, ServiceNow Catalog, Confluence Cloud.
 
-### How do Copilot connectors work Microsoft 365 Copilot?
+### How do Copilot connectors work with Microsoft 365 Copilot?
 
 Copilot connectors allow external content to be stored in Microsoft Graph, which provides a way to surface external content in various Microsoft 365 experiences. This integration allows for Microsoft 365 Copilot to access and summarize your diverse datasets from different sources, enhancing the ways your users are already searching for answers.
 
@@ -47,9 +47,9 @@ For more information, see [Build Copilot connectors for Microsoft Copilot for Mi
 
 When you use connectors to bring your content into Microsoft 365, your security and data access controls are maintained. You map existing access control lists to objects in Microsoft 365 and Microsoft Entra ID to ensure that only individuals with the right permissions can access the content.
 
-### Where is the data stored when it is ingested?
+### Where is the data stored when it's ingested?
 
-When data enters the Microsoft cloud through the Copilot connectors platform, it is stored in the region where your Microsoft 365 tenant is located. For more information, see [Where your Microsoft 365 customer data is stored](/microsoft-365/enterprise/o365-data-locations).
+When data enters the Microsoft cloud through the Copilot connectors platform, it's stored in the region where your Microsoft 365 tenant is located. For more information, see [Where your Microsoft 365 customer data is stored](/microsoft-365/enterprise/o365-data-locations).
 
 ### Is the data ingested into Microsoft Graph encrypted? What encryption algorithm is used?
 
@@ -63,7 +63,7 @@ For more information, see [Encryption in the Microsoft cloud](/purview/office-36
 
 ### If data is encrypted, does Microsoft have access to the encryption keys?
 
-Microsoft does not have (or need) access to partner encryption keys. Content in the Microsoft cloud is encrypted using Microsoft 365 encryption keys by default. You can provide your own encryption key. For more information, see [Service encryption with customer key](/purview/customer-key-overview).
+Microsoft doesn't have (or need) access to partner encryption keys. Content in the Microsoft cloud is encrypted using Microsoft 365 encryption keys by default. You can provide your own encryption key. For more information, see [Service encryption with Microsoft Purview Customer Key](/purview/customer-key-overview).
 
 ### How long are copies of the data retained?
 
@@ -82,7 +82,7 @@ Apply the following best practices when you test a connection:
 
 ### What are prebuilt Copilot connectors?
 
-Prebuilt connectors are connectors that Microsoft and partner organizations provide that allow you to integrate third-party content sources like Salesforce, ServiceNow, Confluence, and more into Microsoft 365. These connectors help you bring external data into Microsoft 365. For more information, see [Copilot connectors gallery](/microsoftsearch/connectors-gallery).
+Prebuilt connectors are connectors that Microsoft and partner organizations provide that allow you to integrate external content sources like Salesforce, ServiceNow, Confluence, and more into Microsoft 365. These connectors help you bring external data into Microsoft 365. For more information, see [Copilot connectors gallery](/microsoftsearch/connectors-gallery).
 
 ### What are the benefits of using prebuilt Copilot connectors?
 
@@ -117,7 +117,7 @@ An incremental crawl:
 
 - Only updates items that changed since the last crawl.
 - Doesn't handle deletions, so items removed from the data source remain in the index. 
-- Incremental crawls do not currently support processing of updates to permissions. 
+- Incremental crawls don't currently support processing of updates to permissions. 
 
 For more information about crawl schedules and refresh settings, see [Crawl scheduling](/microsoftsearch/configure-connector#crawl-scheduling).
 
@@ -127,7 +127,7 @@ Results might not be displayed in Microsoft Search after a Copilot connector is 
 
 - **Indexing delays** - Sometimes, it takes a while for the data to be indexed and displayed in search results. It can vary based on the volume of data and the complexity of the data source.
 - **All vertical setting** - Make sure that **include results in All vertical** is enabled. This setting should be enabled by default for prebuilt Copilot connectors. For custom connectors, the setting must be enabled. 
-- **Permissions issues** - Make sure that the correct permissions are set for the data source. If the permissions are not configured correctly, the data might not be accessible for indexing.
+- **Permissions issues** - Make sure that the correct permissions are set for the data source. If the permissions aren't configured correctly, the data might not be accessible for indexing.
 - **Configuration errors** - Double-check the configuration settings of the Copilot connector. Any misconfiguration can lead to issues with data indexing and search results.
 - **Staged rollout** - If you're using a [staged rollout](/microsoftsearch/staged-rollout-for-graph-connectors), validate which users are in the staged rollout. 
 - **Supported file types and sizes** - Verify that the file types and sizes are supported by the connector. Unsupported file types or sizes might not be indexed.
@@ -164,7 +164,7 @@ The activity information is determined by the most recent activity information a
 
 To update the **LastModifiedBy** label:
 
-- Determine which property you can to use for **LastModifiedBy/DateTime**. 
+- Determine which property you can use for **LastModifiedBy/DateTime**. 
 - Update the logic to adjust the value that you want to show; for example: empty if not available, same as created, some static value, last crawl time, actual modified time.
 - Use the [update schema API](/graph/api/externalconnectors-externalconnection-patch-schema) to map the label to the right property.
 - Use the [update externalConnection API](/graph/api/externalconnectors-externalconnection-update) to update all items.
