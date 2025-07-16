@@ -23,21 +23,11 @@ Microsoft Search indexes all your [Microsoft 365](https://www.microsoft.com/micr
 > [!NOTE]
 > For details about how to build a Microsoft 365 Copilot connector that is integrated with Microsoft 365 Copilot, see [Microsoft 365 Copilot for Microsoft 365 Copilot connectors](/microsoft-365-copilot/extensibility/overview-graph-connector).
 
-The Microsoft 365 Copilot connectors setup process for the Microsoft Search experience is explained in the following video.
+The following video provides an overview of the Microsoft 365 Copilot connectors setup process for the Microsoft Search experience.
 
 > [!VIDEO 4f4668c6-445a-4895-8627-92880eafad68]
 
-This article is intended to help Microsoft 365 administrators locate the resources that are available to answer the following questions:
-
-* [Microsoft 365 Copilot connectors architecture](#architecture)
-* [What data sources can be connected to Microsoft Search and Microsoft 365 Copilot?](#what-data-sources-can-be-connected-to-microsoft-search-and-microsoft-365-copilot)
-* [How do I manage my connections?](#how-do-i-manage-my-connections)
-* [What are the license requirements and terms of use for Microsoft 365 Copilot connectors?](#what-are-the-license-requirements-and-terms-of-use-for-connectors)
-* [How do I customize and configure search results?](#how-do-i-customize-and-configure-search-results)
-* [How do I search my connector data from a custom application?](#how-do-i-search-my-connector-data-from-a-custom-application)
-* [How do I customize search results?](#how-do-i-customize-and-configure-search-results)
-
-## Architecture
+## Connector architecture
 
 The following architectural diagram of the Microsoft Graph platform shows how Microsoft 365 Copilot connector content flows through content indexing to user results in [Microsoft Search](./overview-microsoft-search.md) clients. The rest of this section explains each of the key building blocks in the diagram.
 
@@ -50,41 +40,52 @@ You can use the Microsoft 365 [admin center](https://admin.microsoft.com) to set
 
 To create a **connection** to a data source, admins need authenticated access to the data and the entire content repository. The data is fed to the Microsoft 365 Copilot connector service for indexing.
 
-## What data sources can be connected to Microsoft Search and Microsoft 365 Copilot?
+## Data sources
 
 Microsoft provides more than 30 Microsoft 365 Copilot connectors, and our ecosystem partners have created over 100 more connectors. You can also build your own connector.
 
-### Microsoft 365 Copilot connectors
+### Microsoft-built Copilot connectors
 
 You can connect to the many popular data sources using connectors created by Microsoft.
 
 The [Microsoft 365 Copilot connectors gallery](https://www.microsoft.com/microsoft-search/connectors) contains a brief description of each of these connectors. If you're ready to connect one of these data sources to your tenant, be sure to read the [Setup overview](configure-connector.md) and any other articles in the setup connectors by Microsoft section that apply to your data source.
 
-### Microsoft 365 Copilot connectors for people data
+### Copilot connectors for people data
 
 [Microsoft 365 Copilot connectors for people data](/graph/peopleconnectors) integrate third-party people data into Microsoft 365 applications to enhance and unify individual profiles. They provide a synchronized view of people data while keeping the original data authoritative in its source system. These connectors improve identity cohesion, Copilot’s response relevance, and data discoverability within M365, including updated profile cards and search capabilities. For more information, see [Microsoft 365 Copilot connectors for people data](/graph/peopleconnectors). 
 
-### Microsoft 365 Copilot connectors by our partners
+### Partner-built Copilot connectors
 
 The [Microsoft 365 Copilot connectors gallery](https://www.microsoft.com/microsoft-search/connectors) includes a brief description of each of the connectors created by our partners and a link to each partner's website. To learn more, contact each partner directly.
 
-### Build your own Microsoft 365 Copilot connector
+### Custom Copilot connectors
 
-You can build your own connector if you prefer. For developer documentation about building connectors, see [Microsoft 365 Copilot connectors overview](/graph/connecting-external-content-connectors-overview). For a quick start on building connectors, see [Build your first custom Microsoft 365 Copilot connector](/graph/connecting-external-content-build-quickstart).
+You can build your own custom connectors to ingest your business data. For more information, see [Microsoft 365 Copilot connectors overview](/graph/connecting-external-content-connectors-overview). See also the following get started topics:
 
-## How do I manage my connections?
+- [Microsoft 365 Agents Toolkit](/microsoft-365-copilot/extensibility/build-your-first-connector)
+- [Copilot connectors SDK](/graph/custom-connector-sdk-sample-overview)
+
+## Connection management
 
 You can manage your connections on the [connectors tab](https://admin.microsoft.com/Adminportal/Home#/MicrosoftSearch/Connectors) in the [Microsoft 365 admin center](https://admin.microsoft.com/). For more information about managing connections, see [Monitor your connections](manage-connector.md).
 
-## What are the license requirements and terms of use for connectors?
+## Limitations
+
+The following limitations apply to Copilot connectors:
+
+* When you publish a Copilot connector, it can take a few minutes for the connection to be created. During that time, the connection shows its status as `Publishing`.
+
+* Limited editing capabilities are supported after a connection is published. If you need to change any details that aren't editable, you have to delete and recreate the connection.
+
+## License requirements
 
 For users in your organization to view data from connectors in their search results, you need a valid Microsoft 365 or Office 365 license.
 
 To learn more, see [License requirements and pricing](licensing.md) and [Terms of use](terms-of-use.md).
 
-## How do I customize and configure search results?
+## Search result configuration and customization
 
-There are many ways to customize and configure search results. To learn more, see the following articles:
+You can customize and configure search results in several ways. To learn more, see the following articles:
 
 * [Manage search verticals](manage-verticals.md) and [result types](manage-result-types.md)
 * [Manage connector results in All vertical](connectors-in-all-vertical.md)
@@ -92,12 +93,15 @@ There are many ways to customize and configure search results. To learn more, se
 * [Manage result cluster](result-cluster.md)
 * [Manage custom filters](custom-filters.md)
 
-## How do I search my connector data from a custom application?
+## Custom applications
 
 After custom data is indexed, developers can [query this data](/graph/search-concept-custom-types). You can view your data in any application. For more information, see the [Overview of the Microsoft Search API in Microsoft Graph](/graph/search-concept-overview).
 
-## What are the limitations of Microsoft 365 Copilot connectors?
+## Copilot connectors for Copilot Search
 
-* When you **publish** a Microsoft 365 Copilot connector, it can take a few minutes for the connection to be created. During that time, the connection shows its status as 'Publishing'.
+Microsoft 365 Copilot Search is a powerful, AI-powered enterprise search experience that acts as a universal search layer that integrates into the Microsoft 365 Copilot app. Copilot connectors enhance the Copilot Search experience by enabling seamless integration of data from external services into Microsoft Graph to make it available in the search experience. For more information, see [Copilot Search overview](./overview-microsoft-search.md).
 
-* There are limited editing capabilities that are supported after publishing a connection. If you need to change any details other than the ones enabled, you must delete and recreate the connection.
+## Related content
+
+- [Microsoft Search overview](/microsoftsearch/overview-microsoft-search)
+- [Connectors gallery](/microsoftsearch/connectors-gallery)
