@@ -33,22 +33,24 @@ Enhanced Copilot Capabilities: Users can ask natural language questions about Ji
 Semantic Search Support: Users can type natural language queries within Microsoft Search to get highly relevant and context-rich responses about Jira issues and projects. 
 
 >[!Note]
->Only compatible with Jira Data Center version 8.14 and above. 
+>The connector is only compatible with Jira Data Center version 8.14 and above. 
 
 By using the Jira Data Center Microsoft 365 Copilot connector, teams can keep their Jira environment on-premises while benefiting from powerful Microsoft Search and Copilot capabilities, ensuring that critical issues and project details are readily discoverable and actionable. 
 
 ## Prerequisites 
 
-**1. Install the Microsoft 365 Copilot connector agent (GCA)**
+1. Install the Microsoft 365 Copilot connector agent (GCA)
 
 To index your Jira Data Center content, you must install the **GCA** on a Windows machine within the same network as the Jira Data Center site. See [install the Microsoft Graph connector agent](/microsoftsearch/graph-connector-agent). You must be the administrator for your organization's Microsoft 365 tenant and the administrator for your organization's Jira site. 
 
 >[!NOTE]
 > If you have previously installed the GCA, ensure it is updated to version 3.1.3.0 or later.  
 
-**2. Install Jira Data Center Plugin**
 
-Install the Jira Data Center plugin. For more information, see [Jira Data Center Microsoft 365 Copilot connector | Atlassian Marketplace](https://marketplace.atlassian.com/apps/1235599/microsoft-graph-connector-for-jira-data-center?hosting=datacenter&tab=installation).
+2. Install Jira Data Center plugin
+
+For more information, see [Jira Data Center Microsoft 365 Copilot connector | Atlassian Marketplace](https://marketplace.atlassian.com/apps/1235599/microsoft-graph-connector-for-jira-data-center?hosting=datacenter&tab=installation).
+
 >[!Note]
 >This plugin works with Jira Data Center versions 8.10.0 - 10.5.1. 
 
