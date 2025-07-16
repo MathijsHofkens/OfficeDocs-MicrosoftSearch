@@ -122,22 +122,7 @@ Custom setup allows admins to edit the default values mentioned above. Once you 
 
 #### Access permissions
 
-The Jira Data Center Microsoft 365 Copilot connector supports data visible to Only people with access to this data source (recommended) or Everyone. If you choose Everyone, indexed data appears in the search results for all users. 
-
-> [!NOTE]  
-> The Jira Data Center Copilot connector enforces access control based on Jira's native permission models to prevent oversharing of sensitive issue content. When indexing issues, the connector applies a hierarchical evaluation similar to Jira's internal permission logic. This ensures only authorized users can discover content via Copilot. The image below illustrates the evaluation logic that determines access rights to Jira issues.
->  
-> ![Diagram showing the workflow of Jira Data Center Copilot connector ACL.](media/jira-data-center-copilot-connector-permission.png)
->  
-> The connector uses the following access control hierarchy:
->
-> 1. Issue security level (highest priority)
->    If an issue has an **Issue security level** configured, access is restricted to users, groups, or roles explicitly associated with that level. In this case, **Issue Security Level overrides all other permission settings**. Users not included in the security level definition are **denied** access, regardless of their project-level permissions.
->
-> 2. Fallback to project-level permissions
-> If no Issue Security Level is set, access is determined by the **Project’s Permission Scheme**. Specifically, the user must be granted the **Browse Projects** permission for the corresponding project. The connector currently supports resolving the following types of `Browse Projects` permission assignments: **Project Roles**,  **Groups**, **Current Assignee**, **Reporter**, **Project Lead** and **Single Users**. But if the `Browse Projects` permission is configured using other types (e.g., Application access, public, Any logged in user, Group custom field value, User custom field value and Service Project Customer-Poratal Access), the connector **cannot evaluate those settings**. In such cases, access to the issue will be **denied** to ensure data security.
-
-If you choose Only people with access to this data source, you need to further choose whether your Jira Data Center has Microsoft Entra ID provisioned users or non-AAD users. 
+The Jira Data Center Microsoft 365 Copilot connector supports data visible to Only people with access to this data source (recommended) or Everyone. If you choose Everyone, indexed data appears in the search results for all users. If you choose Only people with access to this data source, you need to further choose whether your Jira Data Center has Microsoft Entra ID provisioned users or non-AAD users. 
 
 To identify which option is suitable for your organization: 
 
@@ -145,10 +130,22 @@ To identify which option is suitable for your organization:
 
 2. Choose the **non-AAD** option if the email ID of Confluence users is **different** from the UserPrincipalName (UPN) of users in Microsoft Entra ID.
 
+
 >[!Important]
 >- If you choose Microsoft Entra ID as the type of identity source, the connector maps the email IDs of users obtained from Jira Data Center directly to UPN property from Microsoft Entra ID.
 >- If you chose "non-AAD" for the identity type see Map your non-Azure AD Identities for instructions on mapping the identities. You can use this option to provide the mapping regular expression from email ID to UPN.
->- Updates to users or groups governing access permissions are synced in full crawls only. Incremental crawls do not currently support the processing of updates to permissions. 
+>- Updates to users or groups governing access permissions are synced in full crawls only. Incremental crawls do not currently support the processing of updates to permissions.
+
+ If you choose "Only people with access to this data source (recommended) ", the Jira Data Center Copilot connector enforces access control based on Jira's native permission models to prevent oversharing of sensitive issue content. When indexing issues, the connector applies a hierarchical evaluation similar to Jira's internal permission logic. This ensures only authorized users can discover content via Copilot.The image below illustrates the evaluation logic that determines access rights to Jira issues. 
+![Diagram showing the workflow of Jira Data Center Copilot connector ACL.](media/jira-data-center-copilot-connector-permission.png)
+
+The connector uses the following access control hierarchy:
+1. Issue security level (highest priority)
+If an issue has an **Issue security level** configured, access is restricted to users, groups, or roles explicitly associated with that level. In this case, **Issue Security Level overrides all other permission settings**. Users not included in the security level definition are **denied** access, regardless of their project-level permissions.
+
+2. Fallback to project-level permissions
+If no Issue Security Level is set, access is determined by the **Project’s Permission Scheme**. Specifically, the user must be granted the **Browse Projects** permission for the corresponding project. The connector currently supports resolving the following types of `Browse Projects` permission assignments: **Project Roles**,  **Groups**, **Current Assignee**, **Reporter**, **Project Lead** and **Single Users**. But if the `Browse Projects` permission is configured using other types (e.g., Application access, public, Any logged in user, Group custom field value, User custom field value and Service Project Customer-Poratal Access), the connector **cannot evaluate those settings**. In such cases, access to the issue will be **denied** to ensure data security.
+
 
 ### **Content**
 
