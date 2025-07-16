@@ -38,15 +38,15 @@ Before you set up the connector:
 2. Set up the GitHub App for authentication.
 3. Verify that the user account used for authentication has access to the repositories and pull requests to be indexed.
 4. Make sure that users who access indexed GitHub data have corresponding **Microsoft Entra ID** identities for permission mapping.
-5. Install and register the Graph Connector Agent (GCA) on the a device with access to the GitHub instance. The version must be 3.1.11.0 or later.
+5. Install and register the Graph Connector Agent (GCA) on a device with access to the GitHub instance. The version must be 3.1.11.0 or later.
 
 > [!NOTE] 
-> When you install the GitHub Server Connector’s GCA agent on your device, it performs a git clone of the target repository directly into the content-storage path you specify. Because this path exists on your local system, any other user account or process with read (or higher) permissions to that directory can access the full contents of the cloned repositories, including potentially sensitive source code, configuration files, credentials, or secret data. The best practice is to strictly isolate clone storage. Keep the directory used for GCA’s repository clones separate from any shared or personal files so that only the connector process accesses it. Avoid sharing or syncing that folder. Don’t grant read access or include it in any network-share or cloud-sync configuration — this ensures no unintended user or service stumbles upon your code.By isolating GCA’s clone output in a locked-down directory, you prevent unintended data exposure to other local users or processes while still allowing the connector to upload repository contents to Microsoft Graph as intended.
+> When you install the GitHub Server Connector’s GCA agent on your device, it performs a git clone of the target repository directly into the content-storage path you specify. Because this path exists on your local system, any other user account or process with read (or higher) permissions to that directory can access the full contents of the cloned repositories, including potentially sensitive source code, configuration files, credentials, or secret data. The best practice is to strictly isolate clone storage. Keep the directory used for GCA’s repository clones separate from any shared or personal files so that only the connector process accesses it. Avoid sharing or syncing that folder. Don’t grant read access or include it in any network-share or cloud-sync configuration — this ensures no unintended user or service stumbles upon your code By isolating GCA’s clone output in a locked-down directory, you prevent unintended data exposure to other local users or processes while still allowing the connector to upload repository contents to Microsoft Graph as intended.
 
-### Set Up a GitHub App for Authentication 
-Follow the steps below to create a GitHub App for use with your Copilot Connector:
+### Set Up a GitHub App for authentication 
+Follow the steps below to create a GitHub App for use with your Copilot connector:
 
-1. In GitHub, click your profile photo (top right), select **Your organizations**, and choose the organization where the Graph Connector should pull data from.
+1. In GitHub, click your profile photo (top right), select **Your organizations**, and choose the organization where the Copilot connector should pull data from.
 
    :::image type="content" alt-text="Screenshot that shows how to access 'Your organizations'." source="media/github-connector/organizations-nav.png" lightbox="media/github-connector/organizations-nav.png":::
 
@@ -73,7 +73,7 @@ Follow the steps below to create a GitHub App for use with your Copilot Connecto
 
 6. Check **Request user authorization (OAuth) during installation** and disable the **Webhook** option.
 
-   :::image type="content" alt-text="Screenshot that of some check boxes required for the app configuration." source="media/github-connector/github-app2.png" lightbox="media/github-connector/github-app2.png":::
+   :::image type="content" alt-text="Screenshot of some check boxes required for the app configuration." source="media/github-connector/github-app2.png" lightbox="media/github-connector/github-app2.png":::
 
 7. Set the following permissions:
     - **Repository permissions**
@@ -92,7 +92,7 @@ Follow the steps below to create a GitHub App for use with your Copilot Connecto
 
 9. On the GitHub App’s **General** page, generate and copy the **client secret** by clicking **Generate a new client secret**. Then click **Install App**.
 
-   :::image type="content" alt-text="Screenshot that shows the credentials of the app including Client Id and Client secret." source="media/github-connector/github-app-credentials.png" lightbox="media/github-connector/github-app-credentials.png":::
+   :::image type="content" alt-text="Screenshot that shows the credentials of the app, including Client Id and Client secret." source="media/github-connector/github-app-credentials.png" lightbox="media/github-connector/github-app-credentials.png":::
 
 10. Select the organization where you want the app to be installed. **After installation**, you're ready to configure the connector.
 
@@ -118,9 +118,10 @@ Set up the Graph connector agent in a device with access to your GitHub instance
 Before you deploy the connector, test the connection with a limited user base in Copilot and Microsoft Search.
 
 ## Custom setup
-In custom setup you can edit any of the default values for users, content, and sync.
+In custom setup, you can edit any of the default values for users, content, and sync.
 
 ### Users
+
 #### Identity mapping
 To ensure correct permission enforcement, map GitHub user identities to Microsoft Entra ID. The following are the options:
   - **Email:** Maps GitHub email to Microsoft Entra ID user properties.
@@ -161,7 +162,7 @@ Setting up an IP restriction could cause the connector to stop working and lead 
 - For configuration about GitHub Apps and authentication, please check out below documentations
 
 | Topic                                                | Documentation link                                                                                                                                                                                                                                                                                                                                 |
-|:------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|:------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | How to create/register a GitHub App                  | [Registering a GitHub App](https://docs.github.com/en/enterprise-cloud@latest/apps/creating-github-apps/registering-a-github-app/registering-a-github-app)                                                                                                                                                                                          |
 | How to install a GitHub App into organizations       | [Installing your own GitHub App](https://docs.github.com/en/enterprise-cloud@latest/apps/using-github-apps/installing-your-own-github-app)                                                                                                                                                                                                        |
 | How to authenticate a GitHub App on behalf of a user | [About creating GitHub Apps (acting on behalf of a user)](https://docs.github.com/en/enterprise-cloud@latest/apps/creating-github-apps/about-creating-github-apps/about-creating-github-apps#github-apps-that-act-on-behalf-of-a-user)<br>[Authenticating with a GitHub App on behalf of a user](https://docs.github.com/en/enterprise-cloud@latest/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user) |
