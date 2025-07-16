@@ -1,5 +1,5 @@
 ---
-title: "Atlassian Jira Data Center Microsoft Copilot 365 connector" 
+title: "Atlassian Jira Data Center Microsoft 365 Copilot connector" 
 ms.author: rantang
 author: ranran1998
 manager: jecui
@@ -12,7 +12,7 @@ search.appverid:
 - BFB160 
 - MET150 
 - MOE150 
-description: "Set up the Atlassian Jira Data Center Microsoft Copilot 365 connector" 
+description: "Set up the Atlassian Jira Data Center Microsoft 365 Copilot connector" 
 ms.date: 12/26/2024
 ---
 
