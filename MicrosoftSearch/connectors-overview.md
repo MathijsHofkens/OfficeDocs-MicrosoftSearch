@@ -104,4 +104,4 @@ Microsoft 365 Copilot Search is a powerful, AI-powered enterprise search experie
 ## Related content
 
 - [Microsoft Search overview](/microsoftsearch/overview-microsoft-search)
-- [Connectors gallery](microsoftsearch/connectors-gallery)
+- [Connectors gallery](/microsoftsearch/connectors-gallery)

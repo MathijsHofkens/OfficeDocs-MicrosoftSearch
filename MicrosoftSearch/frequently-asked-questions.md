@@ -195,4 +195,4 @@ You can install the Microsoft Graph Connector Agent on multiple computers, for m
 
 - [Connectors overview](/microsoftsearch/connectors-overview)
 - [Connectors gallery](/microsoftsearch/connectors-gallery)
-- [Copilot Search overview](/microsoftsearch/overview-copilot-search)
+- [Copilot Search overview](/microsoftsearch/connectors-copilot-search)
