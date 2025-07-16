@@ -55,24 +55,24 @@ Install the Jira Data Center plugin from [Microsoft Graph Connector for Jira Dat
 
 ## Get started 
 
-**1. Display name**
+### Choose display name
 
 The display name helps users easily recognize the associated file or item in Copilot, signifying trusted content. Display name is also used as a [content source filter](/microsoftsearch/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize. 
 
-**2. Jira Data Center URL**
+### Provide Jira Data Center URL
 
 To connect to your Jira Data Center data, use your organization's Jira Data Center instance URL, typically formatted as `https://<your-organization-domain>.com`.
 
-**3. Graph Connector Agent (GCA)**
+### Graph Connector Agent (GCA)
 
 The graph connector agent acts as a bridge between your Jira Data Center instance and the connector APIs, enabling secure and efficient data transfer. In this step, select the agent configuration you want to use for your connector. See [install the Microsoft Graph connector agent](/microsoftsearch/graph-connector-agent).
 
-**4. Authentication Type**
+### Authentication type
 
-Currently OAuth 2.0 is supported in the connection setup. To enter the Client ID and Client Secret in the connection setup, refer to below instructions to obtain them. 
+Currently, OAuth 2.0 is supported in the connection setup. To enter the Client ID and Client Secret in the connection setup, see the instructions in this topic.
 
 1. Log in to your Jira Data Center.
-1. Click on settings icon -> Click on application -> Click on application links.
+1. Click **Settings** > **Application** > **Application links**.
 
    [![Screenshot of Click Application.](media/jira-data-center-gc-screenshot-1.png)](media/jira-data-center-gc-screenshot-1.png#lightbox)
 
@@ -87,16 +87,16 @@ Currently OAuth 2.0 is supported in the connection setup. To enter the Client ID
     [![{Screenshot of Select External application and then choose Incoming as the direction.}](media/jira-data-center-gc-screenshot-4.png)](media/jira-data-center-gc-screenshot-4.png#lightbox)
 
 1. Fill in the "Configure an incoming link" form.
-    - Redirect URL: for **M365 Enterprise**, `https://gcs.office.com/v1.0/admin/oauth/callback`.
+    - Redirect URL: for **Microsoft 365 Enterprise**, `https://gcs.office.com/v1.0/admin/oauth/callback`.
     - Scope: Admin
   
     [![{Screenshot of Fill in the “Configure an incoming link” form.}](media/jira-data-center-gc-screenshot-5.png)](media/jira-data-center-gc-screenshot-5.png#lightbox)
 
-1. Copy the provided client ID and secret in the "Credentials" page and paste them in the corresponding fields in Jira Data Center connection setup page.
+1. Copy the provided client ID and secret from the "Credentials" page and paste them in the corresponding fields in the Jira Data Center connection setup page.
   
     [![{Screenshot of client ID and secret.}](media/jira-data-center-gc-screenshot-6.png)](media/jira-data-center-gc-screenshot-6.png#lightbox)
 
-**5. Rollout to limited audience**
+### Rollout to limited audience
 
 Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. To know more about limited rollout, click [here](/microsoftsearch/staged-rollout-for-graph-connectors). 
 
@@ -104,16 +104,15 @@ At this point, you are ready to create the connection for your Jira Data Center.
 
 For other settings, we set defaults based on what works best with Jira Data Center data. The default values are as follows: 
 
-**Page** | **Settings** | **Default Values**
---- | ---- | ---
-Users | Access Permissions |Only people with access to this data source. 
-Users | Map Identities |Data source identities mapped using Microsoft Entra IDs.
-Content | Filter | All projects 
-Content | Manage Properties | To check default properties and their schema, [click here](#content).
-Sync | Incremental Crawl | Frequency: Every 15 mins
-Sync | Full crawl | Frequency: Every day
+|Page|Settings|Default values|
+|:--- |:---- |:---|
+|Users | Access Permissions |Only people with access to this data source. |
+|Users | Map Identities |Data source identities mapped using Microsoft Entra IDs.|
+|Content | Filter | All projects |
+|Content | Manage Properties | To check default properties and their schema, [click here](#content).|
+|Sync | Incremental Crawl | Frequency: Every 15 mins|
+|Sync | Full crawl | Frequency: Every day|
 
-If you want to edit any of these values, you need to choose the **Custom Setup** option.
 
 ## Custom Setup 
 
@@ -121,7 +120,7 @@ Custom setup allows admins to edit the default values mentioned above. Once you 
 
 ### Users
 
-**Access permissions**
+#### Access permissions
 
 The Jira Data Center Microsoft 365 Copilot connector supports data visible to Only people with access to this data source (recommended) or Everyone. If you choose Everyone, indexed data appears in the search results for all users. 
 
@@ -132,10 +131,10 @@ The Jira Data Center Microsoft 365 Copilot connector supports data visible to On
 >  
 > The connector uses the following access control hierarchy:
 >
-> 1. **Issue Security Level (Highest Priority)**  
->    If an issue has an **Issue Security Level** configured, access is restricted to users, groups, or roles explicitly associated with that level. In this case, **Issue Security Level overrides all other permission settings**. Users not included in the security level definition are **denied** access, regardless of their project-level permissions.
+> 1. Issue security level (highest priority)
+>    If an issue has an **Issue security level** configured, access is restricted to users, groups, or roles explicitly associated with that level. In this case, **Issue Security Level overrides all other permission settings**. Users not included in the security level definition are **denied** access, regardless of their project-level permissions.
 >
-> 2. **Fallback to Project-Level Permissions**
+> 2. Fallback to project-level permissions
 > If no Issue Security Level is set, access is determined by the **Project’s Permission Scheme**. Specifically, the user must be granted the **Browse Projects** permission for the corresponding project. The connector currently supports resolving the following types of `Browse Projects` permission assignments: **Project Roles**,  **Groups**, **Current Assignee**, **Reporter**, **Project Lead** and **Single Users**. But if the `Browse Projects` permission is configured using other types (e.g., Application access, public, Any logged in user, Group custom field value, User custom field value and Service Project Customer-Poratal Access), the connector **cannot evaluate those settings**. In such cases, access to the issue will be **denied** to ensure data security.
 
 If you choose Only people with access to this data source, you need to further choose whether your Jira Data Center has Microsoft Entra ID provisioned users or non-AAD users. 
@@ -166,8 +165,8 @@ You can filter JiraDataCenter issues based on their creation or last update time
 This section defines the schema for the connection. The schema determines how the indexed Jira content is ingested and processed within the 365 Copilot Connector. You can add or modify properties to ensure the data structure aligns with your organizational needs for Copilot and search experiences. You can also add custom fields from Jira Data Center as properties. [Learn more](/microsoftsearch/manage-search-schema).
 
 
-**Source Property**       | **Semantic Label**          | **Schema**                
----------------------|---------------------- |----------------------
+ |Source Property       | Semantic Label          | Schema  |               
+|:---------------------|:---------------------- |:---------------------- |
 | AssigneeEmailId       |                         | Query, Retrieve, Search |
 | AssigneeName          |                         | Query, Retrieve, Search |
 | Authors               | Authors               | Query, Retrieve       |
@@ -181,15 +180,15 @@ This section defines the schema for the connection. The schema determines how th
 | IssuePriority         |                         | Query, Retrieve, Search |
 | IssueStatus           |                         | Query, Retrieve  |
 | IssueSummary          |                         | Search |
-|IssueType | |Query, Retrieve 
-Labels | |Query, Retrieve 
-ProjectName| |Query, Retrieve 
-ReporterEmailId|Created by|Query, Retrieve, Search 
-ReporterName||Query, Retrieve, Search 
-Title|Title |Query, Retrieve, Search 
-Updated|Last modified date time|Query, Retrieve 
+|IssueType | |Query, Retrieve | 
+|Labels | |Query, Retrieve | 
+|ProjectName| |Query, Retrieve  |
+|ReporterEmailId|Created by|Query, Retrieve, Search  |
+|ReporterName||Query, Retrieve, Search | 
+|Title|Title |Query, Retrieve, Search  |
+|Updated|Last modified date time|Query, Retrieve | 
 
-**Preview Data**
+#### Preview data
 Use the preview results button to verify selected properties and filters. 
 
 ### Synchronization
@@ -206,7 +205,7 @@ The refresh interval determines how often your data is synchronized between the 
 For MS Search, if you need to customize the search results page. To learn about customizing search results, see [Customize the search results page](/microsoftsearch/configure-connector#step-11-customize-the-search-results-page).
 
 ## Troubleshooting
-After publishing your connection, you can review the status under the **Data Sources** tab in the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).
+After publishing your connection, you can review the status under **Data Sources** in the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).
 
 If you have issues or want to provide feedback, contact [Microsoft Graph | Support](https://developer.microsoft.com/graph/support).
 
