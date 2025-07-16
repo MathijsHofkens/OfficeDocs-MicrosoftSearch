@@ -43,6 +43,9 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 - **PostgreSQL Server address**: To connect to your PostgreSQL data, you need your organization's PostgreSQL server address.
 - **Service Account**: To connect to PostgreSQL server and allow Microsoft Graph Connector to update records regularly, you need a service account with read permissions granted to the service account.
 
+>[!NOTE]
+> If you have previously installed the GCA, ensure it is updated to version 3.1.5.0 or later.
+
 ## Get Started with Setup
 
 ### 1. Display name 

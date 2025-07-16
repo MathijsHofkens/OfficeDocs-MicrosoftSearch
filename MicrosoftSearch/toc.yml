@@ -50,6 +50,8 @@ items:
       href: connectors-overview.md
     - name: Connectors gallery
       href: connectors-gallery.md
+    - name: Connectors and Copilot Search
+      href: connectors-copilot-search.md
     - name: Frequently asked questions
       href: frequently-asked-questions.md
     - name: Index quota
