@@ -99,7 +99,7 @@ After custom data is indexed, developers can [query this data](/graph/search-con
 
 ## Copilot connectors for Copilot Search
 
-Microsoft 365 Copilot Search is a powerful, AI-powered enterprise search experience that acts as a universal search layer that integrates into the Microsoft 365 Copilot app. Copilot connectors enhance the Copilot Search experience by enabling seamless integration of data from external services into Microsoft Graph to make it available in the search experience. For more information, see [Copilot Search overview](/microsoftsearch/overview-copilot-search).
+Microsoft 365 Copilot Search is a powerful, AI-powered enterprise search experience that acts as a universal search layer that integrates into the Microsoft 365 Copilot app. Copilot connectors enhance the Copilot Search experience by enabling seamless integration of data from external services into Microsoft Graph to make it available in the search experience. For more information, see [Copilot Search overview](./overview-microsoft-search.md).
 
 ## Related content
 
