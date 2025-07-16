@@ -41,9 +41,9 @@ Before you set up the connector:
 5. Install and register the Graph Connector Agent (GCA) on a device with access to the GitHub instance. The version must be 3.1.11.0 or later.
 
 > [!NOTE] 
-> When you install the GitHub Server Connector’s GCA agent on your device, it performs a git clone of the target repository directly into the content-storage path you specify. Because this path exists on your local system, any other user account or process with read (or higher) permissions to that directory can access the full contents of the cloned repositories, including potentially sensitive source code, configuration files, credentials, or secret data. The best practice is to strictly isolate clone storage. Keep the directory used for GCA’s repository clones separate from any shared or personal files so that only the connector process accesses it. Avoid sharing or syncing that folder. Don’t grant read access or include it in any network-share or cloud-sync configuration — this ensures no unintended user or service stumbles upon your code By isolating GCA’s clone output in a locked-down directory, you prevent unintended data exposure to other local users or processes while still allowing the connector to upload repository contents to Microsoft Graph as intended.
+> When you install the GitHub Server Connector's GCA agent, it clones the target repository to a specified directory on your local system. Any user or process with read access to that directory can potentially access sensitive data. To prevent unintended exposure, isolate the clone storage by keeping it separate from shared or personal files. Avoid sharing, syncing, or granting read access to this directory, ensuring only the connector process can access it. This isolation protects your code while allowing the connector to function properly.
 
-### Set Up a GitHub App for authentication 
+### Set up a GitHub App for authentication 
 Follow the steps below to create a GitHub App for use with your Copilot connector:
 
 1. In GitHub, click your profile photo (top right), select **Your organizations**, and choose the organization where the Copilot connector should pull data from.
