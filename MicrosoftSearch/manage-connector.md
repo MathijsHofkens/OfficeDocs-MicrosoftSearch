@@ -47,15 +47,16 @@ The **State** column for each connection can display one of five statuses:
 ## Manage visibility of third-party data sources in Copilot
 Admins can now control the visibility of third-party (3P) connectors in Copilot Search and Copilot Chat using a simple toggle. This feature enhances data governance and the user experience by allowing selective exposure of indexed content. If the connection is off, it will still crawl the data source, but the data won't be used for search results.
 
-## How to manage visibility of third party data sources in Copilot:
-•	Navigate to Copilot > Agents & Connectors > Connection.
-•	Use the Copilot visibility toggle to turn a 3P connector on or off and click on Save to confirm.
-•	When off, the connector is excluded from all Copilot Search and Copilot Chat results and responses.
+## Managing visibility of third-party data sources in Copilot
 
-## Default behavior:
-•	Newly added 3P connectors are visible by default.
-•	Changes sync automatically with Workplace Search. 
-•	This switch doesn’t affect Declarative Agents and agent’s data. 
+To manage visibility of third-party data sources in Copilot
+- Navigate to Copilot > **Agents & connectors** > **Connection**.
+- Use the Copilot visibility toggle to turn a 3P connector on or off and click **Save**.
+  
+When off, the connector is excluded from all Copilot Search and Copilot Chat results and responses.
+
+The default behavior includes newly added 3P connectors being visible by default, with changes syncing automatically with Workplace Search, without affecting Declarative Agents and their data.
+
 
 ## Notifications for permanent crawl failures in your connections
 
