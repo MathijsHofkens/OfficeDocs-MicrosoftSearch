@@ -18,7 +18,7 @@ ms.date: 12/26/2024
 
 # Atlassian Jira Data Center Microsoft 365 Copilot connector (preview)
 
-The Jira Data Center Microsoft 365 Copilot connector enables your organization to index Jira Data Center issues and related data, making them easily discoverable and actionable within Microsoft 365 ecosystem.  
+The Jira Data Center Microsoft 365 Copilot connector enables your organization to index Jira Data Center issues and related data, making them easily discoverable and actionable within the Microsoft 365 ecosystem.  
 
 This article is intended for Microsoft 365 administrators who are responsible for configuring, running, and monitoring the Jira Data Center Microsoft 365 Copilot connector. It supplements the general instructions provided in [Set up Microsoft 365 Copilot connectors in the Microsoft 365 admin center](/microsoftsearch/configure-connector).
 
@@ -26,11 +26,11 @@ This article is intended for Microsoft 365 administrators who are responsible fo
 
 Enhanced Copilot Capabilities: Users can ask natural language questions about Jira issues and project data in Microsoft 365 Copilot. For example: 
 
-- *"Summarize the open issues in Project Alpha."* 
+- *"Summarize the open issues in project alpha."* 
 
 - *"Show me all high-priority bugs filed this week."* 
 
-Semantic Search Support: Users can type natural language queries within Microsoft Search to get highly relevant and context-rich responses about Jira issues and projects. 
+Semantic search support: Users can type natural language queries within Microsoft Search to get highly relevant and context-rich responses about Jira issues and projects. 
 
 >[!Note]
 >The connector is only compatible with Jira Data Center version 8.14 and above. 
@@ -41,7 +41,7 @@ By using the Jira Data Center Microsoft 365 Copilot connector, teams can keep th
 
 1. Install the Microsoft 365 Copilot connector agent (GCA)
 
-To index your Jira Data Center content, you must install the **GCA** on a Windows machine within the same network as the Jira Data Center site. See [install the Microsoft Graph connector agent](/microsoftsearch/graph-connector-agent). You must be the administrator for your organization's Microsoft 365 tenant and the administrator for your organization's Jira site. 
+To index your Jira Data Center content, you must install the **GCA** on a Windows machine within the same network as the Jira Data Center site. See [install the Graph connector agent](/microsoftsearch/graph-connector-agent). You must be the administrator for your organization's Microsoft 365 tenant and the administrator for your organization's Jira site. 
 
 >[!NOTE]
 > If you have previously installed the GCA, ensure it is updated to version 3.1.3.0 or later.  
@@ -67,7 +67,7 @@ To connect to your Jira Data Center data, use your organization's Jira Data Cent
 
 ### Graph Connector Agent (GCA)
 
-The graph connector agent acts as a bridge between your Jira Data Center instance and the connector APIs, enabling secure and efficient data transfer. In this step, select the agent configuration you want to use for your connector. See [install the Microsoft Graph connector agent](/microsoftsearch/graph-connector-agent).
+The graph connector agent acts as a bridge between your Jira Data Center instance and the connector APIs, enabling secure and efficient data transfer. In this step, select the agent configuration you want to use for your connector. See [install the Graph connector agent](/microsoftsearch/graph-connector-agent).
 
 ### Authentication type
 
@@ -102,9 +102,9 @@ Currently, OAuth 2.0 is supported in the connection setup. To enter the Client I
 
 Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. To know more about limited rollout, click [here](/microsoftsearch/staged-rollout-for-graph-connectors). 
 
-At this point, you are ready to create the connection for your Jira Data Center. You can acknowledge the notice and then click on the **Create** button and the Microsoft 365 Copilot connector starts indexing data from your Jira Data Center site. 
+At this point, you are ready to create the connection for your Jira Data Center. You can acknowledge the notice and then click on the **Create** button, and the Microsoft 365 Copilot connector starts indexing data from your Jira Data Center site. 
 
-For other settings, we set defaults based on what works best with Jira Data Center data. The default values are as follows: 
+For other settings, like Access permissions, Schema, and Crawl frequency, default values are set based on what works best with Jira Data Center data. 
 
 |Page|Settings|Default values|
 |:--- |:---- |:---|
@@ -118,7 +118,7 @@ For other settings, we set defaults based on what works best with Jira Data Cent
 
 ## Custom Setup 
 
-Custom setup allows admins to edit the default values mentioned above. Once you click on the **Custom Setup** option, you see three more tabs – Users, Content, and Sync. 
+In custom setup, you can edit any of the default values for users, content, and sync.
 
 ### Users
 
@@ -128,17 +128,17 @@ The Jira Data Center Microsoft 365 Copilot connector supports data visible to On
 
 To identify which option is suitable for your organization: 
 
-1. Choose the **Microsoft Entra ID** option if the email ID of Jira Data Center users is same as the UserPrincipalName (UPN) of users in Microsoft Entra ID. 
+1. Choose the **Microsoft Entra ID** option if the email ID of Jira Data Center users is the same as the UserPrincipalName (UPN) of users in Microsoft Entra ID. 
 
 2. Choose the **non-AAD** option if the email ID of Confluence users is **different** from the UserPrincipalName (UPN) of users in Microsoft Entra ID.
 
 
 >[!Important]
 >- If you choose Microsoft Entra ID as the type of identity source, the connector maps the email IDs of users obtained from Jira Data Center directly to UPN property from Microsoft Entra ID.
->- If you chose "non-AAD" for the identity type see Map your non-Azure AD Identities for instructions on mapping the identities. You can use this option to provide the mapping regular expression from email ID to UPN.
+>- If you chose "non-AAD" for the identity type, see Map your non-Azure AD Identities for instructions on mapping the identities. You can use this option to provide the mapping regular expression from email ID to UPN.
 >- Updates to users or groups governing access permissions are synced in full crawls only. Incremental crawls do not currently support the processing of updates to permissions.
 
- If you choose "Only people with access to this data source (recommended) ", the Jira Data Center Copilot connector enforces access control based on Jira's native permission models to prevent oversharing of sensitive issue content. When indexing issues, the connector applies a hierarchical evaluation similar to Jira's internal permission logic. This ensures only authorized users can discover content via Copilot.The image below illustrates the evaluation logic that determines access rights to Jira issues. 
+ If you choose "Only people with access to this data source (recommended) ", the Jira Data Center Copilot connector enforces access control based on Jira's native permission models to prevent oversharing of sensitive issue content. When indexing issues, the connector applies a hierarchical evaluation similar to Jira's internal permission logic. This ensures only authorized users can discover content via Copilot. The image below illustrates the evaluation logic that determines access rights to Jira issues. 
 ![Diagram showing the workflow of Jira Data Center Copilot connector ACL.](media/jira-data-center-copilot-connector-permission.png)
 
 The connector uses the following access control hierarchy:
@@ -146,25 +146,25 @@ The connector uses the following access control hierarchy:
 If an issue has an **Issue security level** configured, access is restricted to users, groups, or roles explicitly associated with that level. In this case, **Issue Security Level overrides all other permission settings**. Users not included in the security level definition are **denied** access, regardless of their project-level permissions.
 
 2. Fallback to project-level permissions
-If no Issue Security Level is set, access is determined by the **Project’s Permission Scheme**. Specifically, the user must be granted the **Browse Projects** permission for the corresponding project. The connector currently supports resolving the following types of `Browse Projects` permission assignments: **Project Roles**,  **Groups**, **Current Assignee**, **Reporter**, **Project Lead** and **Single Users**. But if the `Browse Projects` permission is configured using other types (e.g., Application access, public, Any logged in user, Group custom field value, User custom field value and Service Project Customer-Poratal Access), the connector **cannot evaluate those settings**. In such cases, access to the issue will be **denied** to ensure data security.
+If no Issue Security Level is set, access is determined by the **Project’s Permission Scheme**. Specifically, the user must be granted the **Browse Projects** permission for the corresponding project. The connector currently supports resolving the following types of `Browse Projects` permission assignments: **Project Roles**,  **Groups**, **Current Assignee**, **Reporter**, **Project Lead**, and **Single Users**. But if the `Browse Projects` permission is configured using other types (e.g., Application access, public, Any logged in user, Group custom field value, User custom field value and Service Project Customer-Poratal Access), the connector **cannot evaluate those settings**. In such cases, access to the issue will be **denied** to ensure data security.
 
 
-### **Content**
+### Content
 
-**Choose projects and filter data**
+#### Choose projects and filter data
 
 When you choose "Entire JiraDataCenter site", all current and future projects are indexed. When you choose "Only some projects", only the selected projects are indexed.  
 
-**Filter data**
+#### Filter data
 
-You can filter JiraDataCenter issues based on their creation or last update timestamp to only index recent content. For advanced filters you may add a **JQL** string as well. 
+You can filter JiraDataCenter issues based on their creation or last update timestamp to only index recent content. For advanced filters, you may add a **JQL** string as well. 
 
-**Manage Properties**
+#### Manage properties
 
 This section defines the schema for the connection. The schema determines how the indexed Jira content is ingested and processed within the 365 Copilot Connector. You can add or modify properties to ensure the data structure aligns with your organizational needs for Copilot and search experiences. You can also add custom fields from Jira Data Center as properties. [Learn more](/microsoftsearch/manage-search-schema).
 
 
- |Source Property       | Semantic Label          | Schema  |               
+ |Source property       | Semantic Label          | Schema  |               
 |:---------------------|:---------------------- |:---------------------- |
 | AssigneeEmailId       |                         | Query, Retrieve, Search |
 | AssigneeName          |                         | Query, Retrieve, Search |
@@ -193,7 +193,7 @@ Use the preview results button to verify selected properties and filters.
 ### Synchronization
 The refresh interval determines how often your data is synchronized between the data source and the 365 Copilot connector index. There are two types of refresh intervals - full crawl and incremental crawl. For more details, click [here](/microsoftsearch/configure-connector#step-8-refresh-settings).
 
-## Review and Test your connection 
+## Review and test your connection 
 
 - For testing, you can choose [publish to limited audience](/microsoftsearch/staged-rollout-for-graph-connectors#modify-or-stop-staged-rollout). 
 
