@@ -109,7 +109,7 @@ Choose a display name that helps users recognize the connection in a Copilot res
 - Grant the required API scopes.
 
 ### Instance URL 
-Enter the instance URL of your GitHub Enterprise Server. This is the root domain of your internal GitHub server. For example, https://github.yourdomain.com. 
+Enter the instance URL of your GitHub Enterprise Server. This is the root domain of your internal GitHub server. For example, `https://github.yourdomain.com`. 
 
 ### Graph connector agent 
 Set up the Graph connector agent in a device with access to your GitHub instance following the [setup guide](./graph-connector-agent.md). And select the name of your Graph connector agent instance. 
