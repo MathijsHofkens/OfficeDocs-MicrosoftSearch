@@ -20,13 +20,13 @@ ms.date: 02/26/2025
 
 The Veeva Vault PromoMats Microsoft 365 Copilot connector allows organizations to index promotional marketing materials from Veeva Vault into Microsoft Graph, making them accessible across Microsoft 365 experiences, including Microsoft 365 Copilot.
 
-The connector integrates Vault PromoMats' built-in permission model, ensuring that users only access authorized content, and supports faster content generation and review through content analysis and preparation. By enhancing efficiency throughout the content lifecycle, it helps maintain brand consistency. This functionality is beneficial for marketing, medical affairs, and regulatory teams, enabling informed decision-making and reducing the time-to-market for promotional materials.
+The connector integrates Vault PromoMats' built-in permission model, ensuring that users only access authorized content, and supports faster content generation and review through content analysis and preparation. It helps maintain brand consistency by improving efficiency throughout the content lifecycle. This functionality is beneficial for marketing, medical affairs, and regulatory teams, enabling informed decision-making and reducing the time-to-market for promotional materials.
 
 The following are the key benefits of the Veeva Vault PromoMats Copilot connector:
 
 - **Enhanced content management and retrieval:** The connector suggests tags to organize and access relevant documents more easily.
 - **AI-assisted content reuse and localization:** Facilitates content adaptation for various markets, saving time while ensuring relevance for different audiences.
-- **Comprehensive document review and summarization:** AI tools help grammar, spelling, semantics, and regulatory compliance, ensuring accuracy and up-to-date promotional materials.
+- **Comprehensive document review and summarization:** AI tools help with grammar, spelling, semantics, and regulatory compliance, ensuring accuracy and up-to-date promotional materials.
 
 Additionally, the connector boosts productivity by minimizing time spent searching for information across multiple sources. By integrating Microsoft 365 Copilot and Microsoft Search with PromoMats data, it streamlines content preparation and field use. It also improves efficiency by referencing existing compliant documents and content to help generate new messaging and prepare materials effectively.
 
@@ -40,7 +40,7 @@ The Veeva Vault PromoMats Copilot connector enables the following capabilities:
 - Improves the searchability of promotional documents by using advanced Microsoft 365 search capabilities.
 - Gains insights and recommendations from indexed data to enhance workflow efficiency, including checking the usage of specific phrases in PromoMats documents.
 - Indexes PromoMats content to create a unified search experience across Microsoft 365 environments.
-- Maintains data privacy and compliance by supporting ACL permissions and document-level permissions, simplifying the permission model and reducing the risk of misconfiguration.
+- Maintains data privacy and compliance by supporting ACL permissions and document-level permissions, simplifying the permission model, and reducing the risk of misconfiguration.
 - Uses query string conditions to precisely control the synchronization of articles, ensuring efficient indexing.
 
 The following table lists example prompts that show how Microsoft 365 Copilot, integrated with the Veeva PromoMats Copilot connector, can significantly enhance productivity and streamline processes by using PromoMats data.
@@ -48,15 +48,15 @@ The following table lists example prompts that show how Microsoft 365 Copilot, i
 |Scenario|Example prompt|
 |:---|:---|
 |Content generation|Generate personalized content for customer interactions based on the latest research documents stored in PromoMats.|
-|Content tagging|Suggest tags that can be used with the selected promotional contents to make it easier to manage and retrieve going forward.|
+|Content tagging|Suggest tags that can be used with the selected promotional content to make it easier to manage and retrieve going forward.|
 | HTML email generation|Create HTML emails generated automatically from pre-provided HTML templates and documents stored in PromoMats.|
 |Pre-call planning|Summarize relevant information and prepare materials for sales representatives before customer meetings.|
 |AI-assisted content re-use|Identify appropriate tags, translation, and localization to improve the reuse of content. |
 |Content consistency|Create new promotional materials, ensuring consistency with existing content.|
-|Pre-MLR AI-assisted reviews|Review grammar, spelling, and semantics and cross-validate the following promotional documents.|
+|Pre-MLR AI-assisted reviews|Review grammar, spelling, and semantics, and cross-validate the following promotional documents.|
 |Document summarization|Summarize key points from regulatory documents to ensure all team members are informed of the latest compliance requirements.|
 |Meeting preparation|Prepare a script for an upcoming meeting based on recent customer email threads and PromoMats documents.|
-|Support claim process|Find claims that can be reused made about the efficacy of drugs to ensure they are medically and legally validated and approved.|
+|Support claim process|Find claims that can be reused, made about the efficacy of drugs, to ensure they are medically and legally validated and approved.|
 
 ## Limitations
 
@@ -115,12 +115,12 @@ Use the **Client ID** from the newly created application in the Entra admin cent
 
    For the rest of the settings, keep the default values.
 
-5. Link user with the security policy.
+5. Link the user with the security policy.
    1. Go to **Admin** > **Users & Groups**.
    2. Select a user — ideally the vault owner, but otherwise anyone with permission to run VQL queries, use the RESTful API, export documents to file staging, download them from file staging, and have access to all the files on all stages, the Doclifecycle configuration detail and the DAC configuration.
    3. Click **Edit**.
    4. In **Details** > **Security Policy**, change the values to the newly created policy.
-   5. In **Federated ID**, change it to the upn (User Principal Name) of the Entra ID account used to set up the connector (i.e. the admin account).
+   5. In **Federated ID**, change it to the UPN (User Principal Name) of the Entra ID account used to set up the connector, like the admin account.
 
 ## Get started
 
@@ -189,9 +189,10 @@ You can modify the frequency of full crawls to fit your organization's requireme
 ### Content 
 
 #### Manage properties
+
 You can view properties crawled from your Veeva PromoMats.
 
-| Properties             | Semantic Label         | Description                                                    | Schema                 |
+| Properties             | Semantic label         | Description                                                    | Schema                 |
 |------------------------|------------------------|----------------------------------------------------------------|------------------------|
 | Content                |                        | Main text or body content extracted from the document          | Search                 |
 | Country                |                        | Country or region related to the document                      | Query, Retrieve       |
