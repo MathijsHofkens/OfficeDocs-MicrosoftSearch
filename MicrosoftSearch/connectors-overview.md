@@ -48,7 +48,7 @@ Microsoft provides more than 30 Microsoft 365 Copilot connectors, and our ecosys
 
 You can connect to the many popular data sources using connectors created by Microsoft.
 
-The [Microsoft 365 Copilot connectors gallery](https://www.microsoft.com/microsoft-search/connectors) contains a brief description of each of these connectors. If you're ready to connect one of these data sources to your tenant, be sure to read the [Setup overview](configure-connector.md) and any other articles in the setup connectors by Microsoft section that apply to your data source.
+The [Microsoft 365 Copilot connectors gallery](connectors-gallery.md) contains a brief description of each of these connectors. If you're ready to connect one of these data sources to your tenant, be sure to read the [Setup overview](configure-connector.md) and any other articles in the setup connectors by Microsoft section that apply to your data source.
 
 ### Copilot connectors for people data
 
@@ -56,7 +56,7 @@ The [Microsoft 365 Copilot connectors gallery](https://www.microsoft.com/microso
 
 ### Partner-built Copilot connectors
 
-The [Microsoft 365 Copilot connectors gallery](https://www.microsoft.com/microsoft-search/connectors) includes a brief description of each of the connectors created by our partners and a link to each partner's website. To learn more, contact each partner directly.
+The [Microsoft 365 Copilot connectors gallery](connectors-gallery.md) includes a brief description of each of the connectors created by our partners and a link to each partner's website. To learn more, contact each partner directly.
 
 ### Custom Copilot connectors
 
@@ -67,7 +67,7 @@ You can build your own custom connectors to ingest your business data. For more 
 
 ## Connection management
 
-You can manage your connections on the [connectors tab](https://admin.microsoft.com/Adminportal/Home#/MicrosoftSearch/Connectors) in the [Microsoft 365 admin center](https://admin.microsoft.com/). For more information about managing connections, see [Monitor your connections](manage-connector.md).
+You can manage your connections on the [connectors tab](https://admin.microsoft.com/#/copilot/connectors) in the [Microsoft 365 admin center](https://admin.microsoft.com/). For more information about managing connections, see [Monitor your connections](manage-connector.md).
 
 ## Limitations
 
@@ -103,5 +103,5 @@ Microsoft 365 Copilot Search is a powerful, AI-powered enterprise search experie
 
 ## Related content
 
-- [Microsoft Search overview](/microsoftsearch/overview-microsoft-search)
-- [Connectors gallery](/microsoftsearch/connectors-gallery)
+- [Microsoft Search overview](overview-microsoft-search.md)
+- [Microsoft 365 Copilot connectors gallery](connectors-gallery.md)
