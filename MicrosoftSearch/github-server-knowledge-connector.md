@@ -38,7 +38,7 @@ Before you set up the connector:
 2. Set up the GitHub App for authentication.
 3. Verify that the user account used for authentication has access to the repositories and knowledge to be indexed.
 4. Make sure that users who access indexed GitHub data have corresponding **Microsoft Entra ID** identities for permission mapping.
-5. Install and register the Graph Connector Agent (GCA) on the a device with access to the GitHub instance. The version must be 3.1.11.0 or later.
+5. Install and register the Graph Connector Agent (GCA) on a device with access to the GitHub instance. The version must be 3.1.11.0 or later.
 
 > [!NOTE] 
 > When you install the GitHub Server Connector’s GCA agent, it clones the target repository to a specified directory on your local system. Any user or process with read access to this directory can access sensitive data. To prevent this, isolate the clone storage by keeping it separate from shared or personal files. Avoid sharing, syncing, or granting read access to this directory, ensuring only the connector process can access it. This isolation prevents unintended exposure while allowing the connector to upload repository contents to Microsoft Graph.
@@ -109,7 +109,7 @@ Choose a display name that helps users recognize the connection in a Copilot res
 - Grant the required API scopes.
 
 ### Instance URL 
-Enter the instance URL of your GitHub Enterprise Server. This is the root domain of your internal GitHub server. For example, https://github.yourdomain.com. 
+Enter the instance URL of your GitHub Enterprise Server. This is the root domain of your internal GitHub server. For example, `https://github.yourdomain.com`. 
 
 ### Graph connector agent 
 Set up the Graph connector agent in a device with access to your GitHub instance following the [setup guide](./graph-connector-agent.md). And select the name of your Graph connector agent instance. 
