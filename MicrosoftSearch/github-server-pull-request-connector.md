@@ -95,7 +95,7 @@ Follow the steps below to create a GitHub App for use with your Copilot connecto
 
    :::image type="content" alt-text="Screenshot that shows the credentials of the app, including Client Id and Client secret." source="media/github-connector/github-app-credentials.png" lightbox="media/github-connector/github-app-credentials.png":::
 
-10. Select the organization where you want the app to be installed. **After installation**you're ready to configure the connector.
+10. Select the organization where you want the app to be installed. **After installation** you're ready to configure the connector.
 
     :::image type="content" alt-text="Screenshot that shows the app installation dialog." source="media/github-connector/github-install.png" lightbox="media/github-connector/github-install.png":::
 
@@ -110,7 +110,7 @@ Choose a display name that helps users recognize the connection in a Copilot res
 - Grant the required API scopes.
 
 ### Instance URL 
-Enter the instance URL of your GitHub Enterprise Server. This is the root domain of your internal GitHub server. For example, https://github.yourdomain.com. 
+Enter the instance URL of your GitHub Enterprise Server. This is the root domain of your internal GitHub server. For example, `https://github.yourdomain.com`. 
 
 ### Graph connector agent 
 Set up the Graph connector agent in a device with access to your GitHub instance following the [setup guide](./graph-connector-agent.md). And select the name of your Graph connector agent instance. 
