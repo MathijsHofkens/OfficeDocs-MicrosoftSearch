@@ -153,7 +153,7 @@ Enter the required information for identity mapping. For example, if you want to
 
 This process ensures that user identity mappings are correctly established and security permissions are properly enforced.
 
-### 5. Roll out to limited audience
+### Roll out to limited audience
 Deploy this connection to a limited group of users to validate indexing and access control functionality before a full rollout. 
 
 
@@ -163,11 +163,11 @@ The following table lists the default settings for the Veeva Vault PromoMats Cop
 
 | Section  | Setting               | Default value |
 |----------|-----------------------|---------------|
-| **Users**   | Access permissions   | Respects Veeva Vault permissions; only viewable documents are accessible. |
-| **Content** | Index metadata       | Indexes key metadata, such as document name, owner, and lifecycle stage. |
-| **Content** | Manage properties    | Enables metadata like title, created by, and last modified by. |
-| **Sync**    | Full crawls          | Every day.|
-| **Sync**  | Full crawl frequency|Every day.|
+| Users   | Access permissions   | Respects Veeva Vault permissions; only viewable documents are accessible. |
+| Content | Index metadata       | Indexes key metadata, such as document name, owner, and lifecycle stage. |
+| Content | Manage properties    | Enables metadata like title, created by, and last modified by. |
+| Sync    | Full crawls          | Every day.|
+| Sync  | Full crawl frequency|Every day.|
 
 ## Custom setup
 
