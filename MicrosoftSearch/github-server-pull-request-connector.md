@@ -17,8 +17,9 @@ ms.date: 03/06/2025
 ---
 
 # GitHub Server Pull Requests Microsoft 365 Copilot connector (preview)
+
 The GitHub Server Pull Requests Microsoft 365 Copilot connector allows your organization to index pull requests stored in GitHub. After you configure the connector and index GitHub content, users can search and retrieve information via Microsoft Search and Microsoft 365 Copilot.
-This article is intended for Microsoft 365 administrators or anyone who configures, runs, or monitors GitHub Server Pull Requests Copilot connector.
+This article is intended for Microsoft 365 administrators or anyone who configures, runs, or monitors the GitHub Server Pull Requests Copilot connector.
 
 ## Capabilities
 - Index GitHub pull requests from all public repositories and the internal repositories within organizations where the corresponding GitHub App is installed.
@@ -38,15 +39,15 @@ Before you set up the connector:
 2. Set up the GitHub App for authentication.
 3. Verify that the user account used for authentication has access to the repositories and pull requests to be indexed.
 4. Make sure that users who access indexed GitHub data have corresponding **Microsoft Entra ID** identities for permission mapping.
-5. Install and register the Graph Connector Agent (GCA) on the a device with access to the GitHub instance. The version must be 3.1.11.0 or later.
+5. Install and register the Graph Connector Agent (GCA) on a device with access to the GitHub instance. The version must be 3.1.11.0 or later.
 
 > [!NOTE] 
 > When you install the GitHub Server Connector's GCA agent, it clones the repository into a specified directory on your local system. Any user or process with read access can view the cloned content, including sensitive data. To prevent this, isolate the clone storage by keeping it separate from shared or personal files, ensuring only the connector process can access it. Avoid sharing or syncing the folder, and don't grant read access or include it in any network or cloud sync configurations. This protects your data while allowing the connector to upload repository contents to Microsoft Graph.
 
 ### Set Up a GitHub App for Authentication 
-Follow the steps below to create a GitHub App for use with your Copilot Connector:
+Follow the steps below to create a GitHub App for use with your Copilot connector:
 
-1. In GitHub, click your profile photo (top right), select **Your organizations**, and choose the organization where the Graph Connector should pull data from.
+1. In GitHub, click your profile photo (top right), select **Your organizations**, and choose the organization where the Copilot connector should pull data from.
 
    :::image type="content" alt-text="Screenshot that shows how to access 'Your organizations'." source="media/github-connector/organizations-nav.png" lightbox="media/github-connector/organizations-nav.png":::
 
@@ -73,7 +74,7 @@ Follow the steps below to create a GitHub App for use with your Copilot Connecto
 
 6. Check **Request user authorization (OAuth) during installation** and disable the **Webhook** option.
 
-   :::image type="content" alt-text="Screenshot that of some check boxes required for the app configuration." source="media/github-connector/github-app2.png" lightbox="media/github-connector/github-app2.png":::
+   :::image type="content" alt-text="Screenshot of some check boxes required for the app configuration." source="media/github-connector/github-app2.png" lightbox="media/github-connector/github-app2.png":::
 
 7. Set the following permissions:
     - **Repository permissions**
@@ -92,9 +93,9 @@ Follow the steps below to create a GitHub App for use with your Copilot Connecto
 
 9. On the GitHub App’s **General** page, generate and copy the **client secret** by clicking **Generate a new client secret**. Then click **Install App**.
 
-   :::image type="content" alt-text="Screenshot that shows the credentials of the app including Client Id and Client secret." source="media/github-connector/github-app-credentials.png" lightbox="media/github-connector/github-app-credentials.png":::
+   :::image type="content" alt-text="Screenshot that shows the credentials of the app, including Client Id and Client secret." source="media/github-connector/github-app-credentials.png" lightbox="media/github-connector/github-app-credentials.png":::
 
-10. Select the organization where you want the app to be installed. **After installation**, you're ready to configure the connector.
+10. Select the organization where you want the app to be installed. **After installation**you're ready to configure the connector.
 
     :::image type="content" alt-text="Screenshot that shows the app installation dialog." source="media/github-connector/github-install.png" lightbox="media/github-connector/github-install.png":::
 
@@ -161,7 +162,7 @@ Setting up an IP restriction could cause the connector to stop working and lead 
 - For configuration about GitHub Apps and authentication, please check out below documentations
 
 | Topic                                                | Documentation link                                                                                                                                                                                                                                                                                                                                 |
-|:------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|:------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | How to create/register a GitHub App                  | [Registering a GitHub App](https://docs.github.com/en/enterprise-cloud@latest/apps/creating-github-apps/registering-a-github-app/registering-a-github-app)                                                                                                                                                                                          |
 | How to install a GitHub App into organizations       | [Installing your own GitHub App](https://docs.github.com/en/enterprise-cloud@latest/apps/using-github-apps/installing-your-own-github-app)                                                                                                                                                                                                        |
 | How to authenticate a GitHub App on behalf of a user | [About creating GitHub Apps (acting on behalf of a user)](https://docs.github.com/en/enterprise-cloud@latest/apps/creating-github-apps/about-creating-github-apps/about-creating-github-apps#github-apps-that-act-on-behalf-of-a-user)<br>[Authenticating with a GitHub App on behalf of a user](https://docs.github.com/en/enterprise-cloud@latest/apps/creating-github-apps/authenticating-with-a-github-app/authenticating-with-a-github-app-on-behalf-of-a-user) |
