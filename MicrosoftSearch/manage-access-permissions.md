@@ -31,7 +31,7 @@ Incorrect permission settings such as unintentionally granting access to "Everyo
  
 ## Step 2: Review the access permissions
  
-In the connection details pane, locate the **Permissions** section. This will show one of the following:
+In the connection details pane, locate the **Permissions** section. This section shows one of the following settings:
  
 - **Only people with access to this data source**: The connector respects source system ACLs (Access Control Lists).
 - **Visible to everyone**: The connector grants access to all users in the organization.
@@ -40,14 +40,14 @@ In the connection details pane, locate the **Permissions** section. This will sh
  
 ## Step 3: Validate against Your intended settings
  
-Compare the displayed access setting with what you selected during setup. If you used the **Quick setup** flow, be aware that:
+Compare the displayed access setting with what you selected during setup. If you used the **Quick setup** flow, note that:
  
 - For connectors that support access permissions, the default should be **Only people with access**.
-- For connectors that do not support access permissions, the default is **Everyone**, and admins are notified.
+- For connectors that don't support access permissions, the default is **Everyone**, and admins are notified.
  
 ## Step 4: If the setting ss incorrect
  
-If the access permission does not match your intended configuration, you must:
+If the access permissions don't match your intended configuration, you must:
 1. **Delete** the existing connection.
 2. **Recreate** the connection using the **Custom setup** flow to explicitly configure access permissions.
  
