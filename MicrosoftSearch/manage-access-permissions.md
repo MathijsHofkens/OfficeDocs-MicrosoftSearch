@@ -27,7 +27,7 @@ Incorrect permission settings such as unintentionally granting access to "Everyo
 3. Select the connector you want to review.
 4. In the connection overview, click on the connection name to open the **details pane**.
 
-[![Screenshot that shows the connectors list with a connector selected and details pane showing information about this connector.](media/datasourcestab.png)](media/datasourcestab.png#lightbox)
+   [![Screenshot that shows the connectors list with a connector selected and details pane showing information about this connector.](media/datasourcestab.png)](media/datasourcestab.png#lightbox)
  
 ## Step 2: Review the access permissions
  
@@ -52,4 +52,4 @@ If the access permissions don't match your intended configuration, you must:
 2. **Recreate** the connection using the **Custom setup** flow to explicitly configure access permissions.
  
 > [!Note]
-> Editing access permissions after creation is not supported currently. Deletion and recreation is the only reliable way to correct misconfigured access.
+> Editing access permissions after creation isn't supported currently. Deletion and recreation is the only reliable way to correct misconfigured access.
