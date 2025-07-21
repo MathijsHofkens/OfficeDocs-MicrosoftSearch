@@ -245,7 +245,7 @@ SysUpdatedOn  | `Last modified date time` | Date and time the item was last modi
 
 Use the preview results button shown at the top of the content page to verify the sample values of the selected properties and query filter. 
 <p align="center">
-<img width="75%" height="auto" alt="Screesnhot showing where to locate the Preview Data Button in the Content page" src="media/servicenow-tickets-preview-data.png" lightbox="media/servicenow-tickets-preview-data.png"/>
+<img width="75%" height="auto" alt="Screesnhot showing where to locate the Preview Data Button in the Content page" src="media/servicenow-tickets-preview-data.png">
 </p>
 
 ## Step 9: [Users] Access Permissions 
@@ -255,11 +255,11 @@ The ServiceNow Tickets Copilot connector supports search permissions visible to 
 - Select “**Only people with access to this data source**” under Access Permissions
 - Provide at least one rule for all the tables that you have selected for indexing. For each of the tables that appear in the side panel, click on the expand down arrow & then click on “**Edit rule**”.
   <p align="center">
-  <img width="90%" height="auto" alt="Screenshot showing how to assign ACLs to selected table by clicking on Edit Rule" src="media/servicenow-tickets-acl-edit-rule.png" lightbox="media/servicenow-tickets-acl-edit-rule.png"/>
+  <img width="90%" height="auto" alt="Screenshot showing how to assign ACLs to selected table by clicking on Edit Rule" src="media/servicenow-tickets-acl-edit-rule.png">
   </p>
 - For each table selected, you can allow “**read**” permissions for users by selecting the allowed user fields from the dropdown list. Indexed ticket items are visible to only users who have access to them via any of the column fields that you may select, like Assigned to, Opened by, Closed by, etc.
   <p align="center"> 
-  <img width="90%" height="auto" alt="Screenshot showing ACL column selection for a given table" src="media/servicenow-tickets-acl-column-selection.png" lightbox="media/servicenow-tickets-acl-column-selection.png"/>
+  <img width="90%" height="auto" alt="Screenshot showing ACL column selection for a given table" src="media/servicenow-tickets-acl-column-selection.png">
   </p>
 
 - Do the same for the tables that you have selected to index.
