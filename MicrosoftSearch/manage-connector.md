@@ -56,7 +56,8 @@ To manage visibility of third-party data sources in Copilot
 When off, the connector is excluded from all Copilot Search and Copilot Chat results and responses.
 
 The default behavior includes newly added 3P connectors being visible by default, with changes syncing automatically with Workplace Search, without affecting Declarative Agents and their data.
-Note:- After updating the visibility settings at the connection level, please allow up to 30 minutes for the changes to propagate and become effective across all Copilot experiences
+>! Note
+> After updating the visibility settings at the connection level, please allow up to 30 minutes for the changes to propagate and become effective across all Copilot experiences
 
 ## Notifications for permanent crawl failures in your connections
 
