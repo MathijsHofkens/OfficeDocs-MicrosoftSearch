@@ -43,8 +43,8 @@ The **State** column for each connection can display one of five statuses:
 - Ready - The connection is ready, and there's no active crawl running against it. **Last sync time** indicates when the last successful crawl happened. The connection is as fresh as the last sync time.
 - Paused - The crawls are paused by the admins through the pause option. The next crawl runs only when it's manually resumed. However, the data from this connection continues to be searchable.
 - Failed - The connection had a critical failure. This error requires manual intervention. The admin needs to take appropriate action based on the error message shown. Data that was indexed until the error occurred is searchable. The next section talks about getting notified if such failures happen in a connection.
-- Delete Failed - The deletion of the connection failed. Based on the failure reason, the data might still be indexed, item quota might still be consumed, and crawls might still run for the connection. We recommend that you try deleting the connection again in this state.
-- 
+- Delete failed - The deletion of the connection failed. Based on the failure reason, the data might still be indexed, item quota might still be consumed, and crawls might still run for the connection. We recommend that you try deleting the connection again in this state.
+  
 ## Manage visibility of third-party data sources in Copilot
 Admins can now control the visibility of third-party (3P) connectors in Copilot Search and Copilot Chat using a simple toggle. This feature enhances data governance and the user experience by allowing selective exposure of indexed content. If the connection is off, it can still crawl the data source, but the data won't be used for search results.
 
