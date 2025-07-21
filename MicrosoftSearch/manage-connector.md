@@ -48,7 +48,7 @@ The **State** column for each connection can display one of five statuses:
 ## Manage visibility of third-party data sources in Copilot
 Admins can now control the visibility of third-party (3P) connectors in Copilot Search and Copilot Chat using a simple toggle. This feature enhances data governance and the user experience by allowing selective exposure of indexed content. If the connection is off, it can still crawl the data source, but the data won't be used for search results.
 
-To manage visibility of third-party data sources in Copilot
+To manage visibility of third-party data sources in Copilot:
 
 - Navigate to Copilot > **Agents & connectors** > **Connection**.
 - Use the Copilot visibility toggle to turn a 3P connector on or off and click **Save**.
