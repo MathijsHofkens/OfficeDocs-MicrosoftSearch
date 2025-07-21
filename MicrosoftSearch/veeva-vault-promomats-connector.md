@@ -224,6 +224,6 @@ For information about troubleshooting, see [Troubleshooting the Veeva Vault Copi
 
 ## Next steps
 
-After you configure and publish the connector, monitor its status on **Data sources** in the [Admin Center](https://admin.microsoft.com). For more information, see [Manage your connector](manage-connector.md).
+After you configure and publish the connector, monitor its status in the **Agents and connectors** section of the [admin center](https://admin.microsoft.com). For more information, see [Manage your connector](manage-connector.md).
 
 If you have issues or want to provide feedback, contact [Microsoft Graph support](https://developer.microsoft.com/graph/support). 

@@ -130,7 +130,7 @@ The refresh interval determines how often your data is synced between the data s
 You can change the default values of the refresh interval from here if you want to.
 
 ## Troubleshooting
-After publishing your connection, you can review the status under the **Data Sources** tab in the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).
+After publishing your connection, you can review the status in the **Agents and connectors** section of the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).
 
 For more information about index browser search, see [How to get Smartsheet | Smartsheet Learning Center](https://help.smartsheet.com/articles/2482711-get-smartsheet-ids). 
 

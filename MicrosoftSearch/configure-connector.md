@@ -1,5 +1,5 @@
 ---
-ms.date: 10/08/2019
+ms.date: 07/02/2025
 title: "Set up Microsoft 365 Copilot connectors in the Microsoft 365 admin center"
 ms.author: souravpoddar
 author: souravpoddar001
@@ -39,7 +39,7 @@ Before you begin, ensure the following:
 - **Service account (if applicable):** If your data source requires a service account, ensure it has the necessary roles or permissions.
 ---
 ## Step 1: Add a Copilot connector
-Complete the following steps to configure any of the Copilot connectors (or [click here](https://admin.microsoft.com/adminportal/home#/MicrosoftSearch/Connectors/add?ms_search_referrer=MicrosoftSearchDocs_Configure_connector) to directly access the connector catalog):
+Complete the following steps to configure any of the Copilot connectors (or go to the [admin center](https://admin.microsoft.com/#/copilot/connectors/add) to access the connector catalog):
 
 > [!div class="mx-imgBorder"]
    > ![Data sources available include: ADLS Gen2, Enterprise websites, Microsoft SQL server, Azure SQL, Oracle SQL database, ServiceNow Knowledge, ServiceNow Catalog, File share, Azure DevOps, and MediaWiki.](media/add-connector.png)
@@ -47,20 +47,20 @@ Complete the following steps to configure any of the Copilot connectors (or [cli
 1. **Open the Microsoft 365 Admin Center:**
    - Sign in to the [Microsoft 365 admin center](https://admin.microsoft.com/).
 
-2. **Navigate to Settings:**
-   - In the left-hand navigation pane, select **Settings**.
-   - Click on **Search & intelligence**.
+2. **Go to settings:**
+   - In the left navigation pane, select **Copilot**.
+   - Choose **Agents and connectors**.
 
-3. **Add a New Data Source:**
-   - Go to the [**Data sources** tab](https://admin.microsoft.com/Adminportal/Home#/MicrosoftSearch/Connectors).
-   - Click on [+Add](https://admin.microsoft.com/adminportal/home#/MicrosoftSearch/Connectors/add?ms_search_referrer=MicrosoftSearchDocs_Configure_Connector).
-   - From the list of available connectors, select the data source you wish to connect (for example, ServiceNow Knowledge, or Salesforce).
+3. **Add a new data source:**
+   - Go to the **Connectors** tab.
+   - In the left navigation pane, choose **Gallery**.
+   - From the list of available connectors, select the data source you want to connect (for example, ServiceNow Knowledge, or Salesforce).
 
 ---
 
 ## Step 2: Enter basic connection details
 
-![Screenshot that shows Connection creation screen for ServiceNow Knowledge Copilot connector.](media/servicenow-knowledge-create-page.png "Add Microsoft Graph connector for ServiceNow Knowledge")
+![Screenshot that shows Connection creation screen for ServiceNow Knowledge Copilot connector.](media/servicenow-knowledge-create-page.png "Add Copilot for ServiceNow Knowledge")
 
 
 1. **Display name:**

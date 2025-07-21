@@ -40,7 +40,7 @@ For more information, see [Download error script](https://www.powershellgallery.
 
 ## Monitor errors
 
-To monitor errors, go to **Data sources** > **Active Connector**, any existing crawl errors are displayed under **Current Crawl** > **Errors**. This section provides
+To monitor errors, go to **Agents and connectors** > **Active Connector**. Any existing crawl errors are displayed under **Current Crawl** > **Errors**. This section provides:
 
 - Error codes - Lists the various error codes encountered.
 - Count -  Displays the number of occurrences for each error code.

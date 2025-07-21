@@ -61,7 +61,7 @@ Enter the Consumer key and Private secret you got from your Trello app console. 
 
 ### 3. Roll out to limited audience
 
-Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before you expand the rollout to a broader audience. For more information, see [Staged rollout for Microsoft Graph connectors](staged-rollout-for-graph-connectors.md).
+Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before you expand the rollout to a broader audience. For more information, see [Staged rollout for Copilot connectors](staged-rollout-for-graph-connectors.md).
 
 Now you're ready to create the connection for Trello. Choose **Create** to publish your connection and index tickets from your Trello account.
 
@@ -125,6 +125,6 @@ You can change the default values of the refresh interval.
 
 ## Next steps
 
-After you publish your connection, you can review the status under the **Data Sources** tab in the [admin center](https://admin.microsoft.com). For more information, see [Manage your connector](manage-connector.md).
+After you publish your connection, you can review the status in the **Agents and connectors** section of the [admin center](https://admin.microsoft.com). For more information, see [Manage your connector](manage-connector.md).
 
 For help and support, see [Microsoft Graph support](https://developer.microsoft.com/en-us/graph/support).

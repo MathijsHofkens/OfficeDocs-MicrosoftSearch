@@ -128,6 +128,6 @@ Credential info expires. Create a new app id in PagerDuty app registration setti
 Common credential error. Go back to the PagerDuty app registration setting and check if the Client ID and Client secret have the correct permission scope.
 
 ## Next steps
-After you publish your connection, you can review the status under **Data sources** in the [admin center](https://admin.microsoft.com). For more information, see [Manage your connector](manage-connector.md).
+After you publish your connection, you can review the status in the **Agents and connectors** section of the [admin center](https://admin.microsoft.com). For more information, see [Manage your connector](manage-connector.md).
 
 If you have issues or want to provide feedback, contact [Microsoft Graph support](https://developer.microsoft.com/en-us/graph/support).
