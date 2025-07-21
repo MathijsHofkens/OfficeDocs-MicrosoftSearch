@@ -375,6 +375,8 @@ items:
         href: manage-connector.md
       - name: View connection details
         href: connector-view-details.md
+      - name: Manage access permissions
+        href: manage-access-permissions.md
       - name: Search and validate indexed content
         href: connectors-index-search.md
       - name: Error responses 
