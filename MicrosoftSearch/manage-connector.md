@@ -47,16 +47,18 @@ The **State** column for each connection can display one of five statuses:
 ## Manage visibility of third-party data sources in Copilot
 Admins can now control the visibility of third-party (3P) connectors in Copilot Search and Copilot Chat using a simple toggle. This feature enhances data governance and the user experience by allowing selective exposure of indexed content. If the connection is off, it will still crawl the data source, but the data won't be used for search results.
 
-## Managing visibility of third-party data sources in Copilot
+## Manage visibility of third-party data sources in Copilot
 
 To manage visibility of third-party data sources in Copilot
+
 - Navigate to Copilot > **Agents & connectors** > **Connection**.
 - Use the Copilot visibility toggle to turn a 3P connector on or off and click **Save**.
   
 When off, the connector is excluded from all Copilot Search and Copilot Chat results and responses.
 
 The default behavior includes newly added 3P connectors being visible by default, with changes syncing automatically with Workplace Search, without affecting Declarative Agents and their data.
->! Note
+
+> !Note
 > After updating the visibility settings at the connection level, please allow up to 30 minutes for the changes to propagate and become effective across all Copilot experiences
 
 ## Notifications for permanent crawl failures in your connections
@@ -106,13 +108,10 @@ On-demand crawl helps you start a crawl irrespective of the crawl schedule. You 
 > [!NOTE]
 > The Microsoft Graph connector agent, only from version 2.1.0.0 onwards, supports on-demand crawl.
 
-There can be only one category of crawl, scheduled or on-demand, running on a connection at any time. If a connection is in a "Syncing" state, on-demand crawls are disabled. Scheduled crawls are auto-triggered.
+There can be only one category of crawl—scheduled or on-demand—running on a connection at any time. If a connection is in a "Syncing" state, on-demand crawls are disabled. Scheduled crawls are auto-triggered.
 
-If a scheduled or an on-demand crawl continues beyond the time of the schedule of the next full or incremental crawl, the ongoing crawl is stopped, and the next scheduled crawl is skipped and queued. After the ongoing crawl completes, the crawl of the opposite type (full or incremental) is picked from the skipped queue and triggered. For example, if the previous crawl was of the type full crawl, only the incremental crawl, if present in the skipped queue, is triggered and vice versa.
+If a scheduled or on-demand crawl continues beyond the time of the next scheduled full or incremental crawl, the ongoing crawl is stopped, and the next scheduled crawl is skipped and queued. After the ongoing crawl completes, the opposite type of crawl (full or incremental) is picked from the skipped queue and triggered. For example, if the previous crawl was a full crawl, only the incremental crawl, if present in the skipped queue, is triggered—and vice versa.
 
+Identify connections that contain items you no longer want to index. To update this connection, you must delete the existing connection and create a new connection with a data source exclusion filter to exclude the items you no longer wish to index.
 
-* Identify connections that have some items that you didn't want to index. To update this connection, you must delete and create a new connection with a data source exclusion filter to exclude the items you don't want to index anymore.
-
-* Permanently delete one or more connections.
-
-  
+You can permanently delete one or more connections as needed.
