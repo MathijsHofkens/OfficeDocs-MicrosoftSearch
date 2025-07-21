@@ -57,7 +57,7 @@ Select a custom table from your organization| `sys_db_object` | Find the list of
 
 You can **create and assign a role** for the service account you use to connect with Microsoft Search and Microsoft 365 Copilot. [Learn how to assign role for ServiceNow accounts](https://docs.servicenow.com/bundle/washingtondc-platform-administration/page/administer/users-and-groups/task/t_AssignARoleToAUser.html). Read access to the tables can be provided to the created role. To learn about setting read access to table records, see [Securing Table Records](https://developer.servicenow.com/dev.do#!/learn/learning-plans/sandiego/new_to_servicenow/app_store_learnv2_securingapps_sandiego_securing_table_records). When providing read access to sys_db_object, you should create two Access Control Lists: one for row access and one for field access.
 
-# Get Started: Steps to setup the ServiceNow Tickets Copilot connector
+## Get Started: Steps to setup the ServiceNow Tickets Copilot connector
 
 ## Step 1: Select the ServiceNow Tickets Copilot connector in the Microsoft 365 admin center. 
 
@@ -245,7 +245,7 @@ SysUpdatedOn  | `Last modified date time` | Date and time the item was last modi
 
 Use the preview results button shown at the top of the content page to verify the sample values of the selected properties and query filter. 
 <p align="center">
-<img width="75%" height="auto" alt="ServiceNow Tickets Preview Data" src="https://github.com/user-attachments/assets/6d09d212-6de6-43d4-9786-60fce99b9859" />
+<img width="75%" height="auto" alt="Screesnhot showing where to locate the Preview Data Button in the Content page" src="media/servicenow-tickets-preview-data.png" lightbox="media/servicenow-tickets-preview-data.png"/>
 </p>
 
 ## Step 9: [Users] Access Permissions 
@@ -255,11 +255,11 @@ The ServiceNow Tickets Copilot connector supports search permissions visible to 
 - Select “**Only people with access to this data source**” under Access Permissions
 - Provide at least one rule for all the tables that you have selected for indexing. For each of the tables that appear in the side panel, click on the expand down arrow & then click on “**Edit rule**”.
   <p align="center">
-  <img width="90%" height="auto" alt="ServiceNow Tickets ACL edit rule" src="https://github.com/user-attachments/assets/3202b953-fe46-4517-943b-f786b4ed200c" />
+  <img width="90%" height="auto" alt="Screenshot showing how to assign ACLs to selected table by clicking on Edit Rule" src="media/servicenow-tickets-acl-edit-rule.png" lightbox="media/servicenow-tickets-acl-edit-rule.png"/>
   </p>
 - For each table selected, you can allow “**read**” permissions for users by selecting the allowed user fields from the dropdown list. Indexed ticket items are visible to only users who have access to them via any of the column fields that you may select, like Assigned to, Opened by, Closed by, etc.
   <p align="center"> 
-  <img width="90%" height="auto" alt="ServiceNow Tickets ACL column seection" src="https://github.com/user-attachments/assets/1ebdaf1c-304b-4617-a35e-7aee6bb34461" />
+  <img width="90%" height="auto" alt="Screenshot showing ACL column selection for a given table" src="media/servicenow-tickets-acl-column-selection.png" lightbox="media/servicenow-tickets-acl-column-selection.png"/>
   </p>
 
 - Do the same for the tables that you have selected to index.
