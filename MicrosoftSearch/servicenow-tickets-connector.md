@@ -25,7 +25,7 @@ Each step in the setup process is listed in the following steps, along with eith
 
 ## Prerequisites
 
-***ServiceNow Instance URL:*** To connect to your ServiceNow data, you need your organization's ServiceNow instance URL. Your organization's ServiceNow instance URL typically looks like **https://&lt;your-organization-domamin>.service-now.com**. (Do not have one? [Check how to create a test instance](https://www.youtube.com/watch?v=OTdzVLqpFHY))
+***ServiceNow Instance URL:*** To connect to your ServiceNow data, you need your organization's ServiceNow instance URL. Your organization's ServiceNow instance URL typically looks like **https://&lt;your-organization-domamin>.service-now.com**. (Do not have one? [Check how to create a test instance](https://www.youtube.com/watch?v=OTdzVLqpFHY)).
 
 ***Service Account:*** For the connector setup, you need a service account to set up the connection to ServiceNow and to allow Microsoft Search and Microsoft 365 Copilot to periodically update the ticket details based on the refresh schedule. 
 
@@ -192,7 +192,7 @@ The ServiceNow instance needs the following configuration:
 
 Refer the instructions to create a ServiceNow account here: [Create a user in ServiceNow](https://docs.servicenow.com/bundle/washingtondc-platform-administration/page/administer/users-and-groups/task/t_CreateAUser.html).
 
-The following table provides guidance on how to fill out the ServiceNow user account registration
+The following table provides guidance on how to fill out the ServiceNow user account registration.
 
 Field | Recommended Value
 --- | ---
@@ -221,9 +221,9 @@ In this step, you can add or remove available tables from your ServiceNow data s
 ## Step 7: [Content] Manage Properties  
 
 Here, you can add or remove available properties that you want to index from the source tables selected from your ServiceNow data source. Additionally,
-- you can define the schema for the property (define whether a property is searchable, queryable, retrievable, or refinable), Learn more about schema attributes [here](configure-connector.md#search-schema-attributes) 
-- change the semantic label, if needed. Know more about semantic labels [here](configure-connector.md#semantic-labels-for-source-properties) 
-- add an alias to the property to enhance search relevance. Learn more about aliases [here](configure-connector.md#aliases-for-source-properties)  
+- you can define the schema for the property (define whether a property is searchable, queryable, retrievable, or refinable), Learn more about schema attributes [here](configure-connector.md#search-schema-attributes). 
+- change the semantic label, if needed. Know more about semantic labels [here](configure-connector.md#semantic-labels-for-source-properties). 
+- add an alias to the property to enhance search relevance. Learn more about aliases [here](configure-connector.md#aliases-for-source-properties).  
 
 *The list of properties that you select here can impact how you can filter, search, and view your results in Microsoft 365 Copilot.* By default, Microsoft ServiceNow Tickets Copilot connector indexes the following properties: 
 
@@ -244,9 +244,8 @@ SysUpdatedOn  | `Last modified date time` | Date and time the item was last modi
 ## Step 8: [Content] Preview Data
 
 Use the preview results button shown at the top of the content page to verify the sample values of the selected properties and query filter. 
-<p align="center">
-<img width="75%" height="auto" alt="Screesnhot showing where to locate the Preview Data Button in the Content page" src="media/servicenow-tickets-preview-data.png">
-</p>
+
+:::image type="content" source="media/servicenow-tickets-preview-data.png" alt-text="Screesnhot showing where to locate the Preview Data Button in the Content page." lightbox="media/servicenow-tickets-preview-data.png":::
 
 ## Step 9: [Users] Access Permissions 
 
@@ -254,14 +253,13 @@ The ServiceNow Tickets Copilot connector supports search permissions visible to 
 
 - Select “**Only people with access to this data source**” under Access Permissions
 - Provide at least one rule for all the tables selected for indexing. For each of the tables that appear in the side panel, select the down arrow to expand & then select “**Edit rule**”.
-  <p align="center">
-  <img width="90%" height="auto" alt="Screenshot showing how to assign ACLs to selected table by selecting Edit Rule" src="media/servicenow-tickets-acl-edit-rule.png">
-  </p>
-- For each table selected, you can allow “**read**” permissions for users by selecting the allowed user fields from the dropdown list. Indexed ticket items are visible to only users who have access to them via any of the column fields that you can select, like Assigned to, Opened by, Closed by, etc.
-  <p align="center"> 
-  <img width="90%" height="auto" alt="Screenshot showing ACL column selection for a given table" src="media/servicenow-tickets-acl-column-selection.png">
-  </p>
 
+  :::image type="content" source="media/servicenow-tickets-acl-edit-rule.png" alt-text="Screenshot showing how to assign ACLs to selected table by selecting Edit Rule." lightbox="media/servicenow-tickets-acl-edit-rule.png":::
+  
+- For each table selected, you can allow “**read**” permissions for users by selecting the allowed user fields from the dropdown list. Indexed ticket items are visible to only users who have access to them via any of the column fields that you can select, like Assigned to, Opened by, Closed by, etc.
+
+  :::image type="content" source="media/servicenow-tickets-acl-column-selection.png" alt-text="Screenshot showing ACL column selection for a given table." lightbox="media/servicenow-tickets-acl-column-selection.png":::
+  
 - Do the same for the tables that you have selected to index.
 
 ## Step 10: [Users] Map Identities 
@@ -307,7 +305,7 @@ After publishing the connection, you need to customize the search results page. 
 The ServiceNow Tickets Copilot connector has the following limitations in its latest release:
 
 - Under the Access permissions step in Users tab, “***Everyone***” feature does not process any permissions. Do not select this option unless you want to test the connection between selected team members in an isolated environment.
-- Access permissions do not allow defining role-based ACLs 
+- Access permissions do not allow defining role-based ACLs. 
 
 ## Troubleshooting
 After publishing your connection and customizing the results page, you can review the status under **Data Sources** in the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).
