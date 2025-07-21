@@ -21,25 +21,25 @@ With the ServiceNow Tickets Microsoft 365 Copilot connector, your organization c
 
 This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors a ServiceNow Tickets Copilot connector. It supplements the general instructions provided in the [Set up Microsoft Graph connectors in the Microsoft 365 admin center](configure-connector.md) article. 
 
-Each step in the setup process is listed below, along with either a note that indicates you should follow the general setup instructions or other instructions that apply to only the ServiceNow Copilot connector, including information about [Troubleshooting](#troubleshooting) and [Limitations](#limitations).  
+Each step in the setup process is listed in the following steps, along with either a note that indicates you should follow the general setup instructions or other instructions that apply to only the ServiceNow Copilot connector, including information about [Troubleshooting](#troubleshooting) and [Limitations](#limitations).  
 
 ## Prerequisites
 
 ***ServiceNow Instance URL:*** To connect to your ServiceNow data, you need your organization's ServiceNow instance URL. Your organization's ServiceNow instance URL typically looks like **https://&lt;your-organization-domamin>.service-now.com**. (Do not have one? [Check how to create a test instance](https://www.youtube.com/watch?v=OTdzVLqpFHY))
 
-***Service Account:*** For the connector setup, you will need a service account to set up the connection to ServiceNow and to allow Microsoft Search and Microsoft 365 Copilot to periodically update the ticket details based on the refresh schedule. 
+***Service Account:*** For the connector setup, you need a service account to set up the connection to ServiceNow and to allow Microsoft Search and Microsoft 365 Copilot to periodically update the ticket details based on the refresh schedule. 
 
 ***Table Access:*** In ServiceNow, the task table is the base class for ticket management. It can be extended to create ticket applications such as incident, problem, and change management. Learn more about [ServiceNow Task tables](https://docs.servicenow.com/bundle/washingtondc-platform-administration/page/administer/task-table/concept/c_TaskTable.html). 
 
 > [!Note]
-> Crawling is done on the child tables that you have selected for ingestion and the task table.
+> Crawling is done on the child tables that you select for ingestion and the task table.
 
 The service account you use to configure the tickets connection **must have** read access to the following ServiceNow table records to successfully crawl default ticket fields. 
 
 **Feature** | **Read access required tables** | **Description**
 --- | :---: | ---
-Index base [Task table fields](https://docs.servicenow.com/bundle/sandiego-platform-administration/page/administer/task-table/reference/r_ImportantTaskTableFields.html#r_ImportantTaskTableFields) | `task` | For crawling default fields from out of the box task tables
-Sync user tables | `sys_user` | To index user access details for tickets
+Index base [Task table fields](https://docs.servicenow.com/bundle/sandiego-platform-administration/page/administer/task-table/reference/r_ImportantTaskTableFields.html#r_ImportantTaskTableFields) | `task` | Read default fields from out of the box task tables
+Sync user tables | `sys_user` | Read user access details for tickets
 | | `sys_user_has_role` | Read role information of users
 | | `sys_user_grmember` | Read group membership of users
 | | `sys_user_group` | Read user group segments
@@ -48,7 +48,7 @@ Sync user tables | `sys_user` | To index user access details for tickets
 | | `cmn_department` | Read department information
 | | `core_company` | Read company attributes
 
-If you want to index custom properties from [extended tables](https://docs.servicenow.com/bundle/washingtondc-application-development/page/administer/table-administration/concept/table-extension-and-classes.html) of *task* table, provide read access to these tables : ***sys_dictionary*** and ***sys_db_object***. It is an **optional** feature. You'll be able to index *task* table properties without access to the two extra tables.
+If you want to index custom properties from [extended tables](https://docs.servicenow.com/bundle/washingtondc-application-development/page/administer/table-administration/concept/table-extension-and-classes.html) of *task* table, provide read access to these tables: ***sys_dictionary*** and ***sys_db_object***. It is an **optional** feature. You would be able to index *task* table properties without access to the two extra tables.
 
 **Feature** | **Read access required tables** | **Description**
 --- | :---: | ---
@@ -61,7 +61,7 @@ You can **create and assign a role** for the service account you use to connect 
 
 ## Step 1: Select the ServiceNow Tickets Copilot connector in the Microsoft 365 admin center. 
 
-[Add the ServiceNow Tickets Copilot connector](https://admin.microsoft.com/adminportal/home#/MicrosoftSearch/Connectors/add?ms_search_referrer=MicrosoftSearchDocs_ServiceNowTickets&type=ServiceNowTickets​) The connector setup page that opens has 4 sections – **Setup**, **Content**, **Users**, and **Sync**. First, you would need to provide the details for **Setup** & authorize the connection (covered in steps 2 to 4 below) before proceeding to configure the **Content**, **Users** & **Sync** (optional) & then finally create the connection. 
+[Add the ServiceNow Tickets Copilot connector](https://admin.microsoft.com/adminportal/home#/MicrosoftSearch/Connectors/add?ms_search_referrer=MicrosoftSearchDocs_ServiceNowTickets&type=ServiceNowTickets​) The connector setup page that opens has 4 sections – **Setup**, **Content**, **Users**, and **Sync**. First, you need to provide the details for **Setup** & authorize the connection (covered in Steps 2 to Steps 4) before proceeding to configure the **Content**, **Users** & **Sync** (optional) & then finally create the connection. 
 
 ## Step 2: [Setup] Provide “Display Name”
 A display name is used to identify each reference in Copilot, helping users easily recognize the associated file or item. Display name also signifies trusted content. Display name is also used as a [content source filter](/MicrosoftSearch/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize. 
@@ -85,7 +85,7 @@ Enter the username and password of the ServiceNow account with read access to th
 ### Step 4.2: ServiceNow OAuth
 <br/>
 <details>
-   <summary>[Click to expand] To use ServiceNow OAuth for authentication, follow these steps.</summary>
+   <summary>[Select to expand] To use ServiceNow OAuth for authentication, follow these steps.</summary>
    <br/>
    
    A ServiceNow admin needs to provision an endpoint in your ServiceNow instance, so that the ServiceNow Knowledge Copilot connector can access it. To learn more, see [Create an endpoint for clients to access the instance](https://docs.servicenow.com/bundle/xanadu-platform-security/page/administer/security/task/t_CreateEndpointforExternalClients.html) in the ServiceNow documentation.
@@ -95,7 +95,7 @@ The following table provides guidance on how to fill out the endpoint creation f
 Field | Description | Recommended Value
 --- | --- | ---
 Name | Unique value that identifies the application that you require OAuth access for. | Microsoft Search
-Client ID | A read-only, auto-generated unique ID for the application. The instance uses the client ID when it requests an access token. | NA
+Client ID | A read-only, auto generated unique ID for the application. The instance uses the client ID when it requests an access token. | NA
 Client secret | With this shared secret string, the ServiceNow instance and Microsoft Search authorize communications with each other. | Follow security best practices by treating the secret as a password.
 Redirect URL | A required callback URL that the authorization server redirects to. | For **M365 Enterprise**: https://<span>gcs.office.</span>com/v1.0/admin/oauth/callback,</br> For **M365 Government**: https://<span>gcsgcc.office.<span>com/v1.0/admin/oauth/callback
 Logo URL | A URL that contains the image for the application logo. | NA
@@ -103,20 +103,20 @@ Active | Select the check box to make the application registry active. | Set to 
 Refresh token lifespan | The number of seconds that a refresh token is valid. By default, refresh tokens expire in 100 days (8,640,000 seconds). | 31,536,000 (one year)
 Access token lifespan | The number of seconds that an access token is valid. | 43,200 (12 hours)
 
-Enter the client ID and client secret to connect to your instance. After connecting, use a ServiceNow account credential to authenticate permission to crawl. The account should at least have read access to `task` and `sys_user` tables. Refer to the table mentioned under the [Prerequisites](#prerequisites) section for providing read access to more ServiceNow table records and index user criteria permissions.
+Enter the client ID and client secret to connect to your instance. After connecting, use a ServiceNow account credential to authenticate permission to crawl. The account should at least have the **read** access to `task` and `sys_user` tables. Refer to the table mentioned under the [Prerequisites](#prerequisites) section for providing read access to more ServiceNow table records and index user criteria permissions.
 <a name='step-33-azure-ad-openid-connect'></a>
 </details>
 
 ### Step 4.3: Microsoft Entra ID OpenID Connect
 <br/>
 <details>
-   <summary>[Click to expand] To use Microsoft Entra ID OpenID Connect for authentication, follow the steps below.</summary>
+   <summary>[Select to expand] To use Microsoft Entra ID OpenID Connect for authentication, follow the following steps</summary>
    <br/>
 <a name='step-431-register-a-new-application-in-azure-active-directory'></a>
 
-### Step 4.3.1 : Register a new application in Microsoft Entra ID
+### Step 4.3.1: Register a new application in Microsoft Entra ID
 
-To learn about registering a new application in Microsoft Entra ID, see [Register an application](/azure/active-directory/develop/quickstart-register-app#register-an-application). Select single tenant organizational directory. Redirect URL isn't needed. After registration, note down the **Application (client) ID** and **Directory ID (Tenant ID)**.
+To learn about registering a new application in Microsoft Entra ID, see [Register an application](/azure/active-directory/develop/quickstart-register-app#register-an-application). Select single tenant organizational directory. Redirect URL is not needed. After registration, note down the **Application (client) ID** and **Directory ID (Tenant ID)**.
 
 ### Step 4.3.2: Create a client secret
 
@@ -147,7 +147,7 @@ Follow the steps to retrieve Service Principal Object Identifier
    ```
    Replace "Application-ID" with the Application (client) ID (without quotes) of the application you registered in step 4.3.1. Note the value of ID object from PowerShell output. It is the **Service Principal ID**.
 
-Now you have all the information required from the Azure portal. A quick summary of the information is given in the table below.
+Now you have all the information required from the Azure portal. A quick summary of the information is given in the following table.
 
 Property | Description
 --- | ---
@@ -190,7 +190,7 @@ The ServiceNow instance needs the following configuration:
 
 ### Step 4.3.5: Create a ServiceNow account
 
-Refer the instructions to create a ServiceNow account, [create a user in ServiceNow](https://docs.servicenow.com/bundle/washingtondc-platform-administration/page/administer/users-and-groups/task/t_CreateAUser.html).
+Refer the instructions to create a ServiceNow account here: [Create a user in ServiceNow](https://docs.servicenow.com/bundle/washingtondc-platform-administration/page/administer/users-and-groups/task/t_CreateAUser.html).
 
 The following table provides guidance on how to fill out the ServiceNow user account registration
 
@@ -203,12 +203,12 @@ All other values can be left to default.
 
 ### Step 4.3.6: Enable Task, User table access for the ServiceNow account
 
-Access the ServiceNow account you created with ServiceNow Principal ID as User ID and assign the read access to `task` and `sys_user` table. Instructions to assign a role to a ServiceNow account can be found here, [assign a role to a user](https://docs.servicenow.com/bundle/xanadu-platform-administration/page/administer/users-and-groups/task/t_AssignARoleToAUser.html) Refer to the table mentioned under the [Prerequisites](#prerequisites) section for providing read access to more ServiceNow table records and index custom fields.
+Access the ServiceNow account you created with ServiceNow Principal ID as User ID and assign the read access to `task` and `sys_user` table. Instructions to assign a role to a ServiceNow account can be found here: [Assign a role to a user](https://docs.servicenow.com/bundle/xanadu-platform-administration/page/administer/users-and-groups/task/t_AssignARoleToAUser.html). Refer to the table mentioned under the [Prerequisites](#prerequisites) section for providing read access to more ServiceNow table records and index custom fields.
 
 Use Application ID as Client ID (from step 4.3.1), and Client secret (from step 4.3.2) in the M365 admin center configuration window to authenticate to your ServiceNow instance using Microsoft Entra ID OpenID Connect.
 </details>
 
-Once all the details are entered as per any of the above authentication types, click on "**Authorize**". But before we publish the connection, we need to set up the **Content** & **Users** as well for the connector. As part of the custom setup, you can also choose to configure the **Sync** details (optional) for the connector. 
+Once all the details are entered as per any of the mentioned authentication types, Select "**Authorize**". But before we publish the connection, we need to set up the **Content** & **Users** as well for the connector. As part of the custom setup, you can also choose to configure the **Sync** details (optional) for the connector. 
 
 ## Step 5: [Content] Filter
 
@@ -216,7 +216,7 @@ With a ServiceNow query string, you can specify conditions for syncing tickets. 
 
 ## Step 6: [Content] Tables
 
-In this step, you can add or remove available tables from your ServiceNow data source. Microsoft 365 has already selected the “**incident**” table by default. You can choose to select more tables from the dropdown provided in this section. 
+In this step, you can add or remove available tables from your ServiceNow data source. Microsoft 365 selects the “**incident**” table by default. You can choose to select more tables from the dropdown provided in this section. 
 
 ## Step 7: [Content] Manage Properties  
 
@@ -253,11 +253,11 @@ Use the preview results button shown at the top of the content page to verify th
 The ServiceNow Tickets Copilot connector supports search permissions visible to “**Only people with access to this data source**”.
 
 - Select “**Only people with access to this data source**” under Access Permissions
-- Provide at least one rule for all the tables that you have selected for indexing. For each of the tables that appear in the side panel, click on the expand down arrow & then click on “**Edit rule**”.
+- Provide at least one rule for all the tables selected for indexing. For each of the tables that appear in the side panel, select the down arrow to expand & then select “**Edit rule**”.
   <p align="center">
-  <img width="90%" height="auto" alt="Screenshot showing how to assign ACLs to selected table by clicking on Edit Rule" src="media/servicenow-tickets-acl-edit-rule.png">
+  <img width="90%" height="auto" alt="Screenshot showing how to assign ACLs to selected table by selecting Edit Rule" src="media/servicenow-tickets-acl-edit-rule.png">
   </p>
-- For each table selected, you can allow “**read**” permissions for users by selecting the allowed user fields from the dropdown list. Indexed ticket items are visible to only users who have access to them via any of the column fields that you may select, like Assigned to, Opened by, Closed by, etc.
+- For each table selected, you can allow “**read**” permissions for users by selecting the allowed user fields from the dropdown list. Indexed ticket items are visible to only users who have access to them via any of the column fields that you can select, like Assigned to, Opened by, Closed by, etc.
   <p align="center"> 
   <img width="90%" height="auto" alt="Screenshot showing ACL column selection for a given table" src="media/servicenow-tickets-acl-column-selection.png">
   </p>
@@ -269,7 +269,7 @@ The ServiceNow Tickets Copilot connector supports search permissions visible to 
 Next, you need to further choose whether your ServiceNow instance has Microsoft Entra ID provisioned users or non-Azure AD users. To identify which option is suitable for your organization:
 
 1. Choose the default mapping option of “**Microsoft Entra ID**” if the email ID of ServiceNow users is the **same** as the UserPrincipalName (UPN), or Mail of the users in Microsoft Entra ID.
-2. If you believe the default mapping would not work for your organization, choose the “**Non-Azure AD**” option if the email ID of ServiceNow users is **different** from the UserPrincipalName (UPN) of users in Microsoft Entra ID. You can provide a custom mapping formula. To know more about mapping Non-EntraID identities, click [here](map-non-aad.md).
+2. If you believe the default mapping would not work for your organization, choose the “**Non-Azure AD**” option if the email ID of ServiceNow users is **different** from the UserPrincipalName (UPN) of users in Microsoft Entra ID. You can provide a custom mapping formula. Know more about mapping Non-EntraID identities [here](map-non-aad.md).
 
 >[!NOTE]
 > * If you choose Microsoft Entra ID as the type of identity source, the connector maps the email IDs of users obtained from ServiceNow directly to UPN property from Microsoft Entra ID.
@@ -282,9 +282,9 @@ The refresh interval determines how often your data is synchronized between the 
 - Full crawl: Synchronizes all data at scheduled intervals.
 - Incremental crawl: Updates only the changed or new data. 
 
-You can change the default values of the refresh interval from here if you want to or just continue with the recommended defaults. For more details, click [here](configure-connector.md#sync). 
+You can change the default values of the refresh interval from here if you want to or just continue with the recommended defaults. Find more details [here](configure-connector.md#sync). 
 
-You can see the default values below: 
+You can see the default values in the following table: 
 
 **Refresh Intervals** | **Default frequency** 
 :---: | :---:
@@ -297,7 +297,7 @@ Full Periodic Crawl  | Every day
 
 ## Step 12: [Setup] Rollout to a limited audience.
 
-Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. To know more about limited rollout, click [here](staged-rollout-for-graph-connectors.md).
+Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. Know more about limited rollout [here](staged-rollout-for-graph-connectors.md).
 
 At this point, you are ready to create the connection for ServiceNow Knowledge. You can select the **Create** button, and the ServiceNow Knowledge Copilot connector will now start indexing articles from your ServiceNow account. 
 
