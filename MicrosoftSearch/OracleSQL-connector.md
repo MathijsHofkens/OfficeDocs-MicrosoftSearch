@@ -39,6 +39,9 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 - **Service Account**: To connect to your SQL database and allow the Copilot connector to update records regularly, you need a service account with read permissions granted to the service account.
 
 >[!NOTE]
+> If you have previously installed the GCA, ensure it is updated to version 3.1.3.0 or later.  
+
+>[!NOTE]
 >If you use Windows authentication while configuring the Oracle SQL Copilot connector, the user with which you are trying to sign in needs to have interactive login rights to the machine where the connector agent is installed. For more information, see [login policy management](/windows/security/threat-protection/security-policy-settings/allow-log-on-locally#policy-management).
 
 ## Get Started with Setup
@@ -92,7 +95,7 @@ The example demonstrates a selection of five data columns that hold the data for
 Select data columns as shown in this example query: 
  `SELECT orderId, orderTitle, orderDesc, allowedUsers, allowedGroups, deniedUsers, deniedGroups, createdDateTime, isDeleted`
 
-The Oracle SQL Copilot connector don't allow column names with non-alphanumeric characters in the SELECT clause. Remove any non-alphanumeric characters from column names using an alias. Example - SELECT *column_name* AS *columnName*
+The Oracle SQL Copilot connector doesn't allow column names with non-alphanumeric characters in the SELECT clause. Remove any non-alphanumeric characters from column names using an alias. Example - SELECT *column_name* AS *columnName*
 
 To manage access to the search results, you can specify one or more ACL columns in the query. The Oracle SQL Copilot connector allows you to control access at per per-record level. You can choose to have the same access control for all records in a table. If the ACL information is stored in a separate table, you might have to do a join with those tables in your query.
 

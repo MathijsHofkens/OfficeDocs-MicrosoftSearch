@@ -183,6 +183,19 @@ UrlName | | A unique URL-friendly name generated for the article. | Query, Retri
 The refresh interval determines how often your data is synced between the data source and the Salesforce Knowledge Microsoft Graph connector index. There are two types of refresh intervals - full crawl and incremental crawl. For more information, see [refresh settings](configure-connector.md#guidelines-for-sync-settings).
 
 ## Troubleshooting
-After publishing your connection, you can review the status in the **Agents and connectors** section of the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md). 
 
-If you have issues or want to provide feedback, contact [Microsoft Graph | Support](https://developer.microsoft.com/en-us/graph/support).
+After you publish your connection, you can review the status in the **Agents and connectors** section of the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md). 
+
+### Finding items in Index Browser
+If you want to investigate a specific Knowledge Article in the Index Browser, you’ll first need its **KnowledgeArticleId** (the master ID that links all versions of the article). Here’s how to get it from Salesforce:
+1. Get the article version ID from the URL: Open the article in Salesforce. Copy the ID from the URL. For example: `/lightning/r/Knowledge__kav/kav1234567890ABC/view`. Here, `kav1234567890ABC` is the ID.
+2. Open the [Developer Console](https://help.salesforce.com/s/articleView?id=platform.code_dev_console_opening.htm&type=5)
+3. Run the SOQL Query: Go to the **Query Editor** tab and run the following query (replace with your ID).
+     ```sql
+     SELECT Id, KnowledgeArticleId, Title 
+     FROM KnowledgeArticleVersion 
+     WHERE Id = '<<KNOWLEDGE_URL_ID>>'
+4. In the results, copy the `KnowledgeArticleId`
+5. Enter this `KnowledgeArticleId` in the Index Browser to view all related indexed data.
+
+If you have issues or want to provide feedback, see [Microsoft Graph support](https://developer.microsoft.com/graph/support).

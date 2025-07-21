@@ -32,8 +32,9 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 - Support for [Advanced user criteria permissions](https://docs.servicenow.com/bundle/xanadu-servicenow-platform/page/product/knowledge-management/task/create-user-criteria-record-in-knowledge-management.html).
 
 ## Limitations
-- If both Knowledge base and Knowledge article level permissions are defined, then only article-level permissions are honored.
-- Does not index attachments.
+- If both knowledge base and knowledge article-level permissions are defined, only the article-level permissions are honored. Knowledge base-level permissions are disregarded and therefore don't apply to the articles.
+- Doesn't index attachments & comments.
+- Doesn't support reading content from out-of-the-box or custom knowledge article templates, such as FAQs, How-to, What Is, or KCS article templates.
 
 ## Prerequisites
 - **ServiceNow Instance URL**: To connect to your ServiceNow data, you need your organization's ServiceNow instance URL. Your organization's ServiceNow instance URL typically looks like `https://your-organization-name.service-now.com`. (Don’t have one? [Check how to create a test instance](https://www.youtube.com/watch?v=OTdzVLqpFHY))
@@ -44,8 +45,8 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
    Index knowledge articles available to _Everyone_ | kb_knowledge | For crawling knowledge articles
    Index and support user criteria permissions | kb_uc_can_read_mtom | Who can read this knowledge base
    | | kb_uc_can_contribute_mtom | Who can contribute to this knowledge base
-   | | kb_uc_cannot_read_mtom | Who cannot read this knowledge base
-   | | kb_uc_cannot_contribute_mtom | Who cannot contribute to this knowledge base
+   | | kb_uc_cannot_read_mtom | Who can't read this knowledge base
+   | | kb_uc_cannot_contribute_mtom | Who can't contribute to this knowledge base
    | | sys_user | Read user table
    | | sys_user_has_role | Read role information of users
    | | sys_user_grmember | Read group membership of users
@@ -58,6 +59,7 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
    | | core_company | Read company attributes
    Index extended table properties (optional) | sys_db_object | Read extended table details
    | | sys_dictionary | Read extended table properties
+   | | sys_properties | Read properties to evaluate permissions
 
    You can **create and assign a role** for the service account you use to connect with Microsoft Search. [Learn how to assign role for ServiceNow accounts](https://docs.servicenow.com/bundle/xanadu-platform-administration/page/administer/users-and-groups/task/t_AssignARoleToAUser.html). Read access to the tables can be assigned on the created role. To learn about setting read access to table records, see [Securing Table Records](https://developer.servicenow.com/dev.do#!/learn/learning-plans/xanadu/new_to_servicenow/app_store_learnv2_securingapps_xanadu_creating_and_editing_access_controls). 
 
@@ -218,14 +220,14 @@ To authenticate and sync content from ServiceNow, choose **one of three** suppor
    </details>
 
 ### 5. API Namespace (if you are using Advanced flow)
-If you are using the **Advanced** flow, enter the API namespace that you created in your ServiceNow instance. For more details, see [Advanced Flow for Microsoft Graph Connector for ServiceNow Knowledge](/MicrosoftSearch/servicenow-knowledge-advanced-flow).
+If you're using the **Advanced** flow, enter the API namespace that you created in your ServiceNow instance. For more details, see [Advanced Flow for Microsoft Graph Connector for ServiceNow Knowledge](/MicrosoftSearch/servicenow-knowledge-advanced-flow).
 
 
 ### 6. Rollout to a limited audience
 
 Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. To know more about limited rollout, click [here](/MicrosoftSearch/staged-rollout-for-graph-connectors).
 
-At this point, you are ready to create the connection for ServiceNow Knowledge. You can select the **Create** button and the ServiceNow Knowledge Copilot connector starts indexing articles from your ServiceNow account.
+At this point, you're ready to create the connection for ServiceNow Knowledge. You can select the **Create** button and the ServiceNow Knowledge Copilot connector starts indexing articles from your ServiceNow account.
 
 For other settings, like Access permissions, Data inclusion rules, Schema, and Crawl frequency, we have set defaults based on what works best with ServiceNow data. You can see the default values below:
 
@@ -275,7 +277,7 @@ If a knowledge article isn't enabled with a user criterion, it appears in the re
 
 **Mapping identities**
 
-The default method for mapping your data source identities with Microsoft Entra ID is by checking whether the email ID of ServiceNow users is the same as the UserPrincipalName (UPN), or Mail of the users in Microsoft Entra ID. If you believe the default mapping would not work for your organization, you can provide a custom mapping formula. To know more about, mapping Non-EntraID identities, click [here](/MicrosoftSearch/map-non-aad).
+The default method for mapping your data source identities with Microsoft Entra ID is by checking whether the email ID of ServiceNow users is the same as the UserPrincipalName (UPN), or Mail of the users in Microsoft Entra ID. If you believe the default mapping wouldn't work for your organization, you can provide a custom mapping formula. To know more about, mapping Non-EntraID identities, click [here](/MicrosoftSearch/map-non-aad).
 
 ### Content
 

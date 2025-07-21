@@ -50,6 +50,8 @@ items:
       href: connectors-overview.md
     - name: Connectors gallery
       href: connectors-gallery.md
+    - name: Connectors and Copilot Search
+      href: connectors-copilot-search.md
     - name: Frequently asked questions
       href: frequently-asked-questions.md
     - name: Index quota
@@ -223,6 +225,12 @@ items:
             href: GitHub-cloud-issue-connector.md 
           - name: Setup - GitHub Cloud Pull Requests
             href: GitHub-cloud-pull-request-connector.md 
+          - name: Setup - GitHub Server Knowledge (preview)
+            href: GitHub-server-knowledge-connector.md 
+          - name: Setup - GitHub Server Issues (preview)
+            href: GitHub-server-issue-connector.md 
+          - name: Setup - GitHub Server Pull Requests (preview)
+            href: GitHub-server-pull-request-connector.md 
         - name: GitLab (preview)
           items:
           - name: Setup
@@ -367,6 +375,8 @@ items:
         href: manage-connector.md
       - name: View connection details
         href: connector-view-details.md
+      - name: Manage access permissions
+        href: manage-access-permissions.md
       - name: Search and validate indexed content
         href: connectors-index-search.md
       - name: Error responses 
