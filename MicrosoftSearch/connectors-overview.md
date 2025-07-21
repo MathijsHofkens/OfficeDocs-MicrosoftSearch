@@ -74,7 +74,7 @@ You can build your own connector if you prefer. For developer documentation abou
 
 ## How do I manage my connections?
 
-You can manage your connections on the [connectors tab]( https://admin.microsoft.com/#/copilot/connectors) in the [Microsoft 365 admin center](https://admin.microsoft.com/). For more information about managing connections, see [Monitor your connections](manage-connector.md).
+You can manage your connections on the [connectors tab](https://admin.microsoft.com/#/copilot/connectors) in the [Microsoft 365 admin center](https://admin.microsoft.com/). For more information about managing connections, see [Monitor your connections](manage-connector.md).
 
 ## What are the license requirements and terms of use for connectors?
 
