@@ -113,3 +113,5 @@ If a scheduled or an on-demand crawl continues beyond the time of the schedule o
 * Identify connections that have some items that you didn't want to index. To update this connection, you must delete and create a new connection with a data source exclusion filter to exclude the items you don't want to index anymore.
 
 * Permanently delete one or more connections.
+
+  
