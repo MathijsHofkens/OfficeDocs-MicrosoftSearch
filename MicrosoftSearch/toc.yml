@@ -68,7 +68,7 @@ items:
         href: staged-rollout-for-graph-connectors.md
       - name: Microsoft 365 Copilot connectors
         items:
-        - name: Enhancing Microsoft 365 Copilot discovery with Microsoft 365 Copilot connector content
+        - name: Enhance Copilot discovery of connector content
           href: enhancing-microsoft-copilot-discovery-with-graph-connector-content.md
       - name: On-prem connectors
         items:

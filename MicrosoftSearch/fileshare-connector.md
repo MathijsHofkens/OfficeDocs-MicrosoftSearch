@@ -128,7 +128,7 @@ Follow the general [setup instructions](./configure-connector.md).
 Follow the general [setup instructions](./configure-connector.md).
 
 ## Troubleshooting
-After publishing your connection, you can review the status under the **Data sources** tab in the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).
+After publishing your connection, you can review the status in the **Agents and connectors** section of the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).
 
 You can find troubleshooting steps for commonly seen issues [here](troubleshoot-file-share-connector.md).
 

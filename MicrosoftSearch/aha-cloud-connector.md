@@ -54,7 +54,7 @@ To properly register the Aha! OAuth application for GCS access, first navigate t
 Copy the **Client ID** and **Secret** from the OAuth tab in the Aha! app and paste it in the connector setup. Choose Authorize, and use the same Aha! admin account credentials to authenticate permission to crawl. For more information, see [Aha! OAuth2 Authentication](https://www.aha.io/api/oauth2#registering-an-application).
 
 ### Roll out to limited audience
-Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. For more information, see [Staged rollout for Microsoft Graph connectors](staged-rollout-for-graph-connectors.md).
+Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience. For more information, see [Staged rollout for Copilot connectors](staged-rollout-for-graph-connectors.md).
 
 At this point, you're ready to create the connection for Aha!. Click "Create" to publish your connection and index features from your Aha! account.
 
