@@ -15,7 +15,7 @@ description: "Access and manage your Microsoft 365 Copilot connectors as a searc
 
 To access and manage your Microsoft 365 Copilot connectors, you must be designated as a search administrator for your tenant. Contact your tenant administrator to provision your account for the search administrator role.
 
-To see your connections in the [Microsoft 365 admin center](https://admin.microsoft.com), go to the [Data sources tab](https://admin.microsoft.com/Adminportal/Home#/MicrosoftSearch/connectors).
+To see your connections in the [Microsoft 365 admin center](https://admin.microsoft.com), go to the [Data sources tab](https://admin.microsoft.com/#/copilot/connectors).
 
 You can view the connection details and errors by selecting the connection.  
 

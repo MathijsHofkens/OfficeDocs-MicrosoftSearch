@@ -23,7 +23,7 @@ The PostgreSQL Microsoft Graph connector allows your organization to index recor
 This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors a PostgreSQL Graph connector.
 
 >[!NOTE]
->The PostgreSQL connector is in preview. If you wish to get access to try it, you need to enable [Targeted Release](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide#set-up-the-release-option-in-the-admin-center) ring for your Admin account.
+>The PostgreSQL connector is in preview. If you wish to get access to try it, you need to enable [Targeted Release](/microsoft-365/admin/manage/release-options-in-office-365) ring for your Admin account.
 
 ## Capabilities
 - Index records from your PostgreSQL database using a SQL query.
@@ -98,7 +98,7 @@ b. **Supported data types** <br>
 <details>
 <summary>[Click to expand] List of supported data types.</summary><br>
 
-The table summarizes the SQL data types that are supported in the PostgreSQL connector. The table also summarizes the indexing data type for the supported SQL data type. To learn more about Microsoft Graph connectors supported data types for indexing, refer documentation on [property resource types](/graph/api/resources/property?preserve-view=true&view=graph-rest-beta#properties).
+The table summarizes the SQL data types that are supported in the PostgreSQL connector. The table also summarizes the indexing data type for the supported SQL data type. To learn more about Microsoft Graph connectors supported data types for indexing, refer documentation on [property resource types](/graph/api/resources/property).
 
 | Category | Source data type | Indexing data type |
 | ------------ | ------------ | ------------ |
@@ -164,6 +164,6 @@ You can configure full and incremental crawls based on the scheduling options pr
 At this point, you're ready to create the connection for PostgreSQL. You can click on the "Create" button to publish your connection and index data from your database.
 
 ## Troubleshooting
-After publishing your connection, you can review the status under the **Data Sources** tab in the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).
+After publishing your connection, you can review the status in the **Agents and connectors** section of the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).
 
 If you have issues or want to provide feedback, contact [Microsoft Graph | Support](https://developer.microsoft.com/en-us/graph/support).

@@ -40,7 +40,7 @@ The Veeva Vault PromoMats Copilot connector enables the following capabilities:
 - Improves the searchability of promotional documents by using advanced Microsoft 365 search capabilities.
 - Gains insights and recommendations from indexed data to enhance workflow efficiency, including checking the usage of specific phrases in PromoMats documents.
 - Indexes PromoMats content to create a unified search experience across Microsoft 365 environments.
-- Maintains data privacy and compliance by supporting ACL permissions and document-level permissions, simplifying the permission model, and reducing the risk of misconfiguration.
+- Maintains data privacy and availability by supporting ACL permissions and document-level permissions, simplifying the permission model and reducing the risk of misconfiguration.
 - Uses query string conditions to precisely control the synchronization of articles, ensuring efficient indexing.
 
 The following table lists example prompts that show how Microsoft 365 Copilot, integrated with the Veeva PromoMats Copilot connector, can significantly enhance productivity and streamline processes by using PromoMats data.
@@ -224,6 +224,6 @@ For information about troubleshooting, see [Troubleshooting the Veeva Vault Copi
 
 ## Next steps
 
-After you configure and publish the connector, monitor its status on **Data sources** in the [Admin Center](https://admin.microsoft.com). For more information, see [Manage your connector](manage-connector.md).
+After you configure and publish the connector, monitor its status in the **Agents and connectors** section of the [admin center](https://admin.microsoft.com). For more information, see [Manage your connector](manage-connector.md).
 
 If you have issues or want to provide feedback, contact [Microsoft Graph support](https://developer.microsoft.com/graph/support). 

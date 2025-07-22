@@ -375,7 +375,9 @@ You can change the default values of the refresh interval from here if you want 
 > Incremental crawl is only supported when the sitemap crawling option is selected.
 
 ## Troubleshooting
-After publishing your connection, you can review the status **Data Sources** in the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).
-You can find troubleshooting steps for commonly seen issues [here](troubleshoot-enterprise-web-connector.md).
 
-If you have issues or want to provide feedback, contact [Microsoft Graph | Support](https://developer.microsoft.com/en-us/graph/support).
+After you publish your connection, you can review the status in the **Agents and connectors** section in the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).
+
+For troubleshooting information, see [Troubleshooting](troubleshoot-enterprise-web-connector.md).
+
+If you have issues or want to provide feedback, contact [Microsoft Graph support](https://developer.microsoft.com/en-us/graph/support).

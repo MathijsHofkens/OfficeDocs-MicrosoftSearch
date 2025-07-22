@@ -39,21 +39,18 @@ By using the Jira Data Center Microsoft 365 Copilot connector, teams can keep th
 
 ## Prerequisites 
 
-1. Install the Microsoft 365 Copilot connector agent (GCA)
+1. Install the Microsoft 365 Copilot connector agent (GCA).
 
-To index your Jira Data Center content, you must install the **GCA** on a Windows machine within the same network as the Jira Data Center site. See [install the Graph connector agent](/microsoftsearch/graph-connector-agent). You must be the administrator for your organization's Microsoft 365 tenant and the administrator for your organization's Jira site. 
+To index your Jira Data Center content, you must install the **GCA** on a Windows computer within the same network as the Jira Data Center site. For details, see [Install the Microsoft Graph connector agent](/microsoftsearch/graph-connector-agent). You must be the administrator for your organization's Microsoft 365 tenant and the administrator for your organization's Jira site. I
+> [!NOTE]
+> If you already installed the GCA, make sure you're running version 3.1.3.0 or later.  
 
->[!NOTE]
-> If you have previously installed the GCA, ensure it is updated to version 3.1.3.0 or later.  
-
-
-2. Install Jira Data Center plugin
+2. Install the Jira Data Center plugin from [Microsoft 365 Copilot Connector for Jira Data Center | Atlassian Marketplace](https://marketplace.atlassian.com/apps/1235599/microsoft-graph-connector-for-jira-data-center) by following the installation step there.  
 
 For more information, see [Jira Data Center Microsoft 365 Copilot connector | Atlassian Marketplace](https://marketplace.atlassian.com/apps/1235599/microsoft-graph-connector-for-jira-data-center?hosting=datacenter&tab=installation).
 
->[!Note]
->This plugin works with Jira Data Center versions 8.10.0 - 10.5.1. 
-
+> [!Note]
+> This plugin works with Jira Data Center versions 8.10.0 - 10.5.1. 
 
 ## Get started 
 
@@ -204,7 +201,8 @@ The refresh interval determines how often your data is synchronized between the 
 For MS Search, if you need to customize the search results page. To learn about customizing search results, see [Customize the search results page](/microsoftsearch/configure-connector#step-11-customize-the-search-results-page).
 
 ## Troubleshooting
-After publishing your connection, you can review the status under **Data Sources** in the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).
+
+After publishing your connection, you can review the status in the **Agents and connectors** section of the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).
 
 If you have issues or want to provide feedback, contact [Microsoft Graph | Support](https://developer.microsoft.com/graph/support).
 
