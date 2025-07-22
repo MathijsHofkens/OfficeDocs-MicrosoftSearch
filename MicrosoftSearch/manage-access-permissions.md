@@ -36,7 +36,7 @@ In the connection details pane, locate the **Permissions** section. This section
 - **Only people with access to this data source**: The connector respects source system ACLs (Access Control Lists).
 - **Visible to everyone**: The connector grants access to all users in the organization.
  
-## Step 3: What is the permissions don't look right?
+## Step 3: What if the permissions don't look right?
  
 If the access permissions don't match your intended configuration, you must:
 1. **Delete** the existing connection.
