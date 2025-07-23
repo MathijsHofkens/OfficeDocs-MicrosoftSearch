@@ -20,13 +20,13 @@ ms.date: 02/26/2025
 
 The Veeva Vault PromoMats Microsoft 365 Copilot connector allows organizations to index promotional marketing materials from Veeva Vault into Microsoft Graph, making them accessible across Microsoft 365 experiences, including Microsoft 365 Copilot.
 
-The connector integrates Vault PromoMats' built-in permission model, ensuring that users only access authorized content, and supports faster content generation and review through content analysis and preparation. By enhancing efficiency throughout the content lifecycle, it helps maintain brand consistency. This functionality is beneficial for marketing, medical affairs, and regulatory teams, enabling informed decision-making and reducing the time-to-market for promotional materials.
+The connector integrates Vault PromoMats' built-in permission model, ensuring that users only access authorized content, and supports faster content generation and review through content analysis and preparation. It helps maintain brand consistency by improving efficiency throughout the content lifecycle. This functionality is beneficial for marketing, medical affairs, and regulatory teams, enabling informed decision-making and reducing the time-to-market for promotional materials.
 
 The following are the key benefits of the Veeva Vault PromoMats Copilot connector:
 
 - **Enhanced content management and retrieval:** The connector suggests tags to organize and access relevant documents more easily.
 - **AI-assisted content reuse and localization:** Facilitates content adaptation for various markets, saving time while ensuring relevance for different audiences.
-- **Comprehensive document review and summarization:** AI tools help grammar, spelling, semantics, and regulatory compliance, ensuring accuracy and up-to-date promotional materials.
+- **Comprehensive document review and summarization:** AI tools help with grammar, spelling, semantics, and regulatory compliance, ensuring accuracy and up-to-date promotional materials.
 
 Additionally, the connector boosts productivity by minimizing time spent searching for information across multiple sources. By integrating Microsoft 365 Copilot and Microsoft Search with PromoMats data, it streamlines content preparation and field use. It also improves efficiency by referencing existing compliant documents and content to help generate new messaging and prepare materials effectively.
 
@@ -40,7 +40,7 @@ The Veeva Vault PromoMats Copilot connector enables the following capabilities:
 - Improves the searchability of promotional documents by using advanced Microsoft 365 search capabilities.
 - Gains insights and recommendations from indexed data to enhance workflow efficiency, including checking the usage of specific phrases in PromoMats documents.
 - Indexes PromoMats content to create a unified search experience across Microsoft 365 environments.
-- Maintains data privacy and compliance by supporting ACL permissions and document-level permissions, simplifying the permission model and reducing the risk of misconfiguration.
+- Maintains data privacy and availability by supporting ACL permissions and document-level permissions, simplifying the permission model and reducing the risk of misconfiguration.
 - Uses query string conditions to precisely control the synchronization of articles, ensuring efficient indexing.
 
 The following table lists example prompts that show how Microsoft 365 Copilot, integrated with the Veeva PromoMats Copilot connector, can significantly enhance productivity and streamline processes by using PromoMats data.
@@ -48,15 +48,15 @@ The following table lists example prompts that show how Microsoft 365 Copilot, i
 |Scenario|Example prompt|
 |:---|:---|
 |Content generation|Generate personalized content for customer interactions based on the latest research documents stored in PromoMats.|
-|Content tagging|Suggest tags that can be used with the selected promotional contents to make it easier to manage and retrieve going forward.|
+|Content tagging|Suggest tags that can be used with the selected promotional content to make it easier to manage and retrieve going forward.|
 | HTML email generation|Create HTML emails generated automatically from pre-provided HTML templates and documents stored in PromoMats.|
 |Pre-call planning|Summarize relevant information and prepare materials for sales representatives before customer meetings.|
 |AI-assisted content re-use|Identify appropriate tags, translation, and localization to improve the reuse of content. |
 |Content consistency|Create new promotional materials, ensuring consistency with existing content.|
-|Pre-MLR AI-assisted reviews|Review grammar, spelling, and semantics and cross-validate the following promotional documents.|
+|Pre-MLR AI-assisted reviews|Review grammar, spelling, and semantics, and cross-validate the following promotional documents.|
 |Document summarization|Summarize key points from regulatory documents to ensure all team members are informed of the latest compliance requirements.|
 |Meeting preparation|Prepare a script for an upcoming meeting based on recent customer email threads and PromoMats documents.|
-|Support claim process|Find claims that can be reused made about the efficacy of drugs to ensure they are medically and legally validated and approved.|
+|Support claim process|Find claims that can be reused, made about the efficacy of drugs, to ensure they are medically and legally validated and approved.|
 
 ## Limitations
 
@@ -90,34 +90,37 @@ To configure Microsoft Entra ID OAuth 2.0/OpenID Connect for the Veeva Vault Cop
    3. Set **Status** as active.
    4. In **Authorization Server Provider**, select **Azure AD**.
    5. Click **Upload AS metadata** and select **Provide Authorization Server Metadata URL**.
-   6. Copy the **OpenID Connect metadata document** from **endpoints** in the overview page of the newly created application in Microsoft Entra admin center, and paste it into the field.
-   7. Select **Identity is in another claim** and enter the **UPN** of the claim.
+   6. Use the link below, replace {tenant-id} with your tenant ID, and paste it into the field.
+      `https://login.microsoftonline.com/{tenant-id}/v2.0/.well-known/openid-configuration`
+   7. Select **Identity is in another claim** and enter "**UPN**".
    8. In **User ID Type**, select **Federated ID**, and uncheck **Perform Strict Audience Restriction validation**.
 
    > [!NOTE]
    > Make sure your UPN is the same as your federated ID.
 
 2. In the newly created profile page, click **Client Applications** > **Add**. 
-Use the **Client ID** from the newly created application in the Entra admin center.
+Use the **Client ID** from the newly created application in the Entra admin center for both fields: **Application Client ID** and **Authorization Server Client ID**. For **Application Label**, enter any label of your preference.
+   > [!NOTE]
+   > To enable the flag **Perform strict audience restriction validation**, add the Client ID value in the **Audience** field.
 
-3. Create security policies.
+4. Create security policies.
    1. Go to **Admin** > **Settings** > **Security Policies**.
    2. Click **Create** > **Single sign-on**.
    3. Fill out the name and description as your preference.
    4. In status, choose **active**.
-   5. In authentication type, choose **Single Sign-on**
+   5. In authentication type, choose **Single Sign-on**. (Basic Auth is not supported)
    6. In Single Sign-on Profile, choose a profile created based on single sign-on. For more information, see [Veeva Vault documentation](https://platform.veevavault.help/en/gr/13977/).
    7. In eSignature Profile, select **None**.
    8. In the OAuth 2.0 / OpenID Connect Profile, select the newly created OAuth 2.0 profile.
 
    For the rest of the settings, keep the default values.
 
-4. Link user with the security policy.
+5. Link the user with the security policy.
    1. Go to **Admin** > **Users & Groups**.
-   2. Select a user who is the vault owner.
+   2. Select a user — ideally the vault owner, but otherwise anyone with permission to run VQL queries, use the RESTful API, export documents to file staging, download them from file staging, and have access to all the files on all stages, the Doclifecycle configuration detail and the DAC configuration.
    3. Click **Edit**.
    4. In **Details** > **Security Policy**, change the values to the newly created policy.
-   5. In **Federated ID**, change it to the UPN claim of the admin identity, which is also used in the connector setup. 
+   5. In **Federated ID**, change it to the UPN (User Principal Name) of the Entra ID account used to set up the connector, like the admin account.
 
 ## Get started
 
@@ -145,13 +148,12 @@ For customers who need the security settings of their Veeva PromoMats instance t
 Enter the required information for identity mapping. For example, if you want to map identities based on email addresses, you can follow these steps.
 
 1. Select **Mail** as the **Microsoft Entra user property**.
-2. Select **Email** as the **non-Microsoft Entra user property**.
-3. Use a regular expression such as `([^@]+)` to capture a sequence of one or more characters that are not the `@` symbol.
-4. Create a formula to complete the mapping, such as `{0}@<your-domain>`.
+2. Under **non-Microsoft Entra user property**, select **Add identity property**. Select **Email** as the user identity property and use an expression such as `([^@]+)` to capture a sequence of one or more characters that are not the `@` symbol.
+3. Create a formula to complete the mapping, such as `{0}@<your-domain>`.
 
 This process ensures that user identity mappings are correctly established and security permissions are properly enforced.
 
-### 5. Roll out to limited audience
+### Roll out to limited audience
 Deploy this connection to a limited group of users to validate indexing and access control functionality before a full rollout. 
 
 
@@ -161,11 +163,11 @@ The following table lists the default settings for the Veeva Vault PromoMats Cop
 
 | Section  | Setting               | Default value |
 |----------|-----------------------|---------------|
-| **Users**   | Access permissions   | Respects Veeva Vault permissions; only viewable documents are accessible. |
-| **Content** | Index metadata       | Indexes key metadata, such as document name, owner, and lifecycle stage. |
-| **Content** | Manage properties    | Enables metadata like title, created by, and last modified by. |
-| **Sync**    | Full crawls          | Every day.|
-| **Sync**  | Full crawl frequency|Every day.|
+| Users   | Access permissions   | Respects Veeva Vault permissions; only viewable documents are accessible. |
+| Content | Index metadata       | Indexes key metadata, such as document name, owner, and lifecycle stage. |
+| Content | Manage properties    | Enables metadata like title, created by, and last modified by. |
+| Sync    | Full crawls          | Every day.|
+| Sync  | Full crawl frequency|Every day.|
 
 ## Custom setup
 
@@ -184,12 +186,44 @@ You can modify the frequency of full crawls to fit your organization's requireme
 - Incremental crawl - 15 minutes.
 - Full crawl - daily.
 
+### Content 
+
+#### Manage properties
+
+You can view properties crawled from your Veeva PromoMats.
+
+| Properties             | Semantic label         | Description                                                    | Schema                 |
+|------------------------|------------------------|----------------------------------------------------------------|------------------------|
+| Content                |                        | Main text or body content extracted from the document          | Search                 |
+| Country                |                        | Country or region related to the document                      | Query, Retrieve       |
+| CreatedBy              | CreatedBy              | User who initially created the document                        | Query, Retrieve       |
+| CreatedByByUserId      |                        | Internal user identifier for document creator                  | Query, Retrieve       |
+| DocumentCreationDate   | createdDateTime      | The date and time the document was originally created          | Query, Retrieve       |
+| Extension              |                     | File type extension such as PDF, DOCX, PPTX                    | Query, Retrieve, Search |
+| FileName               | fileName                  | Name or title of the document file                             | Query, Retrieve, Search |
+| Format                 |                        | Document format or content type                                | Query, Retrieve       |
+| Id                     |                        | Unique identifier of the document in the system                | Query, Retrieve       |
+| LastModifiedBy         | lastModifiedBy         | User who last modified the document                            | Query, Retrieve       |
+| LastModifiedByUserId   |                        | Internal user identifier for last modifier                     | Query, Retrieve       |
+| Lifecycle             |                        | Lifecycle status of the document (e.g., Draft, Approved)      | Query, Retrieve       |
+| MajorVersion           |                        | Main version number of the document                            | Query, Retrieve       |
+| MinorVersion           |                        | Minor version or revision number                               | Query, Retrieve       |
+| Product               |                        | Product associated with the document content                   | Query, Retrieve       |
+| Size                  |                        | File size of the document                                      |                        |
+| Status                |                        | Document status (e.g., Active, Archived)                      | Query, Retrieve       |
+| Subtype              |                        | Specific subtype or document classification                    | Query, Retrieve       |
+| Type                  |                        | General type or category of the document                       | Query, Retrieve       |
+| Url                    | url                    | Direct URL to access or preview the document                   | Query, Retrieve       |
+| VersionId            |                        | Unique identifier for a specific document version              | Query, Retrieve       |
+| VersionModifiedDate  | lastModifiedDateTime   | Date and time when this version was last modified              | Query, Retrieve       |
+
+
 ## Troubleshooting
 
 For information about troubleshooting, see [Troubleshooting the Veeva Vault Copilot connector](troubleshoot-veeva-vault-connectors.md).
 
 ## Next steps
 
-After you configure and publish the connector, monitor its status on **Data sources** in the [Admin Center](https://admin.microsoft.com). For more information, see [Manage your connector](manage-connector.md).
+After you configure and publish the connector, monitor its status in the **Agents and connectors** section of the [admin center](https://admin.microsoft.com). For more information, see [Manage your connector](manage-connector.md).
 
 If you have issues or want to provide feedback, contact [Microsoft Graph support](https://developer.microsoft.com/graph/support). 

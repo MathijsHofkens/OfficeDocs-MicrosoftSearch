@@ -23,7 +23,6 @@ With the WordPress.org Microsoft 365 Copilot connector for WordPress.org-built w
 
 This article is for Microsoft 365 administrators or anyone who configures, runs, and monitors a WordPress.org Copilot connector. 
 
-
 >[!NOTE]
 >The WordPress.org Copilot connector is in public preview. If you wish to get access to try it, you need to enable [Targeted Release](/microsoft-365/admin/manage/release-options-in-office-365#set-up-the-release-option-in-the-admin-center) ring for your Admin account.
 
@@ -39,10 +38,10 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
 - Doesn't crawl user identities and access permissions. All published pages or posts indexed using the WordPress.org Copilot connector are visible to all Microsoft 365 users in your tenant, from Microsoft Search or Copilot.
 
 ## Prerequisites
-- You must be the **search admin** for your organization's Microsoft 365 tenant.
-- **Install the Microsoft Graph connector agent**: To access your WordPress.org-built website, you must install and configure the [Microsoft Graph connector agent](https://www.microsoft.com/download/details.aspx?id=104045). [Download the agent installer](https://www.microsoft.com/download/details.aspx?id=104045) and follow the installation instructions to set it up. Once installed, ensure that the agent is configured correctly to connect your WordPress.org-built website with the graph connector. 
-- **WordPress.org-built website URL**: To connect to your WordPress.org-built website data, you need your organization's WordPress.org-built website URL. 
-- **WordPress.org-built website Admin account**: To connect to your WordPress.org-built website and allow the WordPress.org Copilot connector to update published posts and pages regularly, you need an **admin user account** of your WordPress.org-built website with the permission to create an **application password**. The application password is used to authenticate with a third-party service or application that connects to your WordPress.org-built website via REST API. 
+1. You must be the **search admin** for your organization's Microsoft 365 tenant.
+2. To access your WordPress.org-built website, you must install and configure the [Microsoft Graph connector agent](https://www.microsoft.com/download/details.aspx?id=104045). [Download the agent installer](https://www.microsoft.com/download/details.aspx?id=104045) and follow the installation instructions to set it up. Once installed, ensure that the agent is configured correctly to connect your WordPress.org-built website with the graph connector. 
+3. To connect to your WordPress.org-built website data, you need your organization's WordPress.org-built website URL. 
+4. To connect to your WordPress.org-built website and allow the WordPress.org Copilot connector to update published posts and pages regularly, you need an **admin user account** of your WordPress.org-built website with the permission to create an **application password**. The application password is used to authenticate with a third-party service or application that connects to your WordPress.org-built website via REST API. 
 
 ## Get Started
 
@@ -63,63 +62,61 @@ We support the basic authentication method. To enable and configure basic authen
 ### 5. Staged rollout to limited audience
 Deploy this connection to a limited user base if you want to validate it in Copilot and other Search surfaces before expanding the rollout to a broader audience.
 
-At this point, you are ready to create the connection for WordPress.org-built website. You can click on the ‘**Create**’ button to publish your connection and index published posts and pages from your WordPress.org-built website.  
+To create the connection for a WordPress.org-built website, click **Create** to publish your connection and index published posts and pages from your WordPress.org-built website.  
 
-For other settings, like Access Permissions, Data inclusion rules, Schema, Crawl frequency etc., we set defaults based on what works best with WordPress.org-built website data. The default value settings are as follows.
+For other settings, like Access Permissions, Data inclusion rules, Schema, Crawl frequency, etc., default values are set based on what works best with WordPress.org-built website data.
 
-**Page** | **Settings** | **Default Values**
---- | ---- | ---
-Users | Access Permissions | All published pages or posts indexed using the WordPress.org Copilot connector are visible to all Microsoft 365 users in your tenant, from Microsoft Search or Copilot.
-Content | Index Content | All published posts and pages are selected by default.
-Content | Manage Properties | To check default properties and their schema, [click here](#content).
-Sync | Incremental Crawl | Frequency: Every 15 mins
-Sync | Full crawl | Frequency: Every day
-
-If you want to edit any of these values, you need to choose the ‘**Custom Setup**’ option. 
+|Page|Settings | Default values|
+|:--- | ---- | ---|
+|Users | Access Permissions | All published pages or posts indexed using the WordPress.org Copilot connector are visible to all Microsoft 365 users in your tenant, from Microsoft Search or Copilot.|
+|Content | Index Content | All published posts and pages are selected by default.|
+|Content | Manage Properties | To check default properties and their schema, [click here](#content).|
+|Sync | Incremental Crawl | Frequency: Every 15 mins|
+|Sync | Full crawl | Frequency: Every day|
 
 ## Custom Setup 
 
-Custom setup is for those admins who want to edit the default values for settings. Once you click on the ‘Custom Setup’ option, you should see three other tabs – Users, Content, and Sync. 
+In custom setup, you can edit any of the default values for users, content, and sync.
 
 ### Users 
 
-**Access permissions**
+#### Access permissions
 
 Currently, only published pages and posts from your WordPress.org-built websites are indexed. All data indexed using the WordPress.org Copilot connector is visible to all Microsoft 365 users in your tenant, from Microsoft Search or Copilot.
 
 ### Content 
 
-**Filter the indexed content**   
+### Filter the indexed content
 
 You can specify conditions for indexed content. For example, you can choose to index posts or pages, and choose to index posts associated with specific categories.  
 
 Use the preview results button to verify the sample values of the selected properties and filters. 
 
-**Manage properties**
+#### Manage properties
 
-Here, you can add or remove available properties from your WordPress.org data source, assign a schema to the property (define whether a property is **searchable, queryable, retrievable or refinable**), change the semantic label and add an alias to the property. Properties that are selected by default are listed below. 
+To add or remove available properties from your WordPress.org data source, assign a schema to the property (define whether a property is searchable, queryable, retrievable, or refinable), and change the semantic label and add an alias to the property. Some properties are selected by default.
 
-**Source Property** | **Label** |**Description**| **Schema**
---- | ---- | --- | ---
-Author | Authors | Name of all the people who participated/collaborated on the item in the data source.  | Search, Query, Retrieve
-Categories  |  |  | Query, Retrieve, Refine
-Content |  | | Search, Retrieve 
-Created | Created date time | Data and time that the item was created in the data source. | Query, Retrieve 
-CreatedBy | Created by| Name of the person who created the item in the data source.| Search, Query, Retrieve 
-Excerpt | | |Search, Retrieve 
-id | | |Query, Retrieve 
-Tags | | | Query, Retrieve, Refine 
-Title |Title| The title of the item that you want to be shown in Copilot and other search experiences. |Search, Retrieve 
-Type | | | Query, Retrieve, Refine
-Updated | Last modified date time | Date and time the item was last modified in the data source. |Query, Retrieve 
-UpdatedBy | Last modified by | Name of the person who most recently edited the item in the data source |Search, Query, Retrieve 
-Url | url | The target URL of the item in the data source.  |Retrieve 
+|Source property | Label |Description|Schema|
+|:--- | ---- | --- | ---| 
+|Author | Authors | Name of all the people who participated/collaborated on the item in the data source.  | Search, Query, Retrieve|
+|Categories  |  |  | Query, Retrieve, Refine|
+|Content |  | | Search, Retrieve |
+|Created | Created date time | Data and time that the item was created in the data source. | Query, Retrieve |
+|CreatedBy | Created by| Name of the person who created the item in the data source.| Search, Query, Retrieve |
+|Excerpt | | |Search, Retrieve |
+|id | | |Query, Retrieve |
+|Tags | | | Query, Retrieve, Refine |
+|Title |Title| The title of the item that you want to be shown in Copilot and other search experiences. |Search, Retrieve |
+|Type | | | Query, Retrieve, Refine|
+|Updated | Last modified date time | Date and time the item was last modified in the data source. |Query, Retrieve |
+|UpdatedBy | Last modified by | Name of the person who most recently edited the item in the data source |Search, Query, Retrieve |
+|Url | url | The target URL of the item in the data source.  |Retrieve |
 
 ### Sync 
 
 You can configure full and incremental crawls based on the scheduling options present here. By default, incremental crawl is set for every 15 minutes, and full crawl is set for every day. If needed, you can adjust these schedules to fit your data refresh needs.
 
 ## Troubleshooting
-After publishing your connection, you can review the status under the **Data Sources** tab in the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).
+After publishing your connection, you can review the status in the **Agents and connectors** section of the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).
 
 If you have issues or want to provide feedback, contact [Microsoft Graph | Support](https://developer.microsoft.com/en-us/graph/support).

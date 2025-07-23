@@ -21,6 +21,12 @@ For help on installation, refer to [this page](graph-connector-agent.md#installa
 
 [Download latest Graph Connector Agent](https://aka.ms/gca)
 
+## Version 3.1.11.0 (*June 30, 2025*)
+
+* Support for Microsoft 365 Copilot Search.
+* Support for Github server connectors.
+* Bug fixes and reliability improvements.
+
 ## Version 3.1.10.0 (*June 18, 2025*)
 
 * Bug fixes and reliability improvements.

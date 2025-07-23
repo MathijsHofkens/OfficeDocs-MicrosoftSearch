@@ -161,6 +161,6 @@ You can configure full and incremental crawls based on the scheduling options pr
 
 ## Next steps
 
-After you publish your connection, you can review the status under **Data sources** in the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).
+After you publish your connection, you can review the status in the **Agents and connectors** section of the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md).
 
 If you have issues or want to provide feedback, see [Microsoft Graph support](https://developer.microsoft.com/graph/support).

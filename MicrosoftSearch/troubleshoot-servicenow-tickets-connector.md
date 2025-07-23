@@ -24,7 +24,7 @@ If your organization has enabled single sign-on (SSO) to ServiceNow, you may hav
 ## Unauthorized or forbidden response to API request
 
 ### Check table access permissions
-If you see a forbidden or unauthorized response in connection status, check if the service account has required access to the tables mentioned in [step 3: connection settings](./servicenow-tickets-connector.md#step-3-connection-settings). Check whether all the columns in the tables have read access.
+If you see a forbidden or unauthorized response in connection status, check if the service account has required access to the tables mentioned in [Prerequisites](servicenow-tickets-connector.md#prerequisites). Check whether all the columns in the tables have read access.
 
 ### Change in account password
 The ServiceNow Tickets Copilot connector uses an access token fetched on behalf of a service account for crawling. The access token refreshes every 12 hours. Ensure that the service account password isn't changed after publishing the connection. You may need to reauthenticate the connection if there's a change in password.

@@ -16,7 +16,7 @@ description: "Set up the Atlassian Jira Cloud Microsoft 365 Copilot connector."
 ms.date: 07/22/2021
 ---
 
-# Atlassian Jira Cloud Microsoft Graph connector
+# Atlassian Jira Cloud Copilot connector
 
 The Atlassian Jira Cloud Microsoft 365 Copilot connector allows your organization to index Jira issues. After you configure the connector and index content from the Jira site, end users can search for those items in Microsoft Search and Microsoft 365 Copilot.
 
@@ -239,6 +239,6 @@ After creating the connection, you need to customize the search results page wit
 You may also use the [sample result layout](jira-connector-result-layout.md) for the Atlassian Jira Cloud Copilot connector. Copy-paste the result layout JSON to get started after reviewing the schema of the connection with required schema for the sample layout.
 
 ## Troubleshooting
-After publishing your connection, you can review the status under **Data sources** in the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md). You can find troubleshooting steps for commonly seen issues in [Troubleshooting guide for Atlassian Jira Cloud Copilot connector](troubleshoot-jira-cloud-connector.md).
+After publishing your connection, you can review the status in the **Agents and connectors** section of the [admin center](https://admin.microsoft.com). To learn how to make updates and deletions, see [Manage your connector](manage-connector.md). You can find troubleshooting steps for commonly seen issues in [Troubleshooting guide for Atlassian Jira Cloud Copilot connector](troubleshoot-jira-cloud-connector.md).
 
 If you have issues or want to provide feedback, contact [Microsoft Graph | Support](https://developer.microsoft.com/en-us/graph/support).

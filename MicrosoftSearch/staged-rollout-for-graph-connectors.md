@@ -41,15 +41,15 @@ Go to the [Microsoft 365 admin center](https://admin.microsoft.com) and complete
 <!---If the above phrase does not apply, delete it and insert specific details for your data source that are different from general setup 
 instructions.-->
 
-2. Go to the **Data Sources** tab and select the connection that you want to apply staged rollout to. If you want to apply staging to a new connection, follow the [general setup instructions](./configure-connector.md) to create a connection.
+1. Go to the **Agents and connectors** tab and select the connection that you want to apply staged rollout to. If you want to apply staging to a new connection, follow the [general setup instructions](./configure-connector.md) to create a connection.
 <!---If the above phrase does not apply, delete it and insert specific details for your data source that are different from general setup 
 instructions.-->
 
-3. After you configure all the connection settings, on the **Review & Publish** step, click on the button **Publish to limited users**. This allows you to deploy the connector to a limited audience.
+1. After you configure all the connection settings, on the **Review & Publish** step, click on the button **Publish to limited users**. This allows you to deploy the connector to a limited audience.
 
    ![Publish to limited users.](media/Staged_Rollout_Publish_limited_users.png)
 
-4. Add the users or security groups to whom you want to give access to the connector. Currently, you can add up to **100 users and 15 Microsoft 365 groups**. For details, see [Overview of Microsoft 365 Groups for administrators](/microsoft-365/admin/create-groups/office-365-groups).
+2. Add the users or security groups to whom you want to give access to the connector. Currently, you can add up to **100 users and 15 Microsoft 365 groups**. For details, see [Overview of Microsoft 365 Groups for administrators](/microsoft-365/admin/create-groups/office-365-groups).
 
    ![Add user or M365 groups.](media/Staged_Rollout_add_users.png)
 
@@ -60,7 +60,7 @@ instructions.-->
 
 6. Choose **Publish to limited users** to complete the connection set-up.
 
-   The portal starts the staged rollout process. Depending on the size of your organization and the number of users selected, the rollout process might take some time. You can check the status on the **Display all connections** section in the **Data sources** tab. After the connection is published, only the users who are included in the rollout will be able to see the connector results (if they have access permissions) in Microsoft Search.
+   The portal starts the staged rollout process. Depending on the size of your organization and the number of users selected, the rollout process might take some time. You can check the status on the **Display all connections** section on the **Agents and connectors** tab. After the connection is published, only the users who are included in the rollout will be able to see the connector results (if they have access permissions) in Microsoft Search.
 
 <!---If the above phrase does not apply, delete it and insert specific details for your data source that are different from general setup 
 instructions.-->
