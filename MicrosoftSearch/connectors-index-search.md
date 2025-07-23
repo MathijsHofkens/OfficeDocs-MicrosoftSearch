@@ -61,11 +61,11 @@ It indicates that the item is missing some information, such as properties, user
 
 It indicates that the item is indexed but remains inaccessible to all users, as shown by an empty response in the permissions tab. Although the item is present in the index, users can't view it.
 
-In the case of a ServiceNow connector, the **Deny all** status may result from different causes
+In the case of a ServiceNow Knowledge connector, the **Deny all** status may result from different causes
 
-- Advanced criteria on an item - If advanced criteria are applied to an item in the deny list, it may be marked as **Deny all.** To resolve it, try removing the advanced criteria and triggering a full crawl. For more information, see the troubleshooting section of each connector. 
+- **Advanced user criteria appled on knowledge article & Simple flow used during connection setup instead of Advanced flow** - In case when connection setup was done using Simple flow & advanced user criteria are applied to knowledge article in the "Cannot Read" section, it may be marked as **Deny all.** To resolve it, try removing the advanced criteria and triggering a full crawl, or do the connection setup using the [advanced flow method](servicenow-knowledge-advanced-flow.md). For more information, see the troubleshooting section of each connector. 
 
-- Advanced criteria on a knowledge base - If advanced criteria on a knowledge base deny list affect all articles within that knowledge base. It can result in a **Deny all** status for those articles. Identify the knowledge base the item belongs to and remove the advanced criteria. For more information, see the troubleshooting section of each connector. 
+- **Advanced user criteria applied on knowledge base & Simple flow used during connection setup instead of Advanced flow** - In case when connection setup was done using Simple flow & advanced user criteria are applied on a knowledge base in the "Cannot Read" or "Cannot Contribute" section, it would result in a **Deny all** status for the articles within that knowledge base. To resolve it, identify the knowledge base the article belongs to and remove the advanced criteria, or do the connection setup using the [advanced flow method](servicenow-knowledge-advanced-flow.md). For more information, see the troubleshooting section of each connector. 
 
 Additionally, temporary issues may cause a **Deny all** status, which could be resolved during the next full crawl.
 
@@ -80,4 +80,3 @@ If an item is discovered but not indexed, check the Errors tab for any issues th
 >- Permissions updates occur during a full crawl, not an incremental crawl.
 >- If your data source permissions change after the last full crawl, a new full crawl must be triggered on-demand or scheduled to update the index.
 >- When testing in Microsoft Search or Microsoft 365 Copilot, make sure that you're searching with a searchable or queryable property. For more information, see [Manage schema](/microsoftsearch/manage-search-schema). 
-
