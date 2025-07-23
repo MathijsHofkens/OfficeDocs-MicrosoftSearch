@@ -34,8 +34,8 @@ This article is for Microsoft 365 administrators or anyone who configures, runs,
    - Image files (.GIF, .JPG, .JPEG, .PNG)
    - Archive files (.ZIP)
 ## Limitations
-- Only supports indexed files in 'General purpose buckets'.
-- Doesn't support only indexed files in storage classes 'Glacier Flexible Retrieval' and 'Glacier Deep Archive'.
+- Only indexes files in 'General purpose buckets'.
+- Doesn't index files in storage classes 'Glacier Flexible Retrieval' and 'Glacier Deep Archive'.
 - Doesn't index files larger than 20 MB.
 - Doesn't support versioned objects (only the latest version is indexed).
 - Restricted file types - only metadata is indexed (filename, extension, author, size, last modified)
