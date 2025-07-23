@@ -1,4 +1,6 @@
-title: "Veeva Vault RIM Microsoft 365 Copilot connector (preview)"  
+--- 
+
+title: "Veeva Vault RIM Microsoft 365 Copilot connector" 
 ms.author: anggao
 author: anggao
 manager: jecui
@@ -11,8 +13,8 @@ search.appverid:
 - BFB160 
 - MET150 
 - MOE150 
-description: "Set up the Veeva Vault RIM Microsoft 365 Copilot connector." 
-ms.date: 06/26/2025
+description: "Set up the Veeva Vault PromoMats Microsoft 365 Copilot connector." 
+ms.date: 07/23/2025
 ---
 # Veeva Vault RIM Microsoft 365 Copilot connector (preview)
 
