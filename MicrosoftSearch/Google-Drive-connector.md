@@ -143,7 +143,8 @@ To sign up for Google Workspace, you need an internet domain name, like your-com
 
 ### 3. Provide Google Apps administrator account email
 Enter the email of a Google Apps administrator account in the `user@company.com` format.
-### 4. Service Account Key*
+
+### 4. Service Account Key
 Copy and paste the **content** of service account key file that you created when you authorized your Microsoft organization to access your users' Google Drive.
 
 _Note: It is not the actual key in Google admin but the contents of the json file_
@@ -163,7 +164,7 @@ For other settings, like Access permissions, Data inclusion rules, Schema, Crawl
 
 ## Custom setup 
 
-In custom setup you can edit any of the default values for users, content, and sync. 
+In custom setup, you can edit any of the default values for users, content, and sync. 
 
 ### Users 
 
