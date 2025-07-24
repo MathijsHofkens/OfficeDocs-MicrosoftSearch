@@ -83,7 +83,7 @@ Enter your BambooHR instance URL, for example, https://contoso.bamboohr.com/
 
 ### 3. Choose authentication type
 
-Select OAuth 2.0 from the list of authentication types, and enter the client ID and client secret from the BambooHR App portal.
+Select OAuth 2.0 from the list of authentication types, and enter the client ID and client secret from your BambooHR Developer portal. When you click **Authorize**, you're required to sign in with your admin credentials from the BambooHR instance containing your employee data and consent to the required permissions.
 
 For other settings, like access permissions, data inclusion rules, schema, crawl frequency, etc., we set defaults based on what works best with data in BambooHR. The default value settings are as follows.
 
