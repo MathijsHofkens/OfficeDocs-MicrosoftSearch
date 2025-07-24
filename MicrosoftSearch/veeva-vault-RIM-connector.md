@@ -134,7 +134,7 @@ Enter the required information for identity mapping. For example, if you want to
 
 This process ensures that user identity mappings are correctly established and security permissions are properly enforced.
 
-### 5. Roll out to limited audience
+### Roll out to limited audience
 Deploy this connection to a limited group of users to validate indexing and access control functionality before a full rollout. 
 
 
