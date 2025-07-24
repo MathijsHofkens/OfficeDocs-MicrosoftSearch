@@ -221,11 +221,11 @@ You can configure full and incremental crawls based on the scheduling options pr
 2. The required permissions for users/files are missing.
    Authentication error, one or more required OAuth scopes for your service account are missing. Your service account must include both API scopes:
 
-  `https://www.googleapis.com/auth/admin.directory.user.readonly` 
+     `https://www.googleapis.com/auth/admin.directory.user.readonly` 
 
-  `https://www.googleapis.com/auth/drive.readonly`
+     `https://www.googleapis.com/auth/drive.readonly`
 
-  `https://www.googleapis.com/auth/admin.directory.group.readonly`
+     `https://www.googleapis.com/auth/admin.directory.group.readonly`
 
 3. Failed to capture file information. Ensure the workspace isn't empty and has files accessible to the admin.
    During the connector setup, at least one file must be present in your organization's workspace to test the connection successfully.
