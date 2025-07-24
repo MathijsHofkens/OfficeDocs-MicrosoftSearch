@@ -39,6 +39,9 @@ Before you begin, ensure the following:
 - **Service account (if applicable):** If your data source requires a service account, ensure it has the necessary roles or permissions.
 ---
 ## Step 1: Add a Copilot connector
+
+<img src="media/add-connector.png" alt="Data sources available include: ADLS Gen2, Enterprise websites, Microsoft SQL server, Azure SQL, Oracle SQL database, ServiceNow Knowledge, ServiceNow Catalog, File share, Azure DevOps, and MediaWiki." data-linktype="relative-path">
+
 Complete the following steps to configure any of the Copilot connectors (or go to the [admin center](https://admin.microsoft.com/#/copilot/connectors/add) to access the connector catalog):
 
 1. **Open the Microsoft 365 Admin Center:**
