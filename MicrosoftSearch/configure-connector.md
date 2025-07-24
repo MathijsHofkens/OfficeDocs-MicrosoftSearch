@@ -1,5 +1,5 @@
 ---
-ms.date: 07/02/2025
+ms.date: 07/24/2025
 title: "Set up Microsoft 365 Copilot connectors in the Microsoft 365 admin center"
 ms.author: souravpoddar
 author: souravpoddar001
@@ -28,7 +28,7 @@ This article outlines the steps to set up a Microsoft 365 Copilot connector in t
 > [!TIP]
 > **Product survey**
 > 
-> To help us understand your requirements related to connecting more data sources to Copilot or Microsoft Search, we request you to take a few minutes to fill out this [survey form](https://forms.office.com/r/0Hh4GJNsJe). Based on the survey results, Microsoft will build connectors for the top-demanded data sources.
+> To help us understand your requirements related to connecting more data sources to Copilot or Microsoft Search, please fill out this [survey form](https://forms.office.com/r/0Hh4GJNsJe). We'll use the survey results to prioritize new data sources for connectors.
 
 ## Prerequisites
 
