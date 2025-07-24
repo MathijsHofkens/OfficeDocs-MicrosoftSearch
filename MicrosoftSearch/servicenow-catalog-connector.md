@@ -62,12 +62,9 @@ You can **create and assign a role** for the service account you use to connect 
 
 [Add ServiceNow Catalog Copilot connector](https://admin.microsoft.com/adminportal/home#/MicrosoftSearch/Connectors/add?ms_search_referrer=MicrosoftSearchDocs_ServiceNowCatalog&type=ServiceNowCatalog​)
 
-[![Screenshot that shows connection creation screen for the ServiceNow Catalog Microsoft 365 Copilot connector.](media/servicenow-catalog-create-page.png)](media/servicenow-catalog-create-page.png#lightbox)
-
 ### 1. Display name
 
 A display name is used to identify each reference in Copilot, helping users easily recognize the associated file or item. Display name also signifies trusted content. Display name is also used as a [content source filter](/MicrosoftSearch/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize.
-
 
 ### 2. ServiceNow URL
 
@@ -241,8 +238,6 @@ Custom setup is for those admins who want to edit the default values for setting
 
 ### Users
 
-[![Screenshot that shows Users tab where you can configure access permissions and user mapping rules.](media/servicenow-catalog-users-tab.png)](media/servicenow-catalog-users-tab.png#lightbox)
-
 **Access permissions**
 
 The ServiceNow Catalog Microsoft Graph connector supports access permissions visible to "Everyone" or "Only people with access to content in data source". Indexed data appears in results and is visible to all users in the organization or users who have access to them via user criteria permission respectively. Choose the one that is most appropriate for your organization.
@@ -254,8 +249,6 @@ The connector supports default user criteria permissions without advanced script
 The default method for mapping your data source identities with Microsoft Entra ID is by checking whether the Email id of ServiceNow users is same as the UserPrincipalName (UPN), or Mail of the users in Microsoft Entra ID. If you believe the default mapping would not work for your organization, you can provide a custom mapping formula. To know more about mapping Non-EntraID identities, click [here](/MicrosoftSearch/map-non-aad).
 
 ### Content
-
-[![Screenshot that shows Content tab where you can configure Query string and Properties.](media/servicenow-catalog-content-tab.png)](media/servicenow-catalog-content-tab.png#lightbox)
 
 **Query string**
 
@@ -288,8 +281,6 @@ SysUpdatedOn  | `lastModifiedDateTime` | Date and time the item was last modifie
 Use the preview results button to verify the sample values of the selected properties and query filter.
 
 ### Sync
-
-[![Screenshot that shows Sync tab where you can configure crawl frequency.](media/servicenow-catalog-sync-tab.png)](media/servicenow-catalog-sync-tab.png#lightbox)
 
 The refresh interval determines how often your data is synced between the data source and the ServiceNow Catalog Copilot connector index. There are two types of refresh intervals – full crawl and incremental crawl. For more details, click [here](/MicrosoftSearch/configure-connector#guidelines-for-sync-settings).
 
