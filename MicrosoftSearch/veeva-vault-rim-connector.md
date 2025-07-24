@@ -36,7 +36,7 @@ This guide is for Microsoft 365 administrators or anyone responsible for configu
 
 The Veeva Vault RIM Copilot connector enables the following capabilities:
 
-- Generates summaries to understand and make decisions based on regulatory submissions and compliance metarils and key documents.
+- Generates summaries to understand and make decisions based on regulatory submissions and compliance metrics and key documents.
 - Improves the searchability of regulatory submissions and compliance documents by using advanced Microsoft 365 search capabilities.
 - Gains insights and recommendations from indexed data to enhance workflow efficiency, including checking the usage of specific phrases in RIM documents.
 - Indexes RIM content to create a unified search experience across Microsoft 365 environments.
