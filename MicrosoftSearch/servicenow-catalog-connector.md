@@ -62,12 +62,9 @@ You can **create and assign a role** for the service account you use to connect 
 
 [Add ServiceNow Catalog Copilot connector](https://admin.microsoft.com/adminportal/home#/MicrosoftSearch/Connectors/add?ms_search_referrer=MicrosoftSearchDocs_ServiceNowCatalog&type=ServiceNowCatalog​)
 
-[![Screenshot that shows connection creation screen for the ServiceNow Catalog Microsoft 365 Copilot connector.](media/servicenow-catalog-create-page.png)](media/servicenow-catalog-create-page.png#lightbox)
-
 ### 1. Display name
 
 A display name is used to identify each reference in Copilot, helping users easily recognize the associated file or item. Display name also signifies trusted content. Display name is also used as a [content source filter](/MicrosoftSearch/custom-filters#content-source-filters). A default value is present for this field, but you can customize it to a name that users in your organization recognize.
-
 
 ### 2. ServiceNow URL
 
@@ -255,8 +252,6 @@ The default method for mapping your data source identities with Microsoft Entra 
 
 ### Content
 
-[![Screenshot that shows Content tab where you can configure Query string and Properties.](media/servicenow-catalog-content-tab.png)](media/servicenow-catalog-content-tab.png#lightbox)
-
 **Query string**
 
 With a ServiceNow query string, you can specify conditions for syncing articles. It's like a **Where** clause in a **SQL Select** statement. For example, you can choose to index only articles that are published and active. To learn about creating your own query string, see [Generate an encoded query string using a filter](https://docs.servicenow.com/bundle/xanadu-platform-user-interface/page/use/using-lists/task/t_GenEncodQueryStringFilter.html).
@@ -288,8 +283,6 @@ SysUpdatedOn  | `lastModifiedDateTime` | Date and time the item was last modifie
 Use the preview results button to verify the sample values of the selected properties and query filter.
 
 ### Sync
-
-[![Screenshot that shows Sync tab where you can configure crawl frequency.](media/servicenow-catalog-sync-tab.png)](media/servicenow-catalog-sync-tab.png#lightbox)
 
 The refresh interval determines how often your data is synced between the data source and the ServiceNow Catalog Copilot connector index. There are two types of refresh intervals – full crawl and incremental crawl. For more details, click [here](/MicrosoftSearch/configure-connector#guidelines-for-sync-settings).
 
