@@ -256,10 +256,6 @@ Custom setup is for those admins who want to edit the default values for setting
 
 ### Users
 
-:::image type="complex" alt-text="Screenshot that shows Users tab where you can configure access permissions and user mapping rules" source="media/servicenow-knowledge-users-tab.png" lightbox="media/servicenow-knowledge-users-tab.png":::
-Configure settings related to Users
-:::image-end:::
-
 **Access permissions**
 
 The ServiceNow Knowledge Copilot connector supports access permissions visible to "Everyone" or "Only people with access to content in the data source". Indexed data appears in results and is visible to all users in the organization or users who have access to it via user criteria permission, respectively. Choose the one that is most appropriate for your organization.
@@ -280,10 +276,6 @@ If a knowledge article isn't enabled with a user criterion, it appears in the re
 The default method for mapping your data source identities with Microsoft Entra ID is by checking whether the email ID of ServiceNow users is the same as the UserPrincipalName (UPN), or Mail of the users in Microsoft Entra ID. If you believe the default mapping wouldn't work for your organization, you can provide a custom mapping formula. To know more about, mapping Non-EntraID identities, click [here](/MicrosoftSearch/map-non-aad).
 
 ### Content
-
-:::image type="complex" alt-text="Screenshot that shows Content tab where you can configure Query string and Properties." source="media/servicenow-knowledge-content-tab.png" lightbox="media/servicenow-knowledge-content-tab.png"::: 
-Configure settings related to your content
-:::image-end:::
 
 **Query string**
 
@@ -318,15 +310,7 @@ Here, you can add or remove available properties from your ServiceNow data sourc
 
 Use the preview results button to verify the sample values of the selected properties and query filter.
 
-:::image type="complex" alt-text="Screenshot that shows Preview data option to check the query filter and properties you have configured." source="media/servicenow-knowledge-preview-data.png" lightbox="media/servicenow-knowledge-preview-data.png":::
-Preview data to validate your Query filter and Manage Properties settings
-:::image-end:::
-
 ### Sync
-
-:::image type="complex" alt-text="Screenshot that shows Sync tab where you can configure crawl frequency." source="media/servicenow-knowledge-sync-tab.png"  lightbox="media/servicenow-knowledge-sync-tab.png":::
-Configure Crawl frequency
-:::image-end:::
 
 The refresh interval determines how often your data is synced between the data source and the ServiceNow Knowledge Copilot connector index. There are two types of refresh intervals – full crawl and incremental crawl. For more details, click [here](/MicrosoftSearch/configure-connector#guidelines-for-sync-settings).
 

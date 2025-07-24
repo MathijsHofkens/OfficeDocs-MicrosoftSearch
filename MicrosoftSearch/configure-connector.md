@@ -1,5 +1,5 @@
 ---
-ms.date: 07/02/2025
+ms.date: 07/24/2025
 title: "Set up Microsoft 365 Copilot connectors in the Microsoft 365 admin center"
 ms.author: souravpoddar
 author: souravpoddar001
@@ -28,7 +28,7 @@ This article outlines the steps to set up a Microsoft 365 Copilot connector in t
 > [!TIP]
 > **Product survey**
 > 
-> To help us understand your requirements related to connecting more data sources to Copilot or Microsoft Search, we request you to take a few minutes to fill out this [survey form](https://forms.office.com/r/0Hh4GJNsJe). Based on the survey results, Microsoft will build connectors for the top-demanded data sources.
+> To help us understand your requirements related to connecting more data sources to Copilot or Microsoft Search, please fill out this [survey form](https://forms.office.com/r/0Hh4GJNsJe). We'll use the survey results to prioritize new data sources for connectors.
 
 ## Prerequisites
 
@@ -39,10 +39,10 @@ Before you begin, ensure the following:
 - **Service account (if applicable):** If your data source requires a service account, ensure it has the necessary roles or permissions.
 ---
 ## Step 1: Add a Copilot connector
-Complete the following steps to configure any of the Copilot connectors (or go to the [admin center](https://admin.microsoft.com/#/copilot/connectors/add) to access the connector catalog):
 
-> [!div class="mx-imgBorder"]
-   > ![Data sources available include: ADLS Gen2, Enterprise websites, Microsoft SQL server, Azure SQL, Oracle SQL database, ServiceNow Knowledge, ServiceNow Catalog, File share, Azure DevOps, and MediaWiki.](media/add-connector.png)
+<img src="media/add-connector.png" alt="Data sources available include: ADLS Gen2, Enterprise websites, Microsoft SQL server, Azure SQL, Oracle SQL database, ServiceNow Knowledge, ServiceNow Catalog, File share, Azure DevOps, and MediaWiki." data-linktype="relative-path">
+
+Complete the following steps to configure any of the Copilot connectors (or go to the [admin center](https://admin.microsoft.com/#/copilot/connectors/add) to access the connector catalog):
 
 1. **Open the Microsoft 365 Admin Center:**
    - Sign in to the [Microsoft 365 admin center](https://admin.microsoft.com/).
@@ -61,7 +61,6 @@ Complete the following steps to configure any of the Copilot connectors (or go t
 ## Step 2: Enter basic connection details
 
 ![Screenshot that shows Connection creation screen for ServiceNow Knowledge Copilot connector.](media/servicenow-knowledge-create-page.png "Add Copilot for ServiceNow Knowledge")
-
 
 1. **Display name:**
    - To help users recognize the source in Copilot and search results, enter a name to identify the connector.
@@ -85,8 +84,6 @@ Complete the following steps to configure any of the Copilot connectors (or go t
 
 - Click **Create** to set up the connection. The connector begins indexing content from your data source using default settings.
 
-![Screenshot that shows success screen once a Copilot connector is created.](media/configure-connector-success-page.png "Connection created successfully")
-
 Once the connection is created, you can add a description for the connection in the success screen. To help Copilot enhance connection results for users, the description should answer the following questions briefly:  
 * What kind of content does this connection have? 
 * How do users refer to this content source in their respective orgs? 
@@ -103,9 +100,6 @@ Admins who want more control over the configuration can choose the **Custom setu
 
 ### Users
 
-![Screenshot that shows Users tab where you can configure access permissions and user mapping rules](media/servicenow-knowledge-users-tab.png "Configure settings related to Users")
-
-
 1. **Access Permissions:**
    - Choose whether indexed data is visible to:
      - **Everyone** in the organization.
@@ -119,8 +113,6 @@ Admins who want more control over the configuration can choose the **Custom setu
 
 ### Content
 
-![Screenshot that shows the content tab where you can configure the query string and properties](media/servicenow-knowledge-content-tab.png "Configure settings related to your content")
-
 1. **Manage properties:**
    - Configure properties from the data source, such as making them searchable, queryable, or refinable.
    - Assign semantic labels and aliases to enhance search relevance.
@@ -129,8 +121,6 @@ Admins who want more control over the configuration can choose the **Custom setu
 ---
 
 ### Sync
-
-![Screenshot that shows Sync tab where you can configure crawl frequency](media/servicenow-knowledge-sync-tab.png "Configure Crawl frequency")
 
 **Refresh intervals:**
    - Configure the frequency of data syncs between the data source and the Copilot connector index.

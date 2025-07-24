@@ -24,8 +24,6 @@ If your ServiceNow instance uses **Advanced Scripts** in your Knowledge Base or 
 
 When setting up the ServiceNow Knowledge Copilot connector, select the **Advanced** option under the field 'Select based on your user criteria setup in ServiceNow'. This is crucial for handling advanced user criteria correctly.
 
-![Screenshot containing the Advanced flow selection in the Copilot connector setup.](media/servicenow-knowledge-advanced-mode.png)
-
 ## Step 2: Configure Scripted REST API in ServiceNow
 
 To allow the connector to fetch advanced user criteria, you must create a **Scripted REST API** in your ServiceNow instance. Follow the steps below.
