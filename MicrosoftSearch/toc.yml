@@ -350,7 +350,7 @@ items:
           - name: Setup - Veeva Vault PromoMats
             href: veeva-vault-promoMats-connector.md
           - name: Setup - Veeva Vault RIM
-            href: veeva-vault-RIM-connector.md 
+            href: veeva-vault-rim-connector.md 
           - name: Troubleshooting
             href: troubleshoot-veeva-vault-connectors.md           
         - name: WordPress
