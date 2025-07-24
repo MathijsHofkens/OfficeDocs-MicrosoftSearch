@@ -238,8 +238,6 @@ Custom setup is for those admins who want to edit the default values for setting
 
 ### Users
 
-[![Screenshot that shows Users tab where you can configure access permissions and user mapping rules.](media/servicenow-catalog-users-tab.png)](media/servicenow-catalog-users-tab.png#lightbox)
-
 **Access permissions**
 
 The ServiceNow Catalog Microsoft Graph connector supports access permissions visible to "Everyone" or "Only people with access to content in data source". Indexed data appears in results and is visible to all users in the organization or users who have access to them via user criteria permission respectively. Choose the one that is most appropriate for your organization.
