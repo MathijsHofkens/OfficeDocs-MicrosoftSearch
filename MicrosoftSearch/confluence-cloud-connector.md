@@ -80,7 +80,7 @@ The following steps provide guidance on how to register the app:
 7. Navigate to `Authorization` from the navigation pane on the left. Add the callback URL, for **Microsoft 365 Enterprise**: `https://gcs.office.com/v1.0/admin/oauth/callback`, for **Microsoft 365 Government**: `https://gcsgcc.office.com/v1.0/admin/oauth/callback` and save the changes.
 8. Navigate to **Settings** from the navigation pane on the left. You get the **Client ID** and **Secret** from this page.
 
-Navigate to https://learn.microsoft.com/en-us/microsoftsearch/configure-connector and add the Confluence Cloud Connector app in your organization. During setup, provide your confluence URL, Client ID and secret.
+Navigate to https://learn.microsoft.com/microsoftsearch/configure-connector and add the Confluence Cloud Connector app in your organization. During setup, provide your confluence URL, Client ID and secret.
 
 ### 6. Rollout to a limited audience
 
